@@ -114,5 +114,51 @@ sub from_string {
 						opcodes		=>	\@opcodes);
 	return $self;
 }
-			
+
+#------------------------------------------------------------------------------
+
+package Opcodes;
+
+use Object::Tiny qw( opcodes );
+
+sub new {
+	my($class) = @_;
+	my $self = bless { opcodes => {} }, $class;
+	return $self;
+}
+
+sub add {
+	my($self, $opcode) = @_;
+	if ($self->opcodes->{$opcode->asm} &&
+		$self->opcodes->{$opcode->asm}{$opcode->cpu}) {
+		die "opcode already exists: ", 
+			$self->opcodes->{$opcode->asm}{$opcode->cpu}->to_string;
+	}
+	
+	$self->opcodes->{$opcode->asm}{$opcode->cpu} = $opcode;
+}
+
+# input/output to data file
+sub to_file {
+	my($self, $file) = @_;
+	open(my $fh, ">", $file) or die "write $file: $!";
+	for my $asm (sort keys %{$self->opcodes}) {
+		for my $cpu (sort keys %{$self->opcodes->{$asm}}) {
+			my $opcode = $self->opcodes->{$asm}{$cpu};
+			say $fh $opcode->to_string;
+		}
+	}
+}
+
+sub from_file {
+	my($class, $file) = @_;
+	my $self = $class->new;
+	open(my $fh, "<", $file) or die "read $file: $!";
+	while (<$fh>) {
+		my $opcode = Opcode->from_string($_);
+		$self->add($opcode);
+	}
+	return $self;
+}
+
 1;
