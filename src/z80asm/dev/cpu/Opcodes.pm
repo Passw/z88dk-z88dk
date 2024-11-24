@@ -16,7 +16,7 @@ package Opcode;
 #	%t	temp jump label to end of statement; %t3 to end of statement - 3
 #------------------------------------------------------------------------------
 
-use Object::Tiny qw( asm cpu synthetic opcodes );
+use Object::Tiny qw( asm cpu synthetic undocumented opcodes );
 
 # all CPUs
 my @CPUS = (qw(
@@ -50,11 +50,14 @@ sub new {
 	my $self = bless {}, $class;
 	
 	$self->{asm} = delete $args{asm} || '';
+	$self->asm or die "assembly not defined";
 	
-	$self->{cpu} = delete $args{cpu} || cpu_z80;
+	$self->{cpu} = delete $args{cpu} || "z80";
 	$CPUS{$self->cpu} or die "cpu not found: ", $self->cpu;
 	
 	$self->{synthetic} = delete $args{synthetic} || 0;
+	
+	$self->{undocumented} = delete $args{undocumented} || 0;
 	
 	# list of opcodes, each list of bytes or %X
 	$self->{opcodes} = delete $args{opcodes} || [[]];
@@ -67,7 +70,9 @@ sub new {
 # input/output to data file
 sub to_string {
 	my($self) = @_;
-	my @output = ($self->asm, $self->cpu, $self->synthetic ? "X" : "_");
+	my @output = ($self->asm, $self->cpu, 
+				  $self->synthetic ? "X" : "_",
+				  $self->undocumented ? "U" : "_");
 	my @opcodes;
 	for my $opcode (@{$self->opcodes}) {
 		my @bytes;
@@ -88,9 +93,26 @@ sub to_string {
 
 sub from_string {
 	my($class, $str) = @_;
-	my $self = Opcode->new;
 	chomp($str);
 	my @fields = split(/\|/, $str);
+	@fields == 5 or die "insuficient data: $str";
+	my @opcodes = split(/;/, $fields[4]);
+	for (@opcodes) {
+		my @bytes = split(' ', $_);
+		for (@bytes) {
+			if (/^[0-9a-f]+$/i) {
+				$_ = hex($_);
+			}
+		}
+		$_ = \@bytes;
+	}
+	my $self = $class->new(
+						asm			=>	$fields[0], 
+						cpu			=>	$fields[1], 
+						synthetic	=>	$fields[2] =~ /x/i ? 1 : 0,
+						undocumented=>	$fields[3] =~ /u/i ? 1 : 0,
+						opcodes		=>	\@opcodes);
+	return $self;
 }
 			
 1;

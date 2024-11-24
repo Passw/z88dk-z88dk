@@ -29,6 +29,15 @@ use Carp ();
 $SIG{__DIE__} = \&Carp::confess;
 use Data::Dump 'dump';
 
+if (0) {
+	my $nop = Opcode->new(asm=>"nop", opcodes=>[[0]]);
+	say $nop->to_string;
+	my $nop2 = Opcode->from_string($nop->to_string);
+	say $nop2->to_string;
+	say dump $nop, $nop2;
+	die;
+}
+
 @ARGV==1 or die "Usage: $0 output_file.yaml\n";
 my $output_file = shift;
 
