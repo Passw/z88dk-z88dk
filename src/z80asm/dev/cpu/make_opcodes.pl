@@ -17,6 +17,11 @@
 #------------------------------------------------------------------------------
 
 use Modern::Perl;
+BEGIN { 
+	use Path::Tiny;
+	use lib path($0)->dirname;
+	use Opcodes;
+}
 use YAML::Tiny;
 use Clone 'clone';
 use warnings FATAL => 'uninitialized'; 
