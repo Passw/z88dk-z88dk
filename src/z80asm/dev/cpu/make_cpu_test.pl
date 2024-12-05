@@ -7,7 +7,7 @@
 use Modern::Perl;
 use YAML::Tiny;
 
-@ARGV==2 or die "Usage: $0 input_file.yaml output_basename\n";
+@ARGV==2 or die "Usage: $0 input_file.dat output_basename\n";
 my($input_file, $output_basename) = @ARGV;
 
 my $yaml = YAML::Tiny->read($input_file);

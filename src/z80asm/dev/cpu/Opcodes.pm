@@ -16,7 +16,8 @@ package Opcode;
 #	%t	temp jump label to end of statement; %t3 to end of statement - 3
 #------------------------------------------------------------------------------
 
-use Object::Tiny qw( asm cpu synthetic undocumented opcodes );
+my @fields = 	 qw( asm cpu synthetic undocumented const opcodes );
+use Object::Tiny qw( asm cpu synthetic undocumented const opcodes );
 
 # all CPUs
 my @CPUS = (qw(
@@ -59,6 +60,9 @@ sub new {
 	
 	$self->{undocumented} = delete $args{undocumented} || 0;
 	
+	# list of constants for %c
+	$self->{const} = delete $args{const} || [];
+	
 	# list of opcodes, each list of bytes or %X
 	$self->{opcodes} = delete $args{opcodes} || [[]];
 	
@@ -68,11 +72,17 @@ sub new {
 }
 
 # input/output to data file
+sub titles {
+	my($class) = @_;
+	return join("|", @fields);
+}
+
 sub to_string {
 	my($self) = @_;
 	my @output = ($self->asm, $self->cpu, 
 				  $self->synthetic ? "X" : "_",
-				  $self->undocumented ? "U" : "_");
+				  $self->undocumented ? "U" : "_",
+				  join(",", @{$self->const}));
 	my @opcodes;
 	for my $opcode (@{$self->opcodes}) {
 		my @bytes;
@@ -95,8 +105,8 @@ sub from_string {
 	my($class, $str) = @_;
 	chomp($str);
 	my @fields = split(/\|/, $str);
-	@fields == 5 or die "insuficient data: $str";
-	my @opcodes = split(/;/, $fields[4]);
+	@fields == 6 or die "insufficient data: $str";
+	my @opcodes = split(/;/, $fields[5]);
 	for (@opcodes) {
 		my @bytes = split(' ', $_);
 		for (@bytes) {
@@ -111,6 +121,7 @@ sub from_string {
 						cpu			=>	$fields[1], 
 						synthetic	=>	$fields[2] =~ /x/i ? 1 : 0,
 						undocumented=>	$fields[3] =~ /u/i ? 1 : 0,
+						const		=>  [split(/,/, $fields[4])],
 						opcodes		=>	\@opcodes);
 	return $self;
 }
@@ -132,16 +143,29 @@ sub add {
 	if ($self->opcodes->{$opcode->asm} &&
 		$self->opcodes->{$opcode->asm}{$opcode->cpu}) {
 		die "opcode already exists: ", 
-			$self->opcodes->{$opcode->asm}{$opcode->cpu}->to_string;
+			$self->opcodes->{$opcode->asm}{$opcode->cpu}->to_string, " ",
+			$opcode->to_string;
 	}
 	
 	$self->opcodes->{$opcode->asm}{$opcode->cpu} = $opcode;
 }
 
+sub exists {
+	my($self, $asm, $cpu) = @_;
+	if ($self->opcodes->{$asm} &&
+		$self->opcodes->{$asm}{$cpu}) {
+		return 1;
+	}
+	else {
+		return 0;
+	}
+}	
+
 # input/output to data file
 sub to_file {
 	my($self, $file) = @_;
 	open(my $fh, ">", $file) or die "write $file: $!";
+	say $fh Opcode->titles;
 	for my $asm (sort keys %{$self->opcodes}) {
 		for my $cpu (sort keys %{$self->opcodes->{$asm}}) {
 			my $opcode = $self->opcodes->{$asm}{$cpu};
@@ -154,6 +178,11 @@ sub from_file {
 	my($class, $file) = @_;
 	my $self = $class->new;
 	open(my $fh, "<", $file) or die "read $file: $!";
+	
+	my $titles = <$fh>;
+	chomp $titles;
+	$titles eq Opcode->titles or die "invalid data file $file";
+	
 	while (<$fh>) {
 		my $opcode = Opcode->from_string($_);
 		$self->add($opcode);

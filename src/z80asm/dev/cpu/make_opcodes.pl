@@ -22,27 +22,24 @@ BEGIN {
 	use lib path($0)->dirname;
 	use Opcodes;
 }
-use YAML::Tiny;
 use Clone 'clone';
 use warnings FATAL => 'uninitialized'; 
 use Carp (); 
 $SIG{__DIE__} = \&Carp::confess;
 use Data::Dump 'dump';
 
-if (0) {
-	my $opcodes = Opcodes->new;
-	
+@ARGV==1 or die "Usage: $0 output_file.dat\n";
+my $output_file = shift;
+
+my $opcodes = Opcodes->new;
+
 #------------------------------------------------------------------------------
 # Intel
 #------------------------------------------------------------------------------
 
-	$opcodes->to_file("opcodes.dat");
-
-	die;
-}
-
-@ARGV==1 or die "Usage: $0 output_file.yaml\n";
-my $output_file = shift;
+#------------------------------------------------------------------------------
+# OLD STUFF
+#------------------------------------------------------------------------------
 
 my @CPUS = qw( z80 z80_strict z80n z180 
 			   ez80 ez80_z80 
@@ -52,9 +49,6 @@ my @CPUS = qw( z80 z80_strict z80n z180
 			   gbz80 
 			   kc160 kc160_z80
 );
-
-# %opcodes: $opcodes{$asm}{$cpu} = [[@bin],[@bin]]
-my %opcodes;
 
 # operand values
 my %V = (
@@ -393,10 +387,12 @@ for my $cpu (@CPUS) {
 	for my $op (qw( add adc sub sbb ana xra ora cmp )) {
 		for my $r (qw( b c d e h l m a )) {
 			if ($r4k || $r5k) {
-				add($cpu, "$op $r", [0x7F, alu_r($op, $r)]) unless $opcodes{"$op $r"}{$cpu};
+				add($cpu, "$op $r", [0x7F, alu_r($op, $r)]) 
+					unless $opcodes->exists("$op $r", $cpu);
 			}
 			else {
-				add($cpu, "$op $r", [alu_r($op, $r)]) unless $opcodes{"$op $r"}{$cpu};
+				add($cpu, "$op $r", [alu_r($op, $r)]) 
+					unless $opcodes->exists("$op $r", $cpu);
 			}
 		}
 	}
@@ -2198,7 +2194,7 @@ for my $cpu (@CPUS) {
 
 			for my $r (qw( b c d e h l (hl) a )) {
 				add_x($cpu, "$op $r", [0xCB, 8*$V{$op}+$V{$r}]) 
-					unless $opcodes{"$op $r"}{$cpu};
+					unless $opcodes->exists("$op $r", $cpu);
 				
 				# (ix+d) -> r
 				if (($z80 || $z80n) && $r ne '(hl)') {
@@ -3948,8 +3944,7 @@ for my $cpu (@CPUS) {
 #------------------------------------------------------------------------------
 # write file
 #------------------------------------------------------------------------------
-my $yaml = YAML::Tiny->new(\%opcodes);
-$yaml->write($output_file);
+$opcodes->to_file($output_file);
 
 #------------------------------------------------------------------------------
 # opcodes
@@ -4005,10 +4000,7 @@ sub add {
 		}
 	}
 
-	if (defined($opcodes{$asm}{$cpu})) {
-		die "$asm $cpu exists:\n", dump($opcodes{$asm}{$cpu});
-	}
-	$opcodes{$asm}{$cpu} = \@ops;
+	$opcodes->add(Opcode->new(asm => $asm, cpu => $cpu, opcodes => \@ops));
 }
 
 sub add_x {

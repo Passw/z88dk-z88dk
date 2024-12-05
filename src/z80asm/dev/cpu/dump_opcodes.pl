@@ -1,19 +1,22 @@
 #!/usr/bin/env perl
 
 #------------------------------------------------------------------------------
-# Build text table representation of opcodes.yaml
+# Build text table representation of opcodes.dat
 #------------------------------------------------------------------------------
 
 use Modern::Perl;
-use YAML::Tiny;
-use Text::Table;
+BEGIN { 
+	use Path::Tiny;
+	use lib path($0)->dirname;
+	use Opcodes;
+}
 use Clone 'clone';
+use Text::Table;
 
-@ARGV==2 or die "Usage: $0 input_file.yaml output_file.txt\n";
+@ARGV==2 or die "Usage: $0 input_file.dat output_file.txt\n";
 my($input_file, $output_file) = @ARGV;
 
-my $yaml = YAML::Tiny->read($input_file);
-my %opcodes = %{$yaml->[0]};
+my $opcodes = Opcodes->from_file($input_file);
 
 my $sep = \"|";
 
@@ -36,17 +39,17 @@ print $fh $hex_table->rule('=');
 
 
 sub expand_consts {
-	my(%opcodes_in) = @_;
-	my %opcodes_out;
+	my($opcodes_in) = @_;
+	my $opcodes_out = Opcodes->new;
 
-	for my $asm (sort keys %opcodes_in) {
-		for my $cpu (sort keys %{$opcodes_in{$asm}}) {
-			my @ops = @{clone($opcodes_in{$asm}{$cpu})};
+	for my $asm (sort keys $opcodes_in) {
+		for my $cpu (sort keys ${$opcodes_in->asm}) {
+			my $opcode = clone($opcodes_in->asm->cpu);
 			
 			if ($asm =~ /%c/) {
-				my @range = find_range($asm, $cpu, @ops);
+				my @range = find_range($asm, $cpu, @{$opcode->opcodes});
 				for my $c (@range) {
-					my($asm1, @ops1) = replace_const($c, $asm, @ops);
+					my($asm1, @ops1) = replace_const($c, $asm, @{$opcode->opcodes});
 					if ($asm =~ /^rst/ && $cpu =~ /^r2ka|^r3k/ && 
 					    ($c == 0 || $c == 8 || $c == 0x30)) {
 						$opcodes_out{$asm1}{$cpu} = [[0xCD, $c, 0]];
@@ -57,12 +60,12 @@ sub expand_consts {
 				}
 			}
 			else {
-				$opcodes_out{$asm}{$cpu} = \@ops;
+				$opcodes_out->add($opcode);
 			}
 		}
 	}
 	
-	return %opcodes_out;
+	return $opcodes_out;
 }	
 
 sub find_range {
