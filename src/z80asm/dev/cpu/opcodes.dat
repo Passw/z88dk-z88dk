@@ -2369,54 +2369,54 @@ altd and l|r2ka|_|_||76;A5
 altd and l|r3k|_|_||76;A5
 altd and l|r4k|_|_||76;7F A5
 altd and l|r5k|_|_||76;7F A5
-altd bit %c, (hl)|r2ka|_|_||76;CB 70+8*%c(0..7)
-altd bit %c, (hl)|r3k|_|_||76;CB 70+8*%c(0..7)
-altd bit %c, (hl)|r4k|_|_||76;CB 70+8*%c(0..7)
-altd bit %c, (hl)|r5k|_|_||76;CB 70+8*%c(0..7)
-altd bit %c, (ix)|r2ka|_|_||76;DD CB 00 70+8*%c(0..7)
-altd bit %c, (ix)|r3k|_|_||76;DD CB 00 70+8*%c(0..7)
-altd bit %c, (ix)|r4k|_|_||76;DD CB 00 70+8*%c(0..7)
-altd bit %c, (ix)|r5k|_|_||76;DD CB 00 70+8*%c(0..7)
-altd bit %c, (ix+%d)|r2ka|_|_||76;DD CB %d 70+8*%c(0..7)
-altd bit %c, (ix+%d)|r3k|_|_||76;DD CB %d 70+8*%c(0..7)
-altd bit %c, (ix+%d)|r4k|_|_||76;DD CB %d 70+8*%c(0..7)
-altd bit %c, (ix+%d)|r5k|_|_||76;DD CB %d 70+8*%c(0..7)
-altd bit %c, (iy)|r2ka|_|_||76;FD CB 00 70+8*%c(0..7)
-altd bit %c, (iy)|r3k|_|_||76;FD CB 00 70+8*%c(0..7)
-altd bit %c, (iy)|r4k|_|_||76;FD CB 00 70+8*%c(0..7)
-altd bit %c, (iy)|r5k|_|_||76;FD CB 00 70+8*%c(0..7)
-altd bit %c, (iy+%d)|r2ka|_|_||76;FD CB %d 70+8*%c(0..7)
-altd bit %c, (iy+%d)|r3k|_|_||76;FD CB %d 70+8*%c(0..7)
-altd bit %c, (iy+%d)|r4k|_|_||76;FD CB %d 70+8*%c(0..7)
-altd bit %c, (iy+%d)|r5k|_|_||76;FD CB %d 70+8*%c(0..7)
-altd bit %c, a|r2ka|_|_||76;CB 71+8*%c(0..7)
-altd bit %c, a|r3k|_|_||76;CB 71+8*%c(0..7)
-altd bit %c, a|r4k|_|_||76;CB 71+8*%c(0..7)
-altd bit %c, a|r5k|_|_||76;CB 71+8*%c(0..7)
-altd bit %c, b|r2ka|_|_||76;CB 64+8*%c(0..7)
-altd bit %c, b|r3k|_|_||76;CB 64+8*%c(0..7)
-altd bit %c, b|r4k|_|_||76;CB 64+8*%c(0..7)
-altd bit %c, b|r5k|_|_||76;CB 64+8*%c(0..7)
-altd bit %c, c|r2ka|_|_||76;CB 65+8*%c(0..7)
-altd bit %c, c|r3k|_|_||76;CB 65+8*%c(0..7)
-altd bit %c, c|r4k|_|_||76;CB 65+8*%c(0..7)
-altd bit %c, c|r5k|_|_||76;CB 65+8*%c(0..7)
-altd bit %c, d|r2ka|_|_||76;CB 66+8*%c(0..7)
-altd bit %c, d|r3k|_|_||76;CB 66+8*%c(0..7)
-altd bit %c, d|r4k|_|_||76;CB 66+8*%c(0..7)
-altd bit %c, d|r5k|_|_||76;CB 66+8*%c(0..7)
-altd bit %c, e|r2ka|_|_||76;CB 67+8*%c(0..7)
-altd bit %c, e|r3k|_|_||76;CB 67+8*%c(0..7)
-altd bit %c, e|r4k|_|_||76;CB 67+8*%c(0..7)
-altd bit %c, e|r5k|_|_||76;CB 67+8*%c(0..7)
-altd bit %c, h|r2ka|_|_||76;CB 68+8*%c(0..7)
-altd bit %c, h|r3k|_|_||76;CB 68+8*%c(0..7)
-altd bit %c, h|r4k|_|_||76;CB 68+8*%c(0..7)
-altd bit %c, h|r5k|_|_||76;CB 68+8*%c(0..7)
-altd bit %c, l|r2ka|_|_||76;CB 69+8*%c(0..7)
-altd bit %c, l|r3k|_|_||76;CB 69+8*%c(0..7)
-altd bit %c, l|r4k|_|_||76;CB 69+8*%c(0..7)
-altd bit %c, l|r5k|_|_||76;CB 69+8*%c(0..7)
+altd bit %c, (hl)|r2ka|_|_|0,1,2,3,4,5,6,7|76;CB 70+8*%c
+altd bit %c, (hl)|r3k|_|_|0,1,2,3,4,5,6,7|76;CB 70+8*%c
+altd bit %c, (hl)|r4k|_|_|0,1,2,3,4,5,6,7|76;CB 70+8*%c
+altd bit %c, (hl)|r5k|_|_|0,1,2,3,4,5,6,7|76;CB 70+8*%c
+altd bit %c, (ix)|r2ka|_|_|0,1,2,3,4,5,6,7|76;DD CB 00 70+8*%c
+altd bit %c, (ix)|r3k|_|_|0,1,2,3,4,5,6,7|76;DD CB 00 70+8*%c
+altd bit %c, (ix)|r4k|_|_|0,1,2,3,4,5,6,7|76;DD CB 00 70+8*%c
+altd bit %c, (ix)|r5k|_|_|0,1,2,3,4,5,6,7|76;DD CB 00 70+8*%c
+altd bit %c, (ix+%d)|r2ka|_|_|0,1,2,3,4,5,6,7|76;DD CB %d 70+8*%c
+altd bit %c, (ix+%d)|r3k|_|_|0,1,2,3,4,5,6,7|76;DD CB %d 70+8*%c
+altd bit %c, (ix+%d)|r4k|_|_|0,1,2,3,4,5,6,7|76;DD CB %d 70+8*%c
+altd bit %c, (ix+%d)|r5k|_|_|0,1,2,3,4,5,6,7|76;DD CB %d 70+8*%c
+altd bit %c, (iy)|r2ka|_|_|0,1,2,3,4,5,6,7|76;FD CB 00 70+8*%c
+altd bit %c, (iy)|r3k|_|_|0,1,2,3,4,5,6,7|76;FD CB 00 70+8*%c
+altd bit %c, (iy)|r4k|_|_|0,1,2,3,4,5,6,7|76;FD CB 00 70+8*%c
+altd bit %c, (iy)|r5k|_|_|0,1,2,3,4,5,6,7|76;FD CB 00 70+8*%c
+altd bit %c, (iy+%d)|r2ka|_|_|0,1,2,3,4,5,6,7|76;FD CB %d 70+8*%c
+altd bit %c, (iy+%d)|r3k|_|_|0,1,2,3,4,5,6,7|76;FD CB %d 70+8*%c
+altd bit %c, (iy+%d)|r4k|_|_|0,1,2,3,4,5,6,7|76;FD CB %d 70+8*%c
+altd bit %c, (iy+%d)|r5k|_|_|0,1,2,3,4,5,6,7|76;FD CB %d 70+8*%c
+altd bit %c, a|r2ka|_|_|0,1,2,3,4,5,6,7|76;CB 71+8*%c
+altd bit %c, a|r3k|_|_|0,1,2,3,4,5,6,7|76;CB 71+8*%c
+altd bit %c, a|r4k|_|_|0,1,2,3,4,5,6,7|76;CB 71+8*%c
+altd bit %c, a|r5k|_|_|0,1,2,3,4,5,6,7|76;CB 71+8*%c
+altd bit %c, b|r2ka|_|_|0,1,2,3,4,5,6,7|76;CB 64+8*%c
+altd bit %c, b|r3k|_|_|0,1,2,3,4,5,6,7|76;CB 64+8*%c
+altd bit %c, b|r4k|_|_|0,1,2,3,4,5,6,7|76;CB 64+8*%c
+altd bit %c, b|r5k|_|_|0,1,2,3,4,5,6,7|76;CB 64+8*%c
+altd bit %c, c|r2ka|_|_|0,1,2,3,4,5,6,7|76;CB 65+8*%c
+altd bit %c, c|r3k|_|_|0,1,2,3,4,5,6,7|76;CB 65+8*%c
+altd bit %c, c|r4k|_|_|0,1,2,3,4,5,6,7|76;CB 65+8*%c
+altd bit %c, c|r5k|_|_|0,1,2,3,4,5,6,7|76;CB 65+8*%c
+altd bit %c, d|r2ka|_|_|0,1,2,3,4,5,6,7|76;CB 66+8*%c
+altd bit %c, d|r3k|_|_|0,1,2,3,4,5,6,7|76;CB 66+8*%c
+altd bit %c, d|r4k|_|_|0,1,2,3,4,5,6,7|76;CB 66+8*%c
+altd bit %c, d|r5k|_|_|0,1,2,3,4,5,6,7|76;CB 66+8*%c
+altd bit %c, e|r2ka|_|_|0,1,2,3,4,5,6,7|76;CB 67+8*%c
+altd bit %c, e|r3k|_|_|0,1,2,3,4,5,6,7|76;CB 67+8*%c
+altd bit %c, e|r4k|_|_|0,1,2,3,4,5,6,7|76;CB 67+8*%c
+altd bit %c, e|r5k|_|_|0,1,2,3,4,5,6,7|76;CB 67+8*%c
+altd bit %c, h|r2ka|_|_|0,1,2,3,4,5,6,7|76;CB 68+8*%c
+altd bit %c, h|r3k|_|_|0,1,2,3,4,5,6,7|76;CB 68+8*%c
+altd bit %c, h|r4k|_|_|0,1,2,3,4,5,6,7|76;CB 68+8*%c
+altd bit %c, h|r5k|_|_|0,1,2,3,4,5,6,7|76;CB 68+8*%c
+altd bit %c, l|r2ka|_|_|0,1,2,3,4,5,6,7|76;CB 69+8*%c
+altd bit %c, l|r3k|_|_|0,1,2,3,4,5,6,7|76;CB 69+8*%c
+altd bit %c, l|r4k|_|_|0,1,2,3,4,5,6,7|76;CB 69+8*%c
+altd bit %c, l|r5k|_|_|0,1,2,3,4,5,6,7|76;CB 69+8*%c
 altd bool hl|r2ka|_|_||76;CC
 altd bool hl|r3k|_|_||76;CC
 altd bool hl|r4k|_|_||76;CC
@@ -3061,26 +3061,26 @@ altd ioe and a, (iy+%d)|r2ka|_|_||76;DB;FD A6 %d
 altd ioe and a, (iy+%d)|r3k|_|_||76;DB;FD A6 %d
 altd ioe and a, (iy+%d)|r4k|_|_||76;DB;FD A6 %d
 altd ioe and a, (iy+%d)|r5k|_|_||76;DB;FD A6 %d
-altd ioe bit %c, (hl)|r2ka|_|_||76;DB;CB 70+8*%c(0..7)
-altd ioe bit %c, (hl)|r3k|_|_||76;DB;CB 70+8*%c(0..7)
-altd ioe bit %c, (hl)|r4k|_|_||76;DB;CB 70+8*%c(0..7)
-altd ioe bit %c, (hl)|r5k|_|_||76;DB;CB 70+8*%c(0..7)
-altd ioe bit %c, (ix)|r2ka|_|_||76;DB;DD CB 00 70+8*%c(0..7)
-altd ioe bit %c, (ix)|r3k|_|_||76;DB;DD CB 00 70+8*%c(0..7)
-altd ioe bit %c, (ix)|r4k|_|_||76;DB;DD CB 00 70+8*%c(0..7)
-altd ioe bit %c, (ix)|r5k|_|_||76;DB;DD CB 00 70+8*%c(0..7)
-altd ioe bit %c, (ix+%d)|r2ka|_|_||76;DB;DD CB %d 70+8*%c(0..7)
-altd ioe bit %c, (ix+%d)|r3k|_|_||76;DB;DD CB %d 70+8*%c(0..7)
-altd ioe bit %c, (ix+%d)|r4k|_|_||76;DB;DD CB %d 70+8*%c(0..7)
-altd ioe bit %c, (ix+%d)|r5k|_|_||76;DB;DD CB %d 70+8*%c(0..7)
-altd ioe bit %c, (iy)|r2ka|_|_||76;DB;FD CB 00 70+8*%c(0..7)
-altd ioe bit %c, (iy)|r3k|_|_||76;DB;FD CB 00 70+8*%c(0..7)
-altd ioe bit %c, (iy)|r4k|_|_||76;DB;FD CB 00 70+8*%c(0..7)
-altd ioe bit %c, (iy)|r5k|_|_||76;DB;FD CB 00 70+8*%c(0..7)
-altd ioe bit %c, (iy+%d)|r2ka|_|_||76;DB;FD CB %d 70+8*%c(0..7)
-altd ioe bit %c, (iy+%d)|r3k|_|_||76;DB;FD CB %d 70+8*%c(0..7)
-altd ioe bit %c, (iy+%d)|r4k|_|_||76;DB;FD CB %d 70+8*%c(0..7)
-altd ioe bit %c, (iy+%d)|r5k|_|_||76;DB;FD CB %d 70+8*%c(0..7)
+altd ioe bit %c, (hl)|r2ka|_|_|0,1,2,3,4,5,6,7|76;DB;CB 70+8*%c
+altd ioe bit %c, (hl)|r3k|_|_|0,1,2,3,4,5,6,7|76;DB;CB 70+8*%c
+altd ioe bit %c, (hl)|r4k|_|_|0,1,2,3,4,5,6,7|76;DB;CB 70+8*%c
+altd ioe bit %c, (hl)|r5k|_|_|0,1,2,3,4,5,6,7|76;DB;CB 70+8*%c
+altd ioe bit %c, (ix)|r2ka|_|_|0,1,2,3,4,5,6,7|76;DB;DD CB 00 70+8*%c
+altd ioe bit %c, (ix)|r3k|_|_|0,1,2,3,4,5,6,7|76;DB;DD CB 00 70+8*%c
+altd ioe bit %c, (ix)|r4k|_|_|0,1,2,3,4,5,6,7|76;DB;DD CB 00 70+8*%c
+altd ioe bit %c, (ix)|r5k|_|_|0,1,2,3,4,5,6,7|76;DB;DD CB 00 70+8*%c
+altd ioe bit %c, (ix+%d)|r2ka|_|_|0,1,2,3,4,5,6,7|76;DB;DD CB %d 70+8*%c
+altd ioe bit %c, (ix+%d)|r3k|_|_|0,1,2,3,4,5,6,7|76;DB;DD CB %d 70+8*%c
+altd ioe bit %c, (ix+%d)|r4k|_|_|0,1,2,3,4,5,6,7|76;DB;DD CB %d 70+8*%c
+altd ioe bit %c, (ix+%d)|r5k|_|_|0,1,2,3,4,5,6,7|76;DB;DD CB %d 70+8*%c
+altd ioe bit %c, (iy)|r2ka|_|_|0,1,2,3,4,5,6,7|76;DB;FD CB 00 70+8*%c
+altd ioe bit %c, (iy)|r3k|_|_|0,1,2,3,4,5,6,7|76;DB;FD CB 00 70+8*%c
+altd ioe bit %c, (iy)|r4k|_|_|0,1,2,3,4,5,6,7|76;DB;FD CB 00 70+8*%c
+altd ioe bit %c, (iy)|r5k|_|_|0,1,2,3,4,5,6,7|76;DB;FD CB 00 70+8*%c
+altd ioe bit %c, (iy+%d)|r2ka|_|_|0,1,2,3,4,5,6,7|76;DB;FD CB %d 70+8*%c
+altd ioe bit %c, (iy+%d)|r3k|_|_|0,1,2,3,4,5,6,7|76;DB;FD CB %d 70+8*%c
+altd ioe bit %c, (iy+%d)|r4k|_|_|0,1,2,3,4,5,6,7|76;DB;FD CB %d 70+8*%c
+altd ioe bit %c, (iy+%d)|r5k|_|_|0,1,2,3,4,5,6,7|76;DB;FD CB %d 70+8*%c
 altd ioe cmp (hl)|r2ka|_|_||76;DB;BE
 altd ioe cmp (hl)|r3k|_|_||76;DB;BE
 altd ioe cmp (hl)|r4k|_|_||76;DB;7F BE
@@ -4127,26 +4127,26 @@ altd ioi and a, (iy+%d)|r2ka|_|_||76;D3;FD A6 %d
 altd ioi and a, (iy+%d)|r3k|_|_||76;D3;FD A6 %d
 altd ioi and a, (iy+%d)|r4k|_|_||76;D3;FD A6 %d
 altd ioi and a, (iy+%d)|r5k|_|_||76;D3;FD A6 %d
-altd ioi bit %c, (hl)|r2ka|_|_||76;D3;CB 70+8*%c(0..7)
-altd ioi bit %c, (hl)|r3k|_|_||76;D3;CB 70+8*%c(0..7)
-altd ioi bit %c, (hl)|r4k|_|_||76;D3;CB 70+8*%c(0..7)
-altd ioi bit %c, (hl)|r5k|_|_||76;D3;CB 70+8*%c(0..7)
-altd ioi bit %c, (ix)|r2ka|_|_||76;D3;DD CB 00 70+8*%c(0..7)
-altd ioi bit %c, (ix)|r3k|_|_||76;D3;DD CB 00 70+8*%c(0..7)
-altd ioi bit %c, (ix)|r4k|_|_||76;D3;DD CB 00 70+8*%c(0..7)
-altd ioi bit %c, (ix)|r5k|_|_||76;D3;DD CB 00 70+8*%c(0..7)
-altd ioi bit %c, (ix+%d)|r2ka|_|_||76;D3;DD CB %d 70+8*%c(0..7)
-altd ioi bit %c, (ix+%d)|r3k|_|_||76;D3;DD CB %d 70+8*%c(0..7)
-altd ioi bit %c, (ix+%d)|r4k|_|_||76;D3;DD CB %d 70+8*%c(0..7)
-altd ioi bit %c, (ix+%d)|r5k|_|_||76;D3;DD CB %d 70+8*%c(0..7)
-altd ioi bit %c, (iy)|r2ka|_|_||76;D3;FD CB 00 70+8*%c(0..7)
-altd ioi bit %c, (iy)|r3k|_|_||76;D3;FD CB 00 70+8*%c(0..7)
-altd ioi bit %c, (iy)|r4k|_|_||76;D3;FD CB 00 70+8*%c(0..7)
-altd ioi bit %c, (iy)|r5k|_|_||76;D3;FD CB 00 70+8*%c(0..7)
-altd ioi bit %c, (iy+%d)|r2ka|_|_||76;D3;FD CB %d 70+8*%c(0..7)
-altd ioi bit %c, (iy+%d)|r3k|_|_||76;D3;FD CB %d 70+8*%c(0..7)
-altd ioi bit %c, (iy+%d)|r4k|_|_||76;D3;FD CB %d 70+8*%c(0..7)
-altd ioi bit %c, (iy+%d)|r5k|_|_||76;D3;FD CB %d 70+8*%c(0..7)
+altd ioi bit %c, (hl)|r2ka|_|_|0,1,2,3,4,5,6,7|76;D3;CB 70+8*%c
+altd ioi bit %c, (hl)|r3k|_|_|0,1,2,3,4,5,6,7|76;D3;CB 70+8*%c
+altd ioi bit %c, (hl)|r4k|_|_|0,1,2,3,4,5,6,7|76;D3;CB 70+8*%c
+altd ioi bit %c, (hl)|r5k|_|_|0,1,2,3,4,5,6,7|76;D3;CB 70+8*%c
+altd ioi bit %c, (ix)|r2ka|_|_|0,1,2,3,4,5,6,7|76;D3;DD CB 00 70+8*%c
+altd ioi bit %c, (ix)|r3k|_|_|0,1,2,3,4,5,6,7|76;D3;DD CB 00 70+8*%c
+altd ioi bit %c, (ix)|r4k|_|_|0,1,2,3,4,5,6,7|76;D3;DD CB 00 70+8*%c
+altd ioi bit %c, (ix)|r5k|_|_|0,1,2,3,4,5,6,7|76;D3;DD CB 00 70+8*%c
+altd ioi bit %c, (ix+%d)|r2ka|_|_|0,1,2,3,4,5,6,7|76;D3;DD CB %d 70+8*%c
+altd ioi bit %c, (ix+%d)|r3k|_|_|0,1,2,3,4,5,6,7|76;D3;DD CB %d 70+8*%c
+altd ioi bit %c, (ix+%d)|r4k|_|_|0,1,2,3,4,5,6,7|76;D3;DD CB %d 70+8*%c
+altd ioi bit %c, (ix+%d)|r5k|_|_|0,1,2,3,4,5,6,7|76;D3;DD CB %d 70+8*%c
+altd ioi bit %c, (iy)|r2ka|_|_|0,1,2,3,4,5,6,7|76;D3;FD CB 00 70+8*%c
+altd ioi bit %c, (iy)|r3k|_|_|0,1,2,3,4,5,6,7|76;D3;FD CB 00 70+8*%c
+altd ioi bit %c, (iy)|r4k|_|_|0,1,2,3,4,5,6,7|76;D3;FD CB 00 70+8*%c
+altd ioi bit %c, (iy)|r5k|_|_|0,1,2,3,4,5,6,7|76;D3;FD CB 00 70+8*%c
+altd ioi bit %c, (iy+%d)|r2ka|_|_|0,1,2,3,4,5,6,7|76;D3;FD CB %d 70+8*%c
+altd ioi bit %c, (iy+%d)|r3k|_|_|0,1,2,3,4,5,6,7|76;D3;FD CB %d 70+8*%c
+altd ioi bit %c, (iy+%d)|r4k|_|_|0,1,2,3,4,5,6,7|76;D3;FD CB %d 70+8*%c
+altd ioi bit %c, (iy+%d)|r5k|_|_|0,1,2,3,4,5,6,7|76;D3;FD CB %d 70+8*%c
 altd ioi cmp (hl)|r2ka|_|_||76;D3;BE
 altd ioi cmp (hl)|r3k|_|_||76;D3;BE
 altd ioi cmp (hl)|r4k|_|_||76;D3;7F BE
@@ -6351,38 +6351,38 @@ altd pop py|r4k|_|_||76;ED E1
 altd pop py|r5k|_|_||76;ED E1
 altd pop pz|r4k|_|_||76;ED F1
 altd pop pz|r5k|_|_||76;ED F1
-altd res %c, a|r2ka|_|_||76;CB 135+8*%c(0..7)
-altd res %c, a|r3k|_|_||76;CB 135+8*%c(0..7)
-altd res %c, a|r4k|_|_||76;CB 135+8*%c(0..7)
-altd res %c, a|r5k|_|_||76;CB 135+8*%c(0..7)
-altd res %c, b|r2ka|_|_||76;CB 128+8*%c(0..7)
-altd res %c, b|r3k|_|_||76;CB 128+8*%c(0..7)
-altd res %c, b|r4k|_|_||76;CB 128+8*%c(0..7)
-altd res %c, b|r5k|_|_||76;CB 128+8*%c(0..7)
-altd res %c, c|r2ka|_|_||76;CB 129+8*%c(0..7)
-altd res %c, c|r3k|_|_||76;CB 129+8*%c(0..7)
-altd res %c, c|r4k|_|_||76;CB 129+8*%c(0..7)
-altd res %c, c|r5k|_|_||76;CB 129+8*%c(0..7)
-altd res %c, d|r2ka|_|_||76;CB 130+8*%c(0..7)
-altd res %c, d|r3k|_|_||76;CB 130+8*%c(0..7)
-altd res %c, d|r4k|_|_||76;CB 130+8*%c(0..7)
-altd res %c, d|r5k|_|_||76;CB 130+8*%c(0..7)
-altd res %c, e|r2ka|_|_||76;CB 131+8*%c(0..7)
-altd res %c, e|r3k|_|_||76;CB 131+8*%c(0..7)
-altd res %c, e|r4k|_|_||76;CB 131+8*%c(0..7)
-altd res %c, e|r5k|_|_||76;CB 131+8*%c(0..7)
-altd res %c, h|r2ka|_|_||76;CB 132+8*%c(0..7)
-altd res %c, h|r3k|_|_||76;CB 132+8*%c(0..7)
-altd res %c, h|r4k|_|_||76;CB 132+8*%c(0..7)
-altd res %c, h|r5k|_|_||76;CB 132+8*%c(0..7)
-altd res %c, l|r2ka|_|_||76;CB 133+8*%c(0..7)
-altd res %c, l|r3k|_|_||76;CB 133+8*%c(0..7)
-altd res %c, l|r4k|_|_||76;CB 133+8*%c(0..7)
-altd res %c, l|r5k|_|_||76;CB 133+8*%c(0..7)
-altd rl %c, bcde|r4k|_|_||76;DD %c(1,2,4)==1?0x68:%c==2?0x69:%c==4?0x6B:0x6F
-altd rl %c, bcde|r5k|_|_||76;DD %c(1,2,4)==1?0x68:%c==2?0x69:%c==4?0x6B:0x6F
-altd rl %c, jkhl|r4k|_|_||76;FD %c(1,2,4)==1?0x68:%c==2?0x69:%c==4?0x6B:0x6F
-altd rl %c, jkhl|r5k|_|_||76;FD %c(1,2,4)==1?0x68:%c==2?0x69:%c==4?0x6B:0x6F
+altd res %c, a|r2ka|_|_|0,1,2,3,4,5,6,7|76;CB 135+8*%c
+altd res %c, a|r3k|_|_|0,1,2,3,4,5,6,7|76;CB 135+8*%c
+altd res %c, a|r4k|_|_|0,1,2,3,4,5,6,7|76;CB 135+8*%c
+altd res %c, a|r5k|_|_|0,1,2,3,4,5,6,7|76;CB 135+8*%c
+altd res %c, b|r2ka|_|_|0,1,2,3,4,5,6,7|76;CB 128+8*%c
+altd res %c, b|r3k|_|_|0,1,2,3,4,5,6,7|76;CB 128+8*%c
+altd res %c, b|r4k|_|_|0,1,2,3,4,5,6,7|76;CB 128+8*%c
+altd res %c, b|r5k|_|_|0,1,2,3,4,5,6,7|76;CB 128+8*%c
+altd res %c, c|r2ka|_|_|0,1,2,3,4,5,6,7|76;CB 129+8*%c
+altd res %c, c|r3k|_|_|0,1,2,3,4,5,6,7|76;CB 129+8*%c
+altd res %c, c|r4k|_|_|0,1,2,3,4,5,6,7|76;CB 129+8*%c
+altd res %c, c|r5k|_|_|0,1,2,3,4,5,6,7|76;CB 129+8*%c
+altd res %c, d|r2ka|_|_|0,1,2,3,4,5,6,7|76;CB 130+8*%c
+altd res %c, d|r3k|_|_|0,1,2,3,4,5,6,7|76;CB 130+8*%c
+altd res %c, d|r4k|_|_|0,1,2,3,4,5,6,7|76;CB 130+8*%c
+altd res %c, d|r5k|_|_|0,1,2,3,4,5,6,7|76;CB 130+8*%c
+altd res %c, e|r2ka|_|_|0,1,2,3,4,5,6,7|76;CB 131+8*%c
+altd res %c, e|r3k|_|_|0,1,2,3,4,5,6,7|76;CB 131+8*%c
+altd res %c, e|r4k|_|_|0,1,2,3,4,5,6,7|76;CB 131+8*%c
+altd res %c, e|r5k|_|_|0,1,2,3,4,5,6,7|76;CB 131+8*%c
+altd res %c, h|r2ka|_|_|0,1,2,3,4,5,6,7|76;CB 132+8*%c
+altd res %c, h|r3k|_|_|0,1,2,3,4,5,6,7|76;CB 132+8*%c
+altd res %c, h|r4k|_|_|0,1,2,3,4,5,6,7|76;CB 132+8*%c
+altd res %c, h|r5k|_|_|0,1,2,3,4,5,6,7|76;CB 132+8*%c
+altd res %c, l|r2ka|_|_|0,1,2,3,4,5,6,7|76;CB 133+8*%c
+altd res %c, l|r3k|_|_|0,1,2,3,4,5,6,7|76;CB 133+8*%c
+altd res %c, l|r4k|_|_|0,1,2,3,4,5,6,7|76;CB 133+8*%c
+altd res %c, l|r5k|_|_|0,1,2,3,4,5,6,7|76;CB 133+8*%c
+altd rl %c, bcde|r4k|_|_|1,2,4|76;DD %c==1?0x68:%c==2?0x69:%c==4?0x6B:0x6F
+altd rl %c, bcde|r5k|_|_|1,2,4|76;DD %c==1?0x68:%c==2?0x69:%c==4?0x6B:0x6F
+altd rl %c, jkhl|r4k|_|_|1,2,4|76;FD %c==1?0x68:%c==2?0x69:%c==4?0x6B:0x6F
+altd rl %c, jkhl|r5k|_|_|1,2,4|76;FD %c==1?0x68:%c==2?0x69:%c==4?0x6B:0x6F
 altd rl (hl)|r2ka|_|_||76;CB 16
 altd rl (hl)|r3k|_|_||76;CB 16
 altd rl (hl)|r4k|_|_||76;CB 16
@@ -6443,10 +6443,10 @@ altd rla|r2ka|_|_||76;17
 altd rla|r3k|_|_||76;17
 altd rla|r4k|_|_||76;17
 altd rla|r5k|_|_||76;17
-altd rlc %c, bcde|r4k|_|_||76;DD %c(1,2,4)==1?0x48:%c==2?0x49:%c==4?0x4B:0x4F
-altd rlc %c, bcde|r5k|_|_||76;DD %c(1,2,4)==1?0x48:%c==2?0x49:%c==4?0x4B:0x4F
-altd rlc %c, jkhl|r4k|_|_||76;FD %c(1,2,4)==1?0x48:%c==2?0x49:%c==4?0x4B:0x4F
-altd rlc %c, jkhl|r5k|_|_||76;FD %c(1,2,4)==1?0x48:%c==2?0x49:%c==4?0x4B:0x4F
+altd rlc %c, bcde|r4k|_|_|1,2,4|76;DD %c==1?0x48:%c==2?0x49:%c==4?0x4B:0x4F
+altd rlc %c, bcde|r5k|_|_|1,2,4|76;DD %c==1?0x48:%c==2?0x49:%c==4?0x4B:0x4F
+altd rlc %c, jkhl|r4k|_|_|1,2,4|76;FD %c==1?0x48:%c==2?0x49:%c==4?0x4B:0x4F
+altd rlc %c, jkhl|r5k|_|_|1,2,4|76;FD %c==1?0x48:%c==2?0x49:%c==4?0x4B:0x4F
 altd rlc (hl)|r2ka|_|_||76;CB 06
 altd rlc (hl)|r3k|_|_||76;CB 06
 altd rlc (hl)|r4k|_|_||76;CB 06
@@ -6503,10 +6503,10 @@ altd rlca|r2ka|_|_||76;07
 altd rlca|r3k|_|_||76;07
 altd rlca|r4k|_|_||76;07
 altd rlca|r5k|_|_||76;07
-altd rr %c, bcde|r4k|_|_||76;DD %c(1,2,4)==1?0x78:%c==2?0x79:%c==4?0x7B:0x7F
-altd rr %c, bcde|r5k|_|_||76;DD %c(1,2,4)==1?0x78:%c==2?0x79:%c==4?0x7B:0x7F
-altd rr %c, jkhl|r4k|_|_||76;FD %c(1,2,4)==1?0x78:%c==2?0x79:%c==4?0x7B:0x7F
-altd rr %c, jkhl|r5k|_|_||76;FD %c(1,2,4)==1?0x78:%c==2?0x79:%c==4?0x7B:0x7F
+altd rr %c, bcde|r4k|_|_|1,2,4|76;DD %c==1?0x78:%c==2?0x79:%c==4?0x7B:0x7F
+altd rr %c, bcde|r5k|_|_|1,2,4|76;DD %c==1?0x78:%c==2?0x79:%c==4?0x7B:0x7F
+altd rr %c, jkhl|r4k|_|_|1,2,4|76;FD %c==1?0x78:%c==2?0x79:%c==4?0x7B:0x7F
+altd rr %c, jkhl|r5k|_|_|1,2,4|76;FD %c==1?0x78:%c==2?0x79:%c==4?0x7B:0x7F
 altd rr (hl)|r2ka|_|_||76;CB 1E
 altd rr (hl)|r3k|_|_||76;CB 1E
 altd rr (hl)|r4k|_|_||76;CB 1E
@@ -6569,10 +6569,10 @@ altd rra|r2ka|_|_||76;1F
 altd rra|r3k|_|_||76;1F
 altd rra|r4k|_|_||76;1F
 altd rra|r5k|_|_||76;1F
-altd rrc %c, bcde|r4k|_|_||76;DD %c(1,2,4)==1?0x58:%c==2?0x59:%c==4?0x5B:0x5F
-altd rrc %c, bcde|r5k|_|_||76;DD %c(1,2,4)==1?0x58:%c==2?0x59:%c==4?0x5B:0x5F
-altd rrc %c, jkhl|r4k|_|_||76;FD %c(1,2,4)==1?0x58:%c==2?0x59:%c==4?0x5B:0x5F
-altd rrc %c, jkhl|r5k|_|_||76;FD %c(1,2,4)==1?0x58:%c==2?0x59:%c==4?0x5B:0x5F
+altd rrc %c, bcde|r4k|_|_|1,2,4|76;DD %c==1?0x58:%c==2?0x59:%c==4?0x5B:0x5F
+altd rrc %c, bcde|r5k|_|_|1,2,4|76;DD %c==1?0x58:%c==2?0x59:%c==4?0x5B:0x5F
+altd rrc %c, jkhl|r4k|_|_|1,2,4|76;FD %c==1?0x58:%c==2?0x59:%c==4?0x5B:0x5F
+altd rrc %c, jkhl|r5k|_|_|1,2,4|76;FD %c==1?0x58:%c==2?0x59:%c==4?0x5B:0x5F
 altd rrc (hl)|r2ka|_|_||76;CB 0E
 altd rrc (hl)|r3k|_|_||76;CB 0E
 altd rrc (hl)|r4k|_|_||76;CB 0E
@@ -6771,38 +6771,38 @@ altd scf|r2ka|_|_||76;37
 altd scf|r3k|_|_||76;37
 altd scf|r4k|_|_||76;37
 altd scf|r5k|_|_||76;37
-altd set %c, a|r2ka|_|_||76;CB 199+8*%c(0..7)
-altd set %c, a|r3k|_|_||76;CB 199+8*%c(0..7)
-altd set %c, a|r4k|_|_||76;CB 199+8*%c(0..7)
-altd set %c, a|r5k|_|_||76;CB 199+8*%c(0..7)
-altd set %c, b|r2ka|_|_||76;CB 192+8*%c(0..7)
-altd set %c, b|r3k|_|_||76;CB 192+8*%c(0..7)
-altd set %c, b|r4k|_|_||76;CB 192+8*%c(0..7)
-altd set %c, b|r5k|_|_||76;CB 192+8*%c(0..7)
-altd set %c, c|r2ka|_|_||76;CB 193+8*%c(0..7)
-altd set %c, c|r3k|_|_||76;CB 193+8*%c(0..7)
-altd set %c, c|r4k|_|_||76;CB 193+8*%c(0..7)
-altd set %c, c|r5k|_|_||76;CB 193+8*%c(0..7)
-altd set %c, d|r2ka|_|_||76;CB 194+8*%c(0..7)
-altd set %c, d|r3k|_|_||76;CB 194+8*%c(0..7)
-altd set %c, d|r4k|_|_||76;CB 194+8*%c(0..7)
-altd set %c, d|r5k|_|_||76;CB 194+8*%c(0..7)
-altd set %c, e|r2ka|_|_||76;CB 195+8*%c(0..7)
-altd set %c, e|r3k|_|_||76;CB 195+8*%c(0..7)
-altd set %c, e|r4k|_|_||76;CB 195+8*%c(0..7)
-altd set %c, e|r5k|_|_||76;CB 195+8*%c(0..7)
-altd set %c, h|r2ka|_|_||76;CB 196+8*%c(0..7)
-altd set %c, h|r3k|_|_||76;CB 196+8*%c(0..7)
-altd set %c, h|r4k|_|_||76;CB 196+8*%c(0..7)
-altd set %c, h|r5k|_|_||76;CB 196+8*%c(0..7)
-altd set %c, l|r2ka|_|_||76;CB 197+8*%c(0..7)
-altd set %c, l|r3k|_|_||76;CB 197+8*%c(0..7)
-altd set %c, l|r4k|_|_||76;CB 197+8*%c(0..7)
-altd set %c, l|r5k|_|_||76;CB 197+8*%c(0..7)
-altd sla %c, bcde|r4k|_|_||76;DD %c(1,2,4)==1?0x88:%c==2?0x89:%c==4?0x8B:0x8F
-altd sla %c, bcde|r5k|_|_||76;DD %c(1,2,4)==1?0x88:%c==2?0x89:%c==4?0x8B:0x8F
-altd sla %c, jkhl|r4k|_|_||76;FD %c(1,2,4)==1?0x88:%c==2?0x89:%c==4?0x8B:0x8F
-altd sla %c, jkhl|r5k|_|_||76;FD %c(1,2,4)==1?0x88:%c==2?0x89:%c==4?0x8B:0x8F
+altd set %c, a|r2ka|_|_|0,1,2,3,4,5,6,7|76;CB 199+8*%c
+altd set %c, a|r3k|_|_|0,1,2,3,4,5,6,7|76;CB 199+8*%c
+altd set %c, a|r4k|_|_|0,1,2,3,4,5,6,7|76;CB 199+8*%c
+altd set %c, a|r5k|_|_|0,1,2,3,4,5,6,7|76;CB 199+8*%c
+altd set %c, b|r2ka|_|_|0,1,2,3,4,5,6,7|76;CB 192+8*%c
+altd set %c, b|r3k|_|_|0,1,2,3,4,5,6,7|76;CB 192+8*%c
+altd set %c, b|r4k|_|_|0,1,2,3,4,5,6,7|76;CB 192+8*%c
+altd set %c, b|r5k|_|_|0,1,2,3,4,5,6,7|76;CB 192+8*%c
+altd set %c, c|r2ka|_|_|0,1,2,3,4,5,6,7|76;CB 193+8*%c
+altd set %c, c|r3k|_|_|0,1,2,3,4,5,6,7|76;CB 193+8*%c
+altd set %c, c|r4k|_|_|0,1,2,3,4,5,6,7|76;CB 193+8*%c
+altd set %c, c|r5k|_|_|0,1,2,3,4,5,6,7|76;CB 193+8*%c
+altd set %c, d|r2ka|_|_|0,1,2,3,4,5,6,7|76;CB 194+8*%c
+altd set %c, d|r3k|_|_|0,1,2,3,4,5,6,7|76;CB 194+8*%c
+altd set %c, d|r4k|_|_|0,1,2,3,4,5,6,7|76;CB 194+8*%c
+altd set %c, d|r5k|_|_|0,1,2,3,4,5,6,7|76;CB 194+8*%c
+altd set %c, e|r2ka|_|_|0,1,2,3,4,5,6,7|76;CB 195+8*%c
+altd set %c, e|r3k|_|_|0,1,2,3,4,5,6,7|76;CB 195+8*%c
+altd set %c, e|r4k|_|_|0,1,2,3,4,5,6,7|76;CB 195+8*%c
+altd set %c, e|r5k|_|_|0,1,2,3,4,5,6,7|76;CB 195+8*%c
+altd set %c, h|r2ka|_|_|0,1,2,3,4,5,6,7|76;CB 196+8*%c
+altd set %c, h|r3k|_|_|0,1,2,3,4,5,6,7|76;CB 196+8*%c
+altd set %c, h|r4k|_|_|0,1,2,3,4,5,6,7|76;CB 196+8*%c
+altd set %c, h|r5k|_|_|0,1,2,3,4,5,6,7|76;CB 196+8*%c
+altd set %c, l|r2ka|_|_|0,1,2,3,4,5,6,7|76;CB 197+8*%c
+altd set %c, l|r3k|_|_|0,1,2,3,4,5,6,7|76;CB 197+8*%c
+altd set %c, l|r4k|_|_|0,1,2,3,4,5,6,7|76;CB 197+8*%c
+altd set %c, l|r5k|_|_|0,1,2,3,4,5,6,7|76;CB 197+8*%c
+altd sla %c, bcde|r4k|_|_|1,2,4|76;DD %c==1?0x88:%c==2?0x89:%c==4?0x8B:0x8F
+altd sla %c, bcde|r5k|_|_|1,2,4|76;DD %c==1?0x88:%c==2?0x89:%c==4?0x8B:0x8F
+altd sla %c, jkhl|r4k|_|_|1,2,4|76;FD %c==1?0x88:%c==2?0x89:%c==4?0x8B:0x8F
+altd sla %c, jkhl|r5k|_|_|1,2,4|76;FD %c==1?0x88:%c==2?0x89:%c==4?0x8B:0x8F
 altd sla (hl)|r2ka|_|_||76;CB 26
 altd sla (hl)|r3k|_|_||76;CB 26
 altd sla (hl)|r4k|_|_||76;CB 26
@@ -6851,14 +6851,14 @@ altd sla l|r2ka|_|_||76;CB 25
 altd sla l|r3k|_|_||76;CB 25
 altd sla l|r4k|_|_||76;CB 25
 altd sla l|r5k|_|_||76;CB 25
-altd sll %c, bcde|r4k|_|_||76;DD %c(1,2,4)==1?0xA8:%c==2?0xA9:%c==4?0xAB:0xAF
-altd sll %c, bcde|r5k|_|_||76;DD %c(1,2,4)==1?0xA8:%c==2?0xA9:%c==4?0xAB:0xAF
-altd sll %c, jkhl|r4k|_|_||76;FD %c(1,2,4)==1?0xA8:%c==2?0xA9:%c==4?0xAB:0xAF
-altd sll %c, jkhl|r5k|_|_||76;FD %c(1,2,4)==1?0xA8:%c==2?0xA9:%c==4?0xAB:0xAF
-altd sra %c, bcde|r4k|_|_||76;DD %c(1,2,4)==1?0x98:%c==2?0x99:%c==4?0x9B:0x9F
-altd sra %c, bcde|r5k|_|_||76;DD %c(1,2,4)==1?0x98:%c==2?0x99:%c==4?0x9B:0x9F
-altd sra %c, jkhl|r4k|_|_||76;FD %c(1,2,4)==1?0x98:%c==2?0x99:%c==4?0x9B:0x9F
-altd sra %c, jkhl|r5k|_|_||76;FD %c(1,2,4)==1?0x98:%c==2?0x99:%c==4?0x9B:0x9F
+altd sll %c, bcde|r4k|_|_|1,2,4|76;DD %c==1?0xA8:%c==2?0xA9:%c==4?0xAB:0xAF
+altd sll %c, bcde|r5k|_|_|1,2,4|76;DD %c==1?0xA8:%c==2?0xA9:%c==4?0xAB:0xAF
+altd sll %c, jkhl|r4k|_|_|1,2,4|76;FD %c==1?0xA8:%c==2?0xA9:%c==4?0xAB:0xAF
+altd sll %c, jkhl|r5k|_|_|1,2,4|76;FD %c==1?0xA8:%c==2?0xA9:%c==4?0xAB:0xAF
+altd sra %c, bcde|r4k|_|_|1,2,4|76;DD %c==1?0x98:%c==2?0x99:%c==4?0x9B:0x9F
+altd sra %c, bcde|r5k|_|_|1,2,4|76;DD %c==1?0x98:%c==2?0x99:%c==4?0x9B:0x9F
+altd sra %c, jkhl|r4k|_|_|1,2,4|76;FD %c==1?0x98:%c==2?0x99:%c==4?0x9B:0x9F
+altd sra %c, jkhl|r5k|_|_|1,2,4|76;FD %c==1?0x98:%c==2?0x99:%c==4?0x9B:0x9F
 altd sra (hl)|r2ka|_|_||76;CB 2E
 altd sra (hl)|r3k|_|_||76;CB 2E
 altd sra (hl)|r4k|_|_||76;CB 2E
@@ -6907,10 +6907,10 @@ altd sra l|r2ka|_|_||76;CB 2D
 altd sra l|r3k|_|_||76;CB 2D
 altd sra l|r4k|_|_||76;CB 2D
 altd sra l|r5k|_|_||76;CB 2D
-altd srl %c, bcde|r4k|_|_||76;DD %c(1,2,4)==1?0xB8:%c==2?0xB9:%c==4?0xBB:0xBF
-altd srl %c, bcde|r5k|_|_||76;DD %c(1,2,4)==1?0xB8:%c==2?0xB9:%c==4?0xBB:0xBF
-altd srl %c, jkhl|r4k|_|_||76;FD %c(1,2,4)==1?0xB8:%c==2?0xB9:%c==4?0xBB:0xBF
-altd srl %c, jkhl|r5k|_|_||76;FD %c(1,2,4)==1?0xB8:%c==2?0xB9:%c==4?0xBB:0xBF
+altd srl %c, bcde|r4k|_|_|1,2,4|76;DD %c==1?0xB8:%c==2?0xB9:%c==4?0xBB:0xBF
+altd srl %c, bcde|r5k|_|_|1,2,4|76;DD %c==1?0xB8:%c==2?0xB9:%c==4?0xBB:0xBF
+altd srl %c, jkhl|r4k|_|_|1,2,4|76;FD %c==1?0xB8:%c==2?0xB9:%c==4?0xBB:0xBF
+altd srl %c, jkhl|r5k|_|_|1,2,4|76;FD %c==1?0xB8:%c==2?0xB9:%c==4?0xBB:0xBF
 altd srl (hl)|r2ka|_|_||76;CB 3E
 altd srl (hl)|r3k|_|_||76;CB 3E
 altd srl (hl)|r4k|_|_||76;CB 3E
@@ -8111,215 +8111,215 @@ arhl|z180|_|_||CB 2C;CB 1D
 arhl|z80|_|_||CB 2C;CB 1D
 arhl|z80_strict|_|_||CB 2C;CB 1D
 arhl|z80n|_|_||CB 2C;CB 1D
-bit %c, (ahl)|kc160|_|_||52;CB 70+8*%c(0..7)
-bit %c, (aix)|kc160|_|_||52;DD CB 00 70+8*%c(0..7)
-bit %c, (aix+%d)|kc160|_|_||52;DD CB %d 70+8*%c(0..7)
-bit %c, (aiy)|kc160|_|_||52;FD CB 00 70+8*%c(0..7)
-bit %c, (aiy+%d)|kc160|_|_||52;FD CB %d 70+8*%c(0..7)
-bit %c, (hl)|ez80|_|_||CB 70+8*%c(0..7)
-bit %c, (hl)|ez80_z80|_|_||CB 70+8*%c(0..7)
-bit %c, (hl)|gbz80|_|_||CB 70+8*%c(0..7)
-bit %c, (hl)|kc160|_|_||CB 70+8*%c(0..7)
-bit %c, (hl)|kc160_z80|_|_||CB 70+8*%c(0..7)
-bit %c, (hl)|r2ka|_|_||CB 70+8*%c(0..7)
-bit %c, (hl)|r3k|_|_||CB 70+8*%c(0..7)
-bit %c, (hl)|r4k|_|_||CB 70+8*%c(0..7)
-bit %c, (hl)|r5k|_|_||CB 70+8*%c(0..7)
-bit %c, (hl)|r800|_|_||CB 70+8*%c(0..7)
-bit %c, (hl)|z180|_|_||CB 70+8*%c(0..7)
-bit %c, (hl)|z80|_|_||CB 70+8*%c(0..7)
-bit %c, (hl)|z80_strict|_|_||CB 70+8*%c(0..7)
-bit %c, (hl)|z80n|_|_||CB 70+8*%c(0..7)
-bit %c, (ix)|ez80|_|_||DD CB 00 70+8*%c(0..7)
-bit %c, (ix)|ez80_z80|_|_||DD CB 00 70+8*%c(0..7)
-bit %c, (ix)|kc160|_|_||DD CB 00 70+8*%c(0..7)
-bit %c, (ix)|kc160_z80|_|_||DD CB 00 70+8*%c(0..7)
-bit %c, (ix)|r2ka|_|_||DD CB 00 70+8*%c(0..7)
-bit %c, (ix)|r3k|_|_||DD CB 00 70+8*%c(0..7)
-bit %c, (ix)|r4k|_|_||DD CB 00 70+8*%c(0..7)
-bit %c, (ix)|r5k|_|_||DD CB 00 70+8*%c(0..7)
-bit %c, (ix)|r800|_|_||DD CB 00 70+8*%c(0..7)
-bit %c, (ix)|z180|_|_||DD CB 00 70+8*%c(0..7)
-bit %c, (ix)|z80|_|_||DD CB 00 70+8*%c(0..7)
-bit %c, (ix)|z80_strict|_|_||DD CB 00 70+8*%c(0..7)
-bit %c, (ix)|z80n|_|_||DD CB 00 70+8*%c(0..7)
-bit %c, (ix+%d)|ez80|_|_||DD CB %d 70+8*%c(0..7)
-bit %c, (ix+%d)|ez80_z80|_|_||DD CB %d 70+8*%c(0..7)
-bit %c, (ix+%d)|kc160|_|_||DD CB %d 70+8*%c(0..7)
-bit %c, (ix+%d)|kc160_z80|_|_||DD CB %d 70+8*%c(0..7)
-bit %c, (ix+%d)|r2ka|_|_||DD CB %d 70+8*%c(0..7)
-bit %c, (ix+%d)|r3k|_|_||DD CB %d 70+8*%c(0..7)
-bit %c, (ix+%d)|r4k|_|_||DD CB %d 70+8*%c(0..7)
-bit %c, (ix+%d)|r5k|_|_||DD CB %d 70+8*%c(0..7)
-bit %c, (ix+%d)|r800|_|_||DD CB %d 70+8*%c(0..7)
-bit %c, (ix+%d)|z180|_|_||DD CB %d 70+8*%c(0..7)
-bit %c, (ix+%d)|z80|_|_||DD CB %d 70+8*%c(0..7)
-bit %c, (ix+%d)|z80_strict|_|_||DD CB %d 70+8*%c(0..7)
-bit %c, (ix+%d)|z80n|_|_||DD CB %d 70+8*%c(0..7)
-bit %c, (iy)|ez80|_|_||FD CB 00 70+8*%c(0..7)
-bit %c, (iy)|ez80_z80|_|_||FD CB 00 70+8*%c(0..7)
-bit %c, (iy)|kc160|_|_||FD CB 00 70+8*%c(0..7)
-bit %c, (iy)|kc160_z80|_|_||FD CB 00 70+8*%c(0..7)
-bit %c, (iy)|r2ka|_|_||FD CB 00 70+8*%c(0..7)
-bit %c, (iy)|r3k|_|_||FD CB 00 70+8*%c(0..7)
-bit %c, (iy)|r4k|_|_||FD CB 00 70+8*%c(0..7)
-bit %c, (iy)|r5k|_|_||FD CB 00 70+8*%c(0..7)
-bit %c, (iy)|r800|_|_||FD CB 00 70+8*%c(0..7)
-bit %c, (iy)|z180|_|_||FD CB 00 70+8*%c(0..7)
-bit %c, (iy)|z80|_|_||FD CB 00 70+8*%c(0..7)
-bit %c, (iy)|z80_strict|_|_||FD CB 00 70+8*%c(0..7)
-bit %c, (iy)|z80n|_|_||FD CB 00 70+8*%c(0..7)
-bit %c, (iy+%d)|ez80|_|_||FD CB %d 70+8*%c(0..7)
-bit %c, (iy+%d)|ez80_z80|_|_||FD CB %d 70+8*%c(0..7)
-bit %c, (iy+%d)|kc160|_|_||FD CB %d 70+8*%c(0..7)
-bit %c, (iy+%d)|kc160_z80|_|_||FD CB %d 70+8*%c(0..7)
-bit %c, (iy+%d)|r2ka|_|_||FD CB %d 70+8*%c(0..7)
-bit %c, (iy+%d)|r3k|_|_||FD CB %d 70+8*%c(0..7)
-bit %c, (iy+%d)|r4k|_|_||FD CB %d 70+8*%c(0..7)
-bit %c, (iy+%d)|r5k|_|_||FD CB %d 70+8*%c(0..7)
-bit %c, (iy+%d)|r800|_|_||FD CB %d 70+8*%c(0..7)
-bit %c, (iy+%d)|z180|_|_||FD CB %d 70+8*%c(0..7)
-bit %c, (iy+%d)|z80|_|_||FD CB %d 70+8*%c(0..7)
-bit %c, (iy+%d)|z80_strict|_|_||FD CB %d 70+8*%c(0..7)
-bit %c, (iy+%d)|z80n|_|_||FD CB %d 70+8*%c(0..7)
-bit %c, (phl)|kc160|_|_||5B;CB 70+8*%c(0..7)
-bit %c, (pix)|kc160|_|_||5B;DD CB 00 70+8*%c(0..7)
-bit %c, (pix+%d)|kc160|_|_||5B;DD CB %d 70+8*%c(0..7)
-bit %c, (piy)|kc160|_|_||5B;FD CB 00 70+8*%c(0..7)
-bit %c, (piy+%d)|kc160|_|_||5B;FD CB %d 70+8*%c(0..7)
-bit %c, (xhl)|kc160|_|_||40;CB 70+8*%c(0..7)
-bit %c, (xix)|kc160|_|_||40;DD CB 00 70+8*%c(0..7)
-bit %c, (xix+%d)|kc160|_|_||40;DD CB %d 70+8*%c(0..7)
-bit %c, (xiy)|kc160|_|_||40;FD CB 00 70+8*%c(0..7)
-bit %c, (xiy+%d)|kc160|_|_||40;FD CB %d 70+8*%c(0..7)
-bit %c, (yhl)|kc160|_|_||49;CB 70+8*%c(0..7)
-bit %c, (yix)|kc160|_|_||49;DD CB 00 70+8*%c(0..7)
-bit %c, (yix+%d)|kc160|_|_||49;DD CB %d 70+8*%c(0..7)
-bit %c, (yiy)|kc160|_|_||49;FD CB 00 70+8*%c(0..7)
-bit %c, (yiy+%d)|kc160|_|_||49;FD CB %d 70+8*%c(0..7)
-bit %c, (zhl)|kc160|_|_||7F;CB 70+8*%c(0..7)
-bit %c, (zix)|kc160|_|_||7F;DD CB 00 70+8*%c(0..7)
-bit %c, (zix+%d)|kc160|_|_||7F;DD CB %d 70+8*%c(0..7)
-bit %c, (ziy)|kc160|_|_||7F;FD CB 00 70+8*%c(0..7)
-bit %c, (ziy+%d)|kc160|_|_||7F;FD CB %d 70+8*%c(0..7)
-bit %c, a|ez80|_|_||CB 71+8*%c(0..7)
-bit %c, a|ez80_z80|_|_||CB 71+8*%c(0..7)
-bit %c, a|gbz80|_|_||CB 71+8*%c(0..7)
-bit %c, a|kc160|_|_||CB 71+8*%c(0..7)
-bit %c, a|kc160_z80|_|_||CB 71+8*%c(0..7)
-bit %c, a|r2ka|_|_||CB 71+8*%c(0..7)
-bit %c, a|r3k|_|_||CB 71+8*%c(0..7)
-bit %c, a|r4k|_|_||CB 71+8*%c(0..7)
-bit %c, a|r5k|_|_||CB 71+8*%c(0..7)
-bit %c, a|r800|_|_||CB 71+8*%c(0..7)
-bit %c, a|z180|_|_||CB 71+8*%c(0..7)
-bit %c, a|z80|_|_||CB 71+8*%c(0..7)
-bit %c, a|z80_strict|_|_||CB 71+8*%c(0..7)
-bit %c, a|z80n|_|_||CB 71+8*%c(0..7)
-bit %c, b|ez80|_|_||CB 64+8*%c(0..7)
-bit %c, b|ez80_z80|_|_||CB 64+8*%c(0..7)
-bit %c, b|gbz80|_|_||CB 64+8*%c(0..7)
-bit %c, b|kc160|_|_||CB 64+8*%c(0..7)
-bit %c, b|kc160_z80|_|_||CB 64+8*%c(0..7)
-bit %c, b|r2ka|_|_||CB 64+8*%c(0..7)
-bit %c, b|r3k|_|_||CB 64+8*%c(0..7)
-bit %c, b|r4k|_|_||CB 64+8*%c(0..7)
-bit %c, b|r5k|_|_||CB 64+8*%c(0..7)
-bit %c, b|r800|_|_||CB 64+8*%c(0..7)
-bit %c, b|z180|_|_||CB 64+8*%c(0..7)
-bit %c, b|z80|_|_||CB 64+8*%c(0..7)
-bit %c, b|z80_strict|_|_||CB 64+8*%c(0..7)
-bit %c, b|z80n|_|_||CB 64+8*%c(0..7)
-bit %c, c|ez80|_|_||CB 65+8*%c(0..7)
-bit %c, c|ez80_z80|_|_||CB 65+8*%c(0..7)
-bit %c, c|gbz80|_|_||CB 65+8*%c(0..7)
-bit %c, c|kc160|_|_||CB 65+8*%c(0..7)
-bit %c, c|kc160_z80|_|_||CB 65+8*%c(0..7)
-bit %c, c|r2ka|_|_||CB 65+8*%c(0..7)
-bit %c, c|r3k|_|_||CB 65+8*%c(0..7)
-bit %c, c|r4k|_|_||CB 65+8*%c(0..7)
-bit %c, c|r5k|_|_||CB 65+8*%c(0..7)
-bit %c, c|r800|_|_||CB 65+8*%c(0..7)
-bit %c, c|z180|_|_||CB 65+8*%c(0..7)
-bit %c, c|z80|_|_||CB 65+8*%c(0..7)
-bit %c, c|z80_strict|_|_||CB 65+8*%c(0..7)
-bit %c, c|z80n|_|_||CB 65+8*%c(0..7)
-bit %c, d|ez80|_|_||CB 66+8*%c(0..7)
-bit %c, d|ez80_z80|_|_||CB 66+8*%c(0..7)
-bit %c, d|gbz80|_|_||CB 66+8*%c(0..7)
-bit %c, d|kc160|_|_||CB 66+8*%c(0..7)
-bit %c, d|kc160_z80|_|_||CB 66+8*%c(0..7)
-bit %c, d|r2ka|_|_||CB 66+8*%c(0..7)
-bit %c, d|r3k|_|_||CB 66+8*%c(0..7)
-bit %c, d|r4k|_|_||CB 66+8*%c(0..7)
-bit %c, d|r5k|_|_||CB 66+8*%c(0..7)
-bit %c, d|r800|_|_||CB 66+8*%c(0..7)
-bit %c, d|z180|_|_||CB 66+8*%c(0..7)
-bit %c, d|z80|_|_||CB 66+8*%c(0..7)
-bit %c, d|z80_strict|_|_||CB 66+8*%c(0..7)
-bit %c, d|z80n|_|_||CB 66+8*%c(0..7)
-bit %c, e|ez80|_|_||CB 67+8*%c(0..7)
-bit %c, e|ez80_z80|_|_||CB 67+8*%c(0..7)
-bit %c, e|gbz80|_|_||CB 67+8*%c(0..7)
-bit %c, e|kc160|_|_||CB 67+8*%c(0..7)
-bit %c, e|kc160_z80|_|_||CB 67+8*%c(0..7)
-bit %c, e|r2ka|_|_||CB 67+8*%c(0..7)
-bit %c, e|r3k|_|_||CB 67+8*%c(0..7)
-bit %c, e|r4k|_|_||CB 67+8*%c(0..7)
-bit %c, e|r5k|_|_||CB 67+8*%c(0..7)
-bit %c, e|r800|_|_||CB 67+8*%c(0..7)
-bit %c, e|z180|_|_||CB 67+8*%c(0..7)
-bit %c, e|z80|_|_||CB 67+8*%c(0..7)
-bit %c, e|z80_strict|_|_||CB 67+8*%c(0..7)
-bit %c, e|z80n|_|_||CB 67+8*%c(0..7)
-bit %c, h|ez80|_|_||CB 68+8*%c(0..7)
-bit %c, h|ez80_z80|_|_||CB 68+8*%c(0..7)
-bit %c, h|gbz80|_|_||CB 68+8*%c(0..7)
-bit %c, h|kc160|_|_||CB 68+8*%c(0..7)
-bit %c, h|kc160_z80|_|_||CB 68+8*%c(0..7)
-bit %c, h|r2ka|_|_||CB 68+8*%c(0..7)
-bit %c, h|r3k|_|_||CB 68+8*%c(0..7)
-bit %c, h|r4k|_|_||CB 68+8*%c(0..7)
-bit %c, h|r5k|_|_||CB 68+8*%c(0..7)
-bit %c, h|r800|_|_||CB 68+8*%c(0..7)
-bit %c, h|z180|_|_||CB 68+8*%c(0..7)
-bit %c, h|z80|_|_||CB 68+8*%c(0..7)
-bit %c, h|z80_strict|_|_||CB 68+8*%c(0..7)
-bit %c, h|z80n|_|_||CB 68+8*%c(0..7)
-bit %c, l|ez80|_|_||CB 69+8*%c(0..7)
-bit %c, l|ez80_z80|_|_||CB 69+8*%c(0..7)
-bit %c, l|gbz80|_|_||CB 69+8*%c(0..7)
-bit %c, l|kc160|_|_||CB 69+8*%c(0..7)
-bit %c, l|kc160_z80|_|_||CB 69+8*%c(0..7)
-bit %c, l|r2ka|_|_||CB 69+8*%c(0..7)
-bit %c, l|r3k|_|_||CB 69+8*%c(0..7)
-bit %c, l|r4k|_|_||CB 69+8*%c(0..7)
-bit %c, l|r5k|_|_||CB 69+8*%c(0..7)
-bit %c, l|r800|_|_||CB 69+8*%c(0..7)
-bit %c, l|z180|_|_||CB 69+8*%c(0..7)
-bit %c, l|z80|_|_||CB 69+8*%c(0..7)
-bit %c, l|z80_strict|_|_||CB 69+8*%c(0..7)
-bit %c, l|z80n|_|_||CB 69+8*%c(0..7)
-bit.l %c, (hl)|ez80_z80|_|_||49;CB 70+8*%c(0..7)
-bit.l %c, (ix)|ez80_z80|_|_||49;DD CB 00 70+8*%c(0..7)
-bit.l %c, (ix+%d)|ez80_z80|_|_||49;DD CB %d 70+8*%c(0..7)
-bit.l %c, (iy)|ez80_z80|_|_||49;FD CB 00 70+8*%c(0..7)
-bit.l %c, (iy+%d)|ez80_z80|_|_||49;FD CB %d 70+8*%c(0..7)
-bit.lis %c, (hl)|ez80_z80|_|_||49;CB 70+8*%c(0..7)
-bit.lis %c, (ix)|ez80_z80|_|_||49;DD CB 00 70+8*%c(0..7)
-bit.lis %c, (ix+%d)|ez80_z80|_|_||49;DD CB %d 70+8*%c(0..7)
-bit.lis %c, (iy)|ez80_z80|_|_||49;FD CB 00 70+8*%c(0..7)
-bit.lis %c, (iy+%d)|ez80_z80|_|_||49;FD CB %d 70+8*%c(0..7)
-bit.s %c, (hl)|ez80|_|_||52;CB 70+8*%c(0..7)
-bit.s %c, (ix)|ez80|_|_||52;DD CB 00 70+8*%c(0..7)
-bit.s %c, (ix+%d)|ez80|_|_||52;DD CB %d 70+8*%c(0..7)
-bit.s %c, (iy)|ez80|_|_||52;FD CB 00 70+8*%c(0..7)
-bit.s %c, (iy+%d)|ez80|_|_||52;FD CB %d 70+8*%c(0..7)
-bit.sil %c, (hl)|ez80|_|_||52;CB 70+8*%c(0..7)
-bit.sil %c, (ix)|ez80|_|_||52;DD CB 00 70+8*%c(0..7)
-bit.sil %c, (ix+%d)|ez80|_|_||52;DD CB %d 70+8*%c(0..7)
-bit.sil %c, (iy)|ez80|_|_||52;FD CB 00 70+8*%c(0..7)
-bit.sil %c, (iy+%d)|ez80|_|_||52;FD CB %d 70+8*%c(0..7)
+bit %c, (ahl)|kc160|_|_|0,1,2,3,4,5,6,7|52;CB 70+8*%c
+bit %c, (aix)|kc160|_|_|0,1,2,3,4,5,6,7|52;DD CB 00 70+8*%c
+bit %c, (aix+%d)|kc160|_|_|0,1,2,3,4,5,6,7|52;DD CB %d 70+8*%c
+bit %c, (aiy)|kc160|_|_|0,1,2,3,4,5,6,7|52;FD CB 00 70+8*%c
+bit %c, (aiy+%d)|kc160|_|_|0,1,2,3,4,5,6,7|52;FD CB %d 70+8*%c
+bit %c, (hl)|ez80|_|_|0,1,2,3,4,5,6,7|CB 70+8*%c
+bit %c, (hl)|ez80_z80|_|_|0,1,2,3,4,5,6,7|CB 70+8*%c
+bit %c, (hl)|gbz80|_|_|0,1,2,3,4,5,6,7|CB 70+8*%c
+bit %c, (hl)|kc160|_|_|0,1,2,3,4,5,6,7|CB 70+8*%c
+bit %c, (hl)|kc160_z80|_|_|0,1,2,3,4,5,6,7|CB 70+8*%c
+bit %c, (hl)|r2ka|_|_|0,1,2,3,4,5,6,7|CB 70+8*%c
+bit %c, (hl)|r3k|_|_|0,1,2,3,4,5,6,7|CB 70+8*%c
+bit %c, (hl)|r4k|_|_|0,1,2,3,4,5,6,7|CB 70+8*%c
+bit %c, (hl)|r5k|_|_|0,1,2,3,4,5,6,7|CB 70+8*%c
+bit %c, (hl)|r800|_|_|0,1,2,3,4,5,6,7|CB 70+8*%c
+bit %c, (hl)|z180|_|_|0,1,2,3,4,5,6,7|CB 70+8*%c
+bit %c, (hl)|z80|_|_|0,1,2,3,4,5,6,7|CB 70+8*%c
+bit %c, (hl)|z80_strict|_|_|0,1,2,3,4,5,6,7|CB 70+8*%c
+bit %c, (hl)|z80n|_|_|0,1,2,3,4,5,6,7|CB 70+8*%c
+bit %c, (ix)|ez80|_|_|0,1,2,3,4,5,6,7|DD CB 00 70+8*%c
+bit %c, (ix)|ez80_z80|_|_|0,1,2,3,4,5,6,7|DD CB 00 70+8*%c
+bit %c, (ix)|kc160|_|_|0,1,2,3,4,5,6,7|DD CB 00 70+8*%c
+bit %c, (ix)|kc160_z80|_|_|0,1,2,3,4,5,6,7|DD CB 00 70+8*%c
+bit %c, (ix)|r2ka|_|_|0,1,2,3,4,5,6,7|DD CB 00 70+8*%c
+bit %c, (ix)|r3k|_|_|0,1,2,3,4,5,6,7|DD CB 00 70+8*%c
+bit %c, (ix)|r4k|_|_|0,1,2,3,4,5,6,7|DD CB 00 70+8*%c
+bit %c, (ix)|r5k|_|_|0,1,2,3,4,5,6,7|DD CB 00 70+8*%c
+bit %c, (ix)|r800|_|_|0,1,2,3,4,5,6,7|DD CB 00 70+8*%c
+bit %c, (ix)|z180|_|_|0,1,2,3,4,5,6,7|DD CB 00 70+8*%c
+bit %c, (ix)|z80|_|_|0,1,2,3,4,5,6,7|DD CB 00 70+8*%c
+bit %c, (ix)|z80_strict|_|_|0,1,2,3,4,5,6,7|DD CB 00 70+8*%c
+bit %c, (ix)|z80n|_|_|0,1,2,3,4,5,6,7|DD CB 00 70+8*%c
+bit %c, (ix+%d)|ez80|_|_|0,1,2,3,4,5,6,7|DD CB %d 70+8*%c
+bit %c, (ix+%d)|ez80_z80|_|_|0,1,2,3,4,5,6,7|DD CB %d 70+8*%c
+bit %c, (ix+%d)|kc160|_|_|0,1,2,3,4,5,6,7|DD CB %d 70+8*%c
+bit %c, (ix+%d)|kc160_z80|_|_|0,1,2,3,4,5,6,7|DD CB %d 70+8*%c
+bit %c, (ix+%d)|r2ka|_|_|0,1,2,3,4,5,6,7|DD CB %d 70+8*%c
+bit %c, (ix+%d)|r3k|_|_|0,1,2,3,4,5,6,7|DD CB %d 70+8*%c
+bit %c, (ix+%d)|r4k|_|_|0,1,2,3,4,5,6,7|DD CB %d 70+8*%c
+bit %c, (ix+%d)|r5k|_|_|0,1,2,3,4,5,6,7|DD CB %d 70+8*%c
+bit %c, (ix+%d)|r800|_|_|0,1,2,3,4,5,6,7|DD CB %d 70+8*%c
+bit %c, (ix+%d)|z180|_|_|0,1,2,3,4,5,6,7|DD CB %d 70+8*%c
+bit %c, (ix+%d)|z80|_|_|0,1,2,3,4,5,6,7|DD CB %d 70+8*%c
+bit %c, (ix+%d)|z80_strict|_|_|0,1,2,3,4,5,6,7|DD CB %d 70+8*%c
+bit %c, (ix+%d)|z80n|_|_|0,1,2,3,4,5,6,7|DD CB %d 70+8*%c
+bit %c, (iy)|ez80|_|_|0,1,2,3,4,5,6,7|FD CB 00 70+8*%c
+bit %c, (iy)|ez80_z80|_|_|0,1,2,3,4,5,6,7|FD CB 00 70+8*%c
+bit %c, (iy)|kc160|_|_|0,1,2,3,4,5,6,7|FD CB 00 70+8*%c
+bit %c, (iy)|kc160_z80|_|_|0,1,2,3,4,5,6,7|FD CB 00 70+8*%c
+bit %c, (iy)|r2ka|_|_|0,1,2,3,4,5,6,7|FD CB 00 70+8*%c
+bit %c, (iy)|r3k|_|_|0,1,2,3,4,5,6,7|FD CB 00 70+8*%c
+bit %c, (iy)|r4k|_|_|0,1,2,3,4,5,6,7|FD CB 00 70+8*%c
+bit %c, (iy)|r5k|_|_|0,1,2,3,4,5,6,7|FD CB 00 70+8*%c
+bit %c, (iy)|r800|_|_|0,1,2,3,4,5,6,7|FD CB 00 70+8*%c
+bit %c, (iy)|z180|_|_|0,1,2,3,4,5,6,7|FD CB 00 70+8*%c
+bit %c, (iy)|z80|_|_|0,1,2,3,4,5,6,7|FD CB 00 70+8*%c
+bit %c, (iy)|z80_strict|_|_|0,1,2,3,4,5,6,7|FD CB 00 70+8*%c
+bit %c, (iy)|z80n|_|_|0,1,2,3,4,5,6,7|FD CB 00 70+8*%c
+bit %c, (iy+%d)|ez80|_|_|0,1,2,3,4,5,6,7|FD CB %d 70+8*%c
+bit %c, (iy+%d)|ez80_z80|_|_|0,1,2,3,4,5,6,7|FD CB %d 70+8*%c
+bit %c, (iy+%d)|kc160|_|_|0,1,2,3,4,5,6,7|FD CB %d 70+8*%c
+bit %c, (iy+%d)|kc160_z80|_|_|0,1,2,3,4,5,6,7|FD CB %d 70+8*%c
+bit %c, (iy+%d)|r2ka|_|_|0,1,2,3,4,5,6,7|FD CB %d 70+8*%c
+bit %c, (iy+%d)|r3k|_|_|0,1,2,3,4,5,6,7|FD CB %d 70+8*%c
+bit %c, (iy+%d)|r4k|_|_|0,1,2,3,4,5,6,7|FD CB %d 70+8*%c
+bit %c, (iy+%d)|r5k|_|_|0,1,2,3,4,5,6,7|FD CB %d 70+8*%c
+bit %c, (iy+%d)|r800|_|_|0,1,2,3,4,5,6,7|FD CB %d 70+8*%c
+bit %c, (iy+%d)|z180|_|_|0,1,2,3,4,5,6,7|FD CB %d 70+8*%c
+bit %c, (iy+%d)|z80|_|_|0,1,2,3,4,5,6,7|FD CB %d 70+8*%c
+bit %c, (iy+%d)|z80_strict|_|_|0,1,2,3,4,5,6,7|FD CB %d 70+8*%c
+bit %c, (iy+%d)|z80n|_|_|0,1,2,3,4,5,6,7|FD CB %d 70+8*%c
+bit %c, (phl)|kc160|_|_|0,1,2,3,4,5,6,7|5B;CB 70+8*%c
+bit %c, (pix)|kc160|_|_|0,1,2,3,4,5,6,7|5B;DD CB 00 70+8*%c
+bit %c, (pix+%d)|kc160|_|_|0,1,2,3,4,5,6,7|5B;DD CB %d 70+8*%c
+bit %c, (piy)|kc160|_|_|0,1,2,3,4,5,6,7|5B;FD CB 00 70+8*%c
+bit %c, (piy+%d)|kc160|_|_|0,1,2,3,4,5,6,7|5B;FD CB %d 70+8*%c
+bit %c, (xhl)|kc160|_|_|0,1,2,3,4,5,6,7|40;CB 70+8*%c
+bit %c, (xix)|kc160|_|_|0,1,2,3,4,5,6,7|40;DD CB 00 70+8*%c
+bit %c, (xix+%d)|kc160|_|_|0,1,2,3,4,5,6,7|40;DD CB %d 70+8*%c
+bit %c, (xiy)|kc160|_|_|0,1,2,3,4,5,6,7|40;FD CB 00 70+8*%c
+bit %c, (xiy+%d)|kc160|_|_|0,1,2,3,4,5,6,7|40;FD CB %d 70+8*%c
+bit %c, (yhl)|kc160|_|_|0,1,2,3,4,5,6,7|49;CB 70+8*%c
+bit %c, (yix)|kc160|_|_|0,1,2,3,4,5,6,7|49;DD CB 00 70+8*%c
+bit %c, (yix+%d)|kc160|_|_|0,1,2,3,4,5,6,7|49;DD CB %d 70+8*%c
+bit %c, (yiy)|kc160|_|_|0,1,2,3,4,5,6,7|49;FD CB 00 70+8*%c
+bit %c, (yiy+%d)|kc160|_|_|0,1,2,3,4,5,6,7|49;FD CB %d 70+8*%c
+bit %c, (zhl)|kc160|_|_|0,1,2,3,4,5,6,7|7F;CB 70+8*%c
+bit %c, (zix)|kc160|_|_|0,1,2,3,4,5,6,7|7F;DD CB 00 70+8*%c
+bit %c, (zix+%d)|kc160|_|_|0,1,2,3,4,5,6,7|7F;DD CB %d 70+8*%c
+bit %c, (ziy)|kc160|_|_|0,1,2,3,4,5,6,7|7F;FD CB 00 70+8*%c
+bit %c, (ziy+%d)|kc160|_|_|0,1,2,3,4,5,6,7|7F;FD CB %d 70+8*%c
+bit %c, a|ez80|_|_|0,1,2,3,4,5,6,7|CB 71+8*%c
+bit %c, a|ez80_z80|_|_|0,1,2,3,4,5,6,7|CB 71+8*%c
+bit %c, a|gbz80|_|_|0,1,2,3,4,5,6,7|CB 71+8*%c
+bit %c, a|kc160|_|_|0,1,2,3,4,5,6,7|CB 71+8*%c
+bit %c, a|kc160_z80|_|_|0,1,2,3,4,5,6,7|CB 71+8*%c
+bit %c, a|r2ka|_|_|0,1,2,3,4,5,6,7|CB 71+8*%c
+bit %c, a|r3k|_|_|0,1,2,3,4,5,6,7|CB 71+8*%c
+bit %c, a|r4k|_|_|0,1,2,3,4,5,6,7|CB 71+8*%c
+bit %c, a|r5k|_|_|0,1,2,3,4,5,6,7|CB 71+8*%c
+bit %c, a|r800|_|_|0,1,2,3,4,5,6,7|CB 71+8*%c
+bit %c, a|z180|_|_|0,1,2,3,4,5,6,7|CB 71+8*%c
+bit %c, a|z80|_|_|0,1,2,3,4,5,6,7|CB 71+8*%c
+bit %c, a|z80_strict|_|_|0,1,2,3,4,5,6,7|CB 71+8*%c
+bit %c, a|z80n|_|_|0,1,2,3,4,5,6,7|CB 71+8*%c
+bit %c, b|ez80|_|_|0,1,2,3,4,5,6,7|CB 64+8*%c
+bit %c, b|ez80_z80|_|_|0,1,2,3,4,5,6,7|CB 64+8*%c
+bit %c, b|gbz80|_|_|0,1,2,3,4,5,6,7|CB 64+8*%c
+bit %c, b|kc160|_|_|0,1,2,3,4,5,6,7|CB 64+8*%c
+bit %c, b|kc160_z80|_|_|0,1,2,3,4,5,6,7|CB 64+8*%c
+bit %c, b|r2ka|_|_|0,1,2,3,4,5,6,7|CB 64+8*%c
+bit %c, b|r3k|_|_|0,1,2,3,4,5,6,7|CB 64+8*%c
+bit %c, b|r4k|_|_|0,1,2,3,4,5,6,7|CB 64+8*%c
+bit %c, b|r5k|_|_|0,1,2,3,4,5,6,7|CB 64+8*%c
+bit %c, b|r800|_|_|0,1,2,3,4,5,6,7|CB 64+8*%c
+bit %c, b|z180|_|_|0,1,2,3,4,5,6,7|CB 64+8*%c
+bit %c, b|z80|_|_|0,1,2,3,4,5,6,7|CB 64+8*%c
+bit %c, b|z80_strict|_|_|0,1,2,3,4,5,6,7|CB 64+8*%c
+bit %c, b|z80n|_|_|0,1,2,3,4,5,6,7|CB 64+8*%c
+bit %c, c|ez80|_|_|0,1,2,3,4,5,6,7|CB 65+8*%c
+bit %c, c|ez80_z80|_|_|0,1,2,3,4,5,6,7|CB 65+8*%c
+bit %c, c|gbz80|_|_|0,1,2,3,4,5,6,7|CB 65+8*%c
+bit %c, c|kc160|_|_|0,1,2,3,4,5,6,7|CB 65+8*%c
+bit %c, c|kc160_z80|_|_|0,1,2,3,4,5,6,7|CB 65+8*%c
+bit %c, c|r2ka|_|_|0,1,2,3,4,5,6,7|CB 65+8*%c
+bit %c, c|r3k|_|_|0,1,2,3,4,5,6,7|CB 65+8*%c
+bit %c, c|r4k|_|_|0,1,2,3,4,5,6,7|CB 65+8*%c
+bit %c, c|r5k|_|_|0,1,2,3,4,5,6,7|CB 65+8*%c
+bit %c, c|r800|_|_|0,1,2,3,4,5,6,7|CB 65+8*%c
+bit %c, c|z180|_|_|0,1,2,3,4,5,6,7|CB 65+8*%c
+bit %c, c|z80|_|_|0,1,2,3,4,5,6,7|CB 65+8*%c
+bit %c, c|z80_strict|_|_|0,1,2,3,4,5,6,7|CB 65+8*%c
+bit %c, c|z80n|_|_|0,1,2,3,4,5,6,7|CB 65+8*%c
+bit %c, d|ez80|_|_|0,1,2,3,4,5,6,7|CB 66+8*%c
+bit %c, d|ez80_z80|_|_|0,1,2,3,4,5,6,7|CB 66+8*%c
+bit %c, d|gbz80|_|_|0,1,2,3,4,5,6,7|CB 66+8*%c
+bit %c, d|kc160|_|_|0,1,2,3,4,5,6,7|CB 66+8*%c
+bit %c, d|kc160_z80|_|_|0,1,2,3,4,5,6,7|CB 66+8*%c
+bit %c, d|r2ka|_|_|0,1,2,3,4,5,6,7|CB 66+8*%c
+bit %c, d|r3k|_|_|0,1,2,3,4,5,6,7|CB 66+8*%c
+bit %c, d|r4k|_|_|0,1,2,3,4,5,6,7|CB 66+8*%c
+bit %c, d|r5k|_|_|0,1,2,3,4,5,6,7|CB 66+8*%c
+bit %c, d|r800|_|_|0,1,2,3,4,5,6,7|CB 66+8*%c
+bit %c, d|z180|_|_|0,1,2,3,4,5,6,7|CB 66+8*%c
+bit %c, d|z80|_|_|0,1,2,3,4,5,6,7|CB 66+8*%c
+bit %c, d|z80_strict|_|_|0,1,2,3,4,5,6,7|CB 66+8*%c
+bit %c, d|z80n|_|_|0,1,2,3,4,5,6,7|CB 66+8*%c
+bit %c, e|ez80|_|_|0,1,2,3,4,5,6,7|CB 67+8*%c
+bit %c, e|ez80_z80|_|_|0,1,2,3,4,5,6,7|CB 67+8*%c
+bit %c, e|gbz80|_|_|0,1,2,3,4,5,6,7|CB 67+8*%c
+bit %c, e|kc160|_|_|0,1,2,3,4,5,6,7|CB 67+8*%c
+bit %c, e|kc160_z80|_|_|0,1,2,3,4,5,6,7|CB 67+8*%c
+bit %c, e|r2ka|_|_|0,1,2,3,4,5,6,7|CB 67+8*%c
+bit %c, e|r3k|_|_|0,1,2,3,4,5,6,7|CB 67+8*%c
+bit %c, e|r4k|_|_|0,1,2,3,4,5,6,7|CB 67+8*%c
+bit %c, e|r5k|_|_|0,1,2,3,4,5,6,7|CB 67+8*%c
+bit %c, e|r800|_|_|0,1,2,3,4,5,6,7|CB 67+8*%c
+bit %c, e|z180|_|_|0,1,2,3,4,5,6,7|CB 67+8*%c
+bit %c, e|z80|_|_|0,1,2,3,4,5,6,7|CB 67+8*%c
+bit %c, e|z80_strict|_|_|0,1,2,3,4,5,6,7|CB 67+8*%c
+bit %c, e|z80n|_|_|0,1,2,3,4,5,6,7|CB 67+8*%c
+bit %c, h|ez80|_|_|0,1,2,3,4,5,6,7|CB 68+8*%c
+bit %c, h|ez80_z80|_|_|0,1,2,3,4,5,6,7|CB 68+8*%c
+bit %c, h|gbz80|_|_|0,1,2,3,4,5,6,7|CB 68+8*%c
+bit %c, h|kc160|_|_|0,1,2,3,4,5,6,7|CB 68+8*%c
+bit %c, h|kc160_z80|_|_|0,1,2,3,4,5,6,7|CB 68+8*%c
+bit %c, h|r2ka|_|_|0,1,2,3,4,5,6,7|CB 68+8*%c
+bit %c, h|r3k|_|_|0,1,2,3,4,5,6,7|CB 68+8*%c
+bit %c, h|r4k|_|_|0,1,2,3,4,5,6,7|CB 68+8*%c
+bit %c, h|r5k|_|_|0,1,2,3,4,5,6,7|CB 68+8*%c
+bit %c, h|r800|_|_|0,1,2,3,4,5,6,7|CB 68+8*%c
+bit %c, h|z180|_|_|0,1,2,3,4,5,6,7|CB 68+8*%c
+bit %c, h|z80|_|_|0,1,2,3,4,5,6,7|CB 68+8*%c
+bit %c, h|z80_strict|_|_|0,1,2,3,4,5,6,7|CB 68+8*%c
+bit %c, h|z80n|_|_|0,1,2,3,4,5,6,7|CB 68+8*%c
+bit %c, l|ez80|_|_|0,1,2,3,4,5,6,7|CB 69+8*%c
+bit %c, l|ez80_z80|_|_|0,1,2,3,4,5,6,7|CB 69+8*%c
+bit %c, l|gbz80|_|_|0,1,2,3,4,5,6,7|CB 69+8*%c
+bit %c, l|kc160|_|_|0,1,2,3,4,5,6,7|CB 69+8*%c
+bit %c, l|kc160_z80|_|_|0,1,2,3,4,5,6,7|CB 69+8*%c
+bit %c, l|r2ka|_|_|0,1,2,3,4,5,6,7|CB 69+8*%c
+bit %c, l|r3k|_|_|0,1,2,3,4,5,6,7|CB 69+8*%c
+bit %c, l|r4k|_|_|0,1,2,3,4,5,6,7|CB 69+8*%c
+bit %c, l|r5k|_|_|0,1,2,3,4,5,6,7|CB 69+8*%c
+bit %c, l|r800|_|_|0,1,2,3,4,5,6,7|CB 69+8*%c
+bit %c, l|z180|_|_|0,1,2,3,4,5,6,7|CB 69+8*%c
+bit %c, l|z80|_|_|0,1,2,3,4,5,6,7|CB 69+8*%c
+bit %c, l|z80_strict|_|_|0,1,2,3,4,5,6,7|CB 69+8*%c
+bit %c, l|z80n|_|_|0,1,2,3,4,5,6,7|CB 69+8*%c
+bit.l %c, (hl)|ez80_z80|_|_|0,1,2,3,4,5,6,7|49;CB 70+8*%c
+bit.l %c, (ix)|ez80_z80|_|_|0,1,2,3,4,5,6,7|49;DD CB 00 70+8*%c
+bit.l %c, (ix+%d)|ez80_z80|_|_|0,1,2,3,4,5,6,7|49;DD CB %d 70+8*%c
+bit.l %c, (iy)|ez80_z80|_|_|0,1,2,3,4,5,6,7|49;FD CB 00 70+8*%c
+bit.l %c, (iy+%d)|ez80_z80|_|_|0,1,2,3,4,5,6,7|49;FD CB %d 70+8*%c
+bit.lis %c, (hl)|ez80_z80|_|_|0,1,2,3,4,5,6,7|49;CB 70+8*%c
+bit.lis %c, (ix)|ez80_z80|_|_|0,1,2,3,4,5,6,7|49;DD CB 00 70+8*%c
+bit.lis %c, (ix+%d)|ez80_z80|_|_|0,1,2,3,4,5,6,7|49;DD CB %d 70+8*%c
+bit.lis %c, (iy)|ez80_z80|_|_|0,1,2,3,4,5,6,7|49;FD CB 00 70+8*%c
+bit.lis %c, (iy+%d)|ez80_z80|_|_|0,1,2,3,4,5,6,7|49;FD CB %d 70+8*%c
+bit.s %c, (hl)|ez80|_|_|0,1,2,3,4,5,6,7|52;CB 70+8*%c
+bit.s %c, (ix)|ez80|_|_|0,1,2,3,4,5,6,7|52;DD CB 00 70+8*%c
+bit.s %c, (ix+%d)|ez80|_|_|0,1,2,3,4,5,6,7|52;DD CB %d 70+8*%c
+bit.s %c, (iy)|ez80|_|_|0,1,2,3,4,5,6,7|52;FD CB 00 70+8*%c
+bit.s %c, (iy+%d)|ez80|_|_|0,1,2,3,4,5,6,7|52;FD CB %d 70+8*%c
+bit.sil %c, (hl)|ez80|_|_|0,1,2,3,4,5,6,7|52;CB 70+8*%c
+bit.sil %c, (ix)|ez80|_|_|0,1,2,3,4,5,6,7|52;DD CB 00 70+8*%c
+bit.sil %c, (ix+%d)|ez80|_|_|0,1,2,3,4,5,6,7|52;DD CB %d 70+8*%c
+bit.sil %c, (iy)|ez80|_|_|0,1,2,3,4,5,6,7|52;FD CB 00 70+8*%c
+bit.sil %c, (iy+%d)|ez80|_|_|0,1,2,3,4,5,6,7|52;FD CB %d 70+8*%c
 bool hl|8080|_|_||F5;7C;B5;CA %t1 %t1;21 01 00;F1
 bool hl|8085|_|_||F5;7C;B5;CA %t1 %t1;21 01 00;F1
 bool hl|ez80|_|_||F5;7C;B5;28 %t1;21 01 00;F1
@@ -12274,15 +12274,15 @@ ibox a|r5k|_|_||ED 12
 idet|r3k|_|_||5B
 idet|r4k|_|_||5B
 idet|r5k|_|_||5B
-im %c|ez80|_|_||ED %c(0..2)==0?0x46:%c==1?0x56:0x5E
-im %c|ez80_z80|_|_||ED %c(0..2)==0?0x46:%c==1?0x56:0x5E
-im %c|kc160|_|_||ED %c(0..3)==0?0x46:%c==1?0x56:%c==2?0x5E:0x4E
-im %c|kc160_z80|_|_||ED %c(0..3)==0?0x46:%c==1?0x56:%c==2?0x5E:0x4E
-im %c|r800|_|_||ED %c(0..2)==0?0x46:%c==1?0x56:0x5E
-im %c|z180|_|_||ED %c(0..2)==0?0x46:%c==1?0x56:0x5E
-im %c|z80|_|_||ED %c(0..2)==0?0x46:%c==1?0x56:0x5E
-im %c|z80_strict|_|_||ED %c(0..2)==0?0x46:%c==1?0x56:0x5E
-im %c|z80n|_|_||ED %c(0..2)==0?0x46:%c==1?0x56:0x5E
+im %c|ez80|_|_|0,1,2|ED %c==0?0x46:%c==1?0x56:0x5E
+im %c|ez80_z80|_|_|0,1,2|ED %c==0?0x46:%c==1?0x56:0x5E
+im %c|kc160|_|_|0,1,2,3|ED %c==0?0x46:%c==1?0x56:%c==2?0x5E:0x4E
+im %c|kc160_z80|_|_|0,1,2,3|ED %c==0?0x46:%c==1?0x56:%c==2?0x5E:0x4E
+im %c|r800|_|_|0,1,2|ED %c==0?0x46:%c==1?0x56:0x5E
+im %c|z180|_|_|0,1,2|ED %c==0?0x46:%c==1?0x56:0x5E
+im %c|z80|_|_|0,1,2|ED %c==0?0x46:%c==1?0x56:0x5E
+im %c|z80_strict|_|_|0,1,2|ED %c==0?0x46:%c==1?0x56:0x5E
+im %c|z80n|_|_|0,1,2|ED %c==0?0x46:%c==1?0x56:0x5E
 in %n|8080|_|_||DB %n
 in %n|8085|_|_||DB %n
 in %n|ez80|_|_||DB %n
@@ -13633,26 +13633,26 @@ ioe altd and a, (iy+%d)|r2ka|_|_||DB;76;FD A6 %d
 ioe altd and a, (iy+%d)|r3k|_|_||DB;76;FD A6 %d
 ioe altd and a, (iy+%d)|r4k|_|_||DB;76;FD A6 %d
 ioe altd and a, (iy+%d)|r5k|_|_||DB;76;FD A6 %d
-ioe altd bit %c, (hl)|r2ka|_|_||DB;76;CB 70+8*%c(0..7)
-ioe altd bit %c, (hl)|r3k|_|_||DB;76;CB 70+8*%c(0..7)
-ioe altd bit %c, (hl)|r4k|_|_||DB;76;CB 70+8*%c(0..7)
-ioe altd bit %c, (hl)|r5k|_|_||DB;76;CB 70+8*%c(0..7)
-ioe altd bit %c, (ix)|r2ka|_|_||DB;76;DD CB 00 70+8*%c(0..7)
-ioe altd bit %c, (ix)|r3k|_|_||DB;76;DD CB 00 70+8*%c(0..7)
-ioe altd bit %c, (ix)|r4k|_|_||DB;76;DD CB 00 70+8*%c(0..7)
-ioe altd bit %c, (ix)|r5k|_|_||DB;76;DD CB 00 70+8*%c(0..7)
-ioe altd bit %c, (ix+%d)|r2ka|_|_||DB;76;DD CB %d 70+8*%c(0..7)
-ioe altd bit %c, (ix+%d)|r3k|_|_||DB;76;DD CB %d 70+8*%c(0..7)
-ioe altd bit %c, (ix+%d)|r4k|_|_||DB;76;DD CB %d 70+8*%c(0..7)
-ioe altd bit %c, (ix+%d)|r5k|_|_||DB;76;DD CB %d 70+8*%c(0..7)
-ioe altd bit %c, (iy)|r2ka|_|_||DB;76;FD CB 00 70+8*%c(0..7)
-ioe altd bit %c, (iy)|r3k|_|_||DB;76;FD CB 00 70+8*%c(0..7)
-ioe altd bit %c, (iy)|r4k|_|_||DB;76;FD CB 00 70+8*%c(0..7)
-ioe altd bit %c, (iy)|r5k|_|_||DB;76;FD CB 00 70+8*%c(0..7)
-ioe altd bit %c, (iy+%d)|r2ka|_|_||DB;76;FD CB %d 70+8*%c(0..7)
-ioe altd bit %c, (iy+%d)|r3k|_|_||DB;76;FD CB %d 70+8*%c(0..7)
-ioe altd bit %c, (iy+%d)|r4k|_|_||DB;76;FD CB %d 70+8*%c(0..7)
-ioe altd bit %c, (iy+%d)|r5k|_|_||DB;76;FD CB %d 70+8*%c(0..7)
+ioe altd bit %c, (hl)|r2ka|_|_|0,1,2,3,4,5,6,7|DB;76;CB 70+8*%c
+ioe altd bit %c, (hl)|r3k|_|_|0,1,2,3,4,5,6,7|DB;76;CB 70+8*%c
+ioe altd bit %c, (hl)|r4k|_|_|0,1,2,3,4,5,6,7|DB;76;CB 70+8*%c
+ioe altd bit %c, (hl)|r5k|_|_|0,1,2,3,4,5,6,7|DB;76;CB 70+8*%c
+ioe altd bit %c, (ix)|r2ka|_|_|0,1,2,3,4,5,6,7|DB;76;DD CB 00 70+8*%c
+ioe altd bit %c, (ix)|r3k|_|_|0,1,2,3,4,5,6,7|DB;76;DD CB 00 70+8*%c
+ioe altd bit %c, (ix)|r4k|_|_|0,1,2,3,4,5,6,7|DB;76;DD CB 00 70+8*%c
+ioe altd bit %c, (ix)|r5k|_|_|0,1,2,3,4,5,6,7|DB;76;DD CB 00 70+8*%c
+ioe altd bit %c, (ix+%d)|r2ka|_|_|0,1,2,3,4,5,6,7|DB;76;DD CB %d 70+8*%c
+ioe altd bit %c, (ix+%d)|r3k|_|_|0,1,2,3,4,5,6,7|DB;76;DD CB %d 70+8*%c
+ioe altd bit %c, (ix+%d)|r4k|_|_|0,1,2,3,4,5,6,7|DB;76;DD CB %d 70+8*%c
+ioe altd bit %c, (ix+%d)|r5k|_|_|0,1,2,3,4,5,6,7|DB;76;DD CB %d 70+8*%c
+ioe altd bit %c, (iy)|r2ka|_|_|0,1,2,3,4,5,6,7|DB;76;FD CB 00 70+8*%c
+ioe altd bit %c, (iy)|r3k|_|_|0,1,2,3,4,5,6,7|DB;76;FD CB 00 70+8*%c
+ioe altd bit %c, (iy)|r4k|_|_|0,1,2,3,4,5,6,7|DB;76;FD CB 00 70+8*%c
+ioe altd bit %c, (iy)|r5k|_|_|0,1,2,3,4,5,6,7|DB;76;FD CB 00 70+8*%c
+ioe altd bit %c, (iy+%d)|r2ka|_|_|0,1,2,3,4,5,6,7|DB;76;FD CB %d 70+8*%c
+ioe altd bit %c, (iy+%d)|r3k|_|_|0,1,2,3,4,5,6,7|DB;76;FD CB %d 70+8*%c
+ioe altd bit %c, (iy+%d)|r4k|_|_|0,1,2,3,4,5,6,7|DB;76;FD CB %d 70+8*%c
+ioe altd bit %c, (iy+%d)|r5k|_|_|0,1,2,3,4,5,6,7|DB;76;FD CB %d 70+8*%c
 ioe altd cmp (hl)|r2ka|_|_||DB;76;BE
 ioe altd cmp (hl)|r3k|_|_||DB;76;BE
 ioe altd cmp (hl)|r4k|_|_||DB;76;7F BE
@@ -14615,26 +14615,26 @@ ioe and a, (iy+%d)|r2ka|_|_||DB;FD A6 %d
 ioe and a, (iy+%d)|r3k|_|_||DB;FD A6 %d
 ioe and a, (iy+%d)|r4k|_|_||DB;FD A6 %d
 ioe and a, (iy+%d)|r5k|_|_||DB;FD A6 %d
-ioe bit %c, (hl)|r2ka|_|_||DB;CB 70+8*%c(0..7)
-ioe bit %c, (hl)|r3k|_|_||DB;CB 70+8*%c(0..7)
-ioe bit %c, (hl)|r4k|_|_||DB;CB 70+8*%c(0..7)
-ioe bit %c, (hl)|r5k|_|_||DB;CB 70+8*%c(0..7)
-ioe bit %c, (ix)|r2ka|_|_||DB;DD CB 00 70+8*%c(0..7)
-ioe bit %c, (ix)|r3k|_|_||DB;DD CB 00 70+8*%c(0..7)
-ioe bit %c, (ix)|r4k|_|_||DB;DD CB 00 70+8*%c(0..7)
-ioe bit %c, (ix)|r5k|_|_||DB;DD CB 00 70+8*%c(0..7)
-ioe bit %c, (ix+%d)|r2ka|_|_||DB;DD CB %d 70+8*%c(0..7)
-ioe bit %c, (ix+%d)|r3k|_|_||DB;DD CB %d 70+8*%c(0..7)
-ioe bit %c, (ix+%d)|r4k|_|_||DB;DD CB %d 70+8*%c(0..7)
-ioe bit %c, (ix+%d)|r5k|_|_||DB;DD CB %d 70+8*%c(0..7)
-ioe bit %c, (iy)|r2ka|_|_||DB;FD CB 00 70+8*%c(0..7)
-ioe bit %c, (iy)|r3k|_|_||DB;FD CB 00 70+8*%c(0..7)
-ioe bit %c, (iy)|r4k|_|_||DB;FD CB 00 70+8*%c(0..7)
-ioe bit %c, (iy)|r5k|_|_||DB;FD CB 00 70+8*%c(0..7)
-ioe bit %c, (iy+%d)|r2ka|_|_||DB;FD CB %d 70+8*%c(0..7)
-ioe bit %c, (iy+%d)|r3k|_|_||DB;FD CB %d 70+8*%c(0..7)
-ioe bit %c, (iy+%d)|r4k|_|_||DB;FD CB %d 70+8*%c(0..7)
-ioe bit %c, (iy+%d)|r5k|_|_||DB;FD CB %d 70+8*%c(0..7)
+ioe bit %c, (hl)|r2ka|_|_|0,1,2,3,4,5,6,7|DB;CB 70+8*%c
+ioe bit %c, (hl)|r3k|_|_|0,1,2,3,4,5,6,7|DB;CB 70+8*%c
+ioe bit %c, (hl)|r4k|_|_|0,1,2,3,4,5,6,7|DB;CB 70+8*%c
+ioe bit %c, (hl)|r5k|_|_|0,1,2,3,4,5,6,7|DB;CB 70+8*%c
+ioe bit %c, (ix)|r2ka|_|_|0,1,2,3,4,5,6,7|DB;DD CB 00 70+8*%c
+ioe bit %c, (ix)|r3k|_|_|0,1,2,3,4,5,6,7|DB;DD CB 00 70+8*%c
+ioe bit %c, (ix)|r4k|_|_|0,1,2,3,4,5,6,7|DB;DD CB 00 70+8*%c
+ioe bit %c, (ix)|r5k|_|_|0,1,2,3,4,5,6,7|DB;DD CB 00 70+8*%c
+ioe bit %c, (ix+%d)|r2ka|_|_|0,1,2,3,4,5,6,7|DB;DD CB %d 70+8*%c
+ioe bit %c, (ix+%d)|r3k|_|_|0,1,2,3,4,5,6,7|DB;DD CB %d 70+8*%c
+ioe bit %c, (ix+%d)|r4k|_|_|0,1,2,3,4,5,6,7|DB;DD CB %d 70+8*%c
+ioe bit %c, (ix+%d)|r5k|_|_|0,1,2,3,4,5,6,7|DB;DD CB %d 70+8*%c
+ioe bit %c, (iy)|r2ka|_|_|0,1,2,3,4,5,6,7|DB;FD CB 00 70+8*%c
+ioe bit %c, (iy)|r3k|_|_|0,1,2,3,4,5,6,7|DB;FD CB 00 70+8*%c
+ioe bit %c, (iy)|r4k|_|_|0,1,2,3,4,5,6,7|DB;FD CB 00 70+8*%c
+ioe bit %c, (iy)|r5k|_|_|0,1,2,3,4,5,6,7|DB;FD CB 00 70+8*%c
+ioe bit %c, (iy+%d)|r2ka|_|_|0,1,2,3,4,5,6,7|DB;FD CB %d 70+8*%c
+ioe bit %c, (iy+%d)|r3k|_|_|0,1,2,3,4,5,6,7|DB;FD CB %d 70+8*%c
+ioe bit %c, (iy+%d)|r4k|_|_|0,1,2,3,4,5,6,7|DB;FD CB %d 70+8*%c
+ioe bit %c, (iy+%d)|r5k|_|_|0,1,2,3,4,5,6,7|DB;FD CB %d 70+8*%c
 ioe cbm %n|r4k|_|_||DB;ED 00 %n
 ioe cbm %n|r5k|_|_||DB;ED 00 %n
 ioe clr (hl)|r2ka|_|_||DB;36 00
@@ -16181,26 +16181,26 @@ ioe or a, (iy+%d)|r2ka|_|_||DB;FD B6 %d
 ioe or a, (iy+%d)|r3k|_|_||DB;FD B6 %d
 ioe or a, (iy+%d)|r4k|_|_||DB;FD B6 %d
 ioe or a, (iy+%d)|r5k|_|_||DB;FD B6 %d
-ioe res %c, (hl)|r2ka|_|_||DB;CB 134+8*%c(0..7)
-ioe res %c, (hl)|r3k|_|_||DB;CB 134+8*%c(0..7)
-ioe res %c, (hl)|r4k|_|_||DB;CB 134+8*%c(0..7)
-ioe res %c, (hl)|r5k|_|_||DB;CB 134+8*%c(0..7)
-ioe res %c, (ix)|r2ka|_|_||DB;DD CB 00 134+8*%c(0..7)
-ioe res %c, (ix)|r3k|_|_||DB;DD CB 00 134+8*%c(0..7)
-ioe res %c, (ix)|r4k|_|_||DB;DD CB 00 134+8*%c(0..7)
-ioe res %c, (ix)|r5k|_|_||DB;DD CB 00 134+8*%c(0..7)
-ioe res %c, (ix+%d)|r2ka|_|_||DB;DD CB %d 134+8*%c(0..7)
-ioe res %c, (ix+%d)|r3k|_|_||DB;DD CB %d 134+8*%c(0..7)
-ioe res %c, (ix+%d)|r4k|_|_||DB;DD CB %d 134+8*%c(0..7)
-ioe res %c, (ix+%d)|r5k|_|_||DB;DD CB %d 134+8*%c(0..7)
-ioe res %c, (iy)|r2ka|_|_||DB;FD CB 00 134+8*%c(0..7)
-ioe res %c, (iy)|r3k|_|_||DB;FD CB 00 134+8*%c(0..7)
-ioe res %c, (iy)|r4k|_|_||DB;FD CB 00 134+8*%c(0..7)
-ioe res %c, (iy)|r5k|_|_||DB;FD CB 00 134+8*%c(0..7)
-ioe res %c, (iy+%d)|r2ka|_|_||DB;FD CB %d 134+8*%c(0..7)
-ioe res %c, (iy+%d)|r3k|_|_||DB;FD CB %d 134+8*%c(0..7)
-ioe res %c, (iy+%d)|r4k|_|_||DB;FD CB %d 134+8*%c(0..7)
-ioe res %c, (iy+%d)|r5k|_|_||DB;FD CB %d 134+8*%c(0..7)
+ioe res %c, (hl)|r2ka|_|_|0,1,2,3,4,5,6,7|DB;CB 134+8*%c
+ioe res %c, (hl)|r3k|_|_|0,1,2,3,4,5,6,7|DB;CB 134+8*%c
+ioe res %c, (hl)|r4k|_|_|0,1,2,3,4,5,6,7|DB;CB 134+8*%c
+ioe res %c, (hl)|r5k|_|_|0,1,2,3,4,5,6,7|DB;CB 134+8*%c
+ioe res %c, (ix)|r2ka|_|_|0,1,2,3,4,5,6,7|DB;DD CB 00 134+8*%c
+ioe res %c, (ix)|r3k|_|_|0,1,2,3,4,5,6,7|DB;DD CB 00 134+8*%c
+ioe res %c, (ix)|r4k|_|_|0,1,2,3,4,5,6,7|DB;DD CB 00 134+8*%c
+ioe res %c, (ix)|r5k|_|_|0,1,2,3,4,5,6,7|DB;DD CB 00 134+8*%c
+ioe res %c, (ix+%d)|r2ka|_|_|0,1,2,3,4,5,6,7|DB;DD CB %d 134+8*%c
+ioe res %c, (ix+%d)|r3k|_|_|0,1,2,3,4,5,6,7|DB;DD CB %d 134+8*%c
+ioe res %c, (ix+%d)|r4k|_|_|0,1,2,3,4,5,6,7|DB;DD CB %d 134+8*%c
+ioe res %c, (ix+%d)|r5k|_|_|0,1,2,3,4,5,6,7|DB;DD CB %d 134+8*%c
+ioe res %c, (iy)|r2ka|_|_|0,1,2,3,4,5,6,7|DB;FD CB 00 134+8*%c
+ioe res %c, (iy)|r3k|_|_|0,1,2,3,4,5,6,7|DB;FD CB 00 134+8*%c
+ioe res %c, (iy)|r4k|_|_|0,1,2,3,4,5,6,7|DB;FD CB 00 134+8*%c
+ioe res %c, (iy)|r5k|_|_|0,1,2,3,4,5,6,7|DB;FD CB 00 134+8*%c
+ioe res %c, (iy+%d)|r2ka|_|_|0,1,2,3,4,5,6,7|DB;FD CB %d 134+8*%c
+ioe res %c, (iy+%d)|r3k|_|_|0,1,2,3,4,5,6,7|DB;FD CB %d 134+8*%c
+ioe res %c, (iy+%d)|r4k|_|_|0,1,2,3,4,5,6,7|DB;FD CB %d 134+8*%c
+ioe res %c, (iy+%d)|r5k|_|_|0,1,2,3,4,5,6,7|DB;FD CB %d 134+8*%c
 ioe rl (hl)|r2ka|_|_||DB;CB 16
 ioe rl (hl)|r3k|_|_||DB;CB 16
 ioe rl (hl)|r4k|_|_||DB;CB 16
@@ -16365,26 +16365,26 @@ ioe sbc a, (iy+%d)|r2ka|_|_||DB;FD 9E %d
 ioe sbc a, (iy+%d)|r3k|_|_||DB;FD 9E %d
 ioe sbc a, (iy+%d)|r4k|_|_||DB;FD 9E %d
 ioe sbc a, (iy+%d)|r5k|_|_||DB;FD 9E %d
-ioe set %c, (hl)|r2ka|_|_||DB;CB 198+8*%c(0..7)
-ioe set %c, (hl)|r3k|_|_||DB;CB 198+8*%c(0..7)
-ioe set %c, (hl)|r4k|_|_||DB;CB 198+8*%c(0..7)
-ioe set %c, (hl)|r5k|_|_||DB;CB 198+8*%c(0..7)
-ioe set %c, (ix)|r2ka|_|_||DB;DD CB 00 198+8*%c(0..7)
-ioe set %c, (ix)|r3k|_|_||DB;DD CB 00 198+8*%c(0..7)
-ioe set %c, (ix)|r4k|_|_||DB;DD CB 00 198+8*%c(0..7)
-ioe set %c, (ix)|r5k|_|_||DB;DD CB 00 198+8*%c(0..7)
-ioe set %c, (ix+%d)|r2ka|_|_||DB;DD CB %d 198+8*%c(0..7)
-ioe set %c, (ix+%d)|r3k|_|_||DB;DD CB %d 198+8*%c(0..7)
-ioe set %c, (ix+%d)|r4k|_|_||DB;DD CB %d 198+8*%c(0..7)
-ioe set %c, (ix+%d)|r5k|_|_||DB;DD CB %d 198+8*%c(0..7)
-ioe set %c, (iy)|r2ka|_|_||DB;FD CB 00 198+8*%c(0..7)
-ioe set %c, (iy)|r3k|_|_||DB;FD CB 00 198+8*%c(0..7)
-ioe set %c, (iy)|r4k|_|_||DB;FD CB 00 198+8*%c(0..7)
-ioe set %c, (iy)|r5k|_|_||DB;FD CB 00 198+8*%c(0..7)
-ioe set %c, (iy+%d)|r2ka|_|_||DB;FD CB %d 198+8*%c(0..7)
-ioe set %c, (iy+%d)|r3k|_|_||DB;FD CB %d 198+8*%c(0..7)
-ioe set %c, (iy+%d)|r4k|_|_||DB;FD CB %d 198+8*%c(0..7)
-ioe set %c, (iy+%d)|r5k|_|_||DB;FD CB %d 198+8*%c(0..7)
+ioe set %c, (hl)|r2ka|_|_|0,1,2,3,4,5,6,7|DB;CB 198+8*%c
+ioe set %c, (hl)|r3k|_|_|0,1,2,3,4,5,6,7|DB;CB 198+8*%c
+ioe set %c, (hl)|r4k|_|_|0,1,2,3,4,5,6,7|DB;CB 198+8*%c
+ioe set %c, (hl)|r5k|_|_|0,1,2,3,4,5,6,7|DB;CB 198+8*%c
+ioe set %c, (ix)|r2ka|_|_|0,1,2,3,4,5,6,7|DB;DD CB 00 198+8*%c
+ioe set %c, (ix)|r3k|_|_|0,1,2,3,4,5,6,7|DB;DD CB 00 198+8*%c
+ioe set %c, (ix)|r4k|_|_|0,1,2,3,4,5,6,7|DB;DD CB 00 198+8*%c
+ioe set %c, (ix)|r5k|_|_|0,1,2,3,4,5,6,7|DB;DD CB 00 198+8*%c
+ioe set %c, (ix+%d)|r2ka|_|_|0,1,2,3,4,5,6,7|DB;DD CB %d 198+8*%c
+ioe set %c, (ix+%d)|r3k|_|_|0,1,2,3,4,5,6,7|DB;DD CB %d 198+8*%c
+ioe set %c, (ix+%d)|r4k|_|_|0,1,2,3,4,5,6,7|DB;DD CB %d 198+8*%c
+ioe set %c, (ix+%d)|r5k|_|_|0,1,2,3,4,5,6,7|DB;DD CB %d 198+8*%c
+ioe set %c, (iy)|r2ka|_|_|0,1,2,3,4,5,6,7|DB;FD CB 00 198+8*%c
+ioe set %c, (iy)|r3k|_|_|0,1,2,3,4,5,6,7|DB;FD CB 00 198+8*%c
+ioe set %c, (iy)|r4k|_|_|0,1,2,3,4,5,6,7|DB;FD CB 00 198+8*%c
+ioe set %c, (iy)|r5k|_|_|0,1,2,3,4,5,6,7|DB;FD CB 00 198+8*%c
+ioe set %c, (iy+%d)|r2ka|_|_|0,1,2,3,4,5,6,7|DB;FD CB %d 198+8*%c
+ioe set %c, (iy+%d)|r3k|_|_|0,1,2,3,4,5,6,7|DB;FD CB %d 198+8*%c
+ioe set %c, (iy+%d)|r4k|_|_|0,1,2,3,4,5,6,7|DB;FD CB %d 198+8*%c
+ioe set %c, (iy+%d)|r5k|_|_|0,1,2,3,4,5,6,7|DB;FD CB %d 198+8*%c
 ioe sla (hl)|r2ka|_|_||DB;CB 26
 ioe sla (hl)|r3k|_|_||DB;CB 26
 ioe sla (hl)|r4k|_|_||DB;CB 26
@@ -16949,26 +16949,26 @@ ioi altd and a, (iy+%d)|r2ka|_|_||D3;76;FD A6 %d
 ioi altd and a, (iy+%d)|r3k|_|_||D3;76;FD A6 %d
 ioi altd and a, (iy+%d)|r4k|_|_||D3;76;FD A6 %d
 ioi altd and a, (iy+%d)|r5k|_|_||D3;76;FD A6 %d
-ioi altd bit %c, (hl)|r2ka|_|_||D3;76;CB 70+8*%c(0..7)
-ioi altd bit %c, (hl)|r3k|_|_||D3;76;CB 70+8*%c(0..7)
-ioi altd bit %c, (hl)|r4k|_|_||D3;76;CB 70+8*%c(0..7)
-ioi altd bit %c, (hl)|r5k|_|_||D3;76;CB 70+8*%c(0..7)
-ioi altd bit %c, (ix)|r2ka|_|_||D3;76;DD CB 00 70+8*%c(0..7)
-ioi altd bit %c, (ix)|r3k|_|_||D3;76;DD CB 00 70+8*%c(0..7)
-ioi altd bit %c, (ix)|r4k|_|_||D3;76;DD CB 00 70+8*%c(0..7)
-ioi altd bit %c, (ix)|r5k|_|_||D3;76;DD CB 00 70+8*%c(0..7)
-ioi altd bit %c, (ix+%d)|r2ka|_|_||D3;76;DD CB %d 70+8*%c(0..7)
-ioi altd bit %c, (ix+%d)|r3k|_|_||D3;76;DD CB %d 70+8*%c(0..7)
-ioi altd bit %c, (ix+%d)|r4k|_|_||D3;76;DD CB %d 70+8*%c(0..7)
-ioi altd bit %c, (ix+%d)|r5k|_|_||D3;76;DD CB %d 70+8*%c(0..7)
-ioi altd bit %c, (iy)|r2ka|_|_||D3;76;FD CB 00 70+8*%c(0..7)
-ioi altd bit %c, (iy)|r3k|_|_||D3;76;FD CB 00 70+8*%c(0..7)
-ioi altd bit %c, (iy)|r4k|_|_||D3;76;FD CB 00 70+8*%c(0..7)
-ioi altd bit %c, (iy)|r5k|_|_||D3;76;FD CB 00 70+8*%c(0..7)
-ioi altd bit %c, (iy+%d)|r2ka|_|_||D3;76;FD CB %d 70+8*%c(0..7)
-ioi altd bit %c, (iy+%d)|r3k|_|_||D3;76;FD CB %d 70+8*%c(0..7)
-ioi altd bit %c, (iy+%d)|r4k|_|_||D3;76;FD CB %d 70+8*%c(0..7)
-ioi altd bit %c, (iy+%d)|r5k|_|_||D3;76;FD CB %d 70+8*%c(0..7)
+ioi altd bit %c, (hl)|r2ka|_|_|0,1,2,3,4,5,6,7|D3;76;CB 70+8*%c
+ioi altd bit %c, (hl)|r3k|_|_|0,1,2,3,4,5,6,7|D3;76;CB 70+8*%c
+ioi altd bit %c, (hl)|r4k|_|_|0,1,2,3,4,5,6,7|D3;76;CB 70+8*%c
+ioi altd bit %c, (hl)|r5k|_|_|0,1,2,3,4,5,6,7|D3;76;CB 70+8*%c
+ioi altd bit %c, (ix)|r2ka|_|_|0,1,2,3,4,5,6,7|D3;76;DD CB 00 70+8*%c
+ioi altd bit %c, (ix)|r3k|_|_|0,1,2,3,4,5,6,7|D3;76;DD CB 00 70+8*%c
+ioi altd bit %c, (ix)|r4k|_|_|0,1,2,3,4,5,6,7|D3;76;DD CB 00 70+8*%c
+ioi altd bit %c, (ix)|r5k|_|_|0,1,2,3,4,5,6,7|D3;76;DD CB 00 70+8*%c
+ioi altd bit %c, (ix+%d)|r2ka|_|_|0,1,2,3,4,5,6,7|D3;76;DD CB %d 70+8*%c
+ioi altd bit %c, (ix+%d)|r3k|_|_|0,1,2,3,4,5,6,7|D3;76;DD CB %d 70+8*%c
+ioi altd bit %c, (ix+%d)|r4k|_|_|0,1,2,3,4,5,6,7|D3;76;DD CB %d 70+8*%c
+ioi altd bit %c, (ix+%d)|r5k|_|_|0,1,2,3,4,5,6,7|D3;76;DD CB %d 70+8*%c
+ioi altd bit %c, (iy)|r2ka|_|_|0,1,2,3,4,5,6,7|D3;76;FD CB 00 70+8*%c
+ioi altd bit %c, (iy)|r3k|_|_|0,1,2,3,4,5,6,7|D3;76;FD CB 00 70+8*%c
+ioi altd bit %c, (iy)|r4k|_|_|0,1,2,3,4,5,6,7|D3;76;FD CB 00 70+8*%c
+ioi altd bit %c, (iy)|r5k|_|_|0,1,2,3,4,5,6,7|D3;76;FD CB 00 70+8*%c
+ioi altd bit %c, (iy+%d)|r2ka|_|_|0,1,2,3,4,5,6,7|D3;76;FD CB %d 70+8*%c
+ioi altd bit %c, (iy+%d)|r3k|_|_|0,1,2,3,4,5,6,7|D3;76;FD CB %d 70+8*%c
+ioi altd bit %c, (iy+%d)|r4k|_|_|0,1,2,3,4,5,6,7|D3;76;FD CB %d 70+8*%c
+ioi altd bit %c, (iy+%d)|r5k|_|_|0,1,2,3,4,5,6,7|D3;76;FD CB %d 70+8*%c
 ioi altd cmp (hl)|r2ka|_|_||D3;76;BE
 ioi altd cmp (hl)|r3k|_|_||D3;76;BE
 ioi altd cmp (hl)|r4k|_|_||D3;76;7F BE
@@ -17931,26 +17931,26 @@ ioi and a, (iy+%d)|r2ka|_|_||D3;FD A6 %d
 ioi and a, (iy+%d)|r3k|_|_||D3;FD A6 %d
 ioi and a, (iy+%d)|r4k|_|_||D3;FD A6 %d
 ioi and a, (iy+%d)|r5k|_|_||D3;FD A6 %d
-ioi bit %c, (hl)|r2ka|_|_||D3;CB 70+8*%c(0..7)
-ioi bit %c, (hl)|r3k|_|_||D3;CB 70+8*%c(0..7)
-ioi bit %c, (hl)|r4k|_|_||D3;CB 70+8*%c(0..7)
-ioi bit %c, (hl)|r5k|_|_||D3;CB 70+8*%c(0..7)
-ioi bit %c, (ix)|r2ka|_|_||D3;DD CB 00 70+8*%c(0..7)
-ioi bit %c, (ix)|r3k|_|_||D3;DD CB 00 70+8*%c(0..7)
-ioi bit %c, (ix)|r4k|_|_||D3;DD CB 00 70+8*%c(0..7)
-ioi bit %c, (ix)|r5k|_|_||D3;DD CB 00 70+8*%c(0..7)
-ioi bit %c, (ix+%d)|r2ka|_|_||D3;DD CB %d 70+8*%c(0..7)
-ioi bit %c, (ix+%d)|r3k|_|_||D3;DD CB %d 70+8*%c(0..7)
-ioi bit %c, (ix+%d)|r4k|_|_||D3;DD CB %d 70+8*%c(0..7)
-ioi bit %c, (ix+%d)|r5k|_|_||D3;DD CB %d 70+8*%c(0..7)
-ioi bit %c, (iy)|r2ka|_|_||D3;FD CB 00 70+8*%c(0..7)
-ioi bit %c, (iy)|r3k|_|_||D3;FD CB 00 70+8*%c(0..7)
-ioi bit %c, (iy)|r4k|_|_||D3;FD CB 00 70+8*%c(0..7)
-ioi bit %c, (iy)|r5k|_|_||D3;FD CB 00 70+8*%c(0..7)
-ioi bit %c, (iy+%d)|r2ka|_|_||D3;FD CB %d 70+8*%c(0..7)
-ioi bit %c, (iy+%d)|r3k|_|_||D3;FD CB %d 70+8*%c(0..7)
-ioi bit %c, (iy+%d)|r4k|_|_||D3;FD CB %d 70+8*%c(0..7)
-ioi bit %c, (iy+%d)|r5k|_|_||D3;FD CB %d 70+8*%c(0..7)
+ioi bit %c, (hl)|r2ka|_|_|0,1,2,3,4,5,6,7|D3;CB 70+8*%c
+ioi bit %c, (hl)|r3k|_|_|0,1,2,3,4,5,6,7|D3;CB 70+8*%c
+ioi bit %c, (hl)|r4k|_|_|0,1,2,3,4,5,6,7|D3;CB 70+8*%c
+ioi bit %c, (hl)|r5k|_|_|0,1,2,3,4,5,6,7|D3;CB 70+8*%c
+ioi bit %c, (ix)|r2ka|_|_|0,1,2,3,4,5,6,7|D3;DD CB 00 70+8*%c
+ioi bit %c, (ix)|r3k|_|_|0,1,2,3,4,5,6,7|D3;DD CB 00 70+8*%c
+ioi bit %c, (ix)|r4k|_|_|0,1,2,3,4,5,6,7|D3;DD CB 00 70+8*%c
+ioi bit %c, (ix)|r5k|_|_|0,1,2,3,4,5,6,7|D3;DD CB 00 70+8*%c
+ioi bit %c, (ix+%d)|r2ka|_|_|0,1,2,3,4,5,6,7|D3;DD CB %d 70+8*%c
+ioi bit %c, (ix+%d)|r3k|_|_|0,1,2,3,4,5,6,7|D3;DD CB %d 70+8*%c
+ioi bit %c, (ix+%d)|r4k|_|_|0,1,2,3,4,5,6,7|D3;DD CB %d 70+8*%c
+ioi bit %c, (ix+%d)|r5k|_|_|0,1,2,3,4,5,6,7|D3;DD CB %d 70+8*%c
+ioi bit %c, (iy)|r2ka|_|_|0,1,2,3,4,5,6,7|D3;FD CB 00 70+8*%c
+ioi bit %c, (iy)|r3k|_|_|0,1,2,3,4,5,6,7|D3;FD CB 00 70+8*%c
+ioi bit %c, (iy)|r4k|_|_|0,1,2,3,4,5,6,7|D3;FD CB 00 70+8*%c
+ioi bit %c, (iy)|r5k|_|_|0,1,2,3,4,5,6,7|D3;FD CB 00 70+8*%c
+ioi bit %c, (iy+%d)|r2ka|_|_|0,1,2,3,4,5,6,7|D3;FD CB %d 70+8*%c
+ioi bit %c, (iy+%d)|r3k|_|_|0,1,2,3,4,5,6,7|D3;FD CB %d 70+8*%c
+ioi bit %c, (iy+%d)|r4k|_|_|0,1,2,3,4,5,6,7|D3;FD CB %d 70+8*%c
+ioi bit %c, (iy+%d)|r5k|_|_|0,1,2,3,4,5,6,7|D3;FD CB %d 70+8*%c
 ioi cbm %n|r4k|_|_||D3;ED 00 %n
 ioi cbm %n|r5k|_|_||D3;ED 00 %n
 ioi clr (hl)|r2ka|_|_||D3;36 00
@@ -19497,26 +19497,26 @@ ioi or a, (iy+%d)|r2ka|_|_||D3;FD B6 %d
 ioi or a, (iy+%d)|r3k|_|_||D3;FD B6 %d
 ioi or a, (iy+%d)|r4k|_|_||D3;FD B6 %d
 ioi or a, (iy+%d)|r5k|_|_||D3;FD B6 %d
-ioi res %c, (hl)|r2ka|_|_||D3;CB 134+8*%c(0..7)
-ioi res %c, (hl)|r3k|_|_||D3;CB 134+8*%c(0..7)
-ioi res %c, (hl)|r4k|_|_||D3;CB 134+8*%c(0..7)
-ioi res %c, (hl)|r5k|_|_||D3;CB 134+8*%c(0..7)
-ioi res %c, (ix)|r2ka|_|_||D3;DD CB 00 134+8*%c(0..7)
-ioi res %c, (ix)|r3k|_|_||D3;DD CB 00 134+8*%c(0..7)
-ioi res %c, (ix)|r4k|_|_||D3;DD CB 00 134+8*%c(0..7)
-ioi res %c, (ix)|r5k|_|_||D3;DD CB 00 134+8*%c(0..7)
-ioi res %c, (ix+%d)|r2ka|_|_||D3;DD CB %d 134+8*%c(0..7)
-ioi res %c, (ix+%d)|r3k|_|_||D3;DD CB %d 134+8*%c(0..7)
-ioi res %c, (ix+%d)|r4k|_|_||D3;DD CB %d 134+8*%c(0..7)
-ioi res %c, (ix+%d)|r5k|_|_||D3;DD CB %d 134+8*%c(0..7)
-ioi res %c, (iy)|r2ka|_|_||D3;FD CB 00 134+8*%c(0..7)
-ioi res %c, (iy)|r3k|_|_||D3;FD CB 00 134+8*%c(0..7)
-ioi res %c, (iy)|r4k|_|_||D3;FD CB 00 134+8*%c(0..7)
-ioi res %c, (iy)|r5k|_|_||D3;FD CB 00 134+8*%c(0..7)
-ioi res %c, (iy+%d)|r2ka|_|_||D3;FD CB %d 134+8*%c(0..7)
-ioi res %c, (iy+%d)|r3k|_|_||D3;FD CB %d 134+8*%c(0..7)
-ioi res %c, (iy+%d)|r4k|_|_||D3;FD CB %d 134+8*%c(0..7)
-ioi res %c, (iy+%d)|r5k|_|_||D3;FD CB %d 134+8*%c(0..7)
+ioi res %c, (hl)|r2ka|_|_|0,1,2,3,4,5,6,7|D3;CB 134+8*%c
+ioi res %c, (hl)|r3k|_|_|0,1,2,3,4,5,6,7|D3;CB 134+8*%c
+ioi res %c, (hl)|r4k|_|_|0,1,2,3,4,5,6,7|D3;CB 134+8*%c
+ioi res %c, (hl)|r5k|_|_|0,1,2,3,4,5,6,7|D3;CB 134+8*%c
+ioi res %c, (ix)|r2ka|_|_|0,1,2,3,4,5,6,7|D3;DD CB 00 134+8*%c
+ioi res %c, (ix)|r3k|_|_|0,1,2,3,4,5,6,7|D3;DD CB 00 134+8*%c
+ioi res %c, (ix)|r4k|_|_|0,1,2,3,4,5,6,7|D3;DD CB 00 134+8*%c
+ioi res %c, (ix)|r5k|_|_|0,1,2,3,4,5,6,7|D3;DD CB 00 134+8*%c
+ioi res %c, (ix+%d)|r2ka|_|_|0,1,2,3,4,5,6,7|D3;DD CB %d 134+8*%c
+ioi res %c, (ix+%d)|r3k|_|_|0,1,2,3,4,5,6,7|D3;DD CB %d 134+8*%c
+ioi res %c, (ix+%d)|r4k|_|_|0,1,2,3,4,5,6,7|D3;DD CB %d 134+8*%c
+ioi res %c, (ix+%d)|r5k|_|_|0,1,2,3,4,5,6,7|D3;DD CB %d 134+8*%c
+ioi res %c, (iy)|r2ka|_|_|0,1,2,3,4,5,6,7|D3;FD CB 00 134+8*%c
+ioi res %c, (iy)|r3k|_|_|0,1,2,3,4,5,6,7|D3;FD CB 00 134+8*%c
+ioi res %c, (iy)|r4k|_|_|0,1,2,3,4,5,6,7|D3;FD CB 00 134+8*%c
+ioi res %c, (iy)|r5k|_|_|0,1,2,3,4,5,6,7|D3;FD CB 00 134+8*%c
+ioi res %c, (iy+%d)|r2ka|_|_|0,1,2,3,4,5,6,7|D3;FD CB %d 134+8*%c
+ioi res %c, (iy+%d)|r3k|_|_|0,1,2,3,4,5,6,7|D3;FD CB %d 134+8*%c
+ioi res %c, (iy+%d)|r4k|_|_|0,1,2,3,4,5,6,7|D3;FD CB %d 134+8*%c
+ioi res %c, (iy+%d)|r5k|_|_|0,1,2,3,4,5,6,7|D3;FD CB %d 134+8*%c
 ioi rl (hl)|r2ka|_|_||D3;CB 16
 ioi rl (hl)|r3k|_|_||D3;CB 16
 ioi rl (hl)|r4k|_|_||D3;CB 16
@@ -19681,26 +19681,26 @@ ioi sbc a, (iy+%d)|r2ka|_|_||D3;FD 9E %d
 ioi sbc a, (iy+%d)|r3k|_|_||D3;FD 9E %d
 ioi sbc a, (iy+%d)|r4k|_|_||D3;FD 9E %d
 ioi sbc a, (iy+%d)|r5k|_|_||D3;FD 9E %d
-ioi set %c, (hl)|r2ka|_|_||D3;CB 198+8*%c(0..7)
-ioi set %c, (hl)|r3k|_|_||D3;CB 198+8*%c(0..7)
-ioi set %c, (hl)|r4k|_|_||D3;CB 198+8*%c(0..7)
-ioi set %c, (hl)|r5k|_|_||D3;CB 198+8*%c(0..7)
-ioi set %c, (ix)|r2ka|_|_||D3;DD CB 00 198+8*%c(0..7)
-ioi set %c, (ix)|r3k|_|_||D3;DD CB 00 198+8*%c(0..7)
-ioi set %c, (ix)|r4k|_|_||D3;DD CB 00 198+8*%c(0..7)
-ioi set %c, (ix)|r5k|_|_||D3;DD CB 00 198+8*%c(0..7)
-ioi set %c, (ix+%d)|r2ka|_|_||D3;DD CB %d 198+8*%c(0..7)
-ioi set %c, (ix+%d)|r3k|_|_||D3;DD CB %d 198+8*%c(0..7)
-ioi set %c, (ix+%d)|r4k|_|_||D3;DD CB %d 198+8*%c(0..7)
-ioi set %c, (ix+%d)|r5k|_|_||D3;DD CB %d 198+8*%c(0..7)
-ioi set %c, (iy)|r2ka|_|_||D3;FD CB 00 198+8*%c(0..7)
-ioi set %c, (iy)|r3k|_|_||D3;FD CB 00 198+8*%c(0..7)
-ioi set %c, (iy)|r4k|_|_||D3;FD CB 00 198+8*%c(0..7)
-ioi set %c, (iy)|r5k|_|_||D3;FD CB 00 198+8*%c(0..7)
-ioi set %c, (iy+%d)|r2ka|_|_||D3;FD CB %d 198+8*%c(0..7)
-ioi set %c, (iy+%d)|r3k|_|_||D3;FD CB %d 198+8*%c(0..7)
-ioi set %c, (iy+%d)|r4k|_|_||D3;FD CB %d 198+8*%c(0..7)
-ioi set %c, (iy+%d)|r5k|_|_||D3;FD CB %d 198+8*%c(0..7)
+ioi set %c, (hl)|r2ka|_|_|0,1,2,3,4,5,6,7|D3;CB 198+8*%c
+ioi set %c, (hl)|r3k|_|_|0,1,2,3,4,5,6,7|D3;CB 198+8*%c
+ioi set %c, (hl)|r4k|_|_|0,1,2,3,4,5,6,7|D3;CB 198+8*%c
+ioi set %c, (hl)|r5k|_|_|0,1,2,3,4,5,6,7|D3;CB 198+8*%c
+ioi set %c, (ix)|r2ka|_|_|0,1,2,3,4,5,6,7|D3;DD CB 00 198+8*%c
+ioi set %c, (ix)|r3k|_|_|0,1,2,3,4,5,6,7|D3;DD CB 00 198+8*%c
+ioi set %c, (ix)|r4k|_|_|0,1,2,3,4,5,6,7|D3;DD CB 00 198+8*%c
+ioi set %c, (ix)|r5k|_|_|0,1,2,3,4,5,6,7|D3;DD CB 00 198+8*%c
+ioi set %c, (ix+%d)|r2ka|_|_|0,1,2,3,4,5,6,7|D3;DD CB %d 198+8*%c
+ioi set %c, (ix+%d)|r3k|_|_|0,1,2,3,4,5,6,7|D3;DD CB %d 198+8*%c
+ioi set %c, (ix+%d)|r4k|_|_|0,1,2,3,4,5,6,7|D3;DD CB %d 198+8*%c
+ioi set %c, (ix+%d)|r5k|_|_|0,1,2,3,4,5,6,7|D3;DD CB %d 198+8*%c
+ioi set %c, (iy)|r2ka|_|_|0,1,2,3,4,5,6,7|D3;FD CB 00 198+8*%c
+ioi set %c, (iy)|r3k|_|_|0,1,2,3,4,5,6,7|D3;FD CB 00 198+8*%c
+ioi set %c, (iy)|r4k|_|_|0,1,2,3,4,5,6,7|D3;FD CB 00 198+8*%c
+ioi set %c, (iy)|r5k|_|_|0,1,2,3,4,5,6,7|D3;FD CB 00 198+8*%c
+ioi set %c, (iy+%d)|r2ka|_|_|0,1,2,3,4,5,6,7|D3;FD CB %d 198+8*%c
+ioi set %c, (iy+%d)|r3k|_|_|0,1,2,3,4,5,6,7|D3;FD CB %d 198+8*%c
+ioi set %c, (iy+%d)|r4k|_|_|0,1,2,3,4,5,6,7|D3;FD CB %d 198+8*%c
+ioi set %c, (iy+%d)|r5k|_|_|0,1,2,3,4,5,6,7|D3;FD CB %d 198+8*%c
 ioi sla (hl)|r2ka|_|_||D3;CB 26
 ioi sla (hl)|r3k|_|_||D3;CB 26
 ioi sla (hl)|r4k|_|_||D3;CB 26
@@ -19933,10 +19933,10 @@ ipres|r2ka|_|_||ED 5D
 ipres|r3k|_|_||ED 5D
 ipres|r4k|_|_||ED 5D
 ipres|r5k|_|_||ED 5D
-ipset %c|r2ka|_|_||ED %c(0..3)==0?0x46:%c==1?0x56:%c==2?0x4E:0x5E
-ipset %c|r3k|_|_||ED %c(0..3)==0?0x46:%c==1?0x56:%c==2?0x4E:0x5E
-ipset %c|r4k|_|_||ED %c(0..3)==0?0x46:%c==1?0x56:%c==2?0x4E:0x5E
-ipset %c|r5k|_|_||ED %c(0..3)==0?0x46:%c==1?0x56:%c==2?0x4E:0x5E
+ipset %c|r2ka|_|_|0,1,2,3|ED %c==0?0x46:%c==1?0x56:%c==2?0x4E:0x5E
+ipset %c|r3k|_|_|0,1,2,3|ED %c==0?0x46:%c==1?0x56:%c==2?0x4E:0x5E
+ipset %c|r4k|_|_|0,1,2,3|ED %c==0?0x46:%c==1?0x56:%c==2?0x4E:0x5E
+ipset %c|r5k|_|_|0,1,2,3|ED %c==0?0x46:%c==1?0x56:%c==2?0x4E:0x5E
 j_c %m|8080|_|_||DA %m %m
 j_c %m|8085|_|_||DA %m %m
 j_c %m|ez80|_|_||DA %m %m
@@ -25029,14 +25029,14 @@ ld a, r|z180|_|_||ED 5F
 ld a, r|z80|_|_||ED 5F
 ld a, r|z80_strict|_|_||ED 5F
 ld a, r|z80n|_|_||ED 5F
-ld a, res %c, (ix)|z80|_|_||DD CB 00 135+8*%c(0..7)
-ld a, res %c, (ix)|z80n|_|_||DD CB 00 135+8*%c(0..7)
-ld a, res %c, (ix+%d)|z80|_|_||DD CB %d 135+8*%c(0..7)
-ld a, res %c, (ix+%d)|z80n|_|_||DD CB %d 135+8*%c(0..7)
-ld a, res %c, (iy)|z80|_|_||FD CB 00 135+8*%c(0..7)
-ld a, res %c, (iy)|z80n|_|_||FD CB 00 135+8*%c(0..7)
-ld a, res %c, (iy+%d)|z80|_|_||FD CB %d 135+8*%c(0..7)
-ld a, res %c, (iy+%d)|z80n|_|_||FD CB %d 135+8*%c(0..7)
+ld a, res %c, (ix)|z80|_|_|0,1,2,3,4,5,6,7|DD CB 00 135+8*%c
+ld a, res %c, (ix)|z80n|_|_|0,1,2,3,4,5,6,7|DD CB 00 135+8*%c
+ld a, res %c, (ix+%d)|z80|_|_|0,1,2,3,4,5,6,7|DD CB %d 135+8*%c
+ld a, res %c, (ix+%d)|z80n|_|_|0,1,2,3,4,5,6,7|DD CB %d 135+8*%c
+ld a, res %c, (iy)|z80|_|_|0,1,2,3,4,5,6,7|FD CB 00 135+8*%c
+ld a, res %c, (iy)|z80n|_|_|0,1,2,3,4,5,6,7|FD CB 00 135+8*%c
+ld a, res %c, (iy+%d)|z80|_|_|0,1,2,3,4,5,6,7|FD CB %d 135+8*%c
+ld a, res %c, (iy+%d)|z80n|_|_|0,1,2,3,4,5,6,7|FD CB %d 135+8*%c
 ld a, rl (ix)|z80|_|_||DD CB 00 17
 ld a, rl (ix)|z80n|_|_||DD CB 00 17
 ld a, rl (ix+%d)|z80|_|_||DD CB %d 17
@@ -25069,14 +25069,14 @@ ld a, rrc (iy)|z80|_|_||FD CB 00 0F
 ld a, rrc (iy)|z80n|_|_||FD CB 00 0F
 ld a, rrc (iy+%d)|z80|_|_||FD CB %d 0F
 ld a, rrc (iy+%d)|z80n|_|_||FD CB %d 0F
-ld a, set %c, (ix)|z80|_|_||DD CB 00 199+8*%c(0..7)
-ld a, set %c, (ix)|z80n|_|_||DD CB 00 199+8*%c(0..7)
-ld a, set %c, (ix+%d)|z80|_|_||DD CB %d 199+8*%c(0..7)
-ld a, set %c, (ix+%d)|z80n|_|_||DD CB %d 199+8*%c(0..7)
-ld a, set %c, (iy)|z80|_|_||FD CB 00 199+8*%c(0..7)
-ld a, set %c, (iy)|z80n|_|_||FD CB 00 199+8*%c(0..7)
-ld a, set %c, (iy+%d)|z80|_|_||FD CB %d 199+8*%c(0..7)
-ld a, set %c, (iy+%d)|z80n|_|_||FD CB %d 199+8*%c(0..7)
+ld a, set %c, (ix)|z80|_|_|0,1,2,3,4,5,6,7|DD CB 00 199+8*%c
+ld a, set %c, (ix)|z80n|_|_|0,1,2,3,4,5,6,7|DD CB 00 199+8*%c
+ld a, set %c, (ix+%d)|z80|_|_|0,1,2,3,4,5,6,7|DD CB %d 199+8*%c
+ld a, set %c, (ix+%d)|z80n|_|_|0,1,2,3,4,5,6,7|DD CB %d 199+8*%c
+ld a, set %c, (iy)|z80|_|_|0,1,2,3,4,5,6,7|FD CB 00 199+8*%c
+ld a, set %c, (iy)|z80n|_|_|0,1,2,3,4,5,6,7|FD CB 00 199+8*%c
+ld a, set %c, (iy+%d)|z80|_|_|0,1,2,3,4,5,6,7|FD CB %d 199+8*%c
+ld a, set %c, (iy+%d)|z80n|_|_|0,1,2,3,4,5,6,7|FD CB %d 199+8*%c
 ld a, sla (ix)|z80|_|_||DD CB 00 27
 ld a, sla (ix)|z80n|_|_||DD CB 00 27
 ld a, sla (ix+%d)|z80|_|_||DD CB %d 27
@@ -25584,14 +25584,14 @@ ld b, l|z180|_|_||45
 ld b, l|z80|_|_||45
 ld b, l|z80_strict|_|_||45
 ld b, l|z80n|_|_||45
-ld b, res %c, (ix)|z80|_|_||DD CB 00 128+8*%c(0..7)
-ld b, res %c, (ix)|z80n|_|_||DD CB 00 128+8*%c(0..7)
-ld b, res %c, (ix+%d)|z80|_|_||DD CB %d 128+8*%c(0..7)
-ld b, res %c, (ix+%d)|z80n|_|_||DD CB %d 128+8*%c(0..7)
-ld b, res %c, (iy)|z80|_|_||FD CB 00 128+8*%c(0..7)
-ld b, res %c, (iy)|z80n|_|_||FD CB 00 128+8*%c(0..7)
-ld b, res %c, (iy+%d)|z80|_|_||FD CB %d 128+8*%c(0..7)
-ld b, res %c, (iy+%d)|z80n|_|_||FD CB %d 128+8*%c(0..7)
+ld b, res %c, (ix)|z80|_|_|0,1,2,3,4,5,6,7|DD CB 00 128+8*%c
+ld b, res %c, (ix)|z80n|_|_|0,1,2,3,4,5,6,7|DD CB 00 128+8*%c
+ld b, res %c, (ix+%d)|z80|_|_|0,1,2,3,4,5,6,7|DD CB %d 128+8*%c
+ld b, res %c, (ix+%d)|z80n|_|_|0,1,2,3,4,5,6,7|DD CB %d 128+8*%c
+ld b, res %c, (iy)|z80|_|_|0,1,2,3,4,5,6,7|FD CB 00 128+8*%c
+ld b, res %c, (iy)|z80n|_|_|0,1,2,3,4,5,6,7|FD CB 00 128+8*%c
+ld b, res %c, (iy+%d)|z80|_|_|0,1,2,3,4,5,6,7|FD CB %d 128+8*%c
+ld b, res %c, (iy+%d)|z80n|_|_|0,1,2,3,4,5,6,7|FD CB %d 128+8*%c
 ld b, rl (ix)|z80|_|_||DD CB 00 10
 ld b, rl (ix)|z80n|_|_||DD CB 00 10
 ld b, rl (ix+%d)|z80|_|_||DD CB %d 10
@@ -25624,14 +25624,14 @@ ld b, rrc (iy)|z80|_|_||FD CB 00 08
 ld b, rrc (iy)|z80n|_|_||FD CB 00 08
 ld b, rrc (iy+%d)|z80|_|_||FD CB %d 08
 ld b, rrc (iy+%d)|z80n|_|_||FD CB %d 08
-ld b, set %c, (ix)|z80|_|_||DD CB 00 192+8*%c(0..7)
-ld b, set %c, (ix)|z80n|_|_||DD CB 00 192+8*%c(0..7)
-ld b, set %c, (ix+%d)|z80|_|_||DD CB %d 192+8*%c(0..7)
-ld b, set %c, (ix+%d)|z80n|_|_||DD CB %d 192+8*%c(0..7)
-ld b, set %c, (iy)|z80|_|_||FD CB 00 192+8*%c(0..7)
-ld b, set %c, (iy)|z80n|_|_||FD CB 00 192+8*%c(0..7)
-ld b, set %c, (iy+%d)|z80|_|_||FD CB %d 192+8*%c(0..7)
-ld b, set %c, (iy+%d)|z80n|_|_||FD CB %d 192+8*%c(0..7)
+ld b, set %c, (ix)|z80|_|_|0,1,2,3,4,5,6,7|DD CB 00 192+8*%c
+ld b, set %c, (ix)|z80n|_|_|0,1,2,3,4,5,6,7|DD CB 00 192+8*%c
+ld b, set %c, (ix+%d)|z80|_|_|0,1,2,3,4,5,6,7|DD CB %d 192+8*%c
+ld b, set %c, (ix+%d)|z80n|_|_|0,1,2,3,4,5,6,7|DD CB %d 192+8*%c
+ld b, set %c, (iy)|z80|_|_|0,1,2,3,4,5,6,7|FD CB 00 192+8*%c
+ld b, set %c, (iy)|z80n|_|_|0,1,2,3,4,5,6,7|FD CB 00 192+8*%c
+ld b, set %c, (iy+%d)|z80|_|_|0,1,2,3,4,5,6,7|FD CB %d 192+8*%c
+ld b, set %c, (iy+%d)|z80n|_|_|0,1,2,3,4,5,6,7|FD CB %d 192+8*%c
 ld b, sla (ix)|z80|_|_||DD CB 00 20
 ld b, sla (ix)|z80n|_|_||DD CB 00 20
 ld b, sla (ix+%d)|z80|_|_||DD CB %d 20
@@ -26499,14 +26499,14 @@ ld c, l|z180|_|_||4D
 ld c, l|z80|_|_||4D
 ld c, l|z80_strict|_|_||4D
 ld c, l|z80n|_|_||4D
-ld c, res %c, (ix)|z80|_|_||DD CB 00 129+8*%c(0..7)
-ld c, res %c, (ix)|z80n|_|_||DD CB 00 129+8*%c(0..7)
-ld c, res %c, (ix+%d)|z80|_|_||DD CB %d 129+8*%c(0..7)
-ld c, res %c, (ix+%d)|z80n|_|_||DD CB %d 129+8*%c(0..7)
-ld c, res %c, (iy)|z80|_|_||FD CB 00 129+8*%c(0..7)
-ld c, res %c, (iy)|z80n|_|_||FD CB 00 129+8*%c(0..7)
-ld c, res %c, (iy+%d)|z80|_|_||FD CB %d 129+8*%c(0..7)
-ld c, res %c, (iy+%d)|z80n|_|_||FD CB %d 129+8*%c(0..7)
+ld c, res %c, (ix)|z80|_|_|0,1,2,3,4,5,6,7|DD CB 00 129+8*%c
+ld c, res %c, (ix)|z80n|_|_|0,1,2,3,4,5,6,7|DD CB 00 129+8*%c
+ld c, res %c, (ix+%d)|z80|_|_|0,1,2,3,4,5,6,7|DD CB %d 129+8*%c
+ld c, res %c, (ix+%d)|z80n|_|_|0,1,2,3,4,5,6,7|DD CB %d 129+8*%c
+ld c, res %c, (iy)|z80|_|_|0,1,2,3,4,5,6,7|FD CB 00 129+8*%c
+ld c, res %c, (iy)|z80n|_|_|0,1,2,3,4,5,6,7|FD CB 00 129+8*%c
+ld c, res %c, (iy+%d)|z80|_|_|0,1,2,3,4,5,6,7|FD CB %d 129+8*%c
+ld c, res %c, (iy+%d)|z80n|_|_|0,1,2,3,4,5,6,7|FD CB %d 129+8*%c
 ld c, rl (ix)|z80|_|_||DD CB 00 11
 ld c, rl (ix)|z80n|_|_||DD CB 00 11
 ld c, rl (ix+%d)|z80|_|_||DD CB %d 11
@@ -26539,14 +26539,14 @@ ld c, rrc (iy)|z80|_|_||FD CB 00 09
 ld c, rrc (iy)|z80n|_|_||FD CB 00 09
 ld c, rrc (iy+%d)|z80|_|_||FD CB %d 09
 ld c, rrc (iy+%d)|z80n|_|_||FD CB %d 09
-ld c, set %c, (ix)|z80|_|_||DD CB 00 193+8*%c(0..7)
-ld c, set %c, (ix)|z80n|_|_||DD CB 00 193+8*%c(0..7)
-ld c, set %c, (ix+%d)|z80|_|_||DD CB %d 193+8*%c(0..7)
-ld c, set %c, (ix+%d)|z80n|_|_||DD CB %d 193+8*%c(0..7)
-ld c, set %c, (iy)|z80|_|_||FD CB 00 193+8*%c(0..7)
-ld c, set %c, (iy)|z80n|_|_||FD CB 00 193+8*%c(0..7)
-ld c, set %c, (iy+%d)|z80|_|_||FD CB %d 193+8*%c(0..7)
-ld c, set %c, (iy+%d)|z80n|_|_||FD CB %d 193+8*%c(0..7)
+ld c, set %c, (ix)|z80|_|_|0,1,2,3,4,5,6,7|DD CB 00 193+8*%c
+ld c, set %c, (ix)|z80n|_|_|0,1,2,3,4,5,6,7|DD CB 00 193+8*%c
+ld c, set %c, (ix+%d)|z80|_|_|0,1,2,3,4,5,6,7|DD CB %d 193+8*%c
+ld c, set %c, (ix+%d)|z80n|_|_|0,1,2,3,4,5,6,7|DD CB %d 193+8*%c
+ld c, set %c, (iy)|z80|_|_|0,1,2,3,4,5,6,7|FD CB 00 193+8*%c
+ld c, set %c, (iy)|z80n|_|_|0,1,2,3,4,5,6,7|FD CB 00 193+8*%c
+ld c, set %c, (iy+%d)|z80|_|_|0,1,2,3,4,5,6,7|FD CB %d 193+8*%c
+ld c, set %c, (iy+%d)|z80n|_|_|0,1,2,3,4,5,6,7|FD CB %d 193+8*%c
 ld c, sla (ix)|z80|_|_||DD CB 00 21
 ld c, sla (ix)|z80n|_|_||DD CB 00 21
 ld c, sla (ix+%d)|z80|_|_||DD CB %d 21
@@ -27010,14 +27010,14 @@ ld d, l|z180|_|_||55
 ld d, l|z80|_|_||55
 ld d, l|z80_strict|_|_||55
 ld d, l|z80n|_|_||55
-ld d, res %c, (ix)|z80|_|_||DD CB 00 130+8*%c(0..7)
-ld d, res %c, (ix)|z80n|_|_||DD CB 00 130+8*%c(0..7)
-ld d, res %c, (ix+%d)|z80|_|_||DD CB %d 130+8*%c(0..7)
-ld d, res %c, (ix+%d)|z80n|_|_||DD CB %d 130+8*%c(0..7)
-ld d, res %c, (iy)|z80|_|_||FD CB 00 130+8*%c(0..7)
-ld d, res %c, (iy)|z80n|_|_||FD CB 00 130+8*%c(0..7)
-ld d, res %c, (iy+%d)|z80|_|_||FD CB %d 130+8*%c(0..7)
-ld d, res %c, (iy+%d)|z80n|_|_||FD CB %d 130+8*%c(0..7)
+ld d, res %c, (ix)|z80|_|_|0,1,2,3,4,5,6,7|DD CB 00 130+8*%c
+ld d, res %c, (ix)|z80n|_|_|0,1,2,3,4,5,6,7|DD CB 00 130+8*%c
+ld d, res %c, (ix+%d)|z80|_|_|0,1,2,3,4,5,6,7|DD CB %d 130+8*%c
+ld d, res %c, (ix+%d)|z80n|_|_|0,1,2,3,4,5,6,7|DD CB %d 130+8*%c
+ld d, res %c, (iy)|z80|_|_|0,1,2,3,4,5,6,7|FD CB 00 130+8*%c
+ld d, res %c, (iy)|z80n|_|_|0,1,2,3,4,5,6,7|FD CB 00 130+8*%c
+ld d, res %c, (iy+%d)|z80|_|_|0,1,2,3,4,5,6,7|FD CB %d 130+8*%c
+ld d, res %c, (iy+%d)|z80n|_|_|0,1,2,3,4,5,6,7|FD CB %d 130+8*%c
 ld d, rl (ix)|z80|_|_||DD CB 00 12
 ld d, rl (ix)|z80n|_|_||DD CB 00 12
 ld d, rl (ix+%d)|z80|_|_||DD CB %d 12
@@ -27050,14 +27050,14 @@ ld d, rrc (iy)|z80|_|_||FD CB 00 0A
 ld d, rrc (iy)|z80n|_|_||FD CB 00 0A
 ld d, rrc (iy+%d)|z80|_|_||FD CB %d 0A
 ld d, rrc (iy+%d)|z80n|_|_||FD CB %d 0A
-ld d, set %c, (ix)|z80|_|_||DD CB 00 194+8*%c(0..7)
-ld d, set %c, (ix)|z80n|_|_||DD CB 00 194+8*%c(0..7)
-ld d, set %c, (ix+%d)|z80|_|_||DD CB %d 194+8*%c(0..7)
-ld d, set %c, (ix+%d)|z80n|_|_||DD CB %d 194+8*%c(0..7)
-ld d, set %c, (iy)|z80|_|_||FD CB 00 194+8*%c(0..7)
-ld d, set %c, (iy)|z80n|_|_||FD CB 00 194+8*%c(0..7)
-ld d, set %c, (iy+%d)|z80|_|_||FD CB %d 194+8*%c(0..7)
-ld d, set %c, (iy+%d)|z80n|_|_||FD CB %d 194+8*%c(0..7)
+ld d, set %c, (ix)|z80|_|_|0,1,2,3,4,5,6,7|DD CB 00 194+8*%c
+ld d, set %c, (ix)|z80n|_|_|0,1,2,3,4,5,6,7|DD CB 00 194+8*%c
+ld d, set %c, (ix+%d)|z80|_|_|0,1,2,3,4,5,6,7|DD CB %d 194+8*%c
+ld d, set %c, (ix+%d)|z80n|_|_|0,1,2,3,4,5,6,7|DD CB %d 194+8*%c
+ld d, set %c, (iy)|z80|_|_|0,1,2,3,4,5,6,7|FD CB 00 194+8*%c
+ld d, set %c, (iy)|z80n|_|_|0,1,2,3,4,5,6,7|FD CB 00 194+8*%c
+ld d, set %c, (iy+%d)|z80|_|_|0,1,2,3,4,5,6,7|FD CB %d 194+8*%c
+ld d, set %c, (iy+%d)|z80n|_|_|0,1,2,3,4,5,6,7|FD CB %d 194+8*%c
 ld d, sla (ix)|z80|_|_||DD CB 00 22
 ld d, sla (ix)|z80n|_|_||DD CB 00 22
 ld d, sla (ix+%d)|z80|_|_||DD CB %d 22
@@ -27871,14 +27871,14 @@ ld e, l|z180|_|_||5D
 ld e, l|z80|_|_||5D
 ld e, l|z80_strict|_|_||5D
 ld e, l|z80n|_|_||5D
-ld e, res %c, (ix)|z80|_|_||DD CB 00 131+8*%c(0..7)
-ld e, res %c, (ix)|z80n|_|_||DD CB 00 131+8*%c(0..7)
-ld e, res %c, (ix+%d)|z80|_|_||DD CB %d 131+8*%c(0..7)
-ld e, res %c, (ix+%d)|z80n|_|_||DD CB %d 131+8*%c(0..7)
-ld e, res %c, (iy)|z80|_|_||FD CB 00 131+8*%c(0..7)
-ld e, res %c, (iy)|z80n|_|_||FD CB 00 131+8*%c(0..7)
-ld e, res %c, (iy+%d)|z80|_|_||FD CB %d 131+8*%c(0..7)
-ld e, res %c, (iy+%d)|z80n|_|_||FD CB %d 131+8*%c(0..7)
+ld e, res %c, (ix)|z80|_|_|0,1,2,3,4,5,6,7|DD CB 00 131+8*%c
+ld e, res %c, (ix)|z80n|_|_|0,1,2,3,4,5,6,7|DD CB 00 131+8*%c
+ld e, res %c, (ix+%d)|z80|_|_|0,1,2,3,4,5,6,7|DD CB %d 131+8*%c
+ld e, res %c, (ix+%d)|z80n|_|_|0,1,2,3,4,5,6,7|DD CB %d 131+8*%c
+ld e, res %c, (iy)|z80|_|_|0,1,2,3,4,5,6,7|FD CB 00 131+8*%c
+ld e, res %c, (iy)|z80n|_|_|0,1,2,3,4,5,6,7|FD CB 00 131+8*%c
+ld e, res %c, (iy+%d)|z80|_|_|0,1,2,3,4,5,6,7|FD CB %d 131+8*%c
+ld e, res %c, (iy+%d)|z80n|_|_|0,1,2,3,4,5,6,7|FD CB %d 131+8*%c
 ld e, rl (ix)|z80|_|_||DD CB 00 13
 ld e, rl (ix)|z80n|_|_||DD CB 00 13
 ld e, rl (ix+%d)|z80|_|_||DD CB %d 13
@@ -27911,14 +27911,14 @@ ld e, rrc (iy)|z80|_|_||FD CB 00 0B
 ld e, rrc (iy)|z80n|_|_||FD CB 00 0B
 ld e, rrc (iy+%d)|z80|_|_||FD CB %d 0B
 ld e, rrc (iy+%d)|z80n|_|_||FD CB %d 0B
-ld e, set %c, (ix)|z80|_|_||DD CB 00 195+8*%c(0..7)
-ld e, set %c, (ix)|z80n|_|_||DD CB 00 195+8*%c(0..7)
-ld e, set %c, (ix+%d)|z80|_|_||DD CB %d 195+8*%c(0..7)
-ld e, set %c, (ix+%d)|z80n|_|_||DD CB %d 195+8*%c(0..7)
-ld e, set %c, (iy)|z80|_|_||FD CB 00 195+8*%c(0..7)
-ld e, set %c, (iy)|z80n|_|_||FD CB 00 195+8*%c(0..7)
-ld e, set %c, (iy+%d)|z80|_|_||FD CB %d 195+8*%c(0..7)
-ld e, set %c, (iy+%d)|z80n|_|_||FD CB %d 195+8*%c(0..7)
+ld e, set %c, (ix)|z80|_|_|0,1,2,3,4,5,6,7|DD CB 00 195+8*%c
+ld e, set %c, (ix)|z80n|_|_|0,1,2,3,4,5,6,7|DD CB 00 195+8*%c
+ld e, set %c, (ix+%d)|z80|_|_|0,1,2,3,4,5,6,7|DD CB %d 195+8*%c
+ld e, set %c, (ix+%d)|z80n|_|_|0,1,2,3,4,5,6,7|DD CB %d 195+8*%c
+ld e, set %c, (iy)|z80|_|_|0,1,2,3,4,5,6,7|FD CB 00 195+8*%c
+ld e, set %c, (iy)|z80n|_|_|0,1,2,3,4,5,6,7|FD CB 00 195+8*%c
+ld e, set %c, (iy+%d)|z80|_|_|0,1,2,3,4,5,6,7|FD CB %d 195+8*%c
+ld e, set %c, (iy+%d)|z80n|_|_|0,1,2,3,4,5,6,7|FD CB %d 195+8*%c
 ld e, sla (ix)|z80|_|_||DD CB 00 23
 ld e, sla (ix)|z80n|_|_||DD CB 00 23
 ld e, sla (ix+%d)|z80|_|_||DD CB %d 23
@@ -28368,14 +28368,14 @@ ld h, l|z180|_|_||65
 ld h, l|z80|_|_||65
 ld h, l|z80_strict|_|_||65
 ld h, l|z80n|_|_||65
-ld h, res %c, (ix)|z80|_|_||DD CB 00 132+8*%c(0..7)
-ld h, res %c, (ix)|z80n|_|_||DD CB 00 132+8*%c(0..7)
-ld h, res %c, (ix+%d)|z80|_|_||DD CB %d 132+8*%c(0..7)
-ld h, res %c, (ix+%d)|z80n|_|_||DD CB %d 132+8*%c(0..7)
-ld h, res %c, (iy)|z80|_|_||FD CB 00 132+8*%c(0..7)
-ld h, res %c, (iy)|z80n|_|_||FD CB 00 132+8*%c(0..7)
-ld h, res %c, (iy+%d)|z80|_|_||FD CB %d 132+8*%c(0..7)
-ld h, res %c, (iy+%d)|z80n|_|_||FD CB %d 132+8*%c(0..7)
+ld h, res %c, (ix)|z80|_|_|0,1,2,3,4,5,6,7|DD CB 00 132+8*%c
+ld h, res %c, (ix)|z80n|_|_|0,1,2,3,4,5,6,7|DD CB 00 132+8*%c
+ld h, res %c, (ix+%d)|z80|_|_|0,1,2,3,4,5,6,7|DD CB %d 132+8*%c
+ld h, res %c, (ix+%d)|z80n|_|_|0,1,2,3,4,5,6,7|DD CB %d 132+8*%c
+ld h, res %c, (iy)|z80|_|_|0,1,2,3,4,5,6,7|FD CB 00 132+8*%c
+ld h, res %c, (iy)|z80n|_|_|0,1,2,3,4,5,6,7|FD CB 00 132+8*%c
+ld h, res %c, (iy+%d)|z80|_|_|0,1,2,3,4,5,6,7|FD CB %d 132+8*%c
+ld h, res %c, (iy+%d)|z80n|_|_|0,1,2,3,4,5,6,7|FD CB %d 132+8*%c
 ld h, rl (ix)|z80|_|_||DD CB 00 14
 ld h, rl (ix)|z80n|_|_||DD CB 00 14
 ld h, rl (ix+%d)|z80|_|_||DD CB %d 14
@@ -28408,14 +28408,14 @@ ld h, rrc (iy)|z80|_|_||FD CB 00 0C
 ld h, rrc (iy)|z80n|_|_||FD CB 00 0C
 ld h, rrc (iy+%d)|z80|_|_||FD CB %d 0C
 ld h, rrc (iy+%d)|z80n|_|_||FD CB %d 0C
-ld h, set %c, (ix)|z80|_|_||DD CB 00 196+8*%c(0..7)
-ld h, set %c, (ix)|z80n|_|_||DD CB 00 196+8*%c(0..7)
-ld h, set %c, (ix+%d)|z80|_|_||DD CB %d 196+8*%c(0..7)
-ld h, set %c, (ix+%d)|z80n|_|_||DD CB %d 196+8*%c(0..7)
-ld h, set %c, (iy)|z80|_|_||FD CB 00 196+8*%c(0..7)
-ld h, set %c, (iy)|z80n|_|_||FD CB 00 196+8*%c(0..7)
-ld h, set %c, (iy+%d)|z80|_|_||FD CB %d 196+8*%c(0..7)
-ld h, set %c, (iy+%d)|z80n|_|_||FD CB %d 196+8*%c(0..7)
+ld h, set %c, (ix)|z80|_|_|0,1,2,3,4,5,6,7|DD CB 00 196+8*%c
+ld h, set %c, (ix)|z80n|_|_|0,1,2,3,4,5,6,7|DD CB 00 196+8*%c
+ld h, set %c, (ix+%d)|z80|_|_|0,1,2,3,4,5,6,7|DD CB %d 196+8*%c
+ld h, set %c, (ix+%d)|z80n|_|_|0,1,2,3,4,5,6,7|DD CB %d 196+8*%c
+ld h, set %c, (iy)|z80|_|_|0,1,2,3,4,5,6,7|FD CB 00 196+8*%c
+ld h, set %c, (iy)|z80n|_|_|0,1,2,3,4,5,6,7|FD CB 00 196+8*%c
+ld h, set %c, (iy+%d)|z80|_|_|0,1,2,3,4,5,6,7|FD CB %d 196+8*%c
+ld h, set %c, (iy+%d)|z80n|_|_|0,1,2,3,4,5,6,7|FD CB %d 196+8*%c
 ld h, sla (ix)|z80|_|_||DD CB 00 24
 ld h, sla (ix)|z80n|_|_||DD CB 00 24
 ld h, sla (ix+%d)|z80|_|_||DD CB %d 24
@@ -30013,14 +30013,14 @@ ld l, l|z180|_|_||6D
 ld l, l|z80|_|_||6D
 ld l, l|z80_strict|_|_||6D
 ld l, l|z80n|_|_||6D
-ld l, res %c, (ix)|z80|_|_||DD CB 00 133+8*%c(0..7)
-ld l, res %c, (ix)|z80n|_|_||DD CB 00 133+8*%c(0..7)
-ld l, res %c, (ix+%d)|z80|_|_||DD CB %d 133+8*%c(0..7)
-ld l, res %c, (ix+%d)|z80n|_|_||DD CB %d 133+8*%c(0..7)
-ld l, res %c, (iy)|z80|_|_||FD CB 00 133+8*%c(0..7)
-ld l, res %c, (iy)|z80n|_|_||FD CB 00 133+8*%c(0..7)
-ld l, res %c, (iy+%d)|z80|_|_||FD CB %d 133+8*%c(0..7)
-ld l, res %c, (iy+%d)|z80n|_|_||FD CB %d 133+8*%c(0..7)
+ld l, res %c, (ix)|z80|_|_|0,1,2,3,4,5,6,7|DD CB 00 133+8*%c
+ld l, res %c, (ix)|z80n|_|_|0,1,2,3,4,5,6,7|DD CB 00 133+8*%c
+ld l, res %c, (ix+%d)|z80|_|_|0,1,2,3,4,5,6,7|DD CB %d 133+8*%c
+ld l, res %c, (ix+%d)|z80n|_|_|0,1,2,3,4,5,6,7|DD CB %d 133+8*%c
+ld l, res %c, (iy)|z80|_|_|0,1,2,3,4,5,6,7|FD CB 00 133+8*%c
+ld l, res %c, (iy)|z80n|_|_|0,1,2,3,4,5,6,7|FD CB 00 133+8*%c
+ld l, res %c, (iy+%d)|z80|_|_|0,1,2,3,4,5,6,7|FD CB %d 133+8*%c
+ld l, res %c, (iy+%d)|z80n|_|_|0,1,2,3,4,5,6,7|FD CB %d 133+8*%c
 ld l, rl (ix)|z80|_|_||DD CB 00 15
 ld l, rl (ix)|z80n|_|_||DD CB 00 15
 ld l, rl (ix+%d)|z80|_|_||DD CB %d 15
@@ -30053,14 +30053,14 @@ ld l, rrc (iy)|z80|_|_||FD CB 00 0D
 ld l, rrc (iy)|z80n|_|_||FD CB 00 0D
 ld l, rrc (iy+%d)|z80|_|_||FD CB %d 0D
 ld l, rrc (iy+%d)|z80n|_|_||FD CB %d 0D
-ld l, set %c, (ix)|z80|_|_||DD CB 00 197+8*%c(0..7)
-ld l, set %c, (ix)|z80n|_|_||DD CB 00 197+8*%c(0..7)
-ld l, set %c, (ix+%d)|z80|_|_||DD CB %d 197+8*%c(0..7)
-ld l, set %c, (ix+%d)|z80n|_|_||DD CB %d 197+8*%c(0..7)
-ld l, set %c, (iy)|z80|_|_||FD CB 00 197+8*%c(0..7)
-ld l, set %c, (iy)|z80n|_|_||FD CB 00 197+8*%c(0..7)
-ld l, set %c, (iy+%d)|z80|_|_||FD CB %d 197+8*%c(0..7)
-ld l, set %c, (iy+%d)|z80n|_|_||FD CB %d 197+8*%c(0..7)
+ld l, set %c, (ix)|z80|_|_|0,1,2,3,4,5,6,7|DD CB 00 197+8*%c
+ld l, set %c, (ix)|z80n|_|_|0,1,2,3,4,5,6,7|DD CB 00 197+8*%c
+ld l, set %c, (ix+%d)|z80|_|_|0,1,2,3,4,5,6,7|DD CB %d 197+8*%c
+ld l, set %c, (ix+%d)|z80n|_|_|0,1,2,3,4,5,6,7|DD CB %d 197+8*%c
+ld l, set %c, (iy)|z80|_|_|0,1,2,3,4,5,6,7|FD CB 00 197+8*%c
+ld l, set %c, (iy)|z80n|_|_|0,1,2,3,4,5,6,7|FD CB 00 197+8*%c
+ld l, set %c, (iy+%d)|z80|_|_|0,1,2,3,4,5,6,7|FD CB %d 197+8*%c
+ld l, set %c, (iy+%d)|z80n|_|_|0,1,2,3,4,5,6,7|FD CB %d 197+8*%c
 ld l, sla (ix)|z80|_|_||DD CB 00 25
 ld l, sla (ix)|z80n|_|_||DD CB 00 25
 ld l, sla (ix+%d)|z80|_|_||DD CB %d 25
@@ -33922,8 +33922,8 @@ mlt.l sp|ez80_z80|_|_||49;ED 7C
 mlt.lis sp|ez80_z80|_|_||49;ED 7C
 mlt.s sp|ez80|_|_||52;ED 7C
 mlt.sil sp|ez80|_|_||52;ED 7C
-mmu %c, %n|z80n|_|_||ED 91 0x50+%c(0..7) %n
-mmu %c, a|z80n|_|_||ED 92 0x50+%c(0..7)
+mmu %c, %n|z80n|_|_|0,1,2,3,4,5,6,7|ED 91 0x50+%c %n
+mmu %c, a|z80n|_|_|0,1,2,3,4,5,6,7|ED 92 0x50+%c
 mmu0 %n|z80n|_|_||ED 91 50 %n
 mmu0 a|z80n|_|_||ED 92 50
 mmu1 %n|z80n|_|_||ED 91 51 %n
@@ -36135,12 +36135,12 @@ out (%n), a|z180|_|_||D3 %n
 out (%n), a|z80|_|_||D3 %n
 out (%n), a|z80_strict|_|_||D3 %n
 out (%n), a|z80n|_|_||D3 %n
-out (bc), %c|ez80|_|_||ED 0x41+%c(0..0)+6*8
-out (bc), %c|ez80_z80|_|_||ED 0x41+%c(0..0)+6*8
-out (bc), %c|r800|_|_||ED 0x41+%c(0..0)+6*8
-out (bc), %c|z180|_|_||ED 0x41+%c(0..0)+6*8
-out (bc), %c|z80|_|_||ED 0x41+%c(0..0)+6*8
-out (bc), %c|z80n|_|_||ED 0x41+%c(0..0)+6*8
+out (bc), %c|ez80|_|_|0|ED 0x41+%c+6*8
+out (bc), %c|ez80_z80|_|_|0|ED 0x41+%c+6*8
+out (bc), %c|r800|_|_|0|ED 0x41+%c+6*8
+out (bc), %c|z180|_|_|0|ED 0x41+%c+6*8
+out (bc), %c|z80|_|_|0|ED 0x41+%c+6*8
+out (bc), %c|z80n|_|_|0|ED 0x41+%c+6*8
 out (bc), a|ez80|_|_||ED 79
 out (bc), a|ez80_z80|_|_||ED 79
 out (bc), a|kc160|_|_||ED 79
@@ -36207,12 +36207,12 @@ out (bc), l|z180|_|_||ED 69
 out (bc), l|z80|_|_||ED 69
 out (bc), l|z80_strict|_|_||ED 69
 out (bc), l|z80n|_|_||ED 69
-out (c), %c|ez80|_|_||ED 0x41+%c(0..0)+6*8
-out (c), %c|ez80_z80|_|_||ED 0x41+%c(0..0)+6*8
-out (c), %c|r800|_|_||ED 0x41+%c(0..0)+6*8
-out (c), %c|z180|_|_||ED 0x41+%c(0..0)+6*8
-out (c), %c|z80|_|_||ED 0x41+%c(0..0)+6*8
-out (c), %c|z80n|_|_||ED 0x41+%c(0..0)+6*8
+out (c), %c|ez80|_|_|0|ED 0x41+%c+6*8
+out (c), %c|ez80_z80|_|_|0|ED 0x41+%c+6*8
+out (c), %c|r800|_|_|0|ED 0x41+%c+6*8
+out (c), %c|z180|_|_|0|ED 0x41+%c+6*8
+out (c), %c|z80|_|_|0|ED 0x41+%c+6*8
+out (c), %c|z80n|_|_|0|ED 0x41+%c+6*8
 out (c), a|ez80|_|_||ED 79
 out (c), a|ez80_z80|_|_||ED 79
 out (c), a|kc160|_|_||ED 79
@@ -37156,299 +37156,299 @@ req|z180|_|_||C8
 req|z80|_|_||C8
 req|z80_strict|_|_||C8
 req|z80n|_|_||C8
-res %c, (ahl)|kc160|_|_||52;CB 134+8*%c(0..7)
-res %c, (aix)|kc160|_|_||52;DD CB 00 134+8*%c(0..7)
-res %c, (aix+%d)|kc160|_|_||52;DD CB %d 134+8*%c(0..7)
-res %c, (aiy)|kc160|_|_||52;FD CB 00 134+8*%c(0..7)
-res %c, (aiy+%d)|kc160|_|_||52;FD CB %d 134+8*%c(0..7)
-res %c, (hl)|ez80|_|_||CB 134+8*%c(0..7)
-res %c, (hl)|ez80_z80|_|_||CB 134+8*%c(0..7)
-res %c, (hl)|gbz80|_|_||CB 134+8*%c(0..7)
-res %c, (hl)|kc160|_|_||CB 134+8*%c(0..7)
-res %c, (hl)|kc160_z80|_|_||CB 134+8*%c(0..7)
-res %c, (hl)|r2ka|_|_||CB 134+8*%c(0..7)
-res %c, (hl)|r3k|_|_||CB 134+8*%c(0..7)
-res %c, (hl)|r4k|_|_||CB 134+8*%c(0..7)
-res %c, (hl)|r5k|_|_||CB 134+8*%c(0..7)
-res %c, (hl)|r800|_|_||CB 134+8*%c(0..7)
-res %c, (hl)|z180|_|_||CB 134+8*%c(0..7)
-res %c, (hl)|z80|_|_||CB 134+8*%c(0..7)
-res %c, (hl)|z80_strict|_|_||CB 134+8*%c(0..7)
-res %c, (hl)|z80n|_|_||CB 134+8*%c(0..7)
-res %c, (ix)|ez80|_|_||DD CB 00 134+8*%c(0..7)
-res %c, (ix)|ez80_z80|_|_||DD CB 00 134+8*%c(0..7)
-res %c, (ix)|kc160|_|_||DD CB 00 134+8*%c(0..7)
-res %c, (ix)|kc160_z80|_|_||DD CB 00 134+8*%c(0..7)
-res %c, (ix)|r2ka|_|_||DD CB 00 134+8*%c(0..7)
-res %c, (ix)|r3k|_|_||DD CB 00 134+8*%c(0..7)
-res %c, (ix)|r4k|_|_||DD CB 00 134+8*%c(0..7)
-res %c, (ix)|r5k|_|_||DD CB 00 134+8*%c(0..7)
-res %c, (ix)|r800|_|_||DD CB 00 134+8*%c(0..7)
-res %c, (ix)|z180|_|_||DD CB 00 134+8*%c(0..7)
-res %c, (ix)|z80|_|_||DD CB 00 134+8*%c(0..7)
-res %c, (ix)|z80_strict|_|_||DD CB 00 134+8*%c(0..7)
-res %c, (ix)|z80n|_|_||DD CB 00 134+8*%c(0..7)
-res %c, (ix), a|z80|_|_||DD CB 00 135+8*%c(0..7)
-res %c, (ix), a|z80n|_|_||DD CB 00 135+8*%c(0..7)
-res %c, (ix), b|z80|_|_||DD CB 00 128+8*%c(0..7)
-res %c, (ix), b|z80n|_|_||DD CB 00 128+8*%c(0..7)
-res %c, (ix), c|z80|_|_||DD CB 00 129+8*%c(0..7)
-res %c, (ix), c|z80n|_|_||DD CB 00 129+8*%c(0..7)
-res %c, (ix), d|z80|_|_||DD CB 00 130+8*%c(0..7)
-res %c, (ix), d|z80n|_|_||DD CB 00 130+8*%c(0..7)
-res %c, (ix), e|z80|_|_||DD CB 00 131+8*%c(0..7)
-res %c, (ix), e|z80n|_|_||DD CB 00 131+8*%c(0..7)
-res %c, (ix), h|z80|_|_||DD CB 00 132+8*%c(0..7)
-res %c, (ix), h|z80n|_|_||DD CB 00 132+8*%c(0..7)
-res %c, (ix), l|z80|_|_||DD CB 00 133+8*%c(0..7)
-res %c, (ix), l|z80n|_|_||DD CB 00 133+8*%c(0..7)
-res %c, (ix+%d)|ez80|_|_||DD CB %d 134+8*%c(0..7)
-res %c, (ix+%d)|ez80_z80|_|_||DD CB %d 134+8*%c(0..7)
-res %c, (ix+%d)|kc160|_|_||DD CB %d 134+8*%c(0..7)
-res %c, (ix+%d)|kc160_z80|_|_||DD CB %d 134+8*%c(0..7)
-res %c, (ix+%d)|r2ka|_|_||DD CB %d 134+8*%c(0..7)
-res %c, (ix+%d)|r3k|_|_||DD CB %d 134+8*%c(0..7)
-res %c, (ix+%d)|r4k|_|_||DD CB %d 134+8*%c(0..7)
-res %c, (ix+%d)|r5k|_|_||DD CB %d 134+8*%c(0..7)
-res %c, (ix+%d)|r800|_|_||DD CB %d 134+8*%c(0..7)
-res %c, (ix+%d)|z180|_|_||DD CB %d 134+8*%c(0..7)
-res %c, (ix+%d)|z80|_|_||DD CB %d 134+8*%c(0..7)
-res %c, (ix+%d)|z80_strict|_|_||DD CB %d 134+8*%c(0..7)
-res %c, (ix+%d)|z80n|_|_||DD CB %d 134+8*%c(0..7)
-res %c, (ix+%d), a|z80|_|_||DD CB %d 135+8*%c(0..7)
-res %c, (ix+%d), a|z80n|_|_||DD CB %d 135+8*%c(0..7)
-res %c, (ix+%d), b|z80|_|_||DD CB %d 128+8*%c(0..7)
-res %c, (ix+%d), b|z80n|_|_||DD CB %d 128+8*%c(0..7)
-res %c, (ix+%d), c|z80|_|_||DD CB %d 129+8*%c(0..7)
-res %c, (ix+%d), c|z80n|_|_||DD CB %d 129+8*%c(0..7)
-res %c, (ix+%d), d|z80|_|_||DD CB %d 130+8*%c(0..7)
-res %c, (ix+%d), d|z80n|_|_||DD CB %d 130+8*%c(0..7)
-res %c, (ix+%d), e|z80|_|_||DD CB %d 131+8*%c(0..7)
-res %c, (ix+%d), e|z80n|_|_||DD CB %d 131+8*%c(0..7)
-res %c, (ix+%d), h|z80|_|_||DD CB %d 132+8*%c(0..7)
-res %c, (ix+%d), h|z80n|_|_||DD CB %d 132+8*%c(0..7)
-res %c, (ix+%d), l|z80|_|_||DD CB %d 133+8*%c(0..7)
-res %c, (ix+%d), l|z80n|_|_||DD CB %d 133+8*%c(0..7)
-res %c, (iy)|ez80|_|_||FD CB 00 134+8*%c(0..7)
-res %c, (iy)|ez80_z80|_|_||FD CB 00 134+8*%c(0..7)
-res %c, (iy)|kc160|_|_||FD CB 00 134+8*%c(0..7)
-res %c, (iy)|kc160_z80|_|_||FD CB 00 134+8*%c(0..7)
-res %c, (iy)|r2ka|_|_||FD CB 00 134+8*%c(0..7)
-res %c, (iy)|r3k|_|_||FD CB 00 134+8*%c(0..7)
-res %c, (iy)|r4k|_|_||FD CB 00 134+8*%c(0..7)
-res %c, (iy)|r5k|_|_||FD CB 00 134+8*%c(0..7)
-res %c, (iy)|r800|_|_||FD CB 00 134+8*%c(0..7)
-res %c, (iy)|z180|_|_||FD CB 00 134+8*%c(0..7)
-res %c, (iy)|z80|_|_||FD CB 00 134+8*%c(0..7)
-res %c, (iy)|z80_strict|_|_||FD CB 00 134+8*%c(0..7)
-res %c, (iy)|z80n|_|_||FD CB 00 134+8*%c(0..7)
-res %c, (iy), a|z80|_|_||FD CB 00 135+8*%c(0..7)
-res %c, (iy), a|z80n|_|_||FD CB 00 135+8*%c(0..7)
-res %c, (iy), b|z80|_|_||FD CB 00 128+8*%c(0..7)
-res %c, (iy), b|z80n|_|_||FD CB 00 128+8*%c(0..7)
-res %c, (iy), c|z80|_|_||FD CB 00 129+8*%c(0..7)
-res %c, (iy), c|z80n|_|_||FD CB 00 129+8*%c(0..7)
-res %c, (iy), d|z80|_|_||FD CB 00 130+8*%c(0..7)
-res %c, (iy), d|z80n|_|_||FD CB 00 130+8*%c(0..7)
-res %c, (iy), e|z80|_|_||FD CB 00 131+8*%c(0..7)
-res %c, (iy), e|z80n|_|_||FD CB 00 131+8*%c(0..7)
-res %c, (iy), h|z80|_|_||FD CB 00 132+8*%c(0..7)
-res %c, (iy), h|z80n|_|_||FD CB 00 132+8*%c(0..7)
-res %c, (iy), l|z80|_|_||FD CB 00 133+8*%c(0..7)
-res %c, (iy), l|z80n|_|_||FD CB 00 133+8*%c(0..7)
-res %c, (iy+%d)|ez80|_|_||FD CB %d 134+8*%c(0..7)
-res %c, (iy+%d)|ez80_z80|_|_||FD CB %d 134+8*%c(0..7)
-res %c, (iy+%d)|kc160|_|_||FD CB %d 134+8*%c(0..7)
-res %c, (iy+%d)|kc160_z80|_|_||FD CB %d 134+8*%c(0..7)
-res %c, (iy+%d)|r2ka|_|_||FD CB %d 134+8*%c(0..7)
-res %c, (iy+%d)|r3k|_|_||FD CB %d 134+8*%c(0..7)
-res %c, (iy+%d)|r4k|_|_||FD CB %d 134+8*%c(0..7)
-res %c, (iy+%d)|r5k|_|_||FD CB %d 134+8*%c(0..7)
-res %c, (iy+%d)|r800|_|_||FD CB %d 134+8*%c(0..7)
-res %c, (iy+%d)|z180|_|_||FD CB %d 134+8*%c(0..7)
-res %c, (iy+%d)|z80|_|_||FD CB %d 134+8*%c(0..7)
-res %c, (iy+%d)|z80_strict|_|_||FD CB %d 134+8*%c(0..7)
-res %c, (iy+%d)|z80n|_|_||FD CB %d 134+8*%c(0..7)
-res %c, (iy+%d), a|z80|_|_||FD CB %d 135+8*%c(0..7)
-res %c, (iy+%d), a|z80n|_|_||FD CB %d 135+8*%c(0..7)
-res %c, (iy+%d), b|z80|_|_||FD CB %d 128+8*%c(0..7)
-res %c, (iy+%d), b|z80n|_|_||FD CB %d 128+8*%c(0..7)
-res %c, (iy+%d), c|z80|_|_||FD CB %d 129+8*%c(0..7)
-res %c, (iy+%d), c|z80n|_|_||FD CB %d 129+8*%c(0..7)
-res %c, (iy+%d), d|z80|_|_||FD CB %d 130+8*%c(0..7)
-res %c, (iy+%d), d|z80n|_|_||FD CB %d 130+8*%c(0..7)
-res %c, (iy+%d), e|z80|_|_||FD CB %d 131+8*%c(0..7)
-res %c, (iy+%d), e|z80n|_|_||FD CB %d 131+8*%c(0..7)
-res %c, (iy+%d), h|z80|_|_||FD CB %d 132+8*%c(0..7)
-res %c, (iy+%d), h|z80n|_|_||FD CB %d 132+8*%c(0..7)
-res %c, (iy+%d), l|z80|_|_||FD CB %d 133+8*%c(0..7)
-res %c, (iy+%d), l|z80n|_|_||FD CB %d 133+8*%c(0..7)
-res %c, (phl)|kc160|_|_||5B;CB 134+8*%c(0..7)
-res %c, (pix)|kc160|_|_||5B;DD CB 00 134+8*%c(0..7)
-res %c, (pix+%d)|kc160|_|_||5B;DD CB %d 134+8*%c(0..7)
-res %c, (piy)|kc160|_|_||5B;FD CB 00 134+8*%c(0..7)
-res %c, (piy+%d)|kc160|_|_||5B;FD CB %d 134+8*%c(0..7)
-res %c, (xhl)|kc160|_|_||40;CB 134+8*%c(0..7)
-res %c, (xix)|kc160|_|_||40;DD CB 00 134+8*%c(0..7)
-res %c, (xix+%d)|kc160|_|_||40;DD CB %d 134+8*%c(0..7)
-res %c, (xiy)|kc160|_|_||40;FD CB 00 134+8*%c(0..7)
-res %c, (xiy+%d)|kc160|_|_||40;FD CB %d 134+8*%c(0..7)
-res %c, (yhl)|kc160|_|_||49;CB 134+8*%c(0..7)
-res %c, (yix)|kc160|_|_||49;DD CB 00 134+8*%c(0..7)
-res %c, (yix+%d)|kc160|_|_||49;DD CB %d 134+8*%c(0..7)
-res %c, (yiy)|kc160|_|_||49;FD CB 00 134+8*%c(0..7)
-res %c, (yiy+%d)|kc160|_|_||49;FD CB %d 134+8*%c(0..7)
-res %c, (zhl)|kc160|_|_||7F;CB 134+8*%c(0..7)
-res %c, (zix)|kc160|_|_||7F;DD CB 00 134+8*%c(0..7)
-res %c, (zix+%d)|kc160|_|_||7F;DD CB %d 134+8*%c(0..7)
-res %c, (ziy)|kc160|_|_||7F;FD CB 00 134+8*%c(0..7)
-res %c, (ziy+%d)|kc160|_|_||7F;FD CB %d 134+8*%c(0..7)
-res %c, a|ez80|_|_||CB 135+8*%c(0..7)
-res %c, a|ez80_z80|_|_||CB 135+8*%c(0..7)
-res %c, a|gbz80|_|_||CB 135+8*%c(0..7)
-res %c, a|kc160|_|_||CB 135+8*%c(0..7)
-res %c, a|kc160_z80|_|_||CB 135+8*%c(0..7)
-res %c, a|r2ka|_|_||CB 135+8*%c(0..7)
-res %c, a|r3k|_|_||CB 135+8*%c(0..7)
-res %c, a|r4k|_|_||CB 135+8*%c(0..7)
-res %c, a|r5k|_|_||CB 135+8*%c(0..7)
-res %c, a|r800|_|_||CB 135+8*%c(0..7)
-res %c, a|z180|_|_||CB 135+8*%c(0..7)
-res %c, a|z80|_|_||CB 135+8*%c(0..7)
-res %c, a|z80_strict|_|_||CB 135+8*%c(0..7)
-res %c, a|z80n|_|_||CB 135+8*%c(0..7)
-res %c, a'|r2ka|_|_||76;CB 135+8*%c(0..7)
-res %c, a'|r3k|_|_||76;CB 135+8*%c(0..7)
-res %c, a'|r4k|_|_||76;CB 135+8*%c(0..7)
-res %c, a'|r5k|_|_||76;CB 135+8*%c(0..7)
-res %c, b|ez80|_|_||CB 128+8*%c(0..7)
-res %c, b|ez80_z80|_|_||CB 128+8*%c(0..7)
-res %c, b|gbz80|_|_||CB 128+8*%c(0..7)
-res %c, b|kc160|_|_||CB 128+8*%c(0..7)
-res %c, b|kc160_z80|_|_||CB 128+8*%c(0..7)
-res %c, b|r2ka|_|_||CB 128+8*%c(0..7)
-res %c, b|r3k|_|_||CB 128+8*%c(0..7)
-res %c, b|r4k|_|_||CB 128+8*%c(0..7)
-res %c, b|r5k|_|_||CB 128+8*%c(0..7)
-res %c, b|r800|_|_||CB 128+8*%c(0..7)
-res %c, b|z180|_|_||CB 128+8*%c(0..7)
-res %c, b|z80|_|_||CB 128+8*%c(0..7)
-res %c, b|z80_strict|_|_||CB 128+8*%c(0..7)
-res %c, b|z80n|_|_||CB 128+8*%c(0..7)
-res %c, b'|r2ka|_|_||76;CB 128+8*%c(0..7)
-res %c, b'|r3k|_|_||76;CB 128+8*%c(0..7)
-res %c, b'|r4k|_|_||76;CB 128+8*%c(0..7)
-res %c, b'|r5k|_|_||76;CB 128+8*%c(0..7)
-res %c, c|ez80|_|_||CB 129+8*%c(0..7)
-res %c, c|ez80_z80|_|_||CB 129+8*%c(0..7)
-res %c, c|gbz80|_|_||CB 129+8*%c(0..7)
-res %c, c|kc160|_|_||CB 129+8*%c(0..7)
-res %c, c|kc160_z80|_|_||CB 129+8*%c(0..7)
-res %c, c|r2ka|_|_||CB 129+8*%c(0..7)
-res %c, c|r3k|_|_||CB 129+8*%c(0..7)
-res %c, c|r4k|_|_||CB 129+8*%c(0..7)
-res %c, c|r5k|_|_||CB 129+8*%c(0..7)
-res %c, c|r800|_|_||CB 129+8*%c(0..7)
-res %c, c|z180|_|_||CB 129+8*%c(0..7)
-res %c, c|z80|_|_||CB 129+8*%c(0..7)
-res %c, c|z80_strict|_|_||CB 129+8*%c(0..7)
-res %c, c|z80n|_|_||CB 129+8*%c(0..7)
-res %c, c'|r2ka|_|_||76;CB 129+8*%c(0..7)
-res %c, c'|r3k|_|_||76;CB 129+8*%c(0..7)
-res %c, c'|r4k|_|_||76;CB 129+8*%c(0..7)
-res %c, c'|r5k|_|_||76;CB 129+8*%c(0..7)
-res %c, d|ez80|_|_||CB 130+8*%c(0..7)
-res %c, d|ez80_z80|_|_||CB 130+8*%c(0..7)
-res %c, d|gbz80|_|_||CB 130+8*%c(0..7)
-res %c, d|kc160|_|_||CB 130+8*%c(0..7)
-res %c, d|kc160_z80|_|_||CB 130+8*%c(0..7)
-res %c, d|r2ka|_|_||CB 130+8*%c(0..7)
-res %c, d|r3k|_|_||CB 130+8*%c(0..7)
-res %c, d|r4k|_|_||CB 130+8*%c(0..7)
-res %c, d|r5k|_|_||CB 130+8*%c(0..7)
-res %c, d|r800|_|_||CB 130+8*%c(0..7)
-res %c, d|z180|_|_||CB 130+8*%c(0..7)
-res %c, d|z80|_|_||CB 130+8*%c(0..7)
-res %c, d|z80_strict|_|_||CB 130+8*%c(0..7)
-res %c, d|z80n|_|_||CB 130+8*%c(0..7)
-res %c, d'|r2ka|_|_||76;CB 130+8*%c(0..7)
-res %c, d'|r3k|_|_||76;CB 130+8*%c(0..7)
-res %c, d'|r4k|_|_||76;CB 130+8*%c(0..7)
-res %c, d'|r5k|_|_||76;CB 130+8*%c(0..7)
-res %c, e|ez80|_|_||CB 131+8*%c(0..7)
-res %c, e|ez80_z80|_|_||CB 131+8*%c(0..7)
-res %c, e|gbz80|_|_||CB 131+8*%c(0..7)
-res %c, e|kc160|_|_||CB 131+8*%c(0..7)
-res %c, e|kc160_z80|_|_||CB 131+8*%c(0..7)
-res %c, e|r2ka|_|_||CB 131+8*%c(0..7)
-res %c, e|r3k|_|_||CB 131+8*%c(0..7)
-res %c, e|r4k|_|_||CB 131+8*%c(0..7)
-res %c, e|r5k|_|_||CB 131+8*%c(0..7)
-res %c, e|r800|_|_||CB 131+8*%c(0..7)
-res %c, e|z180|_|_||CB 131+8*%c(0..7)
-res %c, e|z80|_|_||CB 131+8*%c(0..7)
-res %c, e|z80_strict|_|_||CB 131+8*%c(0..7)
-res %c, e|z80n|_|_||CB 131+8*%c(0..7)
-res %c, e'|r2ka|_|_||76;CB 131+8*%c(0..7)
-res %c, e'|r3k|_|_||76;CB 131+8*%c(0..7)
-res %c, e'|r4k|_|_||76;CB 131+8*%c(0..7)
-res %c, e'|r5k|_|_||76;CB 131+8*%c(0..7)
-res %c, h|ez80|_|_||CB 132+8*%c(0..7)
-res %c, h|ez80_z80|_|_||CB 132+8*%c(0..7)
-res %c, h|gbz80|_|_||CB 132+8*%c(0..7)
-res %c, h|kc160|_|_||CB 132+8*%c(0..7)
-res %c, h|kc160_z80|_|_||CB 132+8*%c(0..7)
-res %c, h|r2ka|_|_||CB 132+8*%c(0..7)
-res %c, h|r3k|_|_||CB 132+8*%c(0..7)
-res %c, h|r4k|_|_||CB 132+8*%c(0..7)
-res %c, h|r5k|_|_||CB 132+8*%c(0..7)
-res %c, h|r800|_|_||CB 132+8*%c(0..7)
-res %c, h|z180|_|_||CB 132+8*%c(0..7)
-res %c, h|z80|_|_||CB 132+8*%c(0..7)
-res %c, h|z80_strict|_|_||CB 132+8*%c(0..7)
-res %c, h|z80n|_|_||CB 132+8*%c(0..7)
-res %c, h'|r2ka|_|_||76;CB 132+8*%c(0..7)
-res %c, h'|r3k|_|_||76;CB 132+8*%c(0..7)
-res %c, h'|r4k|_|_||76;CB 132+8*%c(0..7)
-res %c, h'|r5k|_|_||76;CB 132+8*%c(0..7)
-res %c, l|ez80|_|_||CB 133+8*%c(0..7)
-res %c, l|ez80_z80|_|_||CB 133+8*%c(0..7)
-res %c, l|gbz80|_|_||CB 133+8*%c(0..7)
-res %c, l|kc160|_|_||CB 133+8*%c(0..7)
-res %c, l|kc160_z80|_|_||CB 133+8*%c(0..7)
-res %c, l|r2ka|_|_||CB 133+8*%c(0..7)
-res %c, l|r3k|_|_||CB 133+8*%c(0..7)
-res %c, l|r4k|_|_||CB 133+8*%c(0..7)
-res %c, l|r5k|_|_||CB 133+8*%c(0..7)
-res %c, l|r800|_|_||CB 133+8*%c(0..7)
-res %c, l|z180|_|_||CB 133+8*%c(0..7)
-res %c, l|z80|_|_||CB 133+8*%c(0..7)
-res %c, l|z80_strict|_|_||CB 133+8*%c(0..7)
-res %c, l|z80n|_|_||CB 133+8*%c(0..7)
-res %c, l'|r2ka|_|_||76;CB 133+8*%c(0..7)
-res %c, l'|r3k|_|_||76;CB 133+8*%c(0..7)
-res %c, l'|r4k|_|_||76;CB 133+8*%c(0..7)
-res %c, l'|r5k|_|_||76;CB 133+8*%c(0..7)
-res.l %c, (hl)|ez80_z80|_|_||49;CB 134+8*%c(0..7)
-res.l %c, (ix)|ez80_z80|_|_||49;DD CB 00 134+8*%c(0..7)
-res.l %c, (ix+%d)|ez80_z80|_|_||49;DD CB %d 134+8*%c(0..7)
-res.l %c, (iy)|ez80_z80|_|_||49;FD CB 00 134+8*%c(0..7)
-res.l %c, (iy+%d)|ez80_z80|_|_||49;FD CB %d 134+8*%c(0..7)
-res.lis %c, (hl)|ez80_z80|_|_||49;CB 134+8*%c(0..7)
-res.lis %c, (ix)|ez80_z80|_|_||49;DD CB 00 134+8*%c(0..7)
-res.lis %c, (ix+%d)|ez80_z80|_|_||49;DD CB %d 134+8*%c(0..7)
-res.lis %c, (iy)|ez80_z80|_|_||49;FD CB 00 134+8*%c(0..7)
-res.lis %c, (iy+%d)|ez80_z80|_|_||49;FD CB %d 134+8*%c(0..7)
-res.s %c, (hl)|ez80|_|_||52;CB 134+8*%c(0..7)
-res.s %c, (ix)|ez80|_|_||52;DD CB 00 134+8*%c(0..7)
-res.s %c, (ix+%d)|ez80|_|_||52;DD CB %d 134+8*%c(0..7)
-res.s %c, (iy)|ez80|_|_||52;FD CB 00 134+8*%c(0..7)
-res.s %c, (iy+%d)|ez80|_|_||52;FD CB %d 134+8*%c(0..7)
-res.sil %c, (hl)|ez80|_|_||52;CB 134+8*%c(0..7)
-res.sil %c, (ix)|ez80|_|_||52;DD CB 00 134+8*%c(0..7)
-res.sil %c, (ix+%d)|ez80|_|_||52;DD CB %d 134+8*%c(0..7)
-res.sil %c, (iy)|ez80|_|_||52;FD CB 00 134+8*%c(0..7)
-res.sil %c, (iy+%d)|ez80|_|_||52;FD CB %d 134+8*%c(0..7)
+res %c, (ahl)|kc160|_|_|0,1,2,3,4,5,6,7|52;CB 134+8*%c
+res %c, (aix)|kc160|_|_|0,1,2,3,4,5,6,7|52;DD CB 00 134+8*%c
+res %c, (aix+%d)|kc160|_|_|0,1,2,3,4,5,6,7|52;DD CB %d 134+8*%c
+res %c, (aiy)|kc160|_|_|0,1,2,3,4,5,6,7|52;FD CB 00 134+8*%c
+res %c, (aiy+%d)|kc160|_|_|0,1,2,3,4,5,6,7|52;FD CB %d 134+8*%c
+res %c, (hl)|ez80|_|_|0,1,2,3,4,5,6,7|CB 134+8*%c
+res %c, (hl)|ez80_z80|_|_|0,1,2,3,4,5,6,7|CB 134+8*%c
+res %c, (hl)|gbz80|_|_|0,1,2,3,4,5,6,7|CB 134+8*%c
+res %c, (hl)|kc160|_|_|0,1,2,3,4,5,6,7|CB 134+8*%c
+res %c, (hl)|kc160_z80|_|_|0,1,2,3,4,5,6,7|CB 134+8*%c
+res %c, (hl)|r2ka|_|_|0,1,2,3,4,5,6,7|CB 134+8*%c
+res %c, (hl)|r3k|_|_|0,1,2,3,4,5,6,7|CB 134+8*%c
+res %c, (hl)|r4k|_|_|0,1,2,3,4,5,6,7|CB 134+8*%c
+res %c, (hl)|r5k|_|_|0,1,2,3,4,5,6,7|CB 134+8*%c
+res %c, (hl)|r800|_|_|0,1,2,3,4,5,6,7|CB 134+8*%c
+res %c, (hl)|z180|_|_|0,1,2,3,4,5,6,7|CB 134+8*%c
+res %c, (hl)|z80|_|_|0,1,2,3,4,5,6,7|CB 134+8*%c
+res %c, (hl)|z80_strict|_|_|0,1,2,3,4,5,6,7|CB 134+8*%c
+res %c, (hl)|z80n|_|_|0,1,2,3,4,5,6,7|CB 134+8*%c
+res %c, (ix)|ez80|_|_|0,1,2,3,4,5,6,7|DD CB 00 134+8*%c
+res %c, (ix)|ez80_z80|_|_|0,1,2,3,4,5,6,7|DD CB 00 134+8*%c
+res %c, (ix)|kc160|_|_|0,1,2,3,4,5,6,7|DD CB 00 134+8*%c
+res %c, (ix)|kc160_z80|_|_|0,1,2,3,4,5,6,7|DD CB 00 134+8*%c
+res %c, (ix)|r2ka|_|_|0,1,2,3,4,5,6,7|DD CB 00 134+8*%c
+res %c, (ix)|r3k|_|_|0,1,2,3,4,5,6,7|DD CB 00 134+8*%c
+res %c, (ix)|r4k|_|_|0,1,2,3,4,5,6,7|DD CB 00 134+8*%c
+res %c, (ix)|r5k|_|_|0,1,2,3,4,5,6,7|DD CB 00 134+8*%c
+res %c, (ix)|r800|_|_|0,1,2,3,4,5,6,7|DD CB 00 134+8*%c
+res %c, (ix)|z180|_|_|0,1,2,3,4,5,6,7|DD CB 00 134+8*%c
+res %c, (ix)|z80|_|_|0,1,2,3,4,5,6,7|DD CB 00 134+8*%c
+res %c, (ix)|z80_strict|_|_|0,1,2,3,4,5,6,7|DD CB 00 134+8*%c
+res %c, (ix)|z80n|_|_|0,1,2,3,4,5,6,7|DD CB 00 134+8*%c
+res %c, (ix), a|z80|_|_|0,1,2,3,4,5,6,7|DD CB 00 135+8*%c
+res %c, (ix), a|z80n|_|_|0,1,2,3,4,5,6,7|DD CB 00 135+8*%c
+res %c, (ix), b|z80|_|_|0,1,2,3,4,5,6,7|DD CB 00 128+8*%c
+res %c, (ix), b|z80n|_|_|0,1,2,3,4,5,6,7|DD CB 00 128+8*%c
+res %c, (ix), c|z80|_|_|0,1,2,3,4,5,6,7|DD CB 00 129+8*%c
+res %c, (ix), c|z80n|_|_|0,1,2,3,4,5,6,7|DD CB 00 129+8*%c
+res %c, (ix), d|z80|_|_|0,1,2,3,4,5,6,7|DD CB 00 130+8*%c
+res %c, (ix), d|z80n|_|_|0,1,2,3,4,5,6,7|DD CB 00 130+8*%c
+res %c, (ix), e|z80|_|_|0,1,2,3,4,5,6,7|DD CB 00 131+8*%c
+res %c, (ix), e|z80n|_|_|0,1,2,3,4,5,6,7|DD CB 00 131+8*%c
+res %c, (ix), h|z80|_|_|0,1,2,3,4,5,6,7|DD CB 00 132+8*%c
+res %c, (ix), h|z80n|_|_|0,1,2,3,4,5,6,7|DD CB 00 132+8*%c
+res %c, (ix), l|z80|_|_|0,1,2,3,4,5,6,7|DD CB 00 133+8*%c
+res %c, (ix), l|z80n|_|_|0,1,2,3,4,5,6,7|DD CB 00 133+8*%c
+res %c, (ix+%d)|ez80|_|_|0,1,2,3,4,5,6,7|DD CB %d 134+8*%c
+res %c, (ix+%d)|ez80_z80|_|_|0,1,2,3,4,5,6,7|DD CB %d 134+8*%c
+res %c, (ix+%d)|kc160|_|_|0,1,2,3,4,5,6,7|DD CB %d 134+8*%c
+res %c, (ix+%d)|kc160_z80|_|_|0,1,2,3,4,5,6,7|DD CB %d 134+8*%c
+res %c, (ix+%d)|r2ka|_|_|0,1,2,3,4,5,6,7|DD CB %d 134+8*%c
+res %c, (ix+%d)|r3k|_|_|0,1,2,3,4,5,6,7|DD CB %d 134+8*%c
+res %c, (ix+%d)|r4k|_|_|0,1,2,3,4,5,6,7|DD CB %d 134+8*%c
+res %c, (ix+%d)|r5k|_|_|0,1,2,3,4,5,6,7|DD CB %d 134+8*%c
+res %c, (ix+%d)|r800|_|_|0,1,2,3,4,5,6,7|DD CB %d 134+8*%c
+res %c, (ix+%d)|z180|_|_|0,1,2,3,4,5,6,7|DD CB %d 134+8*%c
+res %c, (ix+%d)|z80|_|_|0,1,2,3,4,5,6,7|DD CB %d 134+8*%c
+res %c, (ix+%d)|z80_strict|_|_|0,1,2,3,4,5,6,7|DD CB %d 134+8*%c
+res %c, (ix+%d)|z80n|_|_|0,1,2,3,4,5,6,7|DD CB %d 134+8*%c
+res %c, (ix+%d), a|z80|_|_|0,1,2,3,4,5,6,7|DD CB %d 135+8*%c
+res %c, (ix+%d), a|z80n|_|_|0,1,2,3,4,5,6,7|DD CB %d 135+8*%c
+res %c, (ix+%d), b|z80|_|_|0,1,2,3,4,5,6,7|DD CB %d 128+8*%c
+res %c, (ix+%d), b|z80n|_|_|0,1,2,3,4,5,6,7|DD CB %d 128+8*%c
+res %c, (ix+%d), c|z80|_|_|0,1,2,3,4,5,6,7|DD CB %d 129+8*%c
+res %c, (ix+%d), c|z80n|_|_|0,1,2,3,4,5,6,7|DD CB %d 129+8*%c
+res %c, (ix+%d), d|z80|_|_|0,1,2,3,4,5,6,7|DD CB %d 130+8*%c
+res %c, (ix+%d), d|z80n|_|_|0,1,2,3,4,5,6,7|DD CB %d 130+8*%c
+res %c, (ix+%d), e|z80|_|_|0,1,2,3,4,5,6,7|DD CB %d 131+8*%c
+res %c, (ix+%d), e|z80n|_|_|0,1,2,3,4,5,6,7|DD CB %d 131+8*%c
+res %c, (ix+%d), h|z80|_|_|0,1,2,3,4,5,6,7|DD CB %d 132+8*%c
+res %c, (ix+%d), h|z80n|_|_|0,1,2,3,4,5,6,7|DD CB %d 132+8*%c
+res %c, (ix+%d), l|z80|_|_|0,1,2,3,4,5,6,7|DD CB %d 133+8*%c
+res %c, (ix+%d), l|z80n|_|_|0,1,2,3,4,5,6,7|DD CB %d 133+8*%c
+res %c, (iy)|ez80|_|_|0,1,2,3,4,5,6,7|FD CB 00 134+8*%c
+res %c, (iy)|ez80_z80|_|_|0,1,2,3,4,5,6,7|FD CB 00 134+8*%c
+res %c, (iy)|kc160|_|_|0,1,2,3,4,5,6,7|FD CB 00 134+8*%c
+res %c, (iy)|kc160_z80|_|_|0,1,2,3,4,5,6,7|FD CB 00 134+8*%c
+res %c, (iy)|r2ka|_|_|0,1,2,3,4,5,6,7|FD CB 00 134+8*%c
+res %c, (iy)|r3k|_|_|0,1,2,3,4,5,6,7|FD CB 00 134+8*%c
+res %c, (iy)|r4k|_|_|0,1,2,3,4,5,6,7|FD CB 00 134+8*%c
+res %c, (iy)|r5k|_|_|0,1,2,3,4,5,6,7|FD CB 00 134+8*%c
+res %c, (iy)|r800|_|_|0,1,2,3,4,5,6,7|FD CB 00 134+8*%c
+res %c, (iy)|z180|_|_|0,1,2,3,4,5,6,7|FD CB 00 134+8*%c
+res %c, (iy)|z80|_|_|0,1,2,3,4,5,6,7|FD CB 00 134+8*%c
+res %c, (iy)|z80_strict|_|_|0,1,2,3,4,5,6,7|FD CB 00 134+8*%c
+res %c, (iy)|z80n|_|_|0,1,2,3,4,5,6,7|FD CB 00 134+8*%c
+res %c, (iy), a|z80|_|_|0,1,2,3,4,5,6,7|FD CB 00 135+8*%c
+res %c, (iy), a|z80n|_|_|0,1,2,3,4,5,6,7|FD CB 00 135+8*%c
+res %c, (iy), b|z80|_|_|0,1,2,3,4,5,6,7|FD CB 00 128+8*%c
+res %c, (iy), b|z80n|_|_|0,1,2,3,4,5,6,7|FD CB 00 128+8*%c
+res %c, (iy), c|z80|_|_|0,1,2,3,4,5,6,7|FD CB 00 129+8*%c
+res %c, (iy), c|z80n|_|_|0,1,2,3,4,5,6,7|FD CB 00 129+8*%c
+res %c, (iy), d|z80|_|_|0,1,2,3,4,5,6,7|FD CB 00 130+8*%c
+res %c, (iy), d|z80n|_|_|0,1,2,3,4,5,6,7|FD CB 00 130+8*%c
+res %c, (iy), e|z80|_|_|0,1,2,3,4,5,6,7|FD CB 00 131+8*%c
+res %c, (iy), e|z80n|_|_|0,1,2,3,4,5,6,7|FD CB 00 131+8*%c
+res %c, (iy), h|z80|_|_|0,1,2,3,4,5,6,7|FD CB 00 132+8*%c
+res %c, (iy), h|z80n|_|_|0,1,2,3,4,5,6,7|FD CB 00 132+8*%c
+res %c, (iy), l|z80|_|_|0,1,2,3,4,5,6,7|FD CB 00 133+8*%c
+res %c, (iy), l|z80n|_|_|0,1,2,3,4,5,6,7|FD CB 00 133+8*%c
+res %c, (iy+%d)|ez80|_|_|0,1,2,3,4,5,6,7|FD CB %d 134+8*%c
+res %c, (iy+%d)|ez80_z80|_|_|0,1,2,3,4,5,6,7|FD CB %d 134+8*%c
+res %c, (iy+%d)|kc160|_|_|0,1,2,3,4,5,6,7|FD CB %d 134+8*%c
+res %c, (iy+%d)|kc160_z80|_|_|0,1,2,3,4,5,6,7|FD CB %d 134+8*%c
+res %c, (iy+%d)|r2ka|_|_|0,1,2,3,4,5,6,7|FD CB %d 134+8*%c
+res %c, (iy+%d)|r3k|_|_|0,1,2,3,4,5,6,7|FD CB %d 134+8*%c
+res %c, (iy+%d)|r4k|_|_|0,1,2,3,4,5,6,7|FD CB %d 134+8*%c
+res %c, (iy+%d)|r5k|_|_|0,1,2,3,4,5,6,7|FD CB %d 134+8*%c
+res %c, (iy+%d)|r800|_|_|0,1,2,3,4,5,6,7|FD CB %d 134+8*%c
+res %c, (iy+%d)|z180|_|_|0,1,2,3,4,5,6,7|FD CB %d 134+8*%c
+res %c, (iy+%d)|z80|_|_|0,1,2,3,4,5,6,7|FD CB %d 134+8*%c
+res %c, (iy+%d)|z80_strict|_|_|0,1,2,3,4,5,6,7|FD CB %d 134+8*%c
+res %c, (iy+%d)|z80n|_|_|0,1,2,3,4,5,6,7|FD CB %d 134+8*%c
+res %c, (iy+%d), a|z80|_|_|0,1,2,3,4,5,6,7|FD CB %d 135+8*%c
+res %c, (iy+%d), a|z80n|_|_|0,1,2,3,4,5,6,7|FD CB %d 135+8*%c
+res %c, (iy+%d), b|z80|_|_|0,1,2,3,4,5,6,7|FD CB %d 128+8*%c
+res %c, (iy+%d), b|z80n|_|_|0,1,2,3,4,5,6,7|FD CB %d 128+8*%c
+res %c, (iy+%d), c|z80|_|_|0,1,2,3,4,5,6,7|FD CB %d 129+8*%c
+res %c, (iy+%d), c|z80n|_|_|0,1,2,3,4,5,6,7|FD CB %d 129+8*%c
+res %c, (iy+%d), d|z80|_|_|0,1,2,3,4,5,6,7|FD CB %d 130+8*%c
+res %c, (iy+%d), d|z80n|_|_|0,1,2,3,4,5,6,7|FD CB %d 130+8*%c
+res %c, (iy+%d), e|z80|_|_|0,1,2,3,4,5,6,7|FD CB %d 131+8*%c
+res %c, (iy+%d), e|z80n|_|_|0,1,2,3,4,5,6,7|FD CB %d 131+8*%c
+res %c, (iy+%d), h|z80|_|_|0,1,2,3,4,5,6,7|FD CB %d 132+8*%c
+res %c, (iy+%d), h|z80n|_|_|0,1,2,3,4,5,6,7|FD CB %d 132+8*%c
+res %c, (iy+%d), l|z80|_|_|0,1,2,3,4,5,6,7|FD CB %d 133+8*%c
+res %c, (iy+%d), l|z80n|_|_|0,1,2,3,4,5,6,7|FD CB %d 133+8*%c
+res %c, (phl)|kc160|_|_|0,1,2,3,4,5,6,7|5B;CB 134+8*%c
+res %c, (pix)|kc160|_|_|0,1,2,3,4,5,6,7|5B;DD CB 00 134+8*%c
+res %c, (pix+%d)|kc160|_|_|0,1,2,3,4,5,6,7|5B;DD CB %d 134+8*%c
+res %c, (piy)|kc160|_|_|0,1,2,3,4,5,6,7|5B;FD CB 00 134+8*%c
+res %c, (piy+%d)|kc160|_|_|0,1,2,3,4,5,6,7|5B;FD CB %d 134+8*%c
+res %c, (xhl)|kc160|_|_|0,1,2,3,4,5,6,7|40;CB 134+8*%c
+res %c, (xix)|kc160|_|_|0,1,2,3,4,5,6,7|40;DD CB 00 134+8*%c
+res %c, (xix+%d)|kc160|_|_|0,1,2,3,4,5,6,7|40;DD CB %d 134+8*%c
+res %c, (xiy)|kc160|_|_|0,1,2,3,4,5,6,7|40;FD CB 00 134+8*%c
+res %c, (xiy+%d)|kc160|_|_|0,1,2,3,4,5,6,7|40;FD CB %d 134+8*%c
+res %c, (yhl)|kc160|_|_|0,1,2,3,4,5,6,7|49;CB 134+8*%c
+res %c, (yix)|kc160|_|_|0,1,2,3,4,5,6,7|49;DD CB 00 134+8*%c
+res %c, (yix+%d)|kc160|_|_|0,1,2,3,4,5,6,7|49;DD CB %d 134+8*%c
+res %c, (yiy)|kc160|_|_|0,1,2,3,4,5,6,7|49;FD CB 00 134+8*%c
+res %c, (yiy+%d)|kc160|_|_|0,1,2,3,4,5,6,7|49;FD CB %d 134+8*%c
+res %c, (zhl)|kc160|_|_|0,1,2,3,4,5,6,7|7F;CB 134+8*%c
+res %c, (zix)|kc160|_|_|0,1,2,3,4,5,6,7|7F;DD CB 00 134+8*%c
+res %c, (zix+%d)|kc160|_|_|0,1,2,3,4,5,6,7|7F;DD CB %d 134+8*%c
+res %c, (ziy)|kc160|_|_|0,1,2,3,4,5,6,7|7F;FD CB 00 134+8*%c
+res %c, (ziy+%d)|kc160|_|_|0,1,2,3,4,5,6,7|7F;FD CB %d 134+8*%c
+res %c, a|ez80|_|_|0,1,2,3,4,5,6,7|CB 135+8*%c
+res %c, a|ez80_z80|_|_|0,1,2,3,4,5,6,7|CB 135+8*%c
+res %c, a|gbz80|_|_|0,1,2,3,4,5,6,7|CB 135+8*%c
+res %c, a|kc160|_|_|0,1,2,3,4,5,6,7|CB 135+8*%c
+res %c, a|kc160_z80|_|_|0,1,2,3,4,5,6,7|CB 135+8*%c
+res %c, a|r2ka|_|_|0,1,2,3,4,5,6,7|CB 135+8*%c
+res %c, a|r3k|_|_|0,1,2,3,4,5,6,7|CB 135+8*%c
+res %c, a|r4k|_|_|0,1,2,3,4,5,6,7|CB 135+8*%c
+res %c, a|r5k|_|_|0,1,2,3,4,5,6,7|CB 135+8*%c
+res %c, a|r800|_|_|0,1,2,3,4,5,6,7|CB 135+8*%c
+res %c, a|z180|_|_|0,1,2,3,4,5,6,7|CB 135+8*%c
+res %c, a|z80|_|_|0,1,2,3,4,5,6,7|CB 135+8*%c
+res %c, a|z80_strict|_|_|0,1,2,3,4,5,6,7|CB 135+8*%c
+res %c, a|z80n|_|_|0,1,2,3,4,5,6,7|CB 135+8*%c
+res %c, a'|r2ka|_|_|0,1,2,3,4,5,6,7|76;CB 135+8*%c
+res %c, a'|r3k|_|_|0,1,2,3,4,5,6,7|76;CB 135+8*%c
+res %c, a'|r4k|_|_|0,1,2,3,4,5,6,7|76;CB 135+8*%c
+res %c, a'|r5k|_|_|0,1,2,3,4,5,6,7|76;CB 135+8*%c
+res %c, b|ez80|_|_|0,1,2,3,4,5,6,7|CB 128+8*%c
+res %c, b|ez80_z80|_|_|0,1,2,3,4,5,6,7|CB 128+8*%c
+res %c, b|gbz80|_|_|0,1,2,3,4,5,6,7|CB 128+8*%c
+res %c, b|kc160|_|_|0,1,2,3,4,5,6,7|CB 128+8*%c
+res %c, b|kc160_z80|_|_|0,1,2,3,4,5,6,7|CB 128+8*%c
+res %c, b|r2ka|_|_|0,1,2,3,4,5,6,7|CB 128+8*%c
+res %c, b|r3k|_|_|0,1,2,3,4,5,6,7|CB 128+8*%c
+res %c, b|r4k|_|_|0,1,2,3,4,5,6,7|CB 128+8*%c
+res %c, b|r5k|_|_|0,1,2,3,4,5,6,7|CB 128+8*%c
+res %c, b|r800|_|_|0,1,2,3,4,5,6,7|CB 128+8*%c
+res %c, b|z180|_|_|0,1,2,3,4,5,6,7|CB 128+8*%c
+res %c, b|z80|_|_|0,1,2,3,4,5,6,7|CB 128+8*%c
+res %c, b|z80_strict|_|_|0,1,2,3,4,5,6,7|CB 128+8*%c
+res %c, b|z80n|_|_|0,1,2,3,4,5,6,7|CB 128+8*%c
+res %c, b'|r2ka|_|_|0,1,2,3,4,5,6,7|76;CB 128+8*%c
+res %c, b'|r3k|_|_|0,1,2,3,4,5,6,7|76;CB 128+8*%c
+res %c, b'|r4k|_|_|0,1,2,3,4,5,6,7|76;CB 128+8*%c
+res %c, b'|r5k|_|_|0,1,2,3,4,5,6,7|76;CB 128+8*%c
+res %c, c|ez80|_|_|0,1,2,3,4,5,6,7|CB 129+8*%c
+res %c, c|ez80_z80|_|_|0,1,2,3,4,5,6,7|CB 129+8*%c
+res %c, c|gbz80|_|_|0,1,2,3,4,5,6,7|CB 129+8*%c
+res %c, c|kc160|_|_|0,1,2,3,4,5,6,7|CB 129+8*%c
+res %c, c|kc160_z80|_|_|0,1,2,3,4,5,6,7|CB 129+8*%c
+res %c, c|r2ka|_|_|0,1,2,3,4,5,6,7|CB 129+8*%c
+res %c, c|r3k|_|_|0,1,2,3,4,5,6,7|CB 129+8*%c
+res %c, c|r4k|_|_|0,1,2,3,4,5,6,7|CB 129+8*%c
+res %c, c|r5k|_|_|0,1,2,3,4,5,6,7|CB 129+8*%c
+res %c, c|r800|_|_|0,1,2,3,4,5,6,7|CB 129+8*%c
+res %c, c|z180|_|_|0,1,2,3,4,5,6,7|CB 129+8*%c
+res %c, c|z80|_|_|0,1,2,3,4,5,6,7|CB 129+8*%c
+res %c, c|z80_strict|_|_|0,1,2,3,4,5,6,7|CB 129+8*%c
+res %c, c|z80n|_|_|0,1,2,3,4,5,6,7|CB 129+8*%c
+res %c, c'|r2ka|_|_|0,1,2,3,4,5,6,7|76;CB 129+8*%c
+res %c, c'|r3k|_|_|0,1,2,3,4,5,6,7|76;CB 129+8*%c
+res %c, c'|r4k|_|_|0,1,2,3,4,5,6,7|76;CB 129+8*%c
+res %c, c'|r5k|_|_|0,1,2,3,4,5,6,7|76;CB 129+8*%c
+res %c, d|ez80|_|_|0,1,2,3,4,5,6,7|CB 130+8*%c
+res %c, d|ez80_z80|_|_|0,1,2,3,4,5,6,7|CB 130+8*%c
+res %c, d|gbz80|_|_|0,1,2,3,4,5,6,7|CB 130+8*%c
+res %c, d|kc160|_|_|0,1,2,3,4,5,6,7|CB 130+8*%c
+res %c, d|kc160_z80|_|_|0,1,2,3,4,5,6,7|CB 130+8*%c
+res %c, d|r2ka|_|_|0,1,2,3,4,5,6,7|CB 130+8*%c
+res %c, d|r3k|_|_|0,1,2,3,4,5,6,7|CB 130+8*%c
+res %c, d|r4k|_|_|0,1,2,3,4,5,6,7|CB 130+8*%c
+res %c, d|r5k|_|_|0,1,2,3,4,5,6,7|CB 130+8*%c
+res %c, d|r800|_|_|0,1,2,3,4,5,6,7|CB 130+8*%c
+res %c, d|z180|_|_|0,1,2,3,4,5,6,7|CB 130+8*%c
+res %c, d|z80|_|_|0,1,2,3,4,5,6,7|CB 130+8*%c
+res %c, d|z80_strict|_|_|0,1,2,3,4,5,6,7|CB 130+8*%c
+res %c, d|z80n|_|_|0,1,2,3,4,5,6,7|CB 130+8*%c
+res %c, d'|r2ka|_|_|0,1,2,3,4,5,6,7|76;CB 130+8*%c
+res %c, d'|r3k|_|_|0,1,2,3,4,5,6,7|76;CB 130+8*%c
+res %c, d'|r4k|_|_|0,1,2,3,4,5,6,7|76;CB 130+8*%c
+res %c, d'|r5k|_|_|0,1,2,3,4,5,6,7|76;CB 130+8*%c
+res %c, e|ez80|_|_|0,1,2,3,4,5,6,7|CB 131+8*%c
+res %c, e|ez80_z80|_|_|0,1,2,3,4,5,6,7|CB 131+8*%c
+res %c, e|gbz80|_|_|0,1,2,3,4,5,6,7|CB 131+8*%c
+res %c, e|kc160|_|_|0,1,2,3,4,5,6,7|CB 131+8*%c
+res %c, e|kc160_z80|_|_|0,1,2,3,4,5,6,7|CB 131+8*%c
+res %c, e|r2ka|_|_|0,1,2,3,4,5,6,7|CB 131+8*%c
+res %c, e|r3k|_|_|0,1,2,3,4,5,6,7|CB 131+8*%c
+res %c, e|r4k|_|_|0,1,2,3,4,5,6,7|CB 131+8*%c
+res %c, e|r5k|_|_|0,1,2,3,4,5,6,7|CB 131+8*%c
+res %c, e|r800|_|_|0,1,2,3,4,5,6,7|CB 131+8*%c
+res %c, e|z180|_|_|0,1,2,3,4,5,6,7|CB 131+8*%c
+res %c, e|z80|_|_|0,1,2,3,4,5,6,7|CB 131+8*%c
+res %c, e|z80_strict|_|_|0,1,2,3,4,5,6,7|CB 131+8*%c
+res %c, e|z80n|_|_|0,1,2,3,4,5,6,7|CB 131+8*%c
+res %c, e'|r2ka|_|_|0,1,2,3,4,5,6,7|76;CB 131+8*%c
+res %c, e'|r3k|_|_|0,1,2,3,4,5,6,7|76;CB 131+8*%c
+res %c, e'|r4k|_|_|0,1,2,3,4,5,6,7|76;CB 131+8*%c
+res %c, e'|r5k|_|_|0,1,2,3,4,5,6,7|76;CB 131+8*%c
+res %c, h|ez80|_|_|0,1,2,3,4,5,6,7|CB 132+8*%c
+res %c, h|ez80_z80|_|_|0,1,2,3,4,5,6,7|CB 132+8*%c
+res %c, h|gbz80|_|_|0,1,2,3,4,5,6,7|CB 132+8*%c
+res %c, h|kc160|_|_|0,1,2,3,4,5,6,7|CB 132+8*%c
+res %c, h|kc160_z80|_|_|0,1,2,3,4,5,6,7|CB 132+8*%c
+res %c, h|r2ka|_|_|0,1,2,3,4,5,6,7|CB 132+8*%c
+res %c, h|r3k|_|_|0,1,2,3,4,5,6,7|CB 132+8*%c
+res %c, h|r4k|_|_|0,1,2,3,4,5,6,7|CB 132+8*%c
+res %c, h|r5k|_|_|0,1,2,3,4,5,6,7|CB 132+8*%c
+res %c, h|r800|_|_|0,1,2,3,4,5,6,7|CB 132+8*%c
+res %c, h|z180|_|_|0,1,2,3,4,5,6,7|CB 132+8*%c
+res %c, h|z80|_|_|0,1,2,3,4,5,6,7|CB 132+8*%c
+res %c, h|z80_strict|_|_|0,1,2,3,4,5,6,7|CB 132+8*%c
+res %c, h|z80n|_|_|0,1,2,3,4,5,6,7|CB 132+8*%c
+res %c, h'|r2ka|_|_|0,1,2,3,4,5,6,7|76;CB 132+8*%c
+res %c, h'|r3k|_|_|0,1,2,3,4,5,6,7|76;CB 132+8*%c
+res %c, h'|r4k|_|_|0,1,2,3,4,5,6,7|76;CB 132+8*%c
+res %c, h'|r5k|_|_|0,1,2,3,4,5,6,7|76;CB 132+8*%c
+res %c, l|ez80|_|_|0,1,2,3,4,5,6,7|CB 133+8*%c
+res %c, l|ez80_z80|_|_|0,1,2,3,4,5,6,7|CB 133+8*%c
+res %c, l|gbz80|_|_|0,1,2,3,4,5,6,7|CB 133+8*%c
+res %c, l|kc160|_|_|0,1,2,3,4,5,6,7|CB 133+8*%c
+res %c, l|kc160_z80|_|_|0,1,2,3,4,5,6,7|CB 133+8*%c
+res %c, l|r2ka|_|_|0,1,2,3,4,5,6,7|CB 133+8*%c
+res %c, l|r3k|_|_|0,1,2,3,4,5,6,7|CB 133+8*%c
+res %c, l|r4k|_|_|0,1,2,3,4,5,6,7|CB 133+8*%c
+res %c, l|r5k|_|_|0,1,2,3,4,5,6,7|CB 133+8*%c
+res %c, l|r800|_|_|0,1,2,3,4,5,6,7|CB 133+8*%c
+res %c, l|z180|_|_|0,1,2,3,4,5,6,7|CB 133+8*%c
+res %c, l|z80|_|_|0,1,2,3,4,5,6,7|CB 133+8*%c
+res %c, l|z80_strict|_|_|0,1,2,3,4,5,6,7|CB 133+8*%c
+res %c, l|z80n|_|_|0,1,2,3,4,5,6,7|CB 133+8*%c
+res %c, l'|r2ka|_|_|0,1,2,3,4,5,6,7|76;CB 133+8*%c
+res %c, l'|r3k|_|_|0,1,2,3,4,5,6,7|76;CB 133+8*%c
+res %c, l'|r4k|_|_|0,1,2,3,4,5,6,7|76;CB 133+8*%c
+res %c, l'|r5k|_|_|0,1,2,3,4,5,6,7|76;CB 133+8*%c
+res.l %c, (hl)|ez80_z80|_|_|0,1,2,3,4,5,6,7|49;CB 134+8*%c
+res.l %c, (ix)|ez80_z80|_|_|0,1,2,3,4,5,6,7|49;DD CB 00 134+8*%c
+res.l %c, (ix+%d)|ez80_z80|_|_|0,1,2,3,4,5,6,7|49;DD CB %d 134+8*%c
+res.l %c, (iy)|ez80_z80|_|_|0,1,2,3,4,5,6,7|49;FD CB 00 134+8*%c
+res.l %c, (iy+%d)|ez80_z80|_|_|0,1,2,3,4,5,6,7|49;FD CB %d 134+8*%c
+res.lis %c, (hl)|ez80_z80|_|_|0,1,2,3,4,5,6,7|49;CB 134+8*%c
+res.lis %c, (ix)|ez80_z80|_|_|0,1,2,3,4,5,6,7|49;DD CB 00 134+8*%c
+res.lis %c, (ix+%d)|ez80_z80|_|_|0,1,2,3,4,5,6,7|49;DD CB %d 134+8*%c
+res.lis %c, (iy)|ez80_z80|_|_|0,1,2,3,4,5,6,7|49;FD CB 00 134+8*%c
+res.lis %c, (iy+%d)|ez80_z80|_|_|0,1,2,3,4,5,6,7|49;FD CB %d 134+8*%c
+res.s %c, (hl)|ez80|_|_|0,1,2,3,4,5,6,7|52;CB 134+8*%c
+res.s %c, (ix)|ez80|_|_|0,1,2,3,4,5,6,7|52;DD CB 00 134+8*%c
+res.s %c, (ix+%d)|ez80|_|_|0,1,2,3,4,5,6,7|52;DD CB %d 134+8*%c
+res.s %c, (iy)|ez80|_|_|0,1,2,3,4,5,6,7|52;FD CB 00 134+8*%c
+res.s %c, (iy+%d)|ez80|_|_|0,1,2,3,4,5,6,7|52;FD CB %d 134+8*%c
+res.sil %c, (hl)|ez80|_|_|0,1,2,3,4,5,6,7|52;CB 134+8*%c
+res.sil %c, (ix)|ez80|_|_|0,1,2,3,4,5,6,7|52;DD CB 00 134+8*%c
+res.sil %c, (ix+%d)|ez80|_|_|0,1,2,3,4,5,6,7|52;DD CB %d 134+8*%c
+res.sil %c, (iy)|ez80|_|_|0,1,2,3,4,5,6,7|52;FD CB 00 134+8*%c
+res.sil %c, (iy+%d)|ez80|_|_|0,1,2,3,4,5,6,7|52;FD CB %d 134+8*%c
 ret|8080|_|_||C9
 ret|8085|_|_||C9
 ret|ez80|_|_||C9
@@ -37855,14 +37855,14 @@ rgtu|z80|_|_||28 %t;38 %t;C9
 rgtu|z80_strict|_|_||28 %t;38 %t;C9
 rgtu|z80n|_|_||28 %t;38 %t;C9
 rim|8085|_|_||20
-rl %c, bcde|r4k|_|_||DD %c(1,2,4,8)==1?0x68:%c==2?0x69:%c==4?0x6B:0x6F
-rl %c, bcde|r5k|_|_||DD %c(1,2,4,8)==1?0x68:%c==2?0x69:%c==4?0x6B:0x6F
-rl %c, bcde'|r4k|_|_||76;DD %c(1,2,4)==1?0x68:%c==2?0x69:%c==4?0x6B:0x6F
-rl %c, bcde'|r5k|_|_||76;DD %c(1,2,4)==1?0x68:%c==2?0x69:%c==4?0x6B:0x6F
-rl %c, jkhl|r4k|_|_||FD %c(1,2,4,8)==1?0x68:%c==2?0x69:%c==4?0x6B:0x6F
-rl %c, jkhl|r5k|_|_||FD %c(1,2,4,8)==1?0x68:%c==2?0x69:%c==4?0x6B:0x6F
-rl %c, jkhl'|r4k|_|_||76;FD %c(1,2,4)==1?0x68:%c==2?0x69:%c==4?0x6B:0x6F
-rl %c, jkhl'|r5k|_|_||76;FD %c(1,2,4)==1?0x68:%c==2?0x69:%c==4?0x6B:0x6F
+rl %c, bcde|r4k|_|_|1,2,4,8|DD %c==1?0x68:%c==2?0x69:%c==4?0x6B:0x6F
+rl %c, bcde|r5k|_|_|1,2,4,8|DD %c==1?0x68:%c==2?0x69:%c==4?0x6B:0x6F
+rl %c, bcde'|r4k|_|_|1,2,4|76;DD %c==1?0x68:%c==2?0x69:%c==4?0x6B:0x6F
+rl %c, bcde'|r5k|_|_|1,2,4|76;DD %c==1?0x68:%c==2?0x69:%c==4?0x6B:0x6F
+rl %c, jkhl|r4k|_|_|1,2,4,8|FD %c==1?0x68:%c==2?0x69:%c==4?0x6B:0x6F
+rl %c, jkhl|r5k|_|_|1,2,4,8|FD %c==1?0x68:%c==2?0x69:%c==4?0x6B:0x6F
+rl %c, jkhl'|r4k|_|_|1,2,4|76;FD %c==1?0x68:%c==2?0x69:%c==4?0x6B:0x6F
+rl %c, jkhl'|r5k|_|_|1,2,4|76;FD %c==1?0x68:%c==2?0x69:%c==4?0x6B:0x6F
 rl (ahl)|kc160|_|_||52;CB 16
 rl (aix)|kc160|_|_||52;DD CB 00 16
 rl (aix+%d)|kc160|_|_||52;DD CB %d 16
@@ -38252,14 +38252,14 @@ rlc|z180|_|_||07
 rlc|z80|_|_||07
 rlc|z80_strict|_|_||07
 rlc|z80n|_|_||07
-rlc %c, bcde|r4k|_|_||DD %c(1,2,4,8)==1?0x48:%c==2?0x49:%c==4?0x4B:0x4F
-rlc %c, bcde|r5k|_|_||DD %c(1,2,4,8)==1?0x48:%c==2?0x49:%c==4?0x4B:0x4F
-rlc %c, bcde'|r4k|_|_||76;DD %c(1,2,4)==1?0x48:%c==2?0x49:%c==4?0x4B:0x4F
-rlc %c, bcde'|r5k|_|_||76;DD %c(1,2,4)==1?0x48:%c==2?0x49:%c==4?0x4B:0x4F
-rlc %c, jkhl|r4k|_|_||FD %c(1,2,4,8)==1?0x48:%c==2?0x49:%c==4?0x4B:0x4F
-rlc %c, jkhl|r5k|_|_||FD %c(1,2,4,8)==1?0x48:%c==2?0x49:%c==4?0x4B:0x4F
-rlc %c, jkhl'|r4k|_|_||76;FD %c(1,2,4)==1?0x48:%c==2?0x49:%c==4?0x4B:0x4F
-rlc %c, jkhl'|r5k|_|_||76;FD %c(1,2,4)==1?0x48:%c==2?0x49:%c==4?0x4B:0x4F
+rlc %c, bcde|r4k|_|_|1,2,4,8|DD %c==1?0x48:%c==2?0x49:%c==4?0x4B:0x4F
+rlc %c, bcde|r5k|_|_|1,2,4,8|DD %c==1?0x48:%c==2?0x49:%c==4?0x4B:0x4F
+rlc %c, bcde'|r4k|_|_|1,2,4|76;DD %c==1?0x48:%c==2?0x49:%c==4?0x4B:0x4F
+rlc %c, bcde'|r5k|_|_|1,2,4|76;DD %c==1?0x48:%c==2?0x49:%c==4?0x4B:0x4F
+rlc %c, jkhl|r4k|_|_|1,2,4,8|FD %c==1?0x48:%c==2?0x49:%c==4?0x4B:0x4F
+rlc %c, jkhl|r5k|_|_|1,2,4,8|FD %c==1?0x48:%c==2?0x49:%c==4?0x4B:0x4F
+rlc %c, jkhl'|r4k|_|_|1,2,4|76;FD %c==1?0x48:%c==2?0x49:%c==4?0x4B:0x4F
+rlc %c, jkhl'|r5k|_|_|1,2,4|76;FD %c==1?0x48:%c==2?0x49:%c==4?0x4B:0x4F
 rlc (ahl)|kc160|_|_||52;CB 06
 rlc (aix)|kc160|_|_||52;DD CB 00 06
 rlc (aix+%d)|kc160|_|_||52;DD CB %d 06
@@ -38779,14 +38779,14 @@ rpo|z180|_|_||E0
 rpo|z80|_|_||E0
 rpo|z80_strict|_|_||E0
 rpo|z80n|_|_||E0
-rr %c, bcde|r4k|_|_||DD %c(1,2,4,8)==1?0x78:%c==2?0x79:%c==4?0x7B:0x7F
-rr %c, bcde|r5k|_|_||DD %c(1,2,4,8)==1?0x78:%c==2?0x79:%c==4?0x7B:0x7F
-rr %c, bcde'|r4k|_|_||76;DD %c(1,2,4)==1?0x78:%c==2?0x79:%c==4?0x7B:0x7F
-rr %c, bcde'|r5k|_|_||76;DD %c(1,2,4)==1?0x78:%c==2?0x79:%c==4?0x7B:0x7F
-rr %c, jkhl|r4k|_|_||FD %c(1,2,4,8)==1?0x78:%c==2?0x79:%c==4?0x7B:0x7F
-rr %c, jkhl|r5k|_|_||FD %c(1,2,4,8)==1?0x78:%c==2?0x79:%c==4?0x7B:0x7F
-rr %c, jkhl'|r4k|_|_||76;FD %c(1,2,4)==1?0x78:%c==2?0x79:%c==4?0x7B:0x7F
-rr %c, jkhl'|r5k|_|_||76;FD %c(1,2,4)==1?0x78:%c==2?0x79:%c==4?0x7B:0x7F
+rr %c, bcde|r4k|_|_|1,2,4,8|DD %c==1?0x78:%c==2?0x79:%c==4?0x7B:0x7F
+rr %c, bcde|r5k|_|_|1,2,4,8|DD %c==1?0x78:%c==2?0x79:%c==4?0x7B:0x7F
+rr %c, bcde'|r4k|_|_|1,2,4|76;DD %c==1?0x78:%c==2?0x79:%c==4?0x7B:0x7F
+rr %c, bcde'|r5k|_|_|1,2,4|76;DD %c==1?0x78:%c==2?0x79:%c==4?0x7B:0x7F
+rr %c, jkhl|r4k|_|_|1,2,4,8|FD %c==1?0x78:%c==2?0x79:%c==4?0x7B:0x7F
+rr %c, jkhl|r5k|_|_|1,2,4,8|FD %c==1?0x78:%c==2?0x79:%c==4?0x7B:0x7F
+rr %c, jkhl'|r4k|_|_|1,2,4|76;FD %c==1?0x78:%c==2?0x79:%c==4?0x7B:0x7F
+rr %c, jkhl'|r5k|_|_|1,2,4|76;FD %c==1?0x78:%c==2?0x79:%c==4?0x7B:0x7F
 rr (ahl)|kc160|_|_||52;CB 1E
 rr (aix)|kc160|_|_||52;DD CB 00 1E
 rr (aix+%d)|kc160|_|_||52;DD CB %d 1E
@@ -39186,14 +39186,14 @@ rrc|z180|_|_||0F
 rrc|z80|_|_||0F
 rrc|z80_strict|_|_||0F
 rrc|z80n|_|_||0F
-rrc %c, bcde|r4k|_|_||DD %c(1,2,4,8)==1?0x58:%c==2?0x59:%c==4?0x5B:0x5F
-rrc %c, bcde|r5k|_|_||DD %c(1,2,4,8)==1?0x58:%c==2?0x59:%c==4?0x5B:0x5F
-rrc %c, bcde'|r4k|_|_||76;DD %c(1,2,4)==1?0x58:%c==2?0x59:%c==4?0x5B:0x5F
-rrc %c, bcde'|r5k|_|_||76;DD %c(1,2,4)==1?0x58:%c==2?0x59:%c==4?0x5B:0x5F
-rrc %c, jkhl|r4k|_|_||FD %c(1,2,4,8)==1?0x58:%c==2?0x59:%c==4?0x5B:0x5F
-rrc %c, jkhl|r5k|_|_||FD %c(1,2,4,8)==1?0x58:%c==2?0x59:%c==4?0x5B:0x5F
-rrc %c, jkhl'|r4k|_|_||76;FD %c(1,2,4)==1?0x58:%c==2?0x59:%c==4?0x5B:0x5F
-rrc %c, jkhl'|r5k|_|_||76;FD %c(1,2,4)==1?0x58:%c==2?0x59:%c==4?0x5B:0x5F
+rrc %c, bcde|r4k|_|_|1,2,4,8|DD %c==1?0x58:%c==2?0x59:%c==4?0x5B:0x5F
+rrc %c, bcde|r5k|_|_|1,2,4,8|DD %c==1?0x58:%c==2?0x59:%c==4?0x5B:0x5F
+rrc %c, bcde'|r4k|_|_|1,2,4|76;DD %c==1?0x58:%c==2?0x59:%c==4?0x5B:0x5F
+rrc %c, bcde'|r5k|_|_|1,2,4|76;DD %c==1?0x58:%c==2?0x59:%c==4?0x5B:0x5F
+rrc %c, jkhl|r4k|_|_|1,2,4,8|FD %c==1?0x58:%c==2?0x59:%c==4?0x5B:0x5F
+rrc %c, jkhl|r5k|_|_|1,2,4,8|FD %c==1?0x58:%c==2?0x59:%c==4?0x5B:0x5F
+rrc %c, jkhl'|r4k|_|_|1,2,4|76;FD %c==1?0x58:%c==2?0x59:%c==4?0x5B:0x5F
+rrc %c, jkhl'|r5k|_|_|1,2,4|76;FD %c==1?0x58:%c==2?0x59:%c==4?0x5B:0x5F
 rrc (ahl)|kc160|_|_||52;CB 0E
 rrc (aix)|kc160|_|_||52;DD CB 00 0E
 rrc (aix+%d)|kc160|_|_||52;DD CB %d 0E
@@ -39554,27 +39554,27 @@ rrhl|z80_strict|_|_||CB 2C;CB 1D
 rrhl|z80n|_|_||CB 2C;CB 1D
 rsmix|ez80|_|_||ED 7E
 rsmix|ez80_z80|_|_||ED 7E
-rst %c|8080|_|_||0xC7+%c
-rst %c|8085|_|_||0xC7+%c
-rst %c|ez80|_|_||0xC7+%c
-rst %c|ez80_z80|_|_||0xC7+%c
-rst %c|gbz80|_|_||0xC7+%c
-rst %c|kc160|_|_||0xC7+%c
-rst %c|kc160_z80|_|_||0xC7+%c
-rst %c|r2ka|_|_||0xC7+%c
-rst %c|r3k|_|_||0xC7+%c
-rst %c|r4k|_|_||0xC7+%c
-rst %c|r5k|_|_||0xC7+%c
-rst %c|r800|_|_||0xC7+%c
-rst %c|z180|_|_||0xC7+%c
-rst %c|z80|_|_||0xC7+%c
-rst %c|z80_strict|_|_||0xC7+%c
-rst %c|z80n|_|_||0xC7+%c
-rst v, %c|8085|_|_||139+%c(64..64)
-rst.l %c|ez80_z80|_|_||49;0xC7+%c
-rst.lis %c|ez80_z80|_|_||49;0xC7+%c
-rst.s %c|ez80|_|_||52;0xC7+%c
-rst.sil %c|ez80|_|_||52;0xC7+%c
+rst %c|8080|_|_|0,8,16,24,32,40,48,56|0xC7+%c
+rst %c|8085|_|_|0,8,16,24,32,40,48,56|0xC7+%c
+rst %c|ez80|_|_|0,8,16,24,32,40,48,56|0xC7+%c
+rst %c|ez80_z80|_|_|0,8,16,24,32,40,48,56|0xC7+%c
+rst %c|gbz80|_|_|0,8,16,24,32,40,48,56|0xC7+%c
+rst %c|kc160|_|_|0,8,16,24,32,40,48,56|0xC7+%c
+rst %c|kc160_z80|_|_|0,8,16,24,32,40,48,56|0xC7+%c
+rst %c|r2ka|_|_|16,24,32,40,56|0xC7+%c
+rst %c|r3k|_|_|16,24,32,40,56|0xC7+%c
+rst %c|r4k|_|_|16,24,32,40,56|0xC7+%c
+rst %c|r5k|_|_|16,24,32,40,56|0xC7+%c
+rst %c|r800|_|_|0,8,16,24,32,40,48,56|0xC7+%c
+rst %c|z180|_|_|0,8,16,24,32,40,48,56|0xC7+%c
+rst %c|z80|_|_|0,8,16,24,32,40,48,56|0xC7+%c
+rst %c|z80_strict|_|_|0,8,16,24,32,40,48,56|0xC7+%c
+rst %c|z80n|_|_|0,8,16,24,32,40,48,56|0xC7+%c
+rst v, %c|8085|_|_|64|139+%c
+rst.l %c|ez80_z80|_|_|0,8,16,24,32,40,48,56|49;0xC7+%c
+rst.lis %c|ez80_z80|_|_|0,8,16,24,32,40,48,56|49;0xC7+%c
+rst.s %c|ez80|_|_|0,8,16,24,32,40,48,56|52;0xC7+%c
+rst.sil %c|ez80|_|_|0,8,16,24,32,40,48,56|52;0xC7+%c
 rstv|8085|_|_||CB
 rv|8080|_|_||E8
 rv|8085|_|_||E8
@@ -40547,299 +40547,299 @@ scf'|r2ka|_|_||76;37
 scf'|r3k|_|_||76;37
 scf'|r4k|_|_||76;37
 scf'|r5k|_|_||76;37
-set %c, (ahl)|kc160|_|_||52;CB 198+8*%c(0..7)
-set %c, (aix)|kc160|_|_||52;DD CB 00 198+8*%c(0..7)
-set %c, (aix+%d)|kc160|_|_||52;DD CB %d 198+8*%c(0..7)
-set %c, (aiy)|kc160|_|_||52;FD CB 00 198+8*%c(0..7)
-set %c, (aiy+%d)|kc160|_|_||52;FD CB %d 198+8*%c(0..7)
-set %c, (hl)|ez80|_|_||CB 198+8*%c(0..7)
-set %c, (hl)|ez80_z80|_|_||CB 198+8*%c(0..7)
-set %c, (hl)|gbz80|_|_||CB 198+8*%c(0..7)
-set %c, (hl)|kc160|_|_||CB 198+8*%c(0..7)
-set %c, (hl)|kc160_z80|_|_||CB 198+8*%c(0..7)
-set %c, (hl)|r2ka|_|_||CB 198+8*%c(0..7)
-set %c, (hl)|r3k|_|_||CB 198+8*%c(0..7)
-set %c, (hl)|r4k|_|_||CB 198+8*%c(0..7)
-set %c, (hl)|r5k|_|_||CB 198+8*%c(0..7)
-set %c, (hl)|r800|_|_||CB 198+8*%c(0..7)
-set %c, (hl)|z180|_|_||CB 198+8*%c(0..7)
-set %c, (hl)|z80|_|_||CB 198+8*%c(0..7)
-set %c, (hl)|z80_strict|_|_||CB 198+8*%c(0..7)
-set %c, (hl)|z80n|_|_||CB 198+8*%c(0..7)
-set %c, (ix)|ez80|_|_||DD CB 00 198+8*%c(0..7)
-set %c, (ix)|ez80_z80|_|_||DD CB 00 198+8*%c(0..7)
-set %c, (ix)|kc160|_|_||DD CB 00 198+8*%c(0..7)
-set %c, (ix)|kc160_z80|_|_||DD CB 00 198+8*%c(0..7)
-set %c, (ix)|r2ka|_|_||DD CB 00 198+8*%c(0..7)
-set %c, (ix)|r3k|_|_||DD CB 00 198+8*%c(0..7)
-set %c, (ix)|r4k|_|_||DD CB 00 198+8*%c(0..7)
-set %c, (ix)|r5k|_|_||DD CB 00 198+8*%c(0..7)
-set %c, (ix)|r800|_|_||DD CB 00 198+8*%c(0..7)
-set %c, (ix)|z180|_|_||DD CB 00 198+8*%c(0..7)
-set %c, (ix)|z80|_|_||DD CB 00 198+8*%c(0..7)
-set %c, (ix)|z80_strict|_|_||DD CB 00 198+8*%c(0..7)
-set %c, (ix)|z80n|_|_||DD CB 00 198+8*%c(0..7)
-set %c, (ix), a|z80|_|_||DD CB 00 199+8*%c(0..7)
-set %c, (ix), a|z80n|_|_||DD CB 00 199+8*%c(0..7)
-set %c, (ix), b|z80|_|_||DD CB 00 192+8*%c(0..7)
-set %c, (ix), b|z80n|_|_||DD CB 00 192+8*%c(0..7)
-set %c, (ix), c|z80|_|_||DD CB 00 193+8*%c(0..7)
-set %c, (ix), c|z80n|_|_||DD CB 00 193+8*%c(0..7)
-set %c, (ix), d|z80|_|_||DD CB 00 194+8*%c(0..7)
-set %c, (ix), d|z80n|_|_||DD CB 00 194+8*%c(0..7)
-set %c, (ix), e|z80|_|_||DD CB 00 195+8*%c(0..7)
-set %c, (ix), e|z80n|_|_||DD CB 00 195+8*%c(0..7)
-set %c, (ix), h|z80|_|_||DD CB 00 196+8*%c(0..7)
-set %c, (ix), h|z80n|_|_||DD CB 00 196+8*%c(0..7)
-set %c, (ix), l|z80|_|_||DD CB 00 197+8*%c(0..7)
-set %c, (ix), l|z80n|_|_||DD CB 00 197+8*%c(0..7)
-set %c, (ix+%d)|ez80|_|_||DD CB %d 198+8*%c(0..7)
-set %c, (ix+%d)|ez80_z80|_|_||DD CB %d 198+8*%c(0..7)
-set %c, (ix+%d)|kc160|_|_||DD CB %d 198+8*%c(0..7)
-set %c, (ix+%d)|kc160_z80|_|_||DD CB %d 198+8*%c(0..7)
-set %c, (ix+%d)|r2ka|_|_||DD CB %d 198+8*%c(0..7)
-set %c, (ix+%d)|r3k|_|_||DD CB %d 198+8*%c(0..7)
-set %c, (ix+%d)|r4k|_|_||DD CB %d 198+8*%c(0..7)
-set %c, (ix+%d)|r5k|_|_||DD CB %d 198+8*%c(0..7)
-set %c, (ix+%d)|r800|_|_||DD CB %d 198+8*%c(0..7)
-set %c, (ix+%d)|z180|_|_||DD CB %d 198+8*%c(0..7)
-set %c, (ix+%d)|z80|_|_||DD CB %d 198+8*%c(0..7)
-set %c, (ix+%d)|z80_strict|_|_||DD CB %d 198+8*%c(0..7)
-set %c, (ix+%d)|z80n|_|_||DD CB %d 198+8*%c(0..7)
-set %c, (ix+%d), a|z80|_|_||DD CB %d 199+8*%c(0..7)
-set %c, (ix+%d), a|z80n|_|_||DD CB %d 199+8*%c(0..7)
-set %c, (ix+%d), b|z80|_|_||DD CB %d 192+8*%c(0..7)
-set %c, (ix+%d), b|z80n|_|_||DD CB %d 192+8*%c(0..7)
-set %c, (ix+%d), c|z80|_|_||DD CB %d 193+8*%c(0..7)
-set %c, (ix+%d), c|z80n|_|_||DD CB %d 193+8*%c(0..7)
-set %c, (ix+%d), d|z80|_|_||DD CB %d 194+8*%c(0..7)
-set %c, (ix+%d), d|z80n|_|_||DD CB %d 194+8*%c(0..7)
-set %c, (ix+%d), e|z80|_|_||DD CB %d 195+8*%c(0..7)
-set %c, (ix+%d), e|z80n|_|_||DD CB %d 195+8*%c(0..7)
-set %c, (ix+%d), h|z80|_|_||DD CB %d 196+8*%c(0..7)
-set %c, (ix+%d), h|z80n|_|_||DD CB %d 196+8*%c(0..7)
-set %c, (ix+%d), l|z80|_|_||DD CB %d 197+8*%c(0..7)
-set %c, (ix+%d), l|z80n|_|_||DD CB %d 197+8*%c(0..7)
-set %c, (iy)|ez80|_|_||FD CB 00 198+8*%c(0..7)
-set %c, (iy)|ez80_z80|_|_||FD CB 00 198+8*%c(0..7)
-set %c, (iy)|kc160|_|_||FD CB 00 198+8*%c(0..7)
-set %c, (iy)|kc160_z80|_|_||FD CB 00 198+8*%c(0..7)
-set %c, (iy)|r2ka|_|_||FD CB 00 198+8*%c(0..7)
-set %c, (iy)|r3k|_|_||FD CB 00 198+8*%c(0..7)
-set %c, (iy)|r4k|_|_||FD CB 00 198+8*%c(0..7)
-set %c, (iy)|r5k|_|_||FD CB 00 198+8*%c(0..7)
-set %c, (iy)|r800|_|_||FD CB 00 198+8*%c(0..7)
-set %c, (iy)|z180|_|_||FD CB 00 198+8*%c(0..7)
-set %c, (iy)|z80|_|_||FD CB 00 198+8*%c(0..7)
-set %c, (iy)|z80_strict|_|_||FD CB 00 198+8*%c(0..7)
-set %c, (iy)|z80n|_|_||FD CB 00 198+8*%c(0..7)
-set %c, (iy), a|z80|_|_||FD CB 00 199+8*%c(0..7)
-set %c, (iy), a|z80n|_|_||FD CB 00 199+8*%c(0..7)
-set %c, (iy), b|z80|_|_||FD CB 00 192+8*%c(0..7)
-set %c, (iy), b|z80n|_|_||FD CB 00 192+8*%c(0..7)
-set %c, (iy), c|z80|_|_||FD CB 00 193+8*%c(0..7)
-set %c, (iy), c|z80n|_|_||FD CB 00 193+8*%c(0..7)
-set %c, (iy), d|z80|_|_||FD CB 00 194+8*%c(0..7)
-set %c, (iy), d|z80n|_|_||FD CB 00 194+8*%c(0..7)
-set %c, (iy), e|z80|_|_||FD CB 00 195+8*%c(0..7)
-set %c, (iy), e|z80n|_|_||FD CB 00 195+8*%c(0..7)
-set %c, (iy), h|z80|_|_||FD CB 00 196+8*%c(0..7)
-set %c, (iy), h|z80n|_|_||FD CB 00 196+8*%c(0..7)
-set %c, (iy), l|z80|_|_||FD CB 00 197+8*%c(0..7)
-set %c, (iy), l|z80n|_|_||FD CB 00 197+8*%c(0..7)
-set %c, (iy+%d)|ez80|_|_||FD CB %d 198+8*%c(0..7)
-set %c, (iy+%d)|ez80_z80|_|_||FD CB %d 198+8*%c(0..7)
-set %c, (iy+%d)|kc160|_|_||FD CB %d 198+8*%c(0..7)
-set %c, (iy+%d)|kc160_z80|_|_||FD CB %d 198+8*%c(0..7)
-set %c, (iy+%d)|r2ka|_|_||FD CB %d 198+8*%c(0..7)
-set %c, (iy+%d)|r3k|_|_||FD CB %d 198+8*%c(0..7)
-set %c, (iy+%d)|r4k|_|_||FD CB %d 198+8*%c(0..7)
-set %c, (iy+%d)|r5k|_|_||FD CB %d 198+8*%c(0..7)
-set %c, (iy+%d)|r800|_|_||FD CB %d 198+8*%c(0..7)
-set %c, (iy+%d)|z180|_|_||FD CB %d 198+8*%c(0..7)
-set %c, (iy+%d)|z80|_|_||FD CB %d 198+8*%c(0..7)
-set %c, (iy+%d)|z80_strict|_|_||FD CB %d 198+8*%c(0..7)
-set %c, (iy+%d)|z80n|_|_||FD CB %d 198+8*%c(0..7)
-set %c, (iy+%d), a|z80|_|_||FD CB %d 199+8*%c(0..7)
-set %c, (iy+%d), a|z80n|_|_||FD CB %d 199+8*%c(0..7)
-set %c, (iy+%d), b|z80|_|_||FD CB %d 192+8*%c(0..7)
-set %c, (iy+%d), b|z80n|_|_||FD CB %d 192+8*%c(0..7)
-set %c, (iy+%d), c|z80|_|_||FD CB %d 193+8*%c(0..7)
-set %c, (iy+%d), c|z80n|_|_||FD CB %d 193+8*%c(0..7)
-set %c, (iy+%d), d|z80|_|_||FD CB %d 194+8*%c(0..7)
-set %c, (iy+%d), d|z80n|_|_||FD CB %d 194+8*%c(0..7)
-set %c, (iy+%d), e|z80|_|_||FD CB %d 195+8*%c(0..7)
-set %c, (iy+%d), e|z80n|_|_||FD CB %d 195+8*%c(0..7)
-set %c, (iy+%d), h|z80|_|_||FD CB %d 196+8*%c(0..7)
-set %c, (iy+%d), h|z80n|_|_||FD CB %d 196+8*%c(0..7)
-set %c, (iy+%d), l|z80|_|_||FD CB %d 197+8*%c(0..7)
-set %c, (iy+%d), l|z80n|_|_||FD CB %d 197+8*%c(0..7)
-set %c, (phl)|kc160|_|_||5B;CB 198+8*%c(0..7)
-set %c, (pix)|kc160|_|_||5B;DD CB 00 198+8*%c(0..7)
-set %c, (pix+%d)|kc160|_|_||5B;DD CB %d 198+8*%c(0..7)
-set %c, (piy)|kc160|_|_||5B;FD CB 00 198+8*%c(0..7)
-set %c, (piy+%d)|kc160|_|_||5B;FD CB %d 198+8*%c(0..7)
-set %c, (xhl)|kc160|_|_||40;CB 198+8*%c(0..7)
-set %c, (xix)|kc160|_|_||40;DD CB 00 198+8*%c(0..7)
-set %c, (xix+%d)|kc160|_|_||40;DD CB %d 198+8*%c(0..7)
-set %c, (xiy)|kc160|_|_||40;FD CB 00 198+8*%c(0..7)
-set %c, (xiy+%d)|kc160|_|_||40;FD CB %d 198+8*%c(0..7)
-set %c, (yhl)|kc160|_|_||49;CB 198+8*%c(0..7)
-set %c, (yix)|kc160|_|_||49;DD CB 00 198+8*%c(0..7)
-set %c, (yix+%d)|kc160|_|_||49;DD CB %d 198+8*%c(0..7)
-set %c, (yiy)|kc160|_|_||49;FD CB 00 198+8*%c(0..7)
-set %c, (yiy+%d)|kc160|_|_||49;FD CB %d 198+8*%c(0..7)
-set %c, (zhl)|kc160|_|_||7F;CB 198+8*%c(0..7)
-set %c, (zix)|kc160|_|_||7F;DD CB 00 198+8*%c(0..7)
-set %c, (zix+%d)|kc160|_|_||7F;DD CB %d 198+8*%c(0..7)
-set %c, (ziy)|kc160|_|_||7F;FD CB 00 198+8*%c(0..7)
-set %c, (ziy+%d)|kc160|_|_||7F;FD CB %d 198+8*%c(0..7)
-set %c, a|ez80|_|_||CB 199+8*%c(0..7)
-set %c, a|ez80_z80|_|_||CB 199+8*%c(0..7)
-set %c, a|gbz80|_|_||CB 199+8*%c(0..7)
-set %c, a|kc160|_|_||CB 199+8*%c(0..7)
-set %c, a|kc160_z80|_|_||CB 199+8*%c(0..7)
-set %c, a|r2ka|_|_||CB 199+8*%c(0..7)
-set %c, a|r3k|_|_||CB 199+8*%c(0..7)
-set %c, a|r4k|_|_||CB 199+8*%c(0..7)
-set %c, a|r5k|_|_||CB 199+8*%c(0..7)
-set %c, a|r800|_|_||CB 199+8*%c(0..7)
-set %c, a|z180|_|_||CB 199+8*%c(0..7)
-set %c, a|z80|_|_||CB 199+8*%c(0..7)
-set %c, a|z80_strict|_|_||CB 199+8*%c(0..7)
-set %c, a|z80n|_|_||CB 199+8*%c(0..7)
-set %c, a'|r2ka|_|_||76;CB 199+8*%c(0..7)
-set %c, a'|r3k|_|_||76;CB 199+8*%c(0..7)
-set %c, a'|r4k|_|_||76;CB 199+8*%c(0..7)
-set %c, a'|r5k|_|_||76;CB 199+8*%c(0..7)
-set %c, b|ez80|_|_||CB 192+8*%c(0..7)
-set %c, b|ez80_z80|_|_||CB 192+8*%c(0..7)
-set %c, b|gbz80|_|_||CB 192+8*%c(0..7)
-set %c, b|kc160|_|_||CB 192+8*%c(0..7)
-set %c, b|kc160_z80|_|_||CB 192+8*%c(0..7)
-set %c, b|r2ka|_|_||CB 192+8*%c(0..7)
-set %c, b|r3k|_|_||CB 192+8*%c(0..7)
-set %c, b|r4k|_|_||CB 192+8*%c(0..7)
-set %c, b|r5k|_|_||CB 192+8*%c(0..7)
-set %c, b|r800|_|_||CB 192+8*%c(0..7)
-set %c, b|z180|_|_||CB 192+8*%c(0..7)
-set %c, b|z80|_|_||CB 192+8*%c(0..7)
-set %c, b|z80_strict|_|_||CB 192+8*%c(0..7)
-set %c, b|z80n|_|_||CB 192+8*%c(0..7)
-set %c, b'|r2ka|_|_||76;CB 192+8*%c(0..7)
-set %c, b'|r3k|_|_||76;CB 192+8*%c(0..7)
-set %c, b'|r4k|_|_||76;CB 192+8*%c(0..7)
-set %c, b'|r5k|_|_||76;CB 192+8*%c(0..7)
-set %c, c|ez80|_|_||CB 193+8*%c(0..7)
-set %c, c|ez80_z80|_|_||CB 193+8*%c(0..7)
-set %c, c|gbz80|_|_||CB 193+8*%c(0..7)
-set %c, c|kc160|_|_||CB 193+8*%c(0..7)
-set %c, c|kc160_z80|_|_||CB 193+8*%c(0..7)
-set %c, c|r2ka|_|_||CB 193+8*%c(0..7)
-set %c, c|r3k|_|_||CB 193+8*%c(0..7)
-set %c, c|r4k|_|_||CB 193+8*%c(0..7)
-set %c, c|r5k|_|_||CB 193+8*%c(0..7)
-set %c, c|r800|_|_||CB 193+8*%c(0..7)
-set %c, c|z180|_|_||CB 193+8*%c(0..7)
-set %c, c|z80|_|_||CB 193+8*%c(0..7)
-set %c, c|z80_strict|_|_||CB 193+8*%c(0..7)
-set %c, c|z80n|_|_||CB 193+8*%c(0..7)
-set %c, c'|r2ka|_|_||76;CB 193+8*%c(0..7)
-set %c, c'|r3k|_|_||76;CB 193+8*%c(0..7)
-set %c, c'|r4k|_|_||76;CB 193+8*%c(0..7)
-set %c, c'|r5k|_|_||76;CB 193+8*%c(0..7)
-set %c, d|ez80|_|_||CB 194+8*%c(0..7)
-set %c, d|ez80_z80|_|_||CB 194+8*%c(0..7)
-set %c, d|gbz80|_|_||CB 194+8*%c(0..7)
-set %c, d|kc160|_|_||CB 194+8*%c(0..7)
-set %c, d|kc160_z80|_|_||CB 194+8*%c(0..7)
-set %c, d|r2ka|_|_||CB 194+8*%c(0..7)
-set %c, d|r3k|_|_||CB 194+8*%c(0..7)
-set %c, d|r4k|_|_||CB 194+8*%c(0..7)
-set %c, d|r5k|_|_||CB 194+8*%c(0..7)
-set %c, d|r800|_|_||CB 194+8*%c(0..7)
-set %c, d|z180|_|_||CB 194+8*%c(0..7)
-set %c, d|z80|_|_||CB 194+8*%c(0..7)
-set %c, d|z80_strict|_|_||CB 194+8*%c(0..7)
-set %c, d|z80n|_|_||CB 194+8*%c(0..7)
-set %c, d'|r2ka|_|_||76;CB 194+8*%c(0..7)
-set %c, d'|r3k|_|_||76;CB 194+8*%c(0..7)
-set %c, d'|r4k|_|_||76;CB 194+8*%c(0..7)
-set %c, d'|r5k|_|_||76;CB 194+8*%c(0..7)
-set %c, e|ez80|_|_||CB 195+8*%c(0..7)
-set %c, e|ez80_z80|_|_||CB 195+8*%c(0..7)
-set %c, e|gbz80|_|_||CB 195+8*%c(0..7)
-set %c, e|kc160|_|_||CB 195+8*%c(0..7)
-set %c, e|kc160_z80|_|_||CB 195+8*%c(0..7)
-set %c, e|r2ka|_|_||CB 195+8*%c(0..7)
-set %c, e|r3k|_|_||CB 195+8*%c(0..7)
-set %c, e|r4k|_|_||CB 195+8*%c(0..7)
-set %c, e|r5k|_|_||CB 195+8*%c(0..7)
-set %c, e|r800|_|_||CB 195+8*%c(0..7)
-set %c, e|z180|_|_||CB 195+8*%c(0..7)
-set %c, e|z80|_|_||CB 195+8*%c(0..7)
-set %c, e|z80_strict|_|_||CB 195+8*%c(0..7)
-set %c, e|z80n|_|_||CB 195+8*%c(0..7)
-set %c, e'|r2ka|_|_||76;CB 195+8*%c(0..7)
-set %c, e'|r3k|_|_||76;CB 195+8*%c(0..7)
-set %c, e'|r4k|_|_||76;CB 195+8*%c(0..7)
-set %c, e'|r5k|_|_||76;CB 195+8*%c(0..7)
-set %c, h|ez80|_|_||CB 196+8*%c(0..7)
-set %c, h|ez80_z80|_|_||CB 196+8*%c(0..7)
-set %c, h|gbz80|_|_||CB 196+8*%c(0..7)
-set %c, h|kc160|_|_||CB 196+8*%c(0..7)
-set %c, h|kc160_z80|_|_||CB 196+8*%c(0..7)
-set %c, h|r2ka|_|_||CB 196+8*%c(0..7)
-set %c, h|r3k|_|_||CB 196+8*%c(0..7)
-set %c, h|r4k|_|_||CB 196+8*%c(0..7)
-set %c, h|r5k|_|_||CB 196+8*%c(0..7)
-set %c, h|r800|_|_||CB 196+8*%c(0..7)
-set %c, h|z180|_|_||CB 196+8*%c(0..7)
-set %c, h|z80|_|_||CB 196+8*%c(0..7)
-set %c, h|z80_strict|_|_||CB 196+8*%c(0..7)
-set %c, h|z80n|_|_||CB 196+8*%c(0..7)
-set %c, h'|r2ka|_|_||76;CB 196+8*%c(0..7)
-set %c, h'|r3k|_|_||76;CB 196+8*%c(0..7)
-set %c, h'|r4k|_|_||76;CB 196+8*%c(0..7)
-set %c, h'|r5k|_|_||76;CB 196+8*%c(0..7)
-set %c, l|ez80|_|_||CB 197+8*%c(0..7)
-set %c, l|ez80_z80|_|_||CB 197+8*%c(0..7)
-set %c, l|gbz80|_|_||CB 197+8*%c(0..7)
-set %c, l|kc160|_|_||CB 197+8*%c(0..7)
-set %c, l|kc160_z80|_|_||CB 197+8*%c(0..7)
-set %c, l|r2ka|_|_||CB 197+8*%c(0..7)
-set %c, l|r3k|_|_||CB 197+8*%c(0..7)
-set %c, l|r4k|_|_||CB 197+8*%c(0..7)
-set %c, l|r5k|_|_||CB 197+8*%c(0..7)
-set %c, l|r800|_|_||CB 197+8*%c(0..7)
-set %c, l|z180|_|_||CB 197+8*%c(0..7)
-set %c, l|z80|_|_||CB 197+8*%c(0..7)
-set %c, l|z80_strict|_|_||CB 197+8*%c(0..7)
-set %c, l|z80n|_|_||CB 197+8*%c(0..7)
-set %c, l'|r2ka|_|_||76;CB 197+8*%c(0..7)
-set %c, l'|r3k|_|_||76;CB 197+8*%c(0..7)
-set %c, l'|r4k|_|_||76;CB 197+8*%c(0..7)
-set %c, l'|r5k|_|_||76;CB 197+8*%c(0..7)
-set.l %c, (hl)|ez80_z80|_|_||49;CB 198+8*%c(0..7)
-set.l %c, (ix)|ez80_z80|_|_||49;DD CB 00 198+8*%c(0..7)
-set.l %c, (ix+%d)|ez80_z80|_|_||49;DD CB %d 198+8*%c(0..7)
-set.l %c, (iy)|ez80_z80|_|_||49;FD CB 00 198+8*%c(0..7)
-set.l %c, (iy+%d)|ez80_z80|_|_||49;FD CB %d 198+8*%c(0..7)
-set.lis %c, (hl)|ez80_z80|_|_||49;CB 198+8*%c(0..7)
-set.lis %c, (ix)|ez80_z80|_|_||49;DD CB 00 198+8*%c(0..7)
-set.lis %c, (ix+%d)|ez80_z80|_|_||49;DD CB %d 198+8*%c(0..7)
-set.lis %c, (iy)|ez80_z80|_|_||49;FD CB 00 198+8*%c(0..7)
-set.lis %c, (iy+%d)|ez80_z80|_|_||49;FD CB %d 198+8*%c(0..7)
-set.s %c, (hl)|ez80|_|_||52;CB 198+8*%c(0..7)
-set.s %c, (ix)|ez80|_|_||52;DD CB 00 198+8*%c(0..7)
-set.s %c, (ix+%d)|ez80|_|_||52;DD CB %d 198+8*%c(0..7)
-set.s %c, (iy)|ez80|_|_||52;FD CB 00 198+8*%c(0..7)
-set.s %c, (iy+%d)|ez80|_|_||52;FD CB %d 198+8*%c(0..7)
-set.sil %c, (hl)|ez80|_|_||52;CB 198+8*%c(0..7)
-set.sil %c, (ix)|ez80|_|_||52;DD CB 00 198+8*%c(0..7)
-set.sil %c, (ix+%d)|ez80|_|_||52;DD CB %d 198+8*%c(0..7)
-set.sil %c, (iy)|ez80|_|_||52;FD CB 00 198+8*%c(0..7)
-set.sil %c, (iy+%d)|ez80|_|_||52;FD CB %d 198+8*%c(0..7)
+set %c, (ahl)|kc160|_|_|0,1,2,3,4,5,6,7|52;CB 198+8*%c
+set %c, (aix)|kc160|_|_|0,1,2,3,4,5,6,7|52;DD CB 00 198+8*%c
+set %c, (aix+%d)|kc160|_|_|0,1,2,3,4,5,6,7|52;DD CB %d 198+8*%c
+set %c, (aiy)|kc160|_|_|0,1,2,3,4,5,6,7|52;FD CB 00 198+8*%c
+set %c, (aiy+%d)|kc160|_|_|0,1,2,3,4,5,6,7|52;FD CB %d 198+8*%c
+set %c, (hl)|ez80|_|_|0,1,2,3,4,5,6,7|CB 198+8*%c
+set %c, (hl)|ez80_z80|_|_|0,1,2,3,4,5,6,7|CB 198+8*%c
+set %c, (hl)|gbz80|_|_|0,1,2,3,4,5,6,7|CB 198+8*%c
+set %c, (hl)|kc160|_|_|0,1,2,3,4,5,6,7|CB 198+8*%c
+set %c, (hl)|kc160_z80|_|_|0,1,2,3,4,5,6,7|CB 198+8*%c
+set %c, (hl)|r2ka|_|_|0,1,2,3,4,5,6,7|CB 198+8*%c
+set %c, (hl)|r3k|_|_|0,1,2,3,4,5,6,7|CB 198+8*%c
+set %c, (hl)|r4k|_|_|0,1,2,3,4,5,6,7|CB 198+8*%c
+set %c, (hl)|r5k|_|_|0,1,2,3,4,5,6,7|CB 198+8*%c
+set %c, (hl)|r800|_|_|0,1,2,3,4,5,6,7|CB 198+8*%c
+set %c, (hl)|z180|_|_|0,1,2,3,4,5,6,7|CB 198+8*%c
+set %c, (hl)|z80|_|_|0,1,2,3,4,5,6,7|CB 198+8*%c
+set %c, (hl)|z80_strict|_|_|0,1,2,3,4,5,6,7|CB 198+8*%c
+set %c, (hl)|z80n|_|_|0,1,2,3,4,5,6,7|CB 198+8*%c
+set %c, (ix)|ez80|_|_|0,1,2,3,4,5,6,7|DD CB 00 198+8*%c
+set %c, (ix)|ez80_z80|_|_|0,1,2,3,4,5,6,7|DD CB 00 198+8*%c
+set %c, (ix)|kc160|_|_|0,1,2,3,4,5,6,7|DD CB 00 198+8*%c
+set %c, (ix)|kc160_z80|_|_|0,1,2,3,4,5,6,7|DD CB 00 198+8*%c
+set %c, (ix)|r2ka|_|_|0,1,2,3,4,5,6,7|DD CB 00 198+8*%c
+set %c, (ix)|r3k|_|_|0,1,2,3,4,5,6,7|DD CB 00 198+8*%c
+set %c, (ix)|r4k|_|_|0,1,2,3,4,5,6,7|DD CB 00 198+8*%c
+set %c, (ix)|r5k|_|_|0,1,2,3,4,5,6,7|DD CB 00 198+8*%c
+set %c, (ix)|r800|_|_|0,1,2,3,4,5,6,7|DD CB 00 198+8*%c
+set %c, (ix)|z180|_|_|0,1,2,3,4,5,6,7|DD CB 00 198+8*%c
+set %c, (ix)|z80|_|_|0,1,2,3,4,5,6,7|DD CB 00 198+8*%c
+set %c, (ix)|z80_strict|_|_|0,1,2,3,4,5,6,7|DD CB 00 198+8*%c
+set %c, (ix)|z80n|_|_|0,1,2,3,4,5,6,7|DD CB 00 198+8*%c
+set %c, (ix), a|z80|_|_|0,1,2,3,4,5,6,7|DD CB 00 199+8*%c
+set %c, (ix), a|z80n|_|_|0,1,2,3,4,5,6,7|DD CB 00 199+8*%c
+set %c, (ix), b|z80|_|_|0,1,2,3,4,5,6,7|DD CB 00 192+8*%c
+set %c, (ix), b|z80n|_|_|0,1,2,3,4,5,6,7|DD CB 00 192+8*%c
+set %c, (ix), c|z80|_|_|0,1,2,3,4,5,6,7|DD CB 00 193+8*%c
+set %c, (ix), c|z80n|_|_|0,1,2,3,4,5,6,7|DD CB 00 193+8*%c
+set %c, (ix), d|z80|_|_|0,1,2,3,4,5,6,7|DD CB 00 194+8*%c
+set %c, (ix), d|z80n|_|_|0,1,2,3,4,5,6,7|DD CB 00 194+8*%c
+set %c, (ix), e|z80|_|_|0,1,2,3,4,5,6,7|DD CB 00 195+8*%c
+set %c, (ix), e|z80n|_|_|0,1,2,3,4,5,6,7|DD CB 00 195+8*%c
+set %c, (ix), h|z80|_|_|0,1,2,3,4,5,6,7|DD CB 00 196+8*%c
+set %c, (ix), h|z80n|_|_|0,1,2,3,4,5,6,7|DD CB 00 196+8*%c
+set %c, (ix), l|z80|_|_|0,1,2,3,4,5,6,7|DD CB 00 197+8*%c
+set %c, (ix), l|z80n|_|_|0,1,2,3,4,5,6,7|DD CB 00 197+8*%c
+set %c, (ix+%d)|ez80|_|_|0,1,2,3,4,5,6,7|DD CB %d 198+8*%c
+set %c, (ix+%d)|ez80_z80|_|_|0,1,2,3,4,5,6,7|DD CB %d 198+8*%c
+set %c, (ix+%d)|kc160|_|_|0,1,2,3,4,5,6,7|DD CB %d 198+8*%c
+set %c, (ix+%d)|kc160_z80|_|_|0,1,2,3,4,5,6,7|DD CB %d 198+8*%c
+set %c, (ix+%d)|r2ka|_|_|0,1,2,3,4,5,6,7|DD CB %d 198+8*%c
+set %c, (ix+%d)|r3k|_|_|0,1,2,3,4,5,6,7|DD CB %d 198+8*%c
+set %c, (ix+%d)|r4k|_|_|0,1,2,3,4,5,6,7|DD CB %d 198+8*%c
+set %c, (ix+%d)|r5k|_|_|0,1,2,3,4,5,6,7|DD CB %d 198+8*%c
+set %c, (ix+%d)|r800|_|_|0,1,2,3,4,5,6,7|DD CB %d 198+8*%c
+set %c, (ix+%d)|z180|_|_|0,1,2,3,4,5,6,7|DD CB %d 198+8*%c
+set %c, (ix+%d)|z80|_|_|0,1,2,3,4,5,6,7|DD CB %d 198+8*%c
+set %c, (ix+%d)|z80_strict|_|_|0,1,2,3,4,5,6,7|DD CB %d 198+8*%c
+set %c, (ix+%d)|z80n|_|_|0,1,2,3,4,5,6,7|DD CB %d 198+8*%c
+set %c, (ix+%d), a|z80|_|_|0,1,2,3,4,5,6,7|DD CB %d 199+8*%c
+set %c, (ix+%d), a|z80n|_|_|0,1,2,3,4,5,6,7|DD CB %d 199+8*%c
+set %c, (ix+%d), b|z80|_|_|0,1,2,3,4,5,6,7|DD CB %d 192+8*%c
+set %c, (ix+%d), b|z80n|_|_|0,1,2,3,4,5,6,7|DD CB %d 192+8*%c
+set %c, (ix+%d), c|z80|_|_|0,1,2,3,4,5,6,7|DD CB %d 193+8*%c
+set %c, (ix+%d), c|z80n|_|_|0,1,2,3,4,5,6,7|DD CB %d 193+8*%c
+set %c, (ix+%d), d|z80|_|_|0,1,2,3,4,5,6,7|DD CB %d 194+8*%c
+set %c, (ix+%d), d|z80n|_|_|0,1,2,3,4,5,6,7|DD CB %d 194+8*%c
+set %c, (ix+%d), e|z80|_|_|0,1,2,3,4,5,6,7|DD CB %d 195+8*%c
+set %c, (ix+%d), e|z80n|_|_|0,1,2,3,4,5,6,7|DD CB %d 195+8*%c
+set %c, (ix+%d), h|z80|_|_|0,1,2,3,4,5,6,7|DD CB %d 196+8*%c
+set %c, (ix+%d), h|z80n|_|_|0,1,2,3,4,5,6,7|DD CB %d 196+8*%c
+set %c, (ix+%d), l|z80|_|_|0,1,2,3,4,5,6,7|DD CB %d 197+8*%c
+set %c, (ix+%d), l|z80n|_|_|0,1,2,3,4,5,6,7|DD CB %d 197+8*%c
+set %c, (iy)|ez80|_|_|0,1,2,3,4,5,6,7|FD CB 00 198+8*%c
+set %c, (iy)|ez80_z80|_|_|0,1,2,3,4,5,6,7|FD CB 00 198+8*%c
+set %c, (iy)|kc160|_|_|0,1,2,3,4,5,6,7|FD CB 00 198+8*%c
+set %c, (iy)|kc160_z80|_|_|0,1,2,3,4,5,6,7|FD CB 00 198+8*%c
+set %c, (iy)|r2ka|_|_|0,1,2,3,4,5,6,7|FD CB 00 198+8*%c
+set %c, (iy)|r3k|_|_|0,1,2,3,4,5,6,7|FD CB 00 198+8*%c
+set %c, (iy)|r4k|_|_|0,1,2,3,4,5,6,7|FD CB 00 198+8*%c
+set %c, (iy)|r5k|_|_|0,1,2,3,4,5,6,7|FD CB 00 198+8*%c
+set %c, (iy)|r800|_|_|0,1,2,3,4,5,6,7|FD CB 00 198+8*%c
+set %c, (iy)|z180|_|_|0,1,2,3,4,5,6,7|FD CB 00 198+8*%c
+set %c, (iy)|z80|_|_|0,1,2,3,4,5,6,7|FD CB 00 198+8*%c
+set %c, (iy)|z80_strict|_|_|0,1,2,3,4,5,6,7|FD CB 00 198+8*%c
+set %c, (iy)|z80n|_|_|0,1,2,3,4,5,6,7|FD CB 00 198+8*%c
+set %c, (iy), a|z80|_|_|0,1,2,3,4,5,6,7|FD CB 00 199+8*%c
+set %c, (iy), a|z80n|_|_|0,1,2,3,4,5,6,7|FD CB 00 199+8*%c
+set %c, (iy), b|z80|_|_|0,1,2,3,4,5,6,7|FD CB 00 192+8*%c
+set %c, (iy), b|z80n|_|_|0,1,2,3,4,5,6,7|FD CB 00 192+8*%c
+set %c, (iy), c|z80|_|_|0,1,2,3,4,5,6,7|FD CB 00 193+8*%c
+set %c, (iy), c|z80n|_|_|0,1,2,3,4,5,6,7|FD CB 00 193+8*%c
+set %c, (iy), d|z80|_|_|0,1,2,3,4,5,6,7|FD CB 00 194+8*%c
+set %c, (iy), d|z80n|_|_|0,1,2,3,4,5,6,7|FD CB 00 194+8*%c
+set %c, (iy), e|z80|_|_|0,1,2,3,4,5,6,7|FD CB 00 195+8*%c
+set %c, (iy), e|z80n|_|_|0,1,2,3,4,5,6,7|FD CB 00 195+8*%c
+set %c, (iy), h|z80|_|_|0,1,2,3,4,5,6,7|FD CB 00 196+8*%c
+set %c, (iy), h|z80n|_|_|0,1,2,3,4,5,6,7|FD CB 00 196+8*%c
+set %c, (iy), l|z80|_|_|0,1,2,3,4,5,6,7|FD CB 00 197+8*%c
+set %c, (iy), l|z80n|_|_|0,1,2,3,4,5,6,7|FD CB 00 197+8*%c
+set %c, (iy+%d)|ez80|_|_|0,1,2,3,4,5,6,7|FD CB %d 198+8*%c
+set %c, (iy+%d)|ez80_z80|_|_|0,1,2,3,4,5,6,7|FD CB %d 198+8*%c
+set %c, (iy+%d)|kc160|_|_|0,1,2,3,4,5,6,7|FD CB %d 198+8*%c
+set %c, (iy+%d)|kc160_z80|_|_|0,1,2,3,4,5,6,7|FD CB %d 198+8*%c
+set %c, (iy+%d)|r2ka|_|_|0,1,2,3,4,5,6,7|FD CB %d 198+8*%c
+set %c, (iy+%d)|r3k|_|_|0,1,2,3,4,5,6,7|FD CB %d 198+8*%c
+set %c, (iy+%d)|r4k|_|_|0,1,2,3,4,5,6,7|FD CB %d 198+8*%c
+set %c, (iy+%d)|r5k|_|_|0,1,2,3,4,5,6,7|FD CB %d 198+8*%c
+set %c, (iy+%d)|r800|_|_|0,1,2,3,4,5,6,7|FD CB %d 198+8*%c
+set %c, (iy+%d)|z180|_|_|0,1,2,3,4,5,6,7|FD CB %d 198+8*%c
+set %c, (iy+%d)|z80|_|_|0,1,2,3,4,5,6,7|FD CB %d 198+8*%c
+set %c, (iy+%d)|z80_strict|_|_|0,1,2,3,4,5,6,7|FD CB %d 198+8*%c
+set %c, (iy+%d)|z80n|_|_|0,1,2,3,4,5,6,7|FD CB %d 198+8*%c
+set %c, (iy+%d), a|z80|_|_|0,1,2,3,4,5,6,7|FD CB %d 199+8*%c
+set %c, (iy+%d), a|z80n|_|_|0,1,2,3,4,5,6,7|FD CB %d 199+8*%c
+set %c, (iy+%d), b|z80|_|_|0,1,2,3,4,5,6,7|FD CB %d 192+8*%c
+set %c, (iy+%d), b|z80n|_|_|0,1,2,3,4,5,6,7|FD CB %d 192+8*%c
+set %c, (iy+%d), c|z80|_|_|0,1,2,3,4,5,6,7|FD CB %d 193+8*%c
+set %c, (iy+%d), c|z80n|_|_|0,1,2,3,4,5,6,7|FD CB %d 193+8*%c
+set %c, (iy+%d), d|z80|_|_|0,1,2,3,4,5,6,7|FD CB %d 194+8*%c
+set %c, (iy+%d), d|z80n|_|_|0,1,2,3,4,5,6,7|FD CB %d 194+8*%c
+set %c, (iy+%d), e|z80|_|_|0,1,2,3,4,5,6,7|FD CB %d 195+8*%c
+set %c, (iy+%d), e|z80n|_|_|0,1,2,3,4,5,6,7|FD CB %d 195+8*%c
+set %c, (iy+%d), h|z80|_|_|0,1,2,3,4,5,6,7|FD CB %d 196+8*%c
+set %c, (iy+%d), h|z80n|_|_|0,1,2,3,4,5,6,7|FD CB %d 196+8*%c
+set %c, (iy+%d), l|z80|_|_|0,1,2,3,4,5,6,7|FD CB %d 197+8*%c
+set %c, (iy+%d), l|z80n|_|_|0,1,2,3,4,5,6,7|FD CB %d 197+8*%c
+set %c, (phl)|kc160|_|_|0,1,2,3,4,5,6,7|5B;CB 198+8*%c
+set %c, (pix)|kc160|_|_|0,1,2,3,4,5,6,7|5B;DD CB 00 198+8*%c
+set %c, (pix+%d)|kc160|_|_|0,1,2,3,4,5,6,7|5B;DD CB %d 198+8*%c
+set %c, (piy)|kc160|_|_|0,1,2,3,4,5,6,7|5B;FD CB 00 198+8*%c
+set %c, (piy+%d)|kc160|_|_|0,1,2,3,4,5,6,7|5B;FD CB %d 198+8*%c
+set %c, (xhl)|kc160|_|_|0,1,2,3,4,5,6,7|40;CB 198+8*%c
+set %c, (xix)|kc160|_|_|0,1,2,3,4,5,6,7|40;DD CB 00 198+8*%c
+set %c, (xix+%d)|kc160|_|_|0,1,2,3,4,5,6,7|40;DD CB %d 198+8*%c
+set %c, (xiy)|kc160|_|_|0,1,2,3,4,5,6,7|40;FD CB 00 198+8*%c
+set %c, (xiy+%d)|kc160|_|_|0,1,2,3,4,5,6,7|40;FD CB %d 198+8*%c
+set %c, (yhl)|kc160|_|_|0,1,2,3,4,5,6,7|49;CB 198+8*%c
+set %c, (yix)|kc160|_|_|0,1,2,3,4,5,6,7|49;DD CB 00 198+8*%c
+set %c, (yix+%d)|kc160|_|_|0,1,2,3,4,5,6,7|49;DD CB %d 198+8*%c
+set %c, (yiy)|kc160|_|_|0,1,2,3,4,5,6,7|49;FD CB 00 198+8*%c
+set %c, (yiy+%d)|kc160|_|_|0,1,2,3,4,5,6,7|49;FD CB %d 198+8*%c
+set %c, (zhl)|kc160|_|_|0,1,2,3,4,5,6,7|7F;CB 198+8*%c
+set %c, (zix)|kc160|_|_|0,1,2,3,4,5,6,7|7F;DD CB 00 198+8*%c
+set %c, (zix+%d)|kc160|_|_|0,1,2,3,4,5,6,7|7F;DD CB %d 198+8*%c
+set %c, (ziy)|kc160|_|_|0,1,2,3,4,5,6,7|7F;FD CB 00 198+8*%c
+set %c, (ziy+%d)|kc160|_|_|0,1,2,3,4,5,6,7|7F;FD CB %d 198+8*%c
+set %c, a|ez80|_|_|0,1,2,3,4,5,6,7|CB 199+8*%c
+set %c, a|ez80_z80|_|_|0,1,2,3,4,5,6,7|CB 199+8*%c
+set %c, a|gbz80|_|_|0,1,2,3,4,5,6,7|CB 199+8*%c
+set %c, a|kc160|_|_|0,1,2,3,4,5,6,7|CB 199+8*%c
+set %c, a|kc160_z80|_|_|0,1,2,3,4,5,6,7|CB 199+8*%c
+set %c, a|r2ka|_|_|0,1,2,3,4,5,6,7|CB 199+8*%c
+set %c, a|r3k|_|_|0,1,2,3,4,5,6,7|CB 199+8*%c
+set %c, a|r4k|_|_|0,1,2,3,4,5,6,7|CB 199+8*%c
+set %c, a|r5k|_|_|0,1,2,3,4,5,6,7|CB 199+8*%c
+set %c, a|r800|_|_|0,1,2,3,4,5,6,7|CB 199+8*%c
+set %c, a|z180|_|_|0,1,2,3,4,5,6,7|CB 199+8*%c
+set %c, a|z80|_|_|0,1,2,3,4,5,6,7|CB 199+8*%c
+set %c, a|z80_strict|_|_|0,1,2,3,4,5,6,7|CB 199+8*%c
+set %c, a|z80n|_|_|0,1,2,3,4,5,6,7|CB 199+8*%c
+set %c, a'|r2ka|_|_|0,1,2,3,4,5,6,7|76;CB 199+8*%c
+set %c, a'|r3k|_|_|0,1,2,3,4,5,6,7|76;CB 199+8*%c
+set %c, a'|r4k|_|_|0,1,2,3,4,5,6,7|76;CB 199+8*%c
+set %c, a'|r5k|_|_|0,1,2,3,4,5,6,7|76;CB 199+8*%c
+set %c, b|ez80|_|_|0,1,2,3,4,5,6,7|CB 192+8*%c
+set %c, b|ez80_z80|_|_|0,1,2,3,4,5,6,7|CB 192+8*%c
+set %c, b|gbz80|_|_|0,1,2,3,4,5,6,7|CB 192+8*%c
+set %c, b|kc160|_|_|0,1,2,3,4,5,6,7|CB 192+8*%c
+set %c, b|kc160_z80|_|_|0,1,2,3,4,5,6,7|CB 192+8*%c
+set %c, b|r2ka|_|_|0,1,2,3,4,5,6,7|CB 192+8*%c
+set %c, b|r3k|_|_|0,1,2,3,4,5,6,7|CB 192+8*%c
+set %c, b|r4k|_|_|0,1,2,3,4,5,6,7|CB 192+8*%c
+set %c, b|r5k|_|_|0,1,2,3,4,5,6,7|CB 192+8*%c
+set %c, b|r800|_|_|0,1,2,3,4,5,6,7|CB 192+8*%c
+set %c, b|z180|_|_|0,1,2,3,4,5,6,7|CB 192+8*%c
+set %c, b|z80|_|_|0,1,2,3,4,5,6,7|CB 192+8*%c
+set %c, b|z80_strict|_|_|0,1,2,3,4,5,6,7|CB 192+8*%c
+set %c, b|z80n|_|_|0,1,2,3,4,5,6,7|CB 192+8*%c
+set %c, b'|r2ka|_|_|0,1,2,3,4,5,6,7|76;CB 192+8*%c
+set %c, b'|r3k|_|_|0,1,2,3,4,5,6,7|76;CB 192+8*%c
+set %c, b'|r4k|_|_|0,1,2,3,4,5,6,7|76;CB 192+8*%c
+set %c, b'|r5k|_|_|0,1,2,3,4,5,6,7|76;CB 192+8*%c
+set %c, c|ez80|_|_|0,1,2,3,4,5,6,7|CB 193+8*%c
+set %c, c|ez80_z80|_|_|0,1,2,3,4,5,6,7|CB 193+8*%c
+set %c, c|gbz80|_|_|0,1,2,3,4,5,6,7|CB 193+8*%c
+set %c, c|kc160|_|_|0,1,2,3,4,5,6,7|CB 193+8*%c
+set %c, c|kc160_z80|_|_|0,1,2,3,4,5,6,7|CB 193+8*%c
+set %c, c|r2ka|_|_|0,1,2,3,4,5,6,7|CB 193+8*%c
+set %c, c|r3k|_|_|0,1,2,3,4,5,6,7|CB 193+8*%c
+set %c, c|r4k|_|_|0,1,2,3,4,5,6,7|CB 193+8*%c
+set %c, c|r5k|_|_|0,1,2,3,4,5,6,7|CB 193+8*%c
+set %c, c|r800|_|_|0,1,2,3,4,5,6,7|CB 193+8*%c
+set %c, c|z180|_|_|0,1,2,3,4,5,6,7|CB 193+8*%c
+set %c, c|z80|_|_|0,1,2,3,4,5,6,7|CB 193+8*%c
+set %c, c|z80_strict|_|_|0,1,2,3,4,5,6,7|CB 193+8*%c
+set %c, c|z80n|_|_|0,1,2,3,4,5,6,7|CB 193+8*%c
+set %c, c'|r2ka|_|_|0,1,2,3,4,5,6,7|76;CB 193+8*%c
+set %c, c'|r3k|_|_|0,1,2,3,4,5,6,7|76;CB 193+8*%c
+set %c, c'|r4k|_|_|0,1,2,3,4,5,6,7|76;CB 193+8*%c
+set %c, c'|r5k|_|_|0,1,2,3,4,5,6,7|76;CB 193+8*%c
+set %c, d|ez80|_|_|0,1,2,3,4,5,6,7|CB 194+8*%c
+set %c, d|ez80_z80|_|_|0,1,2,3,4,5,6,7|CB 194+8*%c
+set %c, d|gbz80|_|_|0,1,2,3,4,5,6,7|CB 194+8*%c
+set %c, d|kc160|_|_|0,1,2,3,4,5,6,7|CB 194+8*%c
+set %c, d|kc160_z80|_|_|0,1,2,3,4,5,6,7|CB 194+8*%c
+set %c, d|r2ka|_|_|0,1,2,3,4,5,6,7|CB 194+8*%c
+set %c, d|r3k|_|_|0,1,2,3,4,5,6,7|CB 194+8*%c
+set %c, d|r4k|_|_|0,1,2,3,4,5,6,7|CB 194+8*%c
+set %c, d|r5k|_|_|0,1,2,3,4,5,6,7|CB 194+8*%c
+set %c, d|r800|_|_|0,1,2,3,4,5,6,7|CB 194+8*%c
+set %c, d|z180|_|_|0,1,2,3,4,5,6,7|CB 194+8*%c
+set %c, d|z80|_|_|0,1,2,3,4,5,6,7|CB 194+8*%c
+set %c, d|z80_strict|_|_|0,1,2,3,4,5,6,7|CB 194+8*%c
+set %c, d|z80n|_|_|0,1,2,3,4,5,6,7|CB 194+8*%c
+set %c, d'|r2ka|_|_|0,1,2,3,4,5,6,7|76;CB 194+8*%c
+set %c, d'|r3k|_|_|0,1,2,3,4,5,6,7|76;CB 194+8*%c
+set %c, d'|r4k|_|_|0,1,2,3,4,5,6,7|76;CB 194+8*%c
+set %c, d'|r5k|_|_|0,1,2,3,4,5,6,7|76;CB 194+8*%c
+set %c, e|ez80|_|_|0,1,2,3,4,5,6,7|CB 195+8*%c
+set %c, e|ez80_z80|_|_|0,1,2,3,4,5,6,7|CB 195+8*%c
+set %c, e|gbz80|_|_|0,1,2,3,4,5,6,7|CB 195+8*%c
+set %c, e|kc160|_|_|0,1,2,3,4,5,6,7|CB 195+8*%c
+set %c, e|kc160_z80|_|_|0,1,2,3,4,5,6,7|CB 195+8*%c
+set %c, e|r2ka|_|_|0,1,2,3,4,5,6,7|CB 195+8*%c
+set %c, e|r3k|_|_|0,1,2,3,4,5,6,7|CB 195+8*%c
+set %c, e|r4k|_|_|0,1,2,3,4,5,6,7|CB 195+8*%c
+set %c, e|r5k|_|_|0,1,2,3,4,5,6,7|CB 195+8*%c
+set %c, e|r800|_|_|0,1,2,3,4,5,6,7|CB 195+8*%c
+set %c, e|z180|_|_|0,1,2,3,4,5,6,7|CB 195+8*%c
+set %c, e|z80|_|_|0,1,2,3,4,5,6,7|CB 195+8*%c
+set %c, e|z80_strict|_|_|0,1,2,3,4,5,6,7|CB 195+8*%c
+set %c, e|z80n|_|_|0,1,2,3,4,5,6,7|CB 195+8*%c
+set %c, e'|r2ka|_|_|0,1,2,3,4,5,6,7|76;CB 195+8*%c
+set %c, e'|r3k|_|_|0,1,2,3,4,5,6,7|76;CB 195+8*%c
+set %c, e'|r4k|_|_|0,1,2,3,4,5,6,7|76;CB 195+8*%c
+set %c, e'|r5k|_|_|0,1,2,3,4,5,6,7|76;CB 195+8*%c
+set %c, h|ez80|_|_|0,1,2,3,4,5,6,7|CB 196+8*%c
+set %c, h|ez80_z80|_|_|0,1,2,3,4,5,6,7|CB 196+8*%c
+set %c, h|gbz80|_|_|0,1,2,3,4,5,6,7|CB 196+8*%c
+set %c, h|kc160|_|_|0,1,2,3,4,5,6,7|CB 196+8*%c
+set %c, h|kc160_z80|_|_|0,1,2,3,4,5,6,7|CB 196+8*%c
+set %c, h|r2ka|_|_|0,1,2,3,4,5,6,7|CB 196+8*%c
+set %c, h|r3k|_|_|0,1,2,3,4,5,6,7|CB 196+8*%c
+set %c, h|r4k|_|_|0,1,2,3,4,5,6,7|CB 196+8*%c
+set %c, h|r5k|_|_|0,1,2,3,4,5,6,7|CB 196+8*%c
+set %c, h|r800|_|_|0,1,2,3,4,5,6,7|CB 196+8*%c
+set %c, h|z180|_|_|0,1,2,3,4,5,6,7|CB 196+8*%c
+set %c, h|z80|_|_|0,1,2,3,4,5,6,7|CB 196+8*%c
+set %c, h|z80_strict|_|_|0,1,2,3,4,5,6,7|CB 196+8*%c
+set %c, h|z80n|_|_|0,1,2,3,4,5,6,7|CB 196+8*%c
+set %c, h'|r2ka|_|_|0,1,2,3,4,5,6,7|76;CB 196+8*%c
+set %c, h'|r3k|_|_|0,1,2,3,4,5,6,7|76;CB 196+8*%c
+set %c, h'|r4k|_|_|0,1,2,3,4,5,6,7|76;CB 196+8*%c
+set %c, h'|r5k|_|_|0,1,2,3,4,5,6,7|76;CB 196+8*%c
+set %c, l|ez80|_|_|0,1,2,3,4,5,6,7|CB 197+8*%c
+set %c, l|ez80_z80|_|_|0,1,2,3,4,5,6,7|CB 197+8*%c
+set %c, l|gbz80|_|_|0,1,2,3,4,5,6,7|CB 197+8*%c
+set %c, l|kc160|_|_|0,1,2,3,4,5,6,7|CB 197+8*%c
+set %c, l|kc160_z80|_|_|0,1,2,3,4,5,6,7|CB 197+8*%c
+set %c, l|r2ka|_|_|0,1,2,3,4,5,6,7|CB 197+8*%c
+set %c, l|r3k|_|_|0,1,2,3,4,5,6,7|CB 197+8*%c
+set %c, l|r4k|_|_|0,1,2,3,4,5,6,7|CB 197+8*%c
+set %c, l|r5k|_|_|0,1,2,3,4,5,6,7|CB 197+8*%c
+set %c, l|r800|_|_|0,1,2,3,4,5,6,7|CB 197+8*%c
+set %c, l|z180|_|_|0,1,2,3,4,5,6,7|CB 197+8*%c
+set %c, l|z80|_|_|0,1,2,3,4,5,6,7|CB 197+8*%c
+set %c, l|z80_strict|_|_|0,1,2,3,4,5,6,7|CB 197+8*%c
+set %c, l|z80n|_|_|0,1,2,3,4,5,6,7|CB 197+8*%c
+set %c, l'|r2ka|_|_|0,1,2,3,4,5,6,7|76;CB 197+8*%c
+set %c, l'|r3k|_|_|0,1,2,3,4,5,6,7|76;CB 197+8*%c
+set %c, l'|r4k|_|_|0,1,2,3,4,5,6,7|76;CB 197+8*%c
+set %c, l'|r5k|_|_|0,1,2,3,4,5,6,7|76;CB 197+8*%c
+set.l %c, (hl)|ez80_z80|_|_|0,1,2,3,4,5,6,7|49;CB 198+8*%c
+set.l %c, (ix)|ez80_z80|_|_|0,1,2,3,4,5,6,7|49;DD CB 00 198+8*%c
+set.l %c, (ix+%d)|ez80_z80|_|_|0,1,2,3,4,5,6,7|49;DD CB %d 198+8*%c
+set.l %c, (iy)|ez80_z80|_|_|0,1,2,3,4,5,6,7|49;FD CB 00 198+8*%c
+set.l %c, (iy+%d)|ez80_z80|_|_|0,1,2,3,4,5,6,7|49;FD CB %d 198+8*%c
+set.lis %c, (hl)|ez80_z80|_|_|0,1,2,3,4,5,6,7|49;CB 198+8*%c
+set.lis %c, (ix)|ez80_z80|_|_|0,1,2,3,4,5,6,7|49;DD CB 00 198+8*%c
+set.lis %c, (ix+%d)|ez80_z80|_|_|0,1,2,3,4,5,6,7|49;DD CB %d 198+8*%c
+set.lis %c, (iy)|ez80_z80|_|_|0,1,2,3,4,5,6,7|49;FD CB 00 198+8*%c
+set.lis %c, (iy+%d)|ez80_z80|_|_|0,1,2,3,4,5,6,7|49;FD CB %d 198+8*%c
+set.s %c, (hl)|ez80|_|_|0,1,2,3,4,5,6,7|52;CB 198+8*%c
+set.s %c, (ix)|ez80|_|_|0,1,2,3,4,5,6,7|52;DD CB 00 198+8*%c
+set.s %c, (ix+%d)|ez80|_|_|0,1,2,3,4,5,6,7|52;DD CB %d 198+8*%c
+set.s %c, (iy)|ez80|_|_|0,1,2,3,4,5,6,7|52;FD CB 00 198+8*%c
+set.s %c, (iy+%d)|ez80|_|_|0,1,2,3,4,5,6,7|52;FD CB %d 198+8*%c
+set.sil %c, (hl)|ez80|_|_|0,1,2,3,4,5,6,7|52;CB 198+8*%c
+set.sil %c, (ix)|ez80|_|_|0,1,2,3,4,5,6,7|52;DD CB 00 198+8*%c
+set.sil %c, (ix+%d)|ez80|_|_|0,1,2,3,4,5,6,7|52;DD CB %d 198+8*%c
+set.sil %c, (iy)|ez80|_|_|0,1,2,3,4,5,6,7|52;FD CB 00 198+8*%c
+set.sil %c, (iy+%d)|ez80|_|_|0,1,2,3,4,5,6,7|52;FD CB %d 198+8*%c
 setae|z80n|_|_||ED 95
 setsysp %m|r4k|_|_||ED B1 %m %m
 setsysp %m|r5k|_|_||ED B1 %m %m
@@ -40894,14 +40894,14 @@ shlx|z80|_|_||EB;73;23;72;2B;EB
 shlx|z80_strict|_|_||EB;73;23;72;2B;EB
 shlx|z80n|_|_||EB;73;23;72;2B;EB
 sim|8085|_|_||30
-sla %c, bcde|r4k|_|_||DD %c(1,2,4)==1?0x88:%c==2?0x89:%c==4?0x8B:0x8F
-sla %c, bcde|r5k|_|_||DD %c(1,2,4)==1?0x88:%c==2?0x89:%c==4?0x8B:0x8F
-sla %c, bcde'|r4k|_|_||76;DD %c(1,2,4)==1?0x88:%c==2?0x89:%c==4?0x8B:0x8F
-sla %c, bcde'|r5k|_|_||76;DD %c(1,2,4)==1?0x88:%c==2?0x89:%c==4?0x8B:0x8F
-sla %c, jkhl|r4k|_|_||FD %c(1,2,4)==1?0x88:%c==2?0x89:%c==4?0x8B:0x8F
-sla %c, jkhl|r5k|_|_||FD %c(1,2,4)==1?0x88:%c==2?0x89:%c==4?0x8B:0x8F
-sla %c, jkhl'|r4k|_|_||76;FD %c(1,2,4)==1?0x88:%c==2?0x89:%c==4?0x8B:0x8F
-sla %c, jkhl'|r5k|_|_||76;FD %c(1,2,4)==1?0x88:%c==2?0x89:%c==4?0x8B:0x8F
+sla %c, bcde|r4k|_|_|1,2,4|DD %c==1?0x88:%c==2?0x89:%c==4?0x8B:0x8F
+sla %c, bcde|r5k|_|_|1,2,4|DD %c==1?0x88:%c==2?0x89:%c==4?0x8B:0x8F
+sla %c, bcde'|r4k|_|_|1,2,4|76;DD %c==1?0x88:%c==2?0x89:%c==4?0x8B:0x8F
+sla %c, bcde'|r5k|_|_|1,2,4|76;DD %c==1?0x88:%c==2?0x89:%c==4?0x8B:0x8F
+sla %c, jkhl|r4k|_|_|1,2,4|FD %c==1?0x88:%c==2?0x89:%c==4?0x8B:0x8F
+sla %c, jkhl|r5k|_|_|1,2,4|FD %c==1?0x88:%c==2?0x89:%c==4?0x8B:0x8F
+sla %c, jkhl'|r4k|_|_|1,2,4|76;FD %c==1?0x88:%c==2?0x89:%c==4?0x8B:0x8F
+sla %c, jkhl'|r5k|_|_|1,2,4|76;FD %c==1?0x88:%c==2?0x89:%c==4?0x8B:0x8F
 sla (ahl)|kc160|_|_||52;CB 26
 sla (aix)|kc160|_|_||52;DD CB 00 26
 sla (aix+%d)|kc160|_|_||52;DD CB %d 26
@@ -41275,14 +41275,14 @@ sli h|z80|_|_||CB 34
 sli h|z80n|_|_||CB 34
 sli l|z80|_|_||CB 35
 sli l|z80n|_|_||CB 35
-sll %c, bcde|r4k|_|_||DD %c(1,2,4)==1?0xA8:%c==2?0xA9:%c==4?0xAB:0xAF
-sll %c, bcde|r5k|_|_||DD %c(1,2,4)==1?0xA8:%c==2?0xA9:%c==4?0xAB:0xAF
-sll %c, bcde'|r4k|_|_||76;DD %c(1,2,4)==1?0xA8:%c==2?0xA9:%c==4?0xAB:0xAF
-sll %c, bcde'|r5k|_|_||76;DD %c(1,2,4)==1?0xA8:%c==2?0xA9:%c==4?0xAB:0xAF
-sll %c, jkhl|r4k|_|_||FD %c(1,2,4)==1?0xA8:%c==2?0xA9:%c==4?0xAB:0xAF
-sll %c, jkhl|r5k|_|_||FD %c(1,2,4)==1?0xA8:%c==2?0xA9:%c==4?0xAB:0xAF
-sll %c, jkhl'|r4k|_|_||76;FD %c(1,2,4)==1?0xA8:%c==2?0xA9:%c==4?0xAB:0xAF
-sll %c, jkhl'|r5k|_|_||76;FD %c(1,2,4)==1?0xA8:%c==2?0xA9:%c==4?0xAB:0xAF
+sll %c, bcde|r4k|_|_|1,2,4|DD %c==1?0xA8:%c==2?0xA9:%c==4?0xAB:0xAF
+sll %c, bcde|r5k|_|_|1,2,4|DD %c==1?0xA8:%c==2?0xA9:%c==4?0xAB:0xAF
+sll %c, bcde'|r4k|_|_|1,2,4|76;DD %c==1?0xA8:%c==2?0xA9:%c==4?0xAB:0xAF
+sll %c, bcde'|r5k|_|_|1,2,4|76;DD %c==1?0xA8:%c==2?0xA9:%c==4?0xAB:0xAF
+sll %c, jkhl|r4k|_|_|1,2,4|FD %c==1?0xA8:%c==2?0xA9:%c==4?0xAB:0xAF
+sll %c, jkhl|r5k|_|_|1,2,4|FD %c==1?0xA8:%c==2?0xA9:%c==4?0xAB:0xAF
+sll %c, jkhl'|r4k|_|_|1,2,4|76;FD %c==1?0xA8:%c==2?0xA9:%c==4?0xAB:0xAF
+sll %c, jkhl'|r5k|_|_|1,2,4|76;FD %c==1?0xA8:%c==2?0xA9:%c==4?0xAB:0xAF
 sll (hl)|z80|_|_||CB 36
 sll (hl)|z80n|_|_||CB 36
 sll (ix)|z80|_|_||DD CB 00 36
@@ -41462,14 +41462,14 @@ sphl|z180|_|_||F9
 sphl|z80|_|_||F9
 sphl|z80_strict|_|_||F9
 sphl|z80n|_|_||F9
-sra %c, bcde|r4k|_|_||DD %c(1,2,4)==1?0x98:%c==2?0x99:%c==4?0x9B:0x9F
-sra %c, bcde|r5k|_|_||DD %c(1,2,4)==1?0x98:%c==2?0x99:%c==4?0x9B:0x9F
-sra %c, bcde'|r4k|_|_||76;DD %c(1,2,4)==1?0x98:%c==2?0x99:%c==4?0x9B:0x9F
-sra %c, bcde'|r5k|_|_||76;DD %c(1,2,4)==1?0x98:%c==2?0x99:%c==4?0x9B:0x9F
-sra %c, jkhl|r4k|_|_||FD %c(1,2,4)==1?0x98:%c==2?0x99:%c==4?0x9B:0x9F
-sra %c, jkhl|r5k|_|_||FD %c(1,2,4)==1?0x98:%c==2?0x99:%c==4?0x9B:0x9F
-sra %c, jkhl'|r4k|_|_||76;FD %c(1,2,4)==1?0x98:%c==2?0x99:%c==4?0x9B:0x9F
-sra %c, jkhl'|r5k|_|_||76;FD %c(1,2,4)==1?0x98:%c==2?0x99:%c==4?0x9B:0x9F
+sra %c, bcde|r4k|_|_|1,2,4|DD %c==1?0x98:%c==2?0x99:%c==4?0x9B:0x9F
+sra %c, bcde|r5k|_|_|1,2,4|DD %c==1?0x98:%c==2?0x99:%c==4?0x9B:0x9F
+sra %c, bcde'|r4k|_|_|1,2,4|76;DD %c==1?0x98:%c==2?0x99:%c==4?0x9B:0x9F
+sra %c, bcde'|r5k|_|_|1,2,4|76;DD %c==1?0x98:%c==2?0x99:%c==4?0x9B:0x9F
+sra %c, jkhl|r4k|_|_|1,2,4|FD %c==1?0x98:%c==2?0x99:%c==4?0x9B:0x9F
+sra %c, jkhl|r5k|_|_|1,2,4|FD %c==1?0x98:%c==2?0x99:%c==4?0x9B:0x9F
+sra %c, jkhl'|r4k|_|_|1,2,4|76;FD %c==1?0x98:%c==2?0x99:%c==4?0x9B:0x9F
+sra %c, jkhl'|r5k|_|_|1,2,4|76;FD %c==1?0x98:%c==2?0x99:%c==4?0x9B:0x9F
 sra (ahl)|kc160|_|_||52;CB 2E
 sra (aix)|kc160|_|_||52;DD CB 00 2E
 sra (aix+%d)|kc160|_|_||52;DD CB %d 2E
@@ -41813,14 +41813,14 @@ sra.sil (iy)|ez80|_|_||52;FD CB 00 2E
 sra.sil (iy+%d)|ez80|_|_||52;FD CB %d 2E
 sret|r4k|_|_||ED 83
 sret|r5k|_|_||ED 83
-srl %c, bcde|r4k|_|_||DD %c(1,2,4)==1?0xB8:%c==2?0xB9:%c==4?0xBB:0xBF
-srl %c, bcde|r5k|_|_||DD %c(1,2,4)==1?0xB8:%c==2?0xB9:%c==4?0xBB:0xBF
-srl %c, bcde'|r4k|_|_||76;DD %c(1,2,4)==1?0xB8:%c==2?0xB9:%c==4?0xBB:0xBF
-srl %c, bcde'|r5k|_|_||76;DD %c(1,2,4)==1?0xB8:%c==2?0xB9:%c==4?0xBB:0xBF
-srl %c, jkhl|r4k|_|_||FD %c(1,2,4)==1?0xB8:%c==2?0xB9:%c==4?0xBB:0xBF
-srl %c, jkhl|r5k|_|_||FD %c(1,2,4)==1?0xB8:%c==2?0xB9:%c==4?0xBB:0xBF
-srl %c, jkhl'|r4k|_|_||76;FD %c(1,2,4)==1?0xB8:%c==2?0xB9:%c==4?0xBB:0xBF
-srl %c, jkhl'|r5k|_|_||76;FD %c(1,2,4)==1?0xB8:%c==2?0xB9:%c==4?0xBB:0xBF
+srl %c, bcde|r4k|_|_|1,2,4|DD %c==1?0xB8:%c==2?0xB9:%c==4?0xBB:0xBF
+srl %c, bcde|r5k|_|_|1,2,4|DD %c==1?0xB8:%c==2?0xB9:%c==4?0xBB:0xBF
+srl %c, bcde'|r4k|_|_|1,2,4|76;DD %c==1?0xB8:%c==2?0xB9:%c==4?0xBB:0xBF
+srl %c, bcde'|r5k|_|_|1,2,4|76;DD %c==1?0xB8:%c==2?0xB9:%c==4?0xBB:0xBF
+srl %c, jkhl|r4k|_|_|1,2,4|FD %c==1?0xB8:%c==2?0xB9:%c==4?0xBB:0xBF
+srl %c, jkhl|r5k|_|_|1,2,4|FD %c==1?0xB8:%c==2?0xB9:%c==4?0xBB:0xBF
+srl %c, jkhl'|r4k|_|_|1,2,4|76;FD %c==1?0xB8:%c==2?0xB9:%c==4?0xBB:0xBF
+srl %c, jkhl'|r5k|_|_|1,2,4|76;FD %c==1?0xB8:%c==2?0xB9:%c==4?0xBB:0xBF
 srl (ahl)|kc160|_|_||52;CB 3E
 srl (aix)|kc160|_|_||52;DD CB 00 3E
 srl (aix+%d)|kc160|_|_||52;DD CB %d 3E

@@ -12303,47 +12303,47 @@
 |rrd (zhl)                |-    -    -    -        -     kc160 -         -    -   -   -   -    -    -   -          -   |
 |rrhl                     |8080 8085 ez80 ez80_z80 gbz80 kc160 kc160_z80 r2ka r3k r4k r5k r800 z180 z80 z80_strict z80n|
 |rsmix                    |-    -    ez80 ez80_z80 -     -     -         -    -   -   -   -    -    -   -          -   |
-|rst 00h                  |8080 8085 ez80 ez80_z80 gbz80 kc160 kc160_z80 r2ka r3k r4k r5k r800 z180 z80 z80_strict z80n|
-|rst 08h                  |8080 8085 ez80 ez80_z80 gbz80 kc160 kc160_z80 r2ka r3k r4k r5k r800 z180 z80 z80_strict z80n|
+|rst 0                    |8080 8085 ez80 ez80_z80 gbz80 kc160 kc160_z80 -    -   -   -   r800 z180 z80 z80_strict z80n|
 |rst 10h                  |8080 8085 ez80 ez80_z80 gbz80 kc160 kc160_z80 r2ka r3k r4k r5k r800 z180 z80 z80_strict z80n|
 |rst 18h                  |8080 8085 ez80 ez80_z80 gbz80 kc160 kc160_z80 r2ka r3k r4k r5k r800 z180 z80 z80_strict z80n|
 |rst 20h                  |8080 8085 ez80 ez80_z80 gbz80 kc160 kc160_z80 r2ka r3k r4k r5k r800 z180 z80 z80_strict z80n|
 |rst 28h                  |8080 8085 ez80 ez80_z80 gbz80 kc160 kc160_z80 r2ka r3k r4k r5k r800 z180 z80 z80_strict z80n|
-|rst 30h                  |8080 8085 ez80 ez80_z80 gbz80 kc160 kc160_z80 r2ka r3k r4k r5k r800 z180 z80 z80_strict z80n|
+|rst 30h                  |8080 8085 ez80 ez80_z80 gbz80 kc160 kc160_z80 -    -   -   -   r800 z180 z80 z80_strict z80n|
 |rst 38h                  |8080 8085 ez80 ez80_z80 gbz80 kc160 kc160_z80 r2ka r3k r4k r5k r800 z180 z80 z80_strict z80n|
+|rst 8                    |8080 8085 ez80 ez80_z80 gbz80 kc160 kc160_z80 -    -   -   -   r800 z180 z80 z80_strict z80n|
 |rst v, 40h               |-    8085 -    -        -     -     -         -    -   -   -   -    -    -   -          -   |
-|rst.l 00h                |-    -    -    ez80_z80 -     -     -         -    -   -   -   -    -    -   -          -   |
-|rst.l 08h                |-    -    -    ez80_z80 -     -     -         -    -   -   -   -    -    -   -          -   |
+|rst.l 0                  |-    -    -    ez80_z80 -     -     -         -    -   -   -   -    -    -   -          -   |
 |rst.l 10h                |-    -    -    ez80_z80 -     -     -         -    -   -   -   -    -    -   -          -   |
 |rst.l 18h                |-    -    -    ez80_z80 -     -     -         -    -   -   -   -    -    -   -          -   |
 |rst.l 20h                |-    -    -    ez80_z80 -     -     -         -    -   -   -   -    -    -   -          -   |
 |rst.l 28h                |-    -    -    ez80_z80 -     -     -         -    -   -   -   -    -    -   -          -   |
 |rst.l 30h                |-    -    -    ez80_z80 -     -     -         -    -   -   -   -    -    -   -          -   |
 |rst.l 38h                |-    -    -    ez80_z80 -     -     -         -    -   -   -   -    -    -   -          -   |
-|rst.lis 00h              |-    -    -    ez80_z80 -     -     -         -    -   -   -   -    -    -   -          -   |
-|rst.lis 08h              |-    -    -    ez80_z80 -     -     -         -    -   -   -   -    -    -   -          -   |
+|rst.l 8                  |-    -    -    ez80_z80 -     -     -         -    -   -   -   -    -    -   -          -   |
+|rst.lis 0                |-    -    -    ez80_z80 -     -     -         -    -   -   -   -    -    -   -          -   |
 |rst.lis 10h              |-    -    -    ez80_z80 -     -     -         -    -   -   -   -    -    -   -          -   |
 |rst.lis 18h              |-    -    -    ez80_z80 -     -     -         -    -   -   -   -    -    -   -          -   |
 |rst.lis 20h              |-    -    -    ez80_z80 -     -     -         -    -   -   -   -    -    -   -          -   |
 |rst.lis 28h              |-    -    -    ez80_z80 -     -     -         -    -   -   -   -    -    -   -          -   |
 |rst.lis 30h              |-    -    -    ez80_z80 -     -     -         -    -   -   -   -    -    -   -          -   |
 |rst.lis 38h              |-    -    -    ez80_z80 -     -     -         -    -   -   -   -    -    -   -          -   |
-|rst.s 00h                |-    -    ez80 -        -     -     -         -    -   -   -   -    -    -   -          -   |
-|rst.s 08h                |-    -    ez80 -        -     -     -         -    -   -   -   -    -    -   -          -   |
+|rst.lis 8                |-    -    -    ez80_z80 -     -     -         -    -   -   -   -    -    -   -          -   |
+|rst.s 0                  |-    -    ez80 -        -     -     -         -    -   -   -   -    -    -   -          -   |
 |rst.s 10h                |-    -    ez80 -        -     -     -         -    -   -   -   -    -    -   -          -   |
 |rst.s 18h                |-    -    ez80 -        -     -     -         -    -   -   -   -    -    -   -          -   |
 |rst.s 20h                |-    -    ez80 -        -     -     -         -    -   -   -   -    -    -   -          -   |
 |rst.s 28h                |-    -    ez80 -        -     -     -         -    -   -   -   -    -    -   -          -   |
 |rst.s 30h                |-    -    ez80 -        -     -     -         -    -   -   -   -    -    -   -          -   |
 |rst.s 38h                |-    -    ez80 -        -     -     -         -    -   -   -   -    -    -   -          -   |
-|rst.sil 00h              |-    -    ez80 -        -     -     -         -    -   -   -   -    -    -   -          -   |
-|rst.sil 08h              |-    -    ez80 -        -     -     -         -    -   -   -   -    -    -   -          -   |
+|rst.s 8                  |-    -    ez80 -        -     -     -         -    -   -   -   -    -    -   -          -   |
+|rst.sil 0                |-    -    ez80 -        -     -     -         -    -   -   -   -    -    -   -          -   |
 |rst.sil 10h              |-    -    ez80 -        -     -     -         -    -   -   -   -    -    -   -          -   |
 |rst.sil 18h              |-    -    ez80 -        -     -     -         -    -   -   -   -    -    -   -          -   |
 |rst.sil 20h              |-    -    ez80 -        -     -     -         -    -   -   -   -    -    -   -          -   |
 |rst.sil 28h              |-    -    ez80 -        -     -     -         -    -   -   -   -    -    -   -          -   |
 |rst.sil 30h              |-    -    ez80 -        -     -     -         -    -   -   -   -    -    -   -          -   |
 |rst.sil 38h              |-    -    ez80 -        -     -     -         -    -   -   -   -    -    -   -          -   |
+|rst.sil 8                |-    -    ez80 -        -     -     -         -    -   -   -   -    -    -   -          -   |
 |rstv                     |-    8085 -    -        -     -     -         -    -   -   -   -    -    -   -          -   |
 |rv                       |8080 8085 ez80 ez80_z80 -     kc160 kc160_z80 r2ka r3k -   -   r800 z180 z80 z80_strict z80n|
 |rz                       |8080 8085 ez80 ez80_z80 gbz80 kc160 kc160_z80 r2ka r3k r4k r5k r800 z180 z80 z80_strict z80n|
@@ -58983,38 +58983,18 @@
 |rrhl                     |z80n      |CB 2C CB 1D                                        |
 |rsmix                    |ez80      |ED 7E                                              |
 |rsmix                    |ez80_z80  |ED 7E                                              |
-|rst 00h                  |8080      |C7                                                 |
-|rst 00h                  |8085      |C7                                                 |
-|rst 00h                  |ez80      |C7                                                 |
-|rst 00h                  |ez80_z80  |C7                                                 |
-|rst 00h                  |gbz80     |C7                                                 |
-|rst 00h                  |kc160     |C7                                                 |
-|rst 00h                  |kc160_z80 |C7                                                 |
-|rst 00h                  |r2ka      |CD 00 00                                           |
-|rst 00h                  |r3k       |CD 00 00                                           |
-|rst 00h                  |r4k       |C7                                                 |
-|rst 00h                  |r5k       |C7                                                 |
-|rst 00h                  |r800      |C7                                                 |
-|rst 00h                  |z180      |C7                                                 |
-|rst 00h                  |z80       |C7                                                 |
-|rst 00h                  |z80_strict|C7                                                 |
-|rst 00h                  |z80n      |C7                                                 |
-|rst 08h                  |8080      |CF                                                 |
-|rst 08h                  |8085      |CF                                                 |
-|rst 08h                  |ez80      |CF                                                 |
-|rst 08h                  |ez80_z80  |CF                                                 |
-|rst 08h                  |gbz80     |CF                                                 |
-|rst 08h                  |kc160     |CF                                                 |
-|rst 08h                  |kc160_z80 |CF                                                 |
-|rst 08h                  |r2ka      |CD 08 00                                           |
-|rst 08h                  |r3k       |CD 08 00                                           |
-|rst 08h                  |r4k       |CF                                                 |
-|rst 08h                  |r5k       |CF                                                 |
-|rst 08h                  |r800      |CF                                                 |
-|rst 08h                  |z180      |CF                                                 |
-|rst 08h                  |z80       |CF                                                 |
-|rst 08h                  |z80_strict|CF                                                 |
-|rst 08h                  |z80n      |CF                                                 |
+|rst 0                    |8080      |C7                                                 |
+|rst 0                    |8085      |C7                                                 |
+|rst 0                    |ez80      |C7                                                 |
+|rst 0                    |ez80_z80  |C7                                                 |
+|rst 0                    |gbz80     |C7                                                 |
+|rst 0                    |kc160     |C7                                                 |
+|rst 0                    |kc160_z80 |C7                                                 |
+|rst 0                    |r800      |C7                                                 |
+|rst 0                    |z180      |C7                                                 |
+|rst 0                    |z80       |C7                                                 |
+|rst 0                    |z80_strict|C7                                                 |
+|rst 0                    |z80n      |C7                                                 |
 |rst 10h                  |8080      |D7                                                 |
 |rst 10h                  |8085      |D7                                                 |
 |rst 10h                  |ez80      |D7                                                 |
@@ -59086,10 +59066,6 @@
 |rst 30h                  |gbz80     |F7                                                 |
 |rst 30h                  |kc160     |F7                                                 |
 |rst 30h                  |kc160_z80 |F7                                                 |
-|rst 30h                  |r2ka      |CD 30 00                                           |
-|rst 30h                  |r3k       |CD 30 00                                           |
-|rst 30h                  |r4k       |F7                                                 |
-|rst 30h                  |r5k       |F7                                                 |
 |rst 30h                  |r800      |F7                                                 |
 |rst 30h                  |z180      |F7                                                 |
 |rst 30h                  |z80       |F7                                                 |
@@ -59111,39 +59087,51 @@
 |rst 38h                  |z80       |FF                                                 |
 |rst 38h                  |z80_strict|FF                                                 |
 |rst 38h                  |z80n      |FF                                                 |
+|rst 8                    |8080      |CF                                                 |
+|rst 8                    |8085      |CF                                                 |
+|rst 8                    |ez80      |CF                                                 |
+|rst 8                    |ez80_z80  |CF                                                 |
+|rst 8                    |gbz80     |CF                                                 |
+|rst 8                    |kc160     |CF                                                 |
+|rst 8                    |kc160_z80 |CF                                                 |
+|rst 8                    |r800      |CF                                                 |
+|rst 8                    |z180      |CF                                                 |
+|rst 8                    |z80       |CF                                                 |
+|rst 8                    |z80_strict|CF                                                 |
+|rst 8                    |z80n      |CF                                                 |
 |rst v, 40h               |8085      |CB                                                 |
-|rst.l 00h                |ez80_z80  |49 C7                                              |
-|rst.l 08h                |ez80_z80  |49 CF                                              |
+|rst.l 0                  |ez80_z80  |49 C7                                              |
 |rst.l 10h                |ez80_z80  |49 D7                                              |
 |rst.l 18h                |ez80_z80  |49 DF                                              |
 |rst.l 20h                |ez80_z80  |49 E7                                              |
 |rst.l 28h                |ez80_z80  |49 EF                                              |
 |rst.l 30h                |ez80_z80  |49 F7                                              |
 |rst.l 38h                |ez80_z80  |49 FF                                              |
-|rst.lis 00h              |ez80_z80  |49 C7                                              |
-|rst.lis 08h              |ez80_z80  |49 CF                                              |
+|rst.l 8                  |ez80_z80  |49 CF                                              |
+|rst.lis 0                |ez80_z80  |49 C7                                              |
 |rst.lis 10h              |ez80_z80  |49 D7                                              |
 |rst.lis 18h              |ez80_z80  |49 DF                                              |
 |rst.lis 20h              |ez80_z80  |49 E7                                              |
 |rst.lis 28h              |ez80_z80  |49 EF                                              |
 |rst.lis 30h              |ez80_z80  |49 F7                                              |
 |rst.lis 38h              |ez80_z80  |49 FF                                              |
-|rst.s 00h                |ez80      |52 C7                                              |
-|rst.s 08h                |ez80      |52 CF                                              |
+|rst.lis 8                |ez80_z80  |49 CF                                              |
+|rst.s 0                  |ez80      |52 C7                                              |
 |rst.s 10h                |ez80      |52 D7                                              |
 |rst.s 18h                |ez80      |52 DF                                              |
 |rst.s 20h                |ez80      |52 E7                                              |
 |rst.s 28h                |ez80      |52 EF                                              |
 |rst.s 30h                |ez80      |52 F7                                              |
 |rst.s 38h                |ez80      |52 FF                                              |
-|rst.sil 00h              |ez80      |52 C7                                              |
-|rst.sil 08h              |ez80      |52 CF                                              |
+|rst.s 8                  |ez80      |52 CF                                              |
+|rst.sil 0                |ez80      |52 C7                                              |
 |rst.sil 10h              |ez80      |52 D7                                              |
 |rst.sil 18h              |ez80      |52 DF                                              |
 |rst.sil 20h              |ez80      |52 E7                                              |
 |rst.sil 28h              |ez80      |52 EF                                              |
 |rst.sil 30h              |ez80      |52 F7                                              |
 |rst.sil 38h              |ez80      |52 FF                                              |
+|rst.sil 8                |ez80      |52 CF                                              |
 |rstv                     |8085      |CB                                                 |
 |rv                       |8080      |E8                                                 |
 |rv                       |8085      |E8                                                 |

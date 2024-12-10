@@ -45,7 +45,12 @@ for my $cpu (@CPUS) {
 	$CPUS{$cpu} = 1;
 	eval "sub cpu_$cpu() { return '$cpu'; }"; $@ and die $@;
 }
-	
+
+sub cpus {
+	my($class) = @_;
+	return sort @CPUS;
+}
+
 sub new {
 	my($class, %args) = @_;
 	my $self = bless {}, $class;

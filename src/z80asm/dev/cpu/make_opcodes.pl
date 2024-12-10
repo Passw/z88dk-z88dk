@@ -4000,7 +4000,14 @@ sub add {
 		}
 	}
 
-	$opcodes->add(Opcode->new(asm => $asm, cpu => $cpu, opcodes => \@ops));
+	# add constants
+	my @const;
+	if ($asm =~ /%c/) {
+		@ops = @{clone \@ops };		# make a deep copy
+		@const = find_range($cpu, $asm, \@ops);
+	}
+	$opcodes->add(Opcode->new(asm => $asm, cpu => $cpu,
+							  const => \@const, opcodes => \@ops));
 }
 
 sub add_x {
@@ -4140,4 +4147,31 @@ sub add_suf {
 			}
 		}
 	}
+}
+
+sub find_range {
+	my($cpu, $asm, $ops) = @_;
+	
+	if ($asm =~ / rst (\.(s|sil|l|lis))? \s+ %c /x) {
+		if ($cpu =~ /^r\dk/) {
+			return (            0x10, 0x18, 0x20, 0x28,       0x38);
+		}
+		else {
+			return (0x00, 0x08, 0x10, 0x18, 0x20, 0x28, 0x30, 0x38);
+		}
+	}
+	else {
+		for my $op (@$ops) {
+			for my $byte (@$op) {
+				if ($byte =~ s/ %c \( (\d+) \.\. (\d+) \) /%c/x) {
+					return ($1 .. $2);
+				}
+				elsif ($byte =~ s/ %c \( ( \d+ (, \d+)* ) \) /%c/x) {
+					return (eval $1);
+				}
+			}
+		}
+	}
+	
+	die "no range found in $asm, $cpu";
 }
