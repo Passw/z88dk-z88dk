@@ -5,36 +5,39 @@
 #------------------------------------------------------------------------------
 
 use Modern::Perl;
-use YAML::Tiny;
+BEGIN { 
+	use Path::Tiny;
+	use lib path($0)->dirname;
+	use Opcodes;
+}
+use Carp (); 
+$SIG{__DIE__} = \&Carp::confess;
+use warnings FATAL => 'uninitialized'; 
 
 @ARGV==2 or die "Usage: $0 input_file.dat output_basename\n";
 my($input_file, $output_basename) = @ARGV;
 
-my $yaml = YAML::Tiny->read($input_file);
-my %opcodes = %{$yaml->[0]};
+my $opcodes = Opcodes->from_file($input_file);
 
 my @test;
 my %all_opcodes;
 
-my @CPUS = sort keys %{$opcodes{"nop"}};
-
 # dump cpu_ok and cpu_ixiy_ok
 for my $ixiy ("", "_ixiy") {
-	for my $cpu (@CPUS) {
+	for my $cpu (Opcode->cpus) {
 		@test = ();
 		
-		for my $asm (sort keys %opcodes) {
+		for my $asm (sort keys %{$opcodes->opcodes}) {
 			my $asm_ixiy = $asm;
 			if ($ixiy) {
 				$asm_ixiy =~ s/\b(ix|iy)/$1 eq 'ix' ? 'iy' : 'ix'/eg;
 			}
 			
-			if (exists $opcodes{$asm_ixiy}{$cpu}) {
-				my @ops = @{$opcodes{$asm_ixiy}{$cpu}};
+			if ($opcodes->exists($asm_ixiy, $cpu)) {
+				my @ops = @{$opcodes->opcodes->{$asm_ixiy}{$cpu}->opcodes};
 				my @bytes;
 				for my $op (@ops) {
 					for my $byte (@$op) {
-						next unless defined $byte;
 						if ($byte =~ /^\d+$/) {
 							push @bytes, sprintf("%02X", $byte);
 						}
@@ -55,7 +58,7 @@ for my $ixiy ("", "_ixiy") {
 }
 
 # dump cpu_error
-for my $cpu (@CPUS) {
+for my $cpu (Opcode->cpus) {
 	@test = ();
 	
 	for my $asm (sort keys %{$all_opcodes{ALL}}) {

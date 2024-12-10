@@ -23,9 +23,9 @@ BEGIN {
 	use Opcodes;
 }
 use Clone 'clone';
-use warnings FATAL => 'uninitialized'; 
 use Carp (); 
 $SIG{__DIE__} = \&Carp::confess;
+use warnings FATAL => 'uninitialized'; 
 use Data::Dump 'dump';
 
 @ARGV==1 or die "Usage: $0 output_file.dat\n";
