@@ -13,6 +13,7 @@ BEGIN {
 use List::Util qw( min max );
 use Clone 'clone';
 use Carp (); 
+use Data::Dump 'dump'; 
 $SIG{__DIE__} = \&Carp::confess;
 use warnings FATAL => 'uninitialized'; 
 
@@ -51,7 +52,7 @@ for my $cpu (Opcode->cpus) {
 	@test = ();
 	
 	for my $asm (sort keys %{$all_opcodes{ALL}}) {
-		#say "$cpu\t$asm" if $asm =~ /ld \(sp\+/;
+		#say "$cpu\t$asm" if $opcode->asm =~ /ld \(sp\+/;
 
 		if (!exists $all_opcodes{$cpu}{$asm} &&
 		    !exists $all_opcodes{$cpu}{$asm =~ s/0x1234[0-9A-F]+/0x1234/r} &&
@@ -82,28 +83,20 @@ for my $cpu (Opcode->cpus) {
 sub add {
 	my($cpu, $opcode) = @_;
 	
-use Data::Dump 'dump'; dump $opcode;
-	
 	#say "$cpu\t$opcode->asm\t$bytes" if $opcode->asm =~ /ld hl, sp\+/;
 	
 	# special case for intel: jr and djnz %j is converted to %m
 	if ($opcode->cpu =~ /^80/ && $opcode->asm =~ /^(jr|djnz)/) {
-		$opcode->{asm} =~ s/%j/%m/;
+		$opcode = $opcode->clone(sub { s/%j/%m/; }, sub {});
 	}
 	
 	if ($opcode->asm =~ /%c/) {
 		my @const = sort {$a <=> $b} @{$opcode->const};
 		for my $c (@const) {
-			my $opcode1 = clone($opcode);
-			$opcode1->{asm} =~ s/%c/$c/;
-				
-			for my $op (@{$opcode->opcodes}) {
-				for my $byte (@$op) {
-					if ($byte =~ s/%c/$c/g) {
-						$byte = eval($byte); $@ and die $@;
-					}
-				}
-			}
+			my $opcode1 = $opcode->clone(sub { s/%c/$c/; }, 
+									     sub { if (s/%c/$c/g) {
+										  		  $_ = eval($_); $@ and die $@;
+											   }});
 			add($cpu, $opcode1);
 		}
 		
@@ -116,85 +109,67 @@ use Data::Dump 'dump'; dump $opcode;
 			}
 		}
 	}
+	elsif ($opcode->asm =~ /%n/) {
+		add($cpu, $opcode->clone(sub {s/%n/-128/}, sub {s/%n/0x80/e}));
+		add($cpu, $opcode->clone(sub {s/%n/0/},    sub {s/%n/0x00/e}));
+		add($cpu, $opcode->clone(sub {s/%n/127/},  sub {s/%n/0x7F/e}));
+		add($cpu, $opcode->clone(sub {s/%n/255/},  sub {s/%n/0xFF/e}));
+	}
+	elsif ($opcode->asm =~ /%m/) {
+		add($cpu, $opcode->clone(sub {s/%m/0x12345678/}, 
+								 sub {s/%m1/0x79/e;
+								      s/%m1/0x56/e;
+								      s/%m1/0x34/e;
+								      s/%m1/0x12/e;
+								      s/%m/0x78/e;
+								      s/%m/0x56/e;
+								      s/%m/0x34/e;
+								      s/%m/0x12/e}));
+	}
+	elsif ($opcode->asm =~ /%M/) {
+		add($cpu, $opcode->clone(sub {s/%M/0x1234/}, 
+								 sub {s/%M/0x12/e;
+								      s/%M/0x34/e}));
+	}
+	# must be 1-byte opcode so that call to __z80asm__add_sp_s with defb %s after
+	# is diassembled correctly during z80asm tests in cpu.t
+	elsif ($opcode->asm =~ /%s/) {	
+		add($cpu, $opcode->clone(sub {s/%s/-128/; s/\+-/-/}, sub {s/%s/0x80/e}));
+#		my $bytes1 = $bytes =~ s/%s 00/80 FF/r;
+
+		add($cpu, $opcode->clone(sub {s/%s/0/; s/\+0//}, sub {s/%s/0x00/e}));
+#		$bytes1 = $bytes =~ s/%s 00/00 00/r;
+
+		# 7F is a prefix in r4k and r5k, is not single-opcode; use 7E instead
+		add($cpu, $opcode->clone(sub {s/%s/126/}, sub {s/%s/0x7E/e}));
+#		$bytes1 = $bytes =~ s/%s 00/7E 00/r;
+	}
+	elsif ($opcode->asm =~ /%u/) {
+		add($cpu, $opcode->clone(sub {s/%u/0/; s/\+0//}, sub {s/%u/0x00/e}));
+		add($cpu, $opcode->clone(sub {s/%u/128/}, sub {s/%u/0x80/e}));
+		add($cpu, $opcode->clone(sub {s/%u/255/}, sub {s/%u/0xFF/e}));
+	}
+	elsif ($opcode->asm =~ /%d/) {
+		add($cpu, $opcode->clone(sub {s/%d/126/}, sub {s/%d/0x7E/e; s/%D/0x7F/e}));
+		add($cpu, $opcode->clone(sub {s/%d/0/; s/\+0//}, sub {s/%d/0x00/e; s/%D/0x01/e}));
+		add($cpu, $opcode->clone(sub {s/%d/-128/; s/\+-/-/}, sub {s/%d/0x80/e; s/%D/0x81/e}));
+	}
+	elsif ($opcode->asm =~ /%j/) {
+		my $dist = -scalar($opcode->bytes);
+		add($cpu, $opcode->clone(sub {s/%j/ASMPC/}, sub {s/%j/$dist & 0xFF/e}));
+	}
+	elsif ($opcode->asm =~ /%J/) {
+		my $dist = -scalar($opcode->bytes);
+		add($cpu, $opcode->clone(sub {s/%J/ASMPC/}, sub {s/%J/$dist & 0xFF/e; s/%J/($dist>>8) & 0xFF/e}));
+	}
+	elsif ($opcode->asm =~ /%h/) {
+		add($cpu, $opcode->clone(sub {s/%h/0/}, sub {s/%h/0x00/e}));
+		add($cpu, $opcode->clone(sub {s/%h/127/}, sub {s/%h/0x7F/e}));
+		add($cpu, $opcode->clone(sub {s/%h/255/}, sub {s/%h/0xFF/e}));
+	}
 #	elsif ($opcode->asm =~ /^ldh .*\(c\)/) {
 #		add($cpu, $opcode->asm =~ s/\(c\)/( c )/r, $bytes);	# ( c ) to break recursion
 #		add($cpu, $opcode->asm =~ s/ldh /ld /r =~ s/\(c\)/(0xff00+c)/r, $bytes);
-#	}
-#	elsif ($opcode->asm =~ /%d/) {
-#		my $asm1 = $opcode->asm =~ s/\+%d/+126/r;
-#		my $bytes1 = $bytes =~ s/%d/7E/r =~ s/%D/7F/r;
-#		add($cpu, $asm1, $bytes1);
-		#
-#		$asm1 = $opcode->asm =~ s/\+%d/+0/r;
-#		$bytes1 = $bytes =~ s/%d/00/r =~ s/%D/01/r;
-#		add($cpu, $asm1, $bytes1);
-#
-#		$asm1 = $opcode->asm =~ s/\+%d/-128/r;
-#		$bytes1 = $bytes =~ s/%d/80/r =~ s/%D/81/r;
-#		add($cpu, $asm1, $bytes1);
-#	}
-#	elsif ($opcode->asm =~ /%u/) {
-#		my $asm1 = $opcode->asm =~ s/\+%u/+0/r;
-#		my $bytes1 = $bytes =~ s/%u/00/r;
-#		add($cpu, $asm1, $bytes1);
-		#
-#		$asm1 = $opcode->asm =~ s/\+%u/+128/r;
-#		$bytes1 = $bytes =~ s/%u/80/r;
-#		add($cpu, $asm1, $bytes1);
-		#
-#		$asm1 = $opcode->asm =~ s/\+%u/+255/r;
-#		$bytes1 = $bytes =~ s/%u/FF/r;
-#		add($cpu, $asm1, $bytes1);
-#	}
-#	# must be 1-byte opcode so that call to __z80asm__add_sp_s with defb %s after
-#	# is diassembled correctly during z80asm tests in cpu.t
-#	elsif ($asm =~ /%s/) {	
-#		my $asm1 = $opcode->asm =~ s/%s/-128/r;
-#		$asm1 =~ s/\+-/-/g;
-#		my $bytes1 = $bytes =~ s/%s 00/80 FF/r;
-#		$bytes1 =~ s/%s/80/;
-#		add($cpu, $asm1, $bytes1);
-		#
-#		$asm1 = $opcode->asm =~ s/%s/0/r;
-#		$asm1 =~ s/\+-/-/g;
-#		$bytes1 = $bytes =~ s/%s 00/00 00/r;
-#		$bytes1 =~ s/%s/00/;
-#		add($cpu, $asm1, $bytes1);
-		#
-#		$asm1 = $opcode->asm =~ s/%s/126/r;
-#		$bytes1 = $bytes =~ s/%s 00/7E 00/r;
-#		$bytes1 =~ s/%s/7E/;
-#		add($cpu, $asm1, $bytes1);
-#	}
-#	elsif ($asm =~ /%n/) {
-#		my $asm1 = $opcode->asm =~ s/%n/-128/gr;
-#		my $bytes1 = $bytes =~ s/%n/80/gr;
-#		add($cpu, $asm1, $bytes1);
-		#
-#		$asm1 = $opcode->asm =~ s/%n/0/gr;
-#		$bytes1 = $bytes =~ s/%n/00/gr;
-#		add($cpu, $asm1, $bytes1);
-		#
-#		$asm1 = $opcode->asm =~ s/%n/127/gr;
-#		$bytes1 = $bytes =~ s/%n/7F/gr;
-#		add($cpu, $asm1, $bytes1);
-		#
-#		$asm1 = $opcode->asm =~ s/%n/255/gr;
-#		$bytes1 = $bytes =~ s/%n/FF/gr;
-#		add($cpu, $asm1, $bytes1);
-#	}
-#	elsif ($asm =~ /%h/) {
-#		my $asm1 = $opcode->asm =~ s/%h/0/gr;
-#		my $bytes1 = $bytes =~ s/%h/00/gr;
-#		add($cpu, $asm1, $bytes1);
-		#
-#		$asm1 = $opcode->asm =~ s/%h/127/gr;
-#		$bytes1 = $bytes =~ s/%h/7F/gr;
-#		add($cpu, $asm1, $bytes1);
-		#
-#		$asm1 = $opcode->asm =~ s/%h/255/gr;
-#		$bytes1 = $bytes =~ s/%h/FF/gr;
-#		add($cpu, $asm1, $bytes1);
 #	}
 #	elsif ($bytes =~ /%m %m %m %m/) {
 #		my $asm1 = $opcode->asm =~ s/%m/0x12345678/r;
@@ -216,36 +191,13 @@ use Data::Dump 'dump'; dump $opcode;
 #		my $bytes1 = $bytes =~ s/%m1 %m1/35 12/gr;
 #		add($cpu, $asm1, $bytes1);
 #	}
-#	elsif ($bytes =~ /%m %m/) {
-#		my $asm1 = $opcode->asm =~ s/%m/0x1234/r;
-#		my $bytes1 = $bytes =~ s/%m %m/34 12/gr;
-#		add($cpu, $asm1, $bytes1);
-#	}
-#	elsif ($asm =~ /%M/) {
-#		my $asm1 = $opcode->asm =~ s/%M/0x1234/r;
-#		my $bytes1 = $bytes =~ s/%M/12/r;
-#		$bytes1 = $bytes1 =~ s/%M/34/r;
-#		add($cpu, $asm1, $bytes1);
-#	}
 #	elsif ($bytes =~ /^[0-9A-F]{2} %j [0-9A-F]{2} %j$/) {
 #		my $asm1 = $opcode->asm =~ s/%j/ASMPC/r;
 #		my $bytes1 = $bytes =~ s/%j/FE/r;
 #		$bytes1 = $bytes1 =~ s/%j/FC/r;
 #		add($cpu, $asm1, $bytes1);
 #	}
-#	elsif ($asm =~ /%j/) {
-#		my $asm1 = $opcode->asm =~ s/%j/ASMPC/r;
-#		my $dist = sprintf("%02X", (- scalar(@bytes)) & 0xFF);
-#		my $bytes1 = $bytes =~ s/%j/$dist/r;
-#		add($cpu, $asm1, $bytes1);
-#	}
-#	elsif ($asm =~ /%J/) {
-#		my $asm1 = $opcode->asm =~ s/%J/ASMPC/r;
-#		my $dist = sprintf("%04X", (- scalar(@bytes)) & 0xFFFF);
-#		my $bytes1 = $bytes =~ s/%J %J/substr($dist,2,2)." ".substr($dist,0,2)/er;
-#		add($cpu, $asm1, $bytes1);
-#	}
-#	elsif ($asm =~ /%c/) {
+#	elsif ($opcode->asm =~ /%c/) {
 #		my $bytes1 = $bytes =~ s/%c\((\d+.*?\d+)\)/%c/r;
 #		my @range = eval($1); $@ and die $@;
 #		for my $c (@range) {
@@ -272,8 +224,14 @@ use Data::Dump 'dump'; dump $opcode;
 				if ($byte =~ /^\d+$/) {
 					push @bytes, sprintf("%02X", $byte);
 				}
-				else {
+				elsif ($byte =~ /^@/) {		# call address
 					push @bytes, $byte;
+				}
+				elsif ($byte =~ /^%t/) {	# temp address
+					push @bytes, $byte;
+				}
+				else {
+					die dump $opcode;
 				}
 			}
 		}

@@ -18,6 +18,7 @@ package Opcode;
 
 my @fields = 	 qw( asm cpu synthetic undocumented const opcodes );
 use Object::Tiny qw( asm cpu synthetic undocumented const opcodes );
+use Clone;
 
 # all CPUs
 my @CPUS = (qw(
@@ -74,6 +75,37 @@ sub new {
 	%args and die "extra arguments: ", join(" ", keys %args);
 	
 	return $self;
+}
+
+sub clone {
+	my($self, $replace_asm_f, $replace_bytes_f) = @_;
+	
+	my $new = Clone::clone($self);
+
+	for ($new->{asm}) {
+		$replace_asm_f->();
+	}
+	
+	for my $op (@{$new->opcodes}) {
+		for (@$op) {
+			$replace_bytes_f->();
+		}
+	}
+	
+	return $new;
+}
+
+sub bytes {
+	my($self) = @_;
+	
+	my @bytes;
+	for my $op (@{$self->opcodes}) {
+		for my $byte (@$op) {
+			push @bytes, $byte;
+		}
+	}
+	
+	return @bytes;
 }
 
 # input/output to data file

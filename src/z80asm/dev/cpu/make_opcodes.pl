@@ -7,11 +7,13 @@
 #	%n	unsigned byte
 #   %h  high page offset
 #	%m	unsigned word - 16, 24 or 32 bits
+#	%m1	%m+1
 #	%M	unsigned word, big-endian
 #	%j	jr offset
+#	%J	jre offset
 #	%c	constant (im, bit, rst, ...)
 #	%d	signed register indirect offset
-#	%D	%d+1
+#	%D	%d+1						TODO: should be %d1 for consistency
 #	%u	unsigned register indirect offset
 #	%t	temp jump label to end of statement; %t3 to end of statement - 3
 #------------------------------------------------------------------------------
@@ -2991,7 +2993,7 @@ for my $cpu (@CPUS) {
 	}
 	
 	# RST
-	add_suf($cpu, "rst %c", ["0xC7+%c"]);
+	add_suf($cpu, "rst %c", ["0xC7+(%c<8?%c*8:%c)"]);
 	
 	# RET
 	add($cpu, "ret", [ret()]);
@@ -4154,10 +4156,11 @@ sub find_range {
 	
 	if ($asm =~ / rst (\.(s|sil|l|lis))? \s+ %c /x) {
 		if ($cpu =~ /^r\dk/) {
-			return (            0x10, 0x18, 0x20, 0x28,       0x38);
+			return (            0x10/8, 0x18/8, 0x20/8, 0x28/8,       0x38/8,
+			                    0x10,   0x18,   0x20,   0x28,         0x38);
 		}
 		else {
-			return (0x00, 0x08, 0x10, 0x18, 0x20, 0x28, 0x30, 0x38);
+			return (0x00..0x08, 0x10,   0x18,   0x20,   0x28,   0x30, 0x38);
 		}
 	}
 	else {
