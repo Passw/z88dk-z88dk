@@ -5,7 +5,15 @@
 #------------------------------------------------------------------------------
 
 use Modern::Perl;
-use YAML::Tiny;
+BEGIN { 
+	use Path::Tiny;
+	use lib path($0)->dirname;
+	use Opcodes;
+}
+use Carp (); 
+use Data::Dump 'dump'; 
+$SIG{__DIE__} = \&Carp::confess;
+use warnings FATAL => 'uninitialized'; 
 
 @ARGV==2 or die "Usage: $0 input_file.dat output_file.h\n";
 my($input_file, $output_file) = @ARGV;
@@ -15,14 +23,11 @@ my $output_aux_file_header = $output_file =~ s/\.\w+$/_action.h/r;
 my $output_aux_file_source = $output_file =~ s/\.\w+$/_action.c/r;
 
 
-my $yaml = YAML::Tiny->read($input_file);
-my %opcodes = %{$yaml->[0]};
+my $opcodes = Opcodes->from_file($input_file);
 
 my %parser;
 
-my @CPUS = sort keys %{$opcodes{"nop"}};
-
-for my $asm (sort keys %opcodes) {
+for my $asm (sort keys %{$opcodes->opcodes}) {
 	my $tokens = parser_tokens($asm);
 	
 	# check for parens
@@ -31,10 +36,10 @@ for my $asm (sort keys %opcodes) {
 	elsif ($asm =~ /%[snmjc]/) {		$parens = 'expr_no_parens'; }
 	else {								$parens = 'no_expr';   }
 		
-	for my $cpu (sort keys %{$opcodes{$asm}}) {
-		my @ops = @{$opcodes{$asm}{$cpu}};
+	for my $cpu (sort keys %{$opcodes->opcodes->{$asm}}) {
+		my $opcode = $opcodes->opcodes->{$asm}{$cpu};
 		
-		$parser{$tokens}{$cpu}{$parens} = [$asm, @ops];
+		$parser{$tokens}{$cpu}{$parens} = $opcode;
 	}
 }
 
@@ -210,187 +215,181 @@ sub parser_tokens {
 }
 
 sub parse_code {
-	my($cpu, $asm, @ops) = @_;
+	my($cpu, $opcode) = @_;
 	my @code;
 
-	my @bin;
-	for my $op (@ops) {
-		push @bin, @$op;
-	}
+	my @bin = $opcode->bytes;
 	my $bin = "@bin";
 	
-	#say "$cpu\t$asm\t$bin";
-
-	# handle special case of jump to %t
-	if ($bin =~ /%t/) {
-		push @code,
-			"{",
-			"DO_STMT_LABEL();",
-			"const char *end_label = autolabel();";
-		for my $op (@ops) {
-			my $count_t = scalar(grep {/%t/} @$op);
-			if ($count_t) {
-				my $opcode = 0;
-				my $target_offset = 0;
-				for my $i (0 .. $#$op) {
-					if ($op->[$i] =~ /%t(\d*)/) {
-						if ($1) {
-							$target_offset = $1;
-						}
-						last;
-					}
-					else {
-						$opcode = ($opcode << 8) | ($op->[$i] & 0xFF);
-					}
-				}
-				
-				if ($count_t==1) {
-					push @code,
-						"add_opcode_jr_end(0x".fmthex($opcode).", end_label, $target_offset);";
-				}
-				elsif ($count_t==2) {
-					push @code,
-						"add_opcode_nn_end(0x".fmthex($opcode).", end_label, $target_offset);";
-				}
-				elsif ($count_t==3) {	
-					push @code,
-						"add_opcode_nnn_end(0x".fmthex($opcode).", end_label, $target_offset);";
-				}
-				else {	
-					die $count_t;
-				}				
-			}
-			else {
-				push @code, parse_code_opcode($cpu, $asm, @$op);
-			}
+#	# handle special case of jump to %t
+#	if ($bin =~ /%t/) {
+#		push @code,
+#			"{",
+#			"DO_STMT_LABEL();",
+#			"const char *end_label = autolabel();";
+#		for my $op (@ops) {
+#			my $count_t = scalar(grep {/%t/} @$op);
+#			if ($count_t) {
+#				my $opcode = 0;
+#				my $target_offset = 0;
+#				for my $i (0 .. $#$op) {
+#					if ($op->[$i] =~ /%t(\d*)/) {
+#						if ($1) {
+#							$target_offset = $1;
+#						}
+#						last;
+#					}
+#					else {
+#						$opcode = ($opcode << 8) | ($op->[$i] & 0xFF);
+#					}
+#				}
+#				
+#				if ($count_t==1) {
+#					push @code,
+#						"add_opcode_jr_end(0x".fmthex($opcode).", end_label, $target_offset);";
+#				}
+#				elsif ($count_t==2) {
+#					push @code,
+#						"add_opcode_nn_end(0x".fmthex($opcode).", end_label, $target_offset);";
+#				}
+#				elsif ($count_t==3) {	
+#					push @code,
+#						"add_opcode_nnn_end(0x".fmthex($opcode).", end_label, $target_offset);";
+#				}
+#				else {	
+#					die $count_t;
+#				}				
+#			}
+#			else {
+#				push @code, parse_code_opcode($cpu, $asm, @$op);
+#			}
+#		}
+#		push @code, 
+#			"asm_LABEL_offset(end_label, get_cur_opcode_size());",
+#			"}";
+#	}
+#	# handle multiple uses of the same expression
+#	elsif ($bin =~ /%m/) {
+#		push @code,
+#			"{",
+#			"DO_STMT_LABEL();",
+#			"Expr1 *expr = pop_expr(ctx);";
+#		for my $op (@ops) {
+#			my $count_m = scalar(grep {/%m/} @$op);
+#			if ($count_m) {
+#				my $opcode = 0;
+#				my $target_offset = 0;
+#				for my $i (0 .. $#$op) {
+#					if ($op->[$i] =~ /%m(\d*)/) {
+#						if ($1) {
+#							$target_offset = $1;
+#						}
+#						last;
+#					}
+#					else {
+#						$opcode = ($opcode << 8) | ($op->[$i] & 0xFF);
+#					}
+#				}
+#				
+#				if ($count_m==2) {
+#					push @code,
+#						"add_opcode_nn(0x".fmthex($opcode).", Expr1_clone(expr), $target_offset);";
+#				}
+#				elsif ($count_m==3) {	
+#					push @code,
+#						"add_opcode_nnn(0x".fmthex($opcode).", Expr1_clone(expr), $target_offset);";
+#				}
+#				elsif ($count_m==4) {	
+#					push @code,
+#						"add_opcode_nnnn(0x".fmthex($opcode).", Expr1_clone(expr));";
+#				}
+#				else {	
+#					die $count_m;
+#				}				
+#			}
+#			else {
+#				push @code, parse_code_opcode($cpu, $asm, @$op);
+#			}
+#		}
+#		push @code, 
+#			"OBJ_DELETE(expr);",
+#			"}";
+#	}
+#	elsif ($bin =~ /%j [0-9A-F ]+%j/) {
+#		push @code,
+#			"{",
+#			"DO_STMT_LABEL();",
+#			"Expr1 *expr = pop_expr(ctx);";
+#		for my $op (@ops) {
+#			my $count_j = scalar(grep {/%j/} @$op);
+#			if ($count_j) {
+#				my $opcode = 0;
+#				for my $i (0 .. $#$op) {
+#					last if $op->[$i] =~ /%j/;
+#					$opcode = ($opcode << 8) | ($op->[$i] & 0xFF);
+#				}
+#				
+#				if ($count_j==1) {
+#					push @code,
+#						"add_opcode_jr(0x".fmthex($opcode).", Expr1_clone(expr));";
+#				}
+#				else {	
+#					die $count_j;
+#				}				
+#			}
+#			else {
+#				push @code, parse_code_opcode($cpu, $asm, @$op);
+#			}
+#		}
+#		push @code, 
+#			"OBJ_DELETE(expr);",
+#			"}";
+#	}
+#	# handle rst[.l] %c
+#	elsif ($asm =~ /^rst((\.(s|sil|l|lis))?) %c/) {
+#		if ($1) {
+#			push @code, 
+#				"DO_stmt(".sprintf("0x%02X", $ops[0][0]).");";
+#			shift @ops;
+#		}
+#		for my $op (@ops) {
+#			push @code, parse_code_opcode($cpu, $asm, @$op);
+#		}
+#	}
+#	# handle ld dd,(ix+d) -> ld ddl,(ix+d) : ld ddh, (ix+d+1)
+#	elsif ($bin =~ /%D/) {
+#		for my $i (0 .. $#ops) {
+#			if (($ops[$i][2]//'') eq '%d' && ($ops[$i+1][2]//'') eq '%D') {
+#				my $opcode0 = ($ops[$i+0][0] << 8) + $ops[$i+0][1];
+#				my $opcode1 = ($ops[$i+1][0] << 8) + $ops[$i+1][1];
+#				push @code, 
+#					"DO_stmt_idx_idx1(".sprintf("0x%04X, 0x%04X", $opcode0, $opcode1).");";
+#			}
+#			elsif ($ops[$i][2]//'' eq '%D') {
+#				# already handled
+#			}
+#			else {
+#				push @code, parse_code_opcode($cpu, $asm, @{$ops[$i]});
+#			}
+#		}
+#	}
+#	elsif ($bin =~ /^\d+ %j \d+ %j$/) {
+#		my $opcode0 = $ops[0][0];
+#		my $opcode1 = $ops[1][0];
+#		push @code, 
+#			"DO_stmt_jr_jr(".sprintf("0x%02X, 0x%02X", $opcode0, $opcode1).");";
+#	}		
+#	else {
+		for my $op (@{$opcode->opcodes}) {
+			push @code, parse_code_opcode($cpu, $opcode->asm, @$op);
 		}
-		push @code, 
-			"asm_LABEL_offset(end_label, get_cur_opcode_size());",
-			"}";
-	}
-	# handle multiple uses of the same expression
-	elsif ($bin =~ /%m/) {
-		push @code,
-			"{",
-			"DO_STMT_LABEL();",
-			"Expr1 *expr = pop_expr(ctx);";
-		for my $op (@ops) {
-			my $count_m = scalar(grep {/%m/} @$op);
-			if ($count_m) {
-				my $opcode = 0;
-				my $target_offset = 0;
-				for my $i (0 .. $#$op) {
-					if ($op->[$i] =~ /%m(\d*)/) {
-						if ($1) {
-							$target_offset = $1;
-						}
-						last;
-					}
-					else {
-						$opcode = ($opcode << 8) | ($op->[$i] & 0xFF);
-					}
-				}
-				
-				if ($count_m==2) {
-					push @code,
-						"add_opcode_nn(0x".fmthex($opcode).", Expr1_clone(expr), $target_offset);";
-				}
-				elsif ($count_m==3) {	
-					push @code,
-						"add_opcode_nnn(0x".fmthex($opcode).", Expr1_clone(expr), $target_offset);";
-				}
-				elsif ($count_m==4) {	
-					push @code,
-						"add_opcode_nnnn(0x".fmthex($opcode).", Expr1_clone(expr));";
-				}
-				else {	
-					die $count_m;
-				}				
-			}
-			else {
-				push @code, parse_code_opcode($cpu, $asm, @$op);
-			}
-		}
-		push @code, 
-			"OBJ_DELETE(expr);",
-			"}";
-	}
-	elsif ($bin =~ /%j [0-9A-F ]+%j/) {
-		push @code,
-			"{",
-			"DO_STMT_LABEL();",
-			"Expr1 *expr = pop_expr(ctx);";
-		for my $op (@ops) {
-			my $count_j = scalar(grep {/%j/} @$op);
-			if ($count_j) {
-				my $opcode = 0;
-				for my $i (0 .. $#$op) {
-					last if $op->[$i] =~ /%j/;
-					$opcode = ($opcode << 8) | ($op->[$i] & 0xFF);
-				}
-				
-				if ($count_j==1) {
-					push @code,
-						"add_opcode_jr(0x".fmthex($opcode).", Expr1_clone(expr));";
-				}
-				else {	
-					die $count_j;
-				}				
-			}
-			else {
-				push @code, parse_code_opcode($cpu, $asm, @$op);
-			}
-		}
-		push @code, 
-			"OBJ_DELETE(expr);",
-			"}";
-	}
-	# handle rst[.l] %c
-	elsif ($asm =~ /^rst((\.(s|sil|l|lis))?) %c/) {
-		if ($1) {
-			push @code, 
-				"DO_stmt(".sprintf("0x%02X", $ops[0][0]).");";
-			shift @ops;
-		}
-		for my $op (@ops) {
-			push @code, parse_code_opcode($cpu, $asm, @$op);
-		}
-	}
-	# handle ld dd,(ix+d) -> ld ddl,(ix+d) : ld ddh, (ix+d+1)
-	elsif ($bin =~ /%D/) {
-		for my $i (0 .. $#ops) {
-			if (($ops[$i][2]//'') eq '%d' && ($ops[$i+1][2]//'') eq '%D') {
-				my $opcode0 = ($ops[$i+0][0] << 8) + $ops[$i+0][1];
-				my $opcode1 = ($ops[$i+1][0] << 8) + $ops[$i+1][1];
-				push @code, 
-					"DO_stmt_idx_idx1(".sprintf("0x%04X, 0x%04X", $opcode0, $opcode1).");";
-			}
-			elsif ($ops[$i][2]//'' eq '%D') {
-				# already handled
-			}
-			else {
-				push @code, parse_code_opcode($cpu, $asm, @{$ops[$i]});
-			}
-		}
-	}
-	elsif ($bin =~ /^\d+ %j \d+ %j$/) {
-		my $opcode0 = $ops[0][0];
-		my $opcode1 = $ops[1][0];
-		push @code, 
-			"DO_stmt_jr_jr(".sprintf("0x%02X, 0x%02X", $opcode0, $opcode1).");";
-	}		
-	else {
-		for my $op (@ops) {
-			push @code, parse_code_opcode($cpu, $asm, @$op);
-		}
-	}
+#	}
 	
 	return join("\n", @code);
 }
 
 sub parse_code_opcode {
 	my($cpu, $asm, @bin) = @_;
-	my @bin0 = @bin;
 	my @code;
 
 	#say "$cpu\t$asm\t@bin";
@@ -540,7 +539,7 @@ sub merge_cpu {
 	my %code;
 	
 	my $last_code;
-	for my $cpu (@CPUS) {
+	for my $cpu (Opcode->cpus) {
 		if (exists $t->{$cpu}) {
 			my $code = merge_parens($cpu, $t->{$cpu});
 			$code{$code}{$cpu}++;
@@ -549,7 +548,7 @@ sub merge_cpu {
 	}
 	
 	if (scalar(keys %code) == 1 && 
-	    scalar(keys %{$code{$last_code}}) == scalar(@CPUS)) {
+	    scalar(keys %{$code{$last_code}}) == scalar(Opcode->cpus)) {
 		# no variants
 		$ret .= $last_code."\n";
 	}
@@ -576,22 +575,22 @@ sub merge_parens {
 	
 	if ($t->{no_expr}) {
 		die if $t->{expr_no_parens} || $t->{expr_in_parens};
-		return parse_code($cpu, @{$t->{no_expr}});
+		return parse_code($cpu, $t->{no_expr});
 	}
 	elsif (!$t->{expr_no_parens} && !$t->{expr_in_parens}) {
 		die;
 	}
 	elsif (!$t->{expr_no_parens} && $t->{expr_in_parens}) {
 		return "if (!ctx->expr_in_parens) return false;\n".
-				parse_code($cpu, @{$t->{expr_in_parens}});			
+				parse_code($cpu, $t->{expr_in_parens});			
 	}
 	elsif ($t->{expr_no_parens} && !$t->{expr_in_parens}) {
 		return "if (ctx->expr_in_parens) warning(ErrExprInParens, NULL);\n".
-				parse_code($cpu, @{$t->{expr_no_parens}});
+				parse_code($cpu, $t->{expr_no_parens});
 	}
 	elsif ($t->{expr_no_parens} && $t->{expr_in_parens}) {
-		my $in_parens = parse_code($cpu, @{$t->{expr_in_parens}});
-		my $no_parens = parse_code($cpu, @{$t->{expr_no_parens}});
+		my $in_parens = parse_code($cpu, $t->{expr_in_parens});
+		my $no_parens = parse_code($cpu, $t->{expr_no_parens});
 		return "if (ctx->expr_in_parens) { $in_parens } else { $no_parens }";
 	}
 	else {
