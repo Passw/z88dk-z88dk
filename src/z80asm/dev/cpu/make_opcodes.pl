@@ -36,8 +36,8 @@ my @CPUS = qw( z80 z80_strict z80n z180
 			   kc160 kc160_z80
 );
 
-# %opcodes: $opcodes{$asm}{$cpu} = [[@bin],[@bin]]
-my %opcodes;
+# $opcodes->{opcodes}{$asm}{$cpu} = [[@bin],[@bin]]
+my $opcodes = {opcodes=>{}};
 
 # operand values
 my %V = (
@@ -376,10 +376,12 @@ for my $cpu (@CPUS) {
 	for my $op (qw( add adc sub sbb ana xra ora cmp )) {
 		for my $r (qw( b c d e h l m a )) {
 			if ($r4k || $r5k) {
-				add($cpu, "$op $r", [0x7F, alu_r($op, $r)]) unless $opcodes{"$op $r"}{$cpu};
+				add($cpu, "$op $r", [0x7F, alu_r($op, $r)]) 
+					unless $opcodes->{opcodes}{"$op $r"}{$cpu};
 			}
 			else {
-				add($cpu, "$op $r", [alu_r($op, $r)]) unless $opcodes{"$op $r"}{$cpu};
+				add($cpu, "$op $r", [alu_r($op, $r)]) 
+					unless $opcodes->{opcodes}{"$op $r"}{$cpu};
 			}
 		}
 	}
@@ -2181,7 +2183,7 @@ for my $cpu (@CPUS) {
 
 			for my $r (qw( b c d e h l (hl) a )) {
 				add_x($cpu, "$op $r", [0xCB, 8*$V{$op}+$V{$r}]) 
-					unless $opcodes{"$op $r"}{$cpu};
+					unless $opcodes->{opcodes}{"$op $r"}{$cpu};
 				
 				# (ix+d) -> r
 				if (($z80 || $z80n) && $r ne '(hl)') {
@@ -3931,7 +3933,7 @@ for my $cpu (@CPUS) {
 #------------------------------------------------------------------------------
 # write file
 #------------------------------------------------------------------------------
-my $yaml = YAML::Tiny->new(\%opcodes);
+my $yaml = YAML::Tiny->new($opcodes);
 $yaml->write($output_file);
 
 #------------------------------------------------------------------------------
@@ -3988,10 +3990,10 @@ sub add {
 		}
 	}
 
-	if (defined($opcodes{$asm}{$cpu})) {
-		die "$asm $cpu exists:\n", dump($opcodes{$asm}{$cpu});
+	if (defined($opcodes->{opcodes}{$asm}{$cpu})) {
+		die "$asm $cpu exists:\n", dump($opcodes->{opcodes}{$asm}{$cpu});
 	}
-	$opcodes{$asm}{$cpu} = \@ops;
+	$opcodes->{opcodes}{$asm}{$cpu} = \@ops;
 }
 
 sub add_x {

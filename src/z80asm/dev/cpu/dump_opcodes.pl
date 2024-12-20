@@ -8,18 +8,22 @@ use Modern::Perl;
 use YAML::Tiny;
 use Text::Table;
 use Clone 'clone';
+use warnings FATAL => 'uninitialized'; 
+use Carp (); 
+$SIG{__DIE__} = \&Carp::confess;
+use Data::Dump 'dump';
 
 @ARGV==2 or die "Usage: $0 input_file.yaml output_file.txt\n";
 my($input_file, $output_file) = @ARGV;
 
 my $yaml = YAML::Tiny->read($input_file);
-my %opcodes = %{$yaml->[0]};
+my $opcodes = $yaml->[0];
 
 my $sep = \"|";
 
-%opcodes = expand_consts(%opcodes);
-my $opcode_table = make_opcode_table(%opcodes);
-my $hex_table = make_hex_table(%opcodes);
+$opcodes = expand_consts($opcodes);
+my $opcode_table = make_opcode_table($opcodes);
+my $hex_table = make_hex_table($opcodes);
 
 open(my $fh, ">", $output_file) or die $!;
 print $fh $opcode_table->rule('=');
@@ -36,12 +40,12 @@ print $fh $hex_table->rule('=');
 
 
 sub expand_consts {
-	my(%opcodes_in) = @_;
-	my %opcodes_out;
+	my($opcodes_in) = @_;
+	my $opcodes_out = {opcodes=>{}};
 
-	for my $asm (sort keys %opcodes_in) {
-		for my $cpu (sort keys %{$opcodes_in{$asm}}) {
-			my @ops = @{clone($opcodes_in{$asm}{$cpu})};
+	for my $asm (sort keys %{$opcodes_in->{opcodes}}) {
+		for my $cpu (sort keys %{$opcodes_in->{opcodes}{$asm}}) {
+			my @ops = @{clone($opcodes_in->{opcodes}{$asm}{$cpu})};
 			
 			if ($asm =~ /%c/) {
 				my @range = find_range($asm, $cpu, @ops);
@@ -49,20 +53,20 @@ sub expand_consts {
 					my($asm1, @ops1) = replace_const($c, $asm, @ops);
 					if ($asm =~ /^rst/ && $cpu =~ /^r2ka|^r3k/ && 
 					    ($c == 0 || $c == 8 || $c == 0x30)) {
-						$opcodes_out{$asm1}{$cpu} = [[0xCD, $c, 0]];
+						$opcodes_out->{opcodes}{$asm1}{$cpu} = [[0xCD, $c, 0]];
 					}
 					else {    
-						$opcodes_out{$asm1}{$cpu} = \@ops1;
+						$opcodes_out->{opcodes}{$asm1}{$cpu} = \@ops1;
 					}
 				}
 			}
 			else {
-				$opcodes_out{$asm}{$cpu} = \@ops;
+				$opcodes_out->{opcodes}{$asm}{$cpu} = \@ops;
 			}
 		}
 	}
 	
-	return %opcodes_out;
+	return $opcodes_out;
 }	
 
 sub find_range {
@@ -106,13 +110,13 @@ sub replace_const {
 }
 	
 sub make_opcode_table {
-	my(%opcodes) = @_;
+	my($opcodes) = @_;
 	my $tb = Text::Table->new($sep, "Assembly", $sep, "CPUs", $sep);
 
-	for my $asm (sort keys %opcodes) {
+	for my $asm (sort keys %{$opcodes->{opcodes}}) {
 		my @cpus;
-		for my $cpu (sort keys %{$opcodes{'nop'}}) {	# always exists
-			if (exists $opcodes{$asm}{$cpu}) {
+		for my $cpu (sort keys %{$opcodes->{opcodes}{'nop'}}) {	# always exists
+			if (exists $opcodes->{opcodes}{$asm}{$cpu}) {
 				push @cpus, $cpu;
 			}
 			else {
@@ -125,12 +129,12 @@ sub make_opcode_table {
 }
 
 sub make_hex_table {
-	my(%opcodes) = @_;
+	my($opcodes) = @_;
 	my $tb = Text::Table->new($sep, "Assembly", $sep, "CPU", $sep, "Opcodes", $sep);
 
-	for my $asm (sort keys %opcodes) {
-		for my $cpu (sort keys %{$opcodes{$asm}}) {
-			my @ops = @{$opcodes{$asm}{$cpu}};
+	for my $asm (sort keys %{$opcodes->{opcodes}}) {
+		for my $cpu (sort keys %{$opcodes->{opcodes}{$asm}}) {
+			my @ops = @{$opcodes->{opcodes}{$asm}{$cpu}};
 			my @bytes;
 			for my $op (@ops) {
 				for my $byte (@$op) {

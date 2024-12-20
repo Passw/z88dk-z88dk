@@ -11,26 +11,26 @@ use YAML::Tiny;
 my($input_file, $output_basename) = @ARGV;
 
 my $yaml = YAML::Tiny->read($input_file);
-my %opcodes = %{$yaml->[0]};
+my $opcodes = $yaml->[0];
 
 my @test;
 my %all_opcodes;
 
-my @CPUS = sort keys %{$opcodes{"nop"}};
+my @CPUS = sort keys %{$opcodes->{opcodes}{"nop"}};
 
 # dump cpu_ok and cpu_ixiy_ok
 for my $ixiy ("", "_ixiy") {
 	for my $cpu (@CPUS) {
 		@test = ();
 		
-		for my $asm (sort keys %opcodes) {
+		for my $asm (sort keys %{$opcodes->{opcodes}}) {
 			my $asm_ixiy = $asm;
 			if ($ixiy) {
 				$asm_ixiy =~ s/\b(ix|iy)/$1 eq 'ix' ? 'iy' : 'ix'/eg;
 			}
 			
-			if (exists $opcodes{$asm_ixiy}{$cpu}) {
-				my @ops = @{$opcodes{$asm_ixiy}{$cpu}};
+			if (exists $opcodes->{opcodes}{$asm_ixiy}{$cpu}) {
+				my @ops = @{$opcodes->{opcodes}{$asm_ixiy}{$cpu}};
 				my @bytes;
 				for my $op (@ops) {
 					for my $byte (@$op) {

@@ -16,13 +16,13 @@ my $output_aux_file_source = $output_file =~ s/\.\w+$/_action.c/r;
 
 
 my $yaml = YAML::Tiny->read($input_file);
-my %opcodes = %{$yaml->[0]};
+my $opcodes = $yaml->[0];
 
 my %parser;
 
-my @CPUS = sort keys %{$opcodes{"nop"}};
+my @CPUS = sort keys %{$opcodes->{opcodes}{"nop"}};
 
-for my $asm (sort keys %opcodes) {
+for my $asm (sort keys %{$opcodes->{opcodes}}) {
 	my $tokens = parser_tokens($asm);
 	
 	# check for parens
@@ -31,8 +31,8 @@ for my $asm (sort keys %opcodes) {
 	elsif ($asm =~ /%[snmjc]/) {		$parens = 'expr_no_parens'; }
 	else {								$parens = 'no_expr';   }
 		
-	for my $cpu (sort keys %{$opcodes{$asm}}) {
-		my @ops = @{$opcodes{$asm}{$cpu}};
+	for my $cpu (sort keys %{$opcodes->{opcodes}{$asm}}) {
+		my @ops = @{$opcodes->{opcodes}{$asm}{$cpu}};
 		
 		$parser{$tokens}{$cpu}{$parens} = [$asm, @ops];
 	}
