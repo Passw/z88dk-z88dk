@@ -6,6 +6,10 @@
 
 use Modern::Perl;
 use YAML::Tiny;
+use warnings FATAL => 'uninitialized'; 
+use Carp (); 
+$SIG{__DIE__} = \&Carp::confess;
+use Data::Dump 'dump';
 
 @ARGV==2 or die "Usage: $0 input_file.yaml output_file.h\n";
 my($input_file, $output_file) = @ARGV;
@@ -13,7 +17,6 @@ my($input_file, $output_file) = @ARGV;
 my $aux_func_name = $output_file =~ s/\..*/_action_/r;
 my $output_aux_file_header = $output_file =~ s/\.\w+$/_action.h/r;
 my $output_aux_file_source = $output_file =~ s/\.\w+$/_action.c/r;
-
 
 my $yaml = YAML::Tiny->read($input_file);
 my $opcodes = $yaml->[0];
@@ -32,7 +35,7 @@ for my $asm (sort keys %{$opcodes->{opcodes}}) {
 	else {								$parens = 'no_expr';   }
 		
 	for my $cpu (sort keys %{$opcodes->{opcodes}{$asm}}) {
-		my @ops = @{$opcodes->{opcodes}{$asm}{$cpu}};
+		my @ops = @{$opcodes->{opcodes}{$asm}{$cpu}{ops}};
 		
 		$parser{$tokens}{$cpu}{$parens} = [$asm, @ops];
 	}

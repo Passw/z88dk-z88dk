@@ -30,7 +30,7 @@ for my $ixiy ("", "_ixiy") {
 			}
 			
 			if (exists $opcodes->{opcodes}{$asm_ixiy}{$cpu}) {
-				my @ops = @{$opcodes->{opcodes}{$asm_ixiy}{$cpu}};
+				my @ops = @{$opcodes->{opcodes}{$asm_ixiy}{$cpu}{ops}};
 				my @bytes;
 				for my $op (@ops) {
 					for my $byte (@$op) {

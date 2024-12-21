@@ -45,7 +45,7 @@ sub expand_consts {
 
 	for my $asm (sort keys %{$opcodes_in->{opcodes}}) {
 		for my $cpu (sort keys %{$opcodes_in->{opcodes}{$asm}}) {
-			my @ops = @{clone($opcodes_in->{opcodes}{$asm}{$cpu})};
+			my @ops = @{clone($opcodes_in->{opcodes}{$asm}{$cpu}{ops})};
 			
 			if ($asm =~ /%c/) {
 				my @range = find_range($asm, $cpu, @ops);
@@ -53,15 +53,15 @@ sub expand_consts {
 					my($asm1, @ops1) = replace_const($c, $asm, @ops);
 					if ($asm =~ /^rst/ && $cpu =~ /^r2ka|^r3k/ && 
 					    ($c == 0 || $c == 8 || $c == 0x30)) {
-						$opcodes_out->{opcodes}{$asm1}{$cpu} = [[0xCD, $c, 0]];
+						$opcodes_out->{opcodes}{$asm1}{$cpu} = {ops => [[0xCD, $c, 0]]};
 					}
 					else {    
-						$opcodes_out->{opcodes}{$asm1}{$cpu} = \@ops1;
+						$opcodes_out->{opcodes}{$asm1}{$cpu} = {ops => \@ops1};
 					}
 				}
 			}
 			else {
-				$opcodes_out->{opcodes}{$asm}{$cpu} = \@ops;
+				$opcodes_out->{opcodes}{$asm}{$cpu} = {ops => \@ops};
 			}
 		}
 	}
@@ -134,7 +134,7 @@ sub make_hex_table {
 
 	for my $asm (sort keys %{$opcodes->{opcodes}}) {
 		for my $cpu (sort keys %{$opcodes->{opcodes}{$asm}}) {
-			my @ops = @{$opcodes->{opcodes}{$asm}{$cpu}};
+			my @ops = @{$opcodes->{opcodes}{$asm}{$cpu}{ops}};
 			my @bytes;
 			for my $op (@ops) {
 				for my $byte (@$op) {

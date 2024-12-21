@@ -36,7 +36,7 @@ my @CPUS = qw( z80 z80_strict z80n z180
 			   kc160 kc160_z80
 );
 
-# $opcodes->{opcodes}{$asm}{$cpu} = [[@bin],[@bin]]
+# $opcodes->{opcodes}{$asm}{$cpu} = {ops => [[@bin],[@bin]]}
 my $opcodes = {opcodes=>{}};
 
 # operand values
@@ -3993,7 +3993,7 @@ sub add {
 	if (defined($opcodes->{opcodes}{$asm}{$cpu})) {
 		die "$asm $cpu exists:\n", dump($opcodes->{opcodes}{$asm}{$cpu});
 	}
-	$opcodes->{opcodes}{$asm}{$cpu} = \@ops;
+	$opcodes->{opcodes}{$asm}{$cpu} = {ops => \@ops};
 }
 
 sub add_x {
