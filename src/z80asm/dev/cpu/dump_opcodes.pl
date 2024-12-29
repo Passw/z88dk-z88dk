@@ -1,11 +1,15 @@
 #!/usr/bin/env perl
 
 #------------------------------------------------------------------------------
-# Build text table representation of opcodes.yaml
+# Build text table representation of opcodes.dat
 #------------------------------------------------------------------------------
 
 use Modern::Perl;
-use YAML::Tiny;
+BEGIN {
+	use Path::Tiny;
+	use lib path($0)->dirname;
+	use Opcodes;
+}
 use Text::Table;
 use Clone 'clone';
 use warnings FATAL => 'uninitialized'; 
@@ -13,11 +17,10 @@ use Carp ();
 $SIG{__DIE__} = \&Carp::confess;
 use Data::Dump 'dump';
 
-@ARGV==2 or die "Usage: $0 input_file.yaml output_file.txt\n";
+@ARGV==2 or die "Usage: $0 input_file.dat output_file.txt\n";
 my($input_file, $output_file) = @ARGV;
 
-my $yaml = YAML::Tiny->read($input_file);
-my $opcodes = $yaml->[0];
+my $opcodes = Opcodes->read_file($input_file);
 
 my $sep = \"|";
 

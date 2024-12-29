@@ -5,18 +5,21 @@
 #------------------------------------------------------------------------------
 
 use Modern::Perl;
-use YAML::Tiny;
+BEGIN {
+	use Path::Tiny;
+	use lib path($0)->dirname;
+	use Opcodes;
+}
 
-@ARGV==2 or die "Usage: $0 input_file.yaml output_basename\n";
+@ARGV==2 or die "Usage: $0 input_file.dat output_basename\n";
 my($input_file, $output_basename) = @ARGV;
 
-my $yaml = YAML::Tiny->read($input_file);
-my $opcodes = $yaml->[0];
+my $opcodes = Opcodes->read_file($input_file);
 
 my @test;
 my %all_opcodes;
 
-my @CPUS = sort keys %{$opcodes->{opcodes}{"nop"}};
+my @CPUS = Opcode::cpus();
 
 # dump cpu_ok and cpu_ixiy_ok
 for my $ixiy ("", "_ixiy") {
