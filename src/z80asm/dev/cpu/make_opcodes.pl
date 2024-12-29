@@ -7,6 +7,7 @@
 #	%n	unsigned byte
 #   %h  high page offset
 #	%m	unsigned word - 16, 24 or 32 bits
+#   %M 	%m+1
 #	%B	unsigned word, big-endian
 #	%j	jr offset
 #	%c	constant (im, bit, rst, ...)
@@ -917,7 +918,7 @@ for my $cpu (@CPUS) {
 									[ld_r_r('a','c')],
 									[0x32, '%m', '%m'],		# ld (%m), a
 									[ld_r_r('a','b')],
-									[0x32, '%m1', '%m1'],	# ld (%m+1), a
+									[0x32, '%M', '%M'],	# ld (%m+1), a
 									[pop_dd('af')]);
 	}
 	elsif ($gameboy) {
@@ -925,7 +926,7 @@ for my $cpu (@CPUS) {
 									[ld_r_r('a','c')],
 									[0xEA, '%m', '%m'],		# ld (%m), a
 									[ld_r_r('a','b')],
-									[0xEA, '%m1', '%m1'],	# ld (%m+1), a
+									[0xEA, '%M', '%M'],	# ld (%m+1), a
 									[pop_dd('af')]);
 	}
 
@@ -940,7 +941,7 @@ for my $cpu (@CPUS) {
 									[ld_r_r('a','e')],
 									[0xEA, '%m', '%m'],		# ld (%m), a
 									[ld_r_r('a','d')],
-									[0xEA, '%m1', '%m1'],	# ld (%m+1), a
+									[0xEA, '%M', '%M'],	# ld (%m+1), a
 									[pop_dd('af')]);
 	}
 

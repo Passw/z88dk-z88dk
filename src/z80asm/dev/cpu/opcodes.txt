@@ -38426,11 +38426,11 @@
 |ld (%m), a               |z80       |32 %m %m                                           |
 |ld (%m), a               |z80_strict|32 %m %m                                           |
 |ld (%m), a               |z80n      |32 %m %m                                           |
-|ld (%m), bc              |8080      |F5 79 32 %m %m 78 32 %m1 %m1 F1                    |
-|ld (%m), bc              |8085      |F5 79 32 %m %m 78 32 %m1 %m1 F1                    |
+|ld (%m), bc              |8080      |F5 79 32 %m %m 78 32 %M %M F1                      |
+|ld (%m), bc              |8085      |F5 79 32 %m %m 78 32 %M %M F1                      |
 |ld (%m), bc              |ez80      |ED 43 %m %m %m                                     |
 |ld (%m), bc              |ez80_z80  |ED 43 %m %m                                        |
-|ld (%m), bc              |gbz80     |F5 79 EA %m %m 78 EA %m1 %m1 F1                    |
+|ld (%m), bc              |gbz80     |F5 79 EA %m %m 78 EA %M %M F1                      |
 |ld (%m), bc              |kc160     |ED 43 %m %m                                        |
 |ld (%m), bc              |kc160_z80 |ED 43 %m %m                                        |
 |ld (%m), bc              |r2ka      |ED 43 %m %m                                        |
@@ -38448,7 +38448,7 @@
 |ld (%m), de              |8085      |EB 22 %m %m EB                                     |
 |ld (%m), de              |ez80      |ED 53 %m %m %m                                     |
 |ld (%m), de              |ez80_z80  |ED 53 %m %m                                        |
-|ld (%m), de              |gbz80     |F5 7B EA %m %m 7A EA %m1 %m1 F1                    |
+|ld (%m), de              |gbz80     |F5 7B EA %m %m 7A EA %M %M F1                      |
 |ld (%m), de              |kc160     |ED 53 %m %m                                        |
 |ld (%m), de              |kc160_z80 |ED 53 %m %m                                        |
 |ld (%m), de              |r2ka      |ED 53 %m %m                                        |

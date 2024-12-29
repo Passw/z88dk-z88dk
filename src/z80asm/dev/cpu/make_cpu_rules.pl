@@ -272,21 +272,19 @@ sub parse_code {
 			"}";
 	}
 	# handle multiple uses of the same expression
-	elsif ($bin =~ /%m/) {
+	elsif ($bin =~ /%[mM]/) {
 		push @code,
 			"{",
 			"DO_STMT_LABEL();",
 			"Expr1 *expr = pop_expr(ctx);";
 		for my $op (@ops) {
-			my $count_m = scalar(grep {/%m/} @$op);
+			my $count_m = scalar(grep {/%[mM]/} @$op);
 			if ($count_m) {
 				my $opcode = 0;
 				my $target_offset = 0;
 				for my $i (0 .. $#$op) {
-					if ($op->[$i] =~ /%m(\d*)/) {
-						if ($1) {
-							$target_offset = $1;
-						}
+					if ($op->[$i] =~ /%[mM]/) {
+						$target_offset = $op->[$i] eq '%m' ? 0 : 1;
 						last;
 					}
 					else {
