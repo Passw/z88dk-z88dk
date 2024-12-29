@@ -198,7 +198,7 @@ sub parser_tokens {
 		elsif (/\G , 			/gcx) { push @tokens, "_TK_COMMA"; }
 		elsif (/\G \) 			/gcx) { push @tokens, "_TK_RPAREN"; }
 		elsif (/\G \( %[nmh] \)	/gcx) { push @tokens, "expr"; }
-		elsif (/\G    %[snmMjJ]	/gcx) { push @tokens, "expr"; }
+		elsif (/\G    %[snmBjJ]	/gcx) { push @tokens, "expr"; }
 		elsif (/\G \+ %[dsu]	/gcx) { push @tokens, "expr"; }
 		elsif (/\G    %[c]		/gcx) { push @tokens, "const_expr"; }
 		elsif (/\G    (\w+)	'	/gcx) { push @tokens, "_TK_".uc($1)."1"; }
@@ -464,7 +464,7 @@ sub parse_code_opcode {
 	elsif ($bin =~ s/ %s 0$//) {
 		$stmt = "DO_stmt_s_0";
 	}
-	elsif ($bin =~ s/ %M %M$//) {
+	elsif ($bin =~ s/ %B %B$//) {
 		$stmt = "DO_stmt_NN";
 	}
 	elsif ($bin =~ s/ %j$//) {

@@ -232,10 +232,10 @@ sub add {
 		my $bytes1 = $bytes =~ s/%m %m/34 12/gr;
 		add($cpu, $asm1, $bytes1);
 	}
-	elsif ($asm =~ /%M/) {
-		my $asm1 = $asm =~ s/%M/0x1234/r;
-		my $bytes1 = $bytes =~ s/%M/12/r;
-		$bytes1 = $bytes1 =~ s/%M/34/r;
+	elsif ($asm =~ /%B/) {
+		my $asm1 = $asm =~ s/%B/0x1234/r;
+		my $bytes1 = $bytes =~ s/%B/12/r;
+		$bytes1 = $bytes1 =~ s/%B/34/r;
 		add($cpu, $asm1, $bytes1);
 	}
 	elsif ($bytes =~ /^[0-9A-F]{2} %j [0-9A-F]{2} %j$/) {

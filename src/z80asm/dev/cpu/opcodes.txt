@@ -10942,7 +10942,7 @@
 |pop.sil hl               |-    -    ez80 -        -     -     -         -    -   -   -   -    -    -   -          -   |
 |pop.sil ix               |-    -    ez80 -        -     -     -         -    -   -   -   -    -    -   -          -   |
 |pop.sil iy               |-    -    ez80 -        -     -     -         -    -   -   -   -    -    -   -          -   |
-|push %M                  |-    -    -    -        -     -     -         -    -   -   -   -    -    -   -          z80n|
+|push %B                  |-    -    -    -        -     -     -         -    -   -   -   -    -    -   -          z80n|
 |push %m                  |-    -    -    -        -     -     -         -    -   r4k r5k -    -    -   -          -   |
 |push af                  |8080 8085 ez80 ez80_z80 gbz80 kc160 kc160_z80 r2ka r3k r4k r5k r800 z180 z80 z80_strict z80n|
 |push ahl                 |-    -    -    -        -     kc160 kc160_z80 -    -   -   -   -    -    -   -          -   |
@@ -54167,7 +54167,7 @@
 |pop.sil hl               |ez80      |52 E1                                              |
 |pop.sil ix               |ez80      |52 DD E1                                           |
 |pop.sil iy               |ez80      |52 FD E1                                           |
-|push %M                  |z80n      |ED 8A %M %M                                        |
+|push %B                  |z80n      |ED 8A %B %B                                        |
 |push %m                  |r4k       |ED A5 %m %m                                        |
 |push %m                  |r5k       |ED A5 %m %m                                        |
 |push af                  |8080      |F5                                                 |

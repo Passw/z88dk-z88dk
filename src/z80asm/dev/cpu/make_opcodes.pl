@@ -7,7 +7,7 @@
 #	%n	unsigned byte
 #   %h  high page offset
 #	%m	unsigned word - 16, 24 or 32 bits
-#	%M	unsigned word, big-endian
+#	%B	unsigned word, big-endian
 #	%j	jr offset
 #	%c	constant (im, bit, rst, ...)
 #	%d	signed register indirect offset
@@ -1290,7 +1290,7 @@ for my $cpu (@CPUS) {
 	}
 
 	if ($z80n) {
-		add($cpu, "push %M", 	[0xED, 0x8A, '%M', '%M']);
+		add($cpu, "push %B", 	[0xED, 0x8A, '%B', '%B']);
 	}	
 
 	if ($rabbit) {
