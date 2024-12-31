@@ -10042,9 +10042,7 @@
 |ld.sis sp, (%m)          |-    -    ez80 -        -     -     -         -    -   -   -   -    -    -   -          -   |
 |lda %m                   |8080 8085 -    -        gbz80 kc160 kc160_z80 r2ka r3k r4k r5k r800 z180 z80 z80_strict z80n|
 |ldax b                   |8080 8085 ez80 ez80_z80 gbz80 kc160 kc160_z80 r2ka r3k r4k r5k r800 z180 z80 z80_strict z80n|
-|ldax bc                  |8080 8085 ez80 ez80_z80 gbz80 kc160 kc160_z80 r2ka r3k r4k r5k r800 z180 z80 z80_strict z80n|
 |ldax d                   |8080 8085 ez80 ez80_z80 gbz80 kc160 kc160_z80 r2ka r3k r4k r5k r800 z180 z80 z80_strict z80n|
-|ldax de                  |8080 8085 ez80 ez80_z80 gbz80 kc160 kc160_z80 r2ka r3k r4k r5k r800 z180 z80 z80_strict z80n|
 |ldd                      |8080 8085 ez80 ez80_z80 gbz80 kc160 kc160_z80 r2ka r3k r4k r5k r800 z180 z80 z80_strict z80n|
 |ldd (bc), a              |8080 8085 ez80 ez80_z80 gbz80 kc160 kc160_z80 r2ka r3k r4k r5k r800 z180 z80 z80_strict z80n|
 |ldd (de), %n             |8080 8085 ez80 ez80_z80 -     kc160 kc160_z80 r2ka r3k r4k r5k r800 z180 z80 z80_strict z80n|
@@ -13911,9 +13909,7 @@
 |sta %m                   |8080 8085 -    -        gbz80 kc160 kc160_z80 r2ka r3k r4k r5k r800 z180 z80 z80_strict z80n|
 |stae                     |-    -    -    -        -     -     -         -    -   -   -   -    -    -   -          z80n|
 |stax b                   |8080 8085 ez80 ez80_z80 gbz80 kc160 kc160_z80 r2ka r3k r4k r5k r800 z180 z80 z80_strict z80n|
-|stax bc                  |8080 8085 ez80 ez80_z80 gbz80 kc160 kc160_z80 r2ka r3k r4k r5k r800 z180 z80 z80_strict z80n|
 |stax d                   |8080 8085 ez80 ez80_z80 gbz80 kc160 kc160_z80 r2ka r3k r4k r5k r800 z180 z80 z80_strict z80n|
-|stax de                  |8080 8085 ez80 ez80_z80 gbz80 kc160 kc160_z80 r2ka r3k r4k r5k r800 z180 z80 z80_strict z80n|
 |stc                      |8080 8085 ez80 ez80_z80 gbz80 kc160 kc160_z80 r2ka r3k r4k r5k r800 z180 z80 z80_strict z80n|
 |stmix                    |-    -    ez80 ez80_z80 -     -     -         -    -   -   -   -    -    -   -          -   |
 |stop                     |-    -    -    -        gbz80 -     -         -    -   -   -   -    -    -   -          -   |
@@ -50645,22 +50641,6 @@
 |ldax b                   |z80       |0A                                                 |
 |ldax b                   |z80_strict|0A                                                 |
 |ldax b                   |z80n      |0A                                                 |
-|ldax bc                  |8080      |0A                                                 |
-|ldax bc                  |8085      |0A                                                 |
-|ldax bc                  |ez80      |0A                                                 |
-|ldax bc                  |ez80_z80  |0A                                                 |
-|ldax bc                  |gbz80     |0A                                                 |
-|ldax bc                  |kc160     |0A                                                 |
-|ldax bc                  |kc160_z80 |0A                                                 |
-|ldax bc                  |r2ka      |0A                                                 |
-|ldax bc                  |r3k       |0A                                                 |
-|ldax bc                  |r4k       |0A                                                 |
-|ldax bc                  |r5k       |0A                                                 |
-|ldax bc                  |r800      |0A                                                 |
-|ldax bc                  |z180      |0A                                                 |
-|ldax bc                  |z80       |0A                                                 |
-|ldax bc                  |z80_strict|0A                                                 |
-|ldax bc                  |z80n      |0A                                                 |
 |ldax d                   |8080      |1A                                                 |
 |ldax d                   |8085      |1A                                                 |
 |ldax d                   |ez80      |1A                                                 |
@@ -50677,22 +50657,6 @@
 |ldax d                   |z80       |1A                                                 |
 |ldax d                   |z80_strict|1A                                                 |
 |ldax d                   |z80n      |1A                                                 |
-|ldax de                  |8080      |1A                                                 |
-|ldax de                  |8085      |1A                                                 |
-|ldax de                  |ez80      |1A                                                 |
-|ldax de                  |ez80_z80  |1A                                                 |
-|ldax de                  |gbz80     |1A                                                 |
-|ldax de                  |kc160     |1A                                                 |
-|ldax de                  |kc160_z80 |1A                                                 |
-|ldax de                  |r2ka      |1A                                                 |
-|ldax de                  |r3k       |1A                                                 |
-|ldax de                  |r4k       |1A                                                 |
-|ldax de                  |r5k       |1A                                                 |
-|ldax de                  |r800      |1A                                                 |
-|ldax de                  |z180      |1A                                                 |
-|ldax de                  |z80       |1A                                                 |
-|ldax de                  |z80_strict|1A                                                 |
-|ldax de                  |z80n      |1A                                                 |
 |ldd                      |8080      |CD @__z80asm__ldd                                  |
 |ldd                      |8085      |CD @__z80asm__ldd                                  |
 |ldd                      |ez80      |ED A8                                              |
@@ -65316,22 +65280,6 @@
 |stax b                   |z80       |02                                                 |
 |stax b                   |z80_strict|02                                                 |
 |stax b                   |z80n      |02                                                 |
-|stax bc                  |8080      |02                                                 |
-|stax bc                  |8085      |02                                                 |
-|stax bc                  |ez80      |02                                                 |
-|stax bc                  |ez80_z80  |02                                                 |
-|stax bc                  |gbz80     |02                                                 |
-|stax bc                  |kc160     |02                                                 |
-|stax bc                  |kc160_z80 |02                                                 |
-|stax bc                  |r2ka      |02                                                 |
-|stax bc                  |r3k       |02                                                 |
-|stax bc                  |r4k       |02                                                 |
-|stax bc                  |r5k       |02                                                 |
-|stax bc                  |r800      |02                                                 |
-|stax bc                  |z180      |02                                                 |
-|stax bc                  |z80       |02                                                 |
-|stax bc                  |z80_strict|02                                                 |
-|stax bc                  |z80n      |02                                                 |
 |stax d                   |8080      |12                                                 |
 |stax d                   |8085      |12                                                 |
 |stax d                   |ez80      |12                                                 |
@@ -65348,22 +65296,6 @@
 |stax d                   |z80       |12                                                 |
 |stax d                   |z80_strict|12                                                 |
 |stax d                   |z80n      |12                                                 |
-|stax de                  |8080      |12                                                 |
-|stax de                  |8085      |12                                                 |
-|stax de                  |ez80      |12                                                 |
-|stax de                  |ez80_z80  |12                                                 |
-|stax de                  |gbz80     |12                                                 |
-|stax de                  |kc160     |12                                                 |
-|stax de                  |kc160_z80 |12                                                 |
-|stax de                  |r2ka      |12                                                 |
-|stax de                  |r3k       |12                                                 |
-|stax de                  |r4k       |12                                                 |
-|stax de                  |r5k       |12                                                 |
-|stax de                  |r800      |12                                                 |
-|stax de                  |z180      |12                                                 |
-|stax de                  |z80       |12                                                 |
-|stax de                  |z80_strict|12                                                 |
-|stax de                  |z80n      |12                                                 |
 |stc                      |8080      |37                                                 |
 |stc                      |8085      |37                                                 |
 |stc                      |ez80      |37                                                 |
