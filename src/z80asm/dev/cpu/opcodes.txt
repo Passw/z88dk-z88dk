@@ -3465,11 +3465,8 @@
 |dcr l                    |8080 8085 ez80 ez80_z80 gbz80 kc160 kc160_z80 r2ka r3k r4k r5k r800 z180 z80 z80_strict z80n|
 |dcr m                    |8080 8085 ez80 ez80_z80 gbz80 kc160 kc160_z80 r2ka r3k r4k r5k r800 z180 z80 z80_strict z80n|
 |dcx b                    |8080 8085 ez80 ez80_z80 gbz80 kc160 kc160_z80 r2ka r3k r4k r5k r800 z180 z80 z80_strict z80n|
-|dcx bc                   |8080 8085 ez80 ez80_z80 gbz80 kc160 kc160_z80 r2ka r3k r4k r5k r800 z180 z80 z80_strict z80n|
 |dcx d                    |8080 8085 ez80 ez80_z80 gbz80 kc160 kc160_z80 r2ka r3k r4k r5k r800 z180 z80 z80_strict z80n|
-|dcx de                   |8080 8085 ez80 ez80_z80 gbz80 kc160 kc160_z80 r2ka r3k r4k r5k r800 z180 z80 z80_strict z80n|
 |dcx h                    |8080 8085 ez80 ez80_z80 gbz80 kc160 kc160_z80 r2ka r3k r4k r5k r800 z180 z80 z80_strict z80n|
-|dcx hl                   |8080 8085 ez80 ez80_z80 gbz80 kc160 kc160_z80 r2ka r3k r4k r5k r800 z180 z80 z80_strict z80n|
 |dcx sp                   |8080 8085 ez80 ez80_z80 gbz80 kc160 kc160_z80 r2ka r3k r4k r5k r800 z180 z80 z80_strict z80n|
 |dec (ahl)                |-    -    -    -        -     kc160 -         -    -   -   -   -    -    -   -          -   |
 |dec (aix)                |-    -    -    -        -     kc160 -         -    -   -   -   -    -    -   -          -   |
@@ -3930,11 +3927,8 @@
 |inr l                    |8080 8085 ez80 ez80_z80 gbz80 kc160 kc160_z80 r2ka r3k r4k r5k r800 z180 z80 z80_strict z80n|
 |inr m                    |8080 8085 ez80 ez80_z80 gbz80 kc160 kc160_z80 r2ka r3k r4k r5k r800 z180 z80 z80_strict z80n|
 |inx b                    |8080 8085 ez80 ez80_z80 gbz80 kc160 kc160_z80 r2ka r3k r4k r5k r800 z180 z80 z80_strict z80n|
-|inx bc                   |8080 8085 ez80 ez80_z80 gbz80 kc160 kc160_z80 r2ka r3k r4k r5k r800 z180 z80 z80_strict z80n|
 |inx d                    |8080 8085 ez80 ez80_z80 gbz80 kc160 kc160_z80 r2ka r3k r4k r5k r800 z180 z80 z80_strict z80n|
-|inx de                   |8080 8085 ez80 ez80_z80 gbz80 kc160 kc160_z80 r2ka r3k r4k r5k r800 z180 z80 z80_strict z80n|
 |inx h                    |8080 8085 ez80 ez80_z80 gbz80 kc160 kc160_z80 r2ka r3k r4k r5k r800 z180 z80 z80_strict z80n|
-|inx hl                   |8080 8085 ez80 ez80_z80 gbz80 kc160 kc160_z80 r2ka r3k r4k r5k r800 z180 z80 z80_strict z80n|
 |inx sp                   |8080 8085 ez80 ez80_z80 gbz80 kc160 kc160_z80 r2ka r3k r4k r5k r800 z180 z80 z80_strict z80n|
 |ioe adc (hl)             |-    -    -    -        -     -     -         r2ka r3k r4k r5k -    -    -   -          -   |
 |ioe adc (hl+)            |-    -    -    -        -     -     -         r2ka r3k r4k r5k -    -    -   -          -   |
@@ -28225,22 +28219,6 @@
 |dcx b                    |z80       |0B                                                 |
 |dcx b                    |z80_strict|0B                                                 |
 |dcx b                    |z80n      |0B                                                 |
-|dcx bc                   |8080      |0B                                                 |
-|dcx bc                   |8085      |0B                                                 |
-|dcx bc                   |ez80      |0B                                                 |
-|dcx bc                   |ez80_z80  |0B                                                 |
-|dcx bc                   |gbz80     |0B                                                 |
-|dcx bc                   |kc160     |0B                                                 |
-|dcx bc                   |kc160_z80 |0B                                                 |
-|dcx bc                   |r2ka      |0B                                                 |
-|dcx bc                   |r3k       |0B                                                 |
-|dcx bc                   |r4k       |0B                                                 |
-|dcx bc                   |r5k       |0B                                                 |
-|dcx bc                   |r800      |0B                                                 |
-|dcx bc                   |z180      |0B                                                 |
-|dcx bc                   |z80       |0B                                                 |
-|dcx bc                   |z80_strict|0B                                                 |
-|dcx bc                   |z80n      |0B                                                 |
 |dcx d                    |8080      |1B                                                 |
 |dcx d                    |8085      |1B                                                 |
 |dcx d                    |ez80      |1B                                                 |
@@ -28257,22 +28235,6 @@
 |dcx d                    |z80       |1B                                                 |
 |dcx d                    |z80_strict|1B                                                 |
 |dcx d                    |z80n      |1B                                                 |
-|dcx de                   |8080      |1B                                                 |
-|dcx de                   |8085      |1B                                                 |
-|dcx de                   |ez80      |1B                                                 |
-|dcx de                   |ez80_z80  |1B                                                 |
-|dcx de                   |gbz80     |1B                                                 |
-|dcx de                   |kc160     |1B                                                 |
-|dcx de                   |kc160_z80 |1B                                                 |
-|dcx de                   |r2ka      |1B                                                 |
-|dcx de                   |r3k       |1B                                                 |
-|dcx de                   |r4k       |1B                                                 |
-|dcx de                   |r5k       |1B                                                 |
-|dcx de                   |r800      |1B                                                 |
-|dcx de                   |z180      |1B                                                 |
-|dcx de                   |z80       |1B                                                 |
-|dcx de                   |z80_strict|1B                                                 |
-|dcx de                   |z80n      |1B                                                 |
 |dcx h                    |8080      |2B                                                 |
 |dcx h                    |8085      |2B                                                 |
 |dcx h                    |ez80      |2B                                                 |
@@ -28289,22 +28251,6 @@
 |dcx h                    |z80       |2B                                                 |
 |dcx h                    |z80_strict|2B                                                 |
 |dcx h                    |z80n      |2B                                                 |
-|dcx hl                   |8080      |2B                                                 |
-|dcx hl                   |8085      |2B                                                 |
-|dcx hl                   |ez80      |2B                                                 |
-|dcx hl                   |ez80_z80  |2B                                                 |
-|dcx hl                   |gbz80     |2B                                                 |
-|dcx hl                   |kc160     |2B                                                 |
-|dcx hl                   |kc160_z80 |2B                                                 |
-|dcx hl                   |r2ka      |2B                                                 |
-|dcx hl                   |r3k       |2B                                                 |
-|dcx hl                   |r4k       |2B                                                 |
-|dcx hl                   |r5k       |2B                                                 |
-|dcx hl                   |r800      |2B                                                 |
-|dcx hl                   |z180      |2B                                                 |
-|dcx hl                   |z80       |2B                                                 |
-|dcx hl                   |z80_strict|2B                                                 |
-|dcx hl                   |z80n      |2B                                                 |
 |dcx sp                   |8080      |3B                                                 |
 |dcx sp                   |8085      |3B                                                 |
 |dcx sp                   |ez80      |3B                                                 |
@@ -30100,22 +30046,6 @@
 |inx b                    |z80       |03                                                 |
 |inx b                    |z80_strict|03                                                 |
 |inx b                    |z80n      |03                                                 |
-|inx bc                   |8080      |03                                                 |
-|inx bc                   |8085      |03                                                 |
-|inx bc                   |ez80      |03                                                 |
-|inx bc                   |ez80_z80  |03                                                 |
-|inx bc                   |gbz80     |03                                                 |
-|inx bc                   |kc160     |03                                                 |
-|inx bc                   |kc160_z80 |03                                                 |
-|inx bc                   |r2ka      |03                                                 |
-|inx bc                   |r3k       |03                                                 |
-|inx bc                   |r4k       |03                                                 |
-|inx bc                   |r5k       |03                                                 |
-|inx bc                   |r800      |03                                                 |
-|inx bc                   |z180      |03                                                 |
-|inx bc                   |z80       |03                                                 |
-|inx bc                   |z80_strict|03                                                 |
-|inx bc                   |z80n      |03                                                 |
 |inx d                    |8080      |13                                                 |
 |inx d                    |8085      |13                                                 |
 |inx d                    |ez80      |13                                                 |
@@ -30132,22 +30062,6 @@
 |inx d                    |z80       |13                                                 |
 |inx d                    |z80_strict|13                                                 |
 |inx d                    |z80n      |13                                                 |
-|inx de                   |8080      |13                                                 |
-|inx de                   |8085      |13                                                 |
-|inx de                   |ez80      |13                                                 |
-|inx de                   |ez80_z80  |13                                                 |
-|inx de                   |gbz80     |13                                                 |
-|inx de                   |kc160     |13                                                 |
-|inx de                   |kc160_z80 |13                                                 |
-|inx de                   |r2ka      |13                                                 |
-|inx de                   |r3k       |13                                                 |
-|inx de                   |r4k       |13                                                 |
-|inx de                   |r5k       |13                                                 |
-|inx de                   |r800      |13                                                 |
-|inx de                   |z180      |13                                                 |
-|inx de                   |z80       |13                                                 |
-|inx de                   |z80_strict|13                                                 |
-|inx de                   |z80n      |13                                                 |
 |inx h                    |8080      |23                                                 |
 |inx h                    |8085      |23                                                 |
 |inx h                    |ez80      |23                                                 |
@@ -30164,22 +30078,6 @@
 |inx h                    |z80       |23                                                 |
 |inx h                    |z80_strict|23                                                 |
 |inx h                    |z80n      |23                                                 |
-|inx hl                   |8080      |23                                                 |
-|inx hl                   |8085      |23                                                 |
-|inx hl                   |ez80      |23                                                 |
-|inx hl                   |ez80_z80  |23                                                 |
-|inx hl                   |gbz80     |23                                                 |
-|inx hl                   |kc160     |23                                                 |
-|inx hl                   |kc160_z80 |23                                                 |
-|inx hl                   |r2ka      |23                                                 |
-|inx hl                   |r3k       |23                                                 |
-|inx hl                   |r4k       |23                                                 |
-|inx hl                   |r5k       |23                                                 |
-|inx hl                   |r800      |23                                                 |
-|inx hl                   |z180      |23                                                 |
-|inx hl                   |z80       |23                                                 |
-|inx hl                   |z80_strict|23                                                 |
-|inx hl                   |z80n      |23                                                 |
 |inx sp                   |8080      |33                                                 |
 |inx sp                   |8085      |33                                                 |
 |inx sp                   |ez80      |33                                                 |
