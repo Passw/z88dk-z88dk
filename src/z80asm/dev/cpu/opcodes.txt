@@ -5929,6 +5929,7 @@
 |jltu %m                  |8080 8085 ez80 ez80_z80 gbz80 kc160 kc160_z80 r2ka r3k r4k r5k r800 z180 z80 z80_strict z80n|
 |jlz %m                   |-    -    -    -        -     -     -         r2ka r3k r4k r5k -    -    -   -          -   |
 |jm %m                    |8080 8085 ez80 ez80_z80 -     kc160 kc160_z80 r2ka r3k r4k r5k r800 z180 z80 z80_strict z80n|
+|jmp %m                   |8080 8085 ez80 ez80_z80 gbz80 kc160 kc160_z80 r2ka r3k r4k r5k r800 z180 z80 z80_strict z80n|
 |jnc %m                   |8080 8085 ez80 ez80_z80 gbz80 kc160 kc160_z80 r2ka r3k r4k r5k r800 z180 z80 z80_strict z80n|
 |jne %m                   |8080 8085 ez80 ez80_z80 gbz80 kc160 kc160_z80 r2ka r3k r4k r5k r800 z180 z80 z80_strict z80n|
 |jnk %m                   |-    8085 -    -        -     -     -         -    -   -   -   -    -    -   -          -   |
@@ -37586,6 +37587,22 @@
 |jm %m                    |z80       |FA %m %m                                           |
 |jm %m                    |z80_strict|FA %m %m                                           |
 |jm %m                    |z80n      |FA %m %m                                           |
+|jmp %m                   |8080      |C3 %m %m                                           |
+|jmp %m                   |8085      |C3 %m %m                                           |
+|jmp %m                   |ez80      |C3 %m %m %m                                        |
+|jmp %m                   |ez80_z80  |C3 %m %m                                           |
+|jmp %m                   |gbz80     |C3 %m %m                                           |
+|jmp %m                   |kc160     |C3 %m %m                                           |
+|jmp %m                   |kc160_z80 |C3 %m %m                                           |
+|jmp %m                   |r2ka      |C3 %m %m                                           |
+|jmp %m                   |r3k       |C3 %m %m                                           |
+|jmp %m                   |r4k       |C3 %m %m                                           |
+|jmp %m                   |r5k       |C3 %m %m                                           |
+|jmp %m                   |r800      |C3 %m %m                                           |
+|jmp %m                   |z180      |C3 %m %m                                           |
+|jmp %m                   |z80       |C3 %m %m                                           |
+|jmp %m                   |z80_strict|C3 %m %m                                           |
+|jmp %m                   |z80n      |C3 %m %m                                           |
 |jnc %m                   |8080      |D2 %m %m                                           |
 |jnc %m                   |8085      |D2 %m %m                                           |
 |jnc %m                   |ez80      |D2 %m %m                                           |
