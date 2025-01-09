@@ -181,20 +181,29 @@ sub new {
 
 sub add {
 	my($self, $opcode) = @_;
-	if ($self->exists($opcode->asm, $opcode->cpu)) {
+	my $extended = ($opcode->synthetic || $opcode->undocumented) ? 1 : 0;
+	if ($self->exists($opcode->asm, $opcode->cpu) &&
+	    $self->opcodes->{$opcode->asm}{$opcode->cpu}[$extended]) {
 		die "opcode already exists: ", 
-			$self->opcodes->{$opcode->asm}{$opcode->cpu}->to_string, " ",
+			$self->opcodes->{$opcode->asm}{$opcode->cpu}[$extended]->to_string, 
+			" ",
 			$opcode->to_string;
 	}
 	
-	$self->opcodes->{$opcode->asm}{$opcode->cpu} = $opcode;
+	$self->opcodes->{$opcode->asm}{$opcode->cpu}[$extended] = $opcode;
 }
 
 sub exists {
 	my($self, $asm, $cpu) = @_;
 	if ($self->opcodes->{$asm} &&
 		$self->opcodes->{$asm}{$cpu}) {
-		return 1;
+		if ($self->opcodes->{$asm}{$cpu}[0] || 
+			$self->opcodes->{$asm}{$cpu}[1]) {
+			return 1;
+		}
+		else {
+			return 0;
+		}
 	}
 	else {
 		return 0;
@@ -208,8 +217,12 @@ sub write_file {
 	say $fh Opcode->titles;
 	for my $asm (sort keys %{$self->opcodes}) {
 		for my $cpu (sort keys %{$self->opcodes->{$asm}}) {
-			my $opcode = $self->opcodes->{$asm}{$cpu};
-			say $fh $opcode->to_string;
+			for my $extended (0..1) {
+				my $opcode = $self->opcodes->{$asm}{$cpu}[$extended];
+				if ($opcode) {
+					say $fh $opcode->to_string;
+				}
+			}
 		}
 	}
 }
