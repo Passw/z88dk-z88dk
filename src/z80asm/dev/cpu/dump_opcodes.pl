@@ -41,23 +41,25 @@ sub expand_consts {
 
 	for my $asm (sort keys %opcodes_in) {
 		for my $cpu (sort keys %{$opcodes_in{$asm}}) {
-			my @ops = @{clone($opcodes_in{$asm}{$cpu})};
-			
-			if ($asm =~ /%c/) {
-				my @range = find_range($asm, $cpu, @ops);
-				for my $c (@range) {
-					my($asm1, @ops1) = replace_const($c, $asm, @ops);
-					if ($asm =~ /^rst/ && $cpu =~ /^r2ka|^r3k/ && 
-					    ($c == 0 || $c == 8 || $c == 0x30)) {
-						$opcodes_out{$asm1}{$cpu} = [[0xCD, $c, 0]];
-					}
-					else {    
-						$opcodes_out{$asm1}{$cpu} = \@ops1;
+			for my $target (sort keys %{$opcodes_in{$asm}{$cpu}}) {
+				my @ops = @{clone($opcodes_in{$asm}{$cpu}{$target})};
+				
+				if ($asm =~ /%c/) {
+					my @range = find_range($asm, $cpu, @ops);
+					for my $c (@range) {
+						my($asm1, @ops1) = replace_const($c, $asm, @ops);
+						if ($asm =~ /^rst/ && $cpu =~ /^r2ka|^r3k/ && 
+							($c == 0 || $c == 8 || $c == 0x30)) {
+							$opcodes_out{$asm1}{$cpu}{$target} = [[0xCD, $c, 0]];
+						}
+						else {    
+							$opcodes_out{$asm1}{$cpu}{$target} = \@ops1;
+						}
 					}
 				}
-			}
-			else {
-				$opcodes_out{$asm}{$cpu} = \@ops;
+				else {
+					$opcodes_out{$asm}{$cpu}{$target} = \@ops;
+				}
 			}
 		}
 	}
@@ -126,24 +128,26 @@ sub make_opcode_table {
 
 sub make_hex_table {
 	my(%opcodes) = @_;
-	my $tb = Text::Table->new($sep, "Assembly", $sep, "CPU", $sep, "Opcodes", $sep);
+	my $tb = Text::Table->new($sep, "Assembly", $sep, "CPU", $sep, "T", $sep, "Opcodes", $sep);
 
 	for my $asm (sort keys %opcodes) {
 		for my $cpu (sort keys %{$opcodes{$asm}}) {
-			my @ops = @{$opcodes{$asm}{$cpu}};
-			my @bytes;
-			for my $op (@ops) {
-				for my $byte (@$op) {
-					next unless defined $byte;
-					if ($byte =~ /^\d+$/) {
-						push @bytes, sprintf("%02X", $byte);
-					}
-					else {
-						push @bytes, $byte;
+			for my $target (sort keys %{$opcodes{$asm}{$cpu}}) {
+				my @ops = @{$opcodes{$asm}{$cpu}{$target}};
+				my @bytes;
+				for my $op (@ops) {
+					for my $byte (@$op) {
+						next unless defined $byte;
+						if ($byte =~ /^\d+$/) {
+							push @bytes, sprintf("%02X", $byte);
+						}
+						else {
+							push @bytes, $byte;
+						}
 					}
 				}
+				$tb->add($asm, $cpu, $target, "@bytes");
 			}
-			$tb->add($asm, $cpu, "@bytes");
 		}
 	}
 	return $tb;
