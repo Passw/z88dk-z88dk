@@ -18,74 +18,80 @@ my %all_opcodes;
 
 my @CPUS = sort keys %{$opcodes{"nop"}};
 
-# dump cpu_ok and cpu_ixiy_ok
-for my $ixiy ("", "_ixiy") {
+# dump strict and non-strict opcodes
+for my $strict ("", "_strict") {
+	# dump cpu_ok and cpu_ixiy_ok
+	for my $ixiy ("", "_ixiy") {
+		for my $cpu (@CPUS) {
+			@test = ();
+			
+			for my $asm (sort keys %opcodes) {
+				my $asm_ixiy = $asm;
+				if ($ixiy) {
+					$asm_ixiy =~ s/\b(ix|iy)/$1 eq 'ix' ? 'iy' : 'ix'/eg;
+				}
+				
+				if (exists $opcodes{$asm_ixiy}{$cpu}) {
+					for my $target (sort keys %{$opcodes{$asm_ixiy}{$cpu}}) {
+						next if ($strict && $target ne "");
+
+						my @ops = @{$opcodes{$asm_ixiy}{$cpu}{$target}};
+						my @bytes;
+						for my $op (@ops) {
+							for my $byte (@$op) {
+								next unless defined $byte;
+								if ($byte =~ /^\d+$/) {
+									push @bytes, sprintf("%02X", $byte);
+								}
+								else {
+									push @bytes, $byte;
+								}
+							}
+						}
+						
+						(my $bytes = join(' ', @bytes)) =~ s/\s+$//;
+						add($cpu, $asm, $bytes);
+					}
+				}
+			}
+			
+			open(my $fh, ">", "${output_basename}_${cpu}${strict}${ixiy}_ok.asm") or die $!;
+			say $fh join("\n", compute_labels($cpu, sort @test));
+		}
+	}
+
+	# dump cpu_error
 	for my $cpu (@CPUS) {
 		@test = ();
 		
-		for my $asm (sort keys %opcodes) {
-			my $asm_ixiy = $asm;
-			if ($ixiy) {
-				$asm_ixiy =~ s/\b(ix|iy)/$1 eq 'ix' ? 'iy' : 'ix'/eg;
-			}
-			
-			if (exists $opcodes{$asm_ixiy}{$cpu}) {
-				my @ops = @{$opcodes{$asm_ixiy}{$cpu}};
-				my @bytes;
-				for my $op (@ops) {
-					for my $byte (@$op) {
-						next unless defined $byte;
-						if ($byte =~ /^\d+$/) {
-							push @bytes, sprintf("%02X", $byte);
-						}
-						else {
-							push @bytes, $byte;
-						}
+		for my $asm (sort keys %{$all_opcodes{ALL}}) {
+			#say "$cpu\t$asm" if $asm =~ /ld \(sp\+/;
+
+			if (!exists $all_opcodes{$cpu}{$asm} &&
+				!exists $all_opcodes{$cpu}{$asm =~ s/0x1234[0-9A-F]+/0x1234/r} &&
+				!exists $all_opcodes{$cpu}{$asm =~ s/0x1234\b/0x123456/r} &&
+				!exists $all_opcodes{$cpu}{$asm =~ s/sp[+-]\d+/sp+0/r} &&
+				!exists $all_opcodes{$cpu}{$asm =~ s/sp[+-]\d+/sp-128/r} ) {
+				my $skip = 0;
+
+				# special case: 'djnz ASMPC' is translated to 'djnz NN' in 8080/8085
+				if ($asm =~ /^(jr|djnz)/) {
+					if ($cpu =~ /^80/) {
+						$skip = 1 if $asm =~ /ASMPC/;	# DIS
+					}
+					else {
+						$skip = 1 if $asm =~ /\d+/;		# nn
 					}
 				}
-				
-				(my $bytes = join(' ', @bytes)) =~ s/\s+$//;
-				add($cpu, $asm, $bytes);
+
+				push @test, sprintf(" %-31s; Error", $asm) unless $skip;
 			}
 		}
 		
-		open(my $fh, ">", "${output_basename}_${cpu}${ixiy}_ok.asm") or die $!;
-		say $fh join("\n", compute_labels($cpu, sort @test));
+		open(my $fh, ">", "${output_basename}_${cpu}${strict}_err.asm") or die $!;
+		say $fh join("\n", sort @test);
 	}
 }
-
-# dump cpu_error
-for my $cpu (@CPUS) {
-	@test = ();
-	
-	for my $asm (sort keys %{$all_opcodes{ALL}}) {
-		#say "$cpu\t$asm" if $asm =~ /ld \(sp\+/;
-
-		if (!exists $all_opcodes{$cpu}{$asm} &&
-		    !exists $all_opcodes{$cpu}{$asm =~ s/0x1234[0-9A-F]+/0x1234/r} &&
-			!exists $all_opcodes{$cpu}{$asm =~ s/0x1234\b/0x123456/r} &&
-			!exists $all_opcodes{$cpu}{$asm =~ s/sp[+-]\d+/sp+0/r} &&
-			!exists $all_opcodes{$cpu}{$asm =~ s/sp[+-]\d+/sp-128/r} ) {
-			my $skip = 0;
-
-			# special case: 'djnz ASMPC' is translated to 'djnz NN' in 8080/8085
-			if ($asm =~ /^(jr|djnz)/) {
-				if ($cpu =~ /^80/) {
-					$skip = 1 if $asm =~ /ASMPC/;	# DIS
-				}
-				else {
-					$skip = 1 if $asm =~ /\d+/;		# nn
-				}
-			}
-
-			push @test, sprintf(" %-31s; Error", $asm) unless $skip;
-		}
-	}
-	
-	open(my $fh, ">", "${output_basename}_${cpu}_err.asm") or die $!;
-	say $fh join("\n", sort @test);
-}
-
 
 sub add {
 	my($cpu, $asm, $bytes) = @_;

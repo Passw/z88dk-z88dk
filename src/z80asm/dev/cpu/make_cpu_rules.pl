@@ -35,9 +35,12 @@ for my $asm (sort keys %opcodes) {
 	else { die $asm; }
 
 	for my $cpu (sort keys %{$opcodes{$asm}}) {
-		my @ops = @{$opcodes{$asm}{$cpu}};
-		
-		$parser{$tokens}{$cpu}{$parens} = [$asm, @ops];
+		my %targets;
+		for my $target (sort keys %{$opcodes{$asm}{$cpu}}) {
+			my @ops = @{$opcodes{$asm}{$cpu}{$target}};
+			$targets{$target} = \@ops;
+		}
+		$parser{$tokens}{$cpu}{$parens} = [$asm, \%targets];
 	}
 }
 
@@ -210,6 +213,43 @@ sub parser_tokens {
 		else { die "$_ ; ", substr($_, pos($_)||0) }
 	}
 	return join(' ', ('| label?', @tokens, "_TK_NEWLINE"));
+}
+
+sub parse_strict {
+	my($cpu, $asm, $targets) = @_;
+
+	my $code_strict = '';
+	my $code_all = '';
+	for my $target (sort keys %$targets) {
+		my @ops = @{$targets->{$target}};
+		my $code = parse_code($cpu, $asm, @ops);
+
+		if ($target eq "") {
+			$code_strict .= $code;
+		}
+		elsif ($target =~ /^[UX]$/) {
+			$code_all .= $code;
+		}
+		else {
+			die $target;
+		}
+	}
+
+	my @code;
+	if ($code_strict eq $code_all) {
+		push @code, $code_strict;
+	}
+	elsif ($code_all eq '') {
+		push @code, $code_strict;
+	}
+	elsif ($code_strict eq '') {
+		push @code, "if (option_strict()) {\nerror_illegal(); } else {\n$code_all}";
+	}
+	else {
+		push @code, "if (option_strict()) {\n$code_strict} else {\n$code_all}";
+	}
+
+	return join("\n", @code);
 }
 
 sub parse_code {
@@ -579,22 +619,22 @@ sub merge_parens {
 	
 	if ($t->{no_expr}) {
 		die if $t->{expr_no_parens} || $t->{expr_in_parens};
-		return parse_code($cpu, @{$t->{no_expr}});
+		return parse_strict($cpu, @{$t->{no_expr}});
 	}
 	elsif (!$t->{expr_no_parens} && !$t->{expr_in_parens}) {
 		die;
 	}
 	elsif (!$t->{expr_no_parens} && $t->{expr_in_parens}) {
 		return "if (!ctx->expr_in_parens) return false;\n".
-				parse_code($cpu, @{$t->{expr_in_parens}});			
+				parse_strict($cpu, @{$t->{expr_in_parens}});			
 	}
 	elsif ($t->{expr_no_parens} && !$t->{expr_in_parens}) {
 		return "if (ctx->expr_in_parens) warning(ErrExprInParens, NULL);\n".
-				parse_code($cpu, @{$t->{expr_no_parens}});
+				parse_strict($cpu, @{$t->{expr_no_parens}});
 	}
 	elsif ($t->{expr_no_parens} && $t->{expr_in_parens}) {
-		my $in_parens = parse_code($cpu, @{$t->{expr_in_parens}});
-		my $no_parens = parse_code($cpu, @{$t->{expr_no_parens}});
+		my $in_parens = parse_strict($cpu, @{$t->{expr_in_parens}});
+		my $no_parens = parse_strict($cpu, @{$t->{expr_no_parens}});
 		return "if (ctx->expr_in_parens) { $in_parens } else { $no_parens }";
 	}
 	else {

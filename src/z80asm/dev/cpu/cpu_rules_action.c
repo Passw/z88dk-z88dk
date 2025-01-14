@@ -65069,6 +65069,7 @@ return true;
 bool cpu_rules_action_5066(ParseCtx *ctx, Str *name, Str *stmt_label) {
 switch (option_cpu()) {
 case CPU_R4K: case CPU_R5K: 
+if (ctx->expr_in_parens) warning(ErrExprInParens, NULL);
 DO_stmt_jre(0x98);
 break;
 default: error(ErrIllegalIdent, NULL); }
@@ -65079,6 +65080,7 @@ return true;
 bool cpu_rules_action_5067(ParseCtx *ctx, Str *name, Str *stmt_label) {
 switch (option_cpu()) {
 case CPU_R4K: case CPU_R5K: 
+if (ctx->expr_in_parens) warning(ErrExprInParens, NULL);
 DO_stmt_jre(0xEDDB);
 break;
 default: error(ErrIllegalIdent, NULL); }
@@ -65089,6 +65091,7 @@ return true;
 bool cpu_rules_action_5068(ParseCtx *ctx, Str *name, Str *stmt_label) {
 switch (option_cpu()) {
 case CPU_R4K: case CPU_R5K: 
+if (ctx->expr_in_parens) warning(ErrExprInParens, NULL);
 DO_stmt_jre(0xEDCB);
 break;
 default: error(ErrIllegalIdent, NULL); }
@@ -65099,6 +65102,7 @@ return true;
 bool cpu_rules_action_5069(ParseCtx *ctx, Str *name, Str *stmt_label) {
 switch (option_cpu()) {
 case CPU_R4K: case CPU_R5K: 
+if (ctx->expr_in_parens) warning(ErrExprInParens, NULL);
 DO_stmt_jre(0xEDD3);
 break;
 default: error(ErrIllegalIdent, NULL); }
@@ -65109,6 +65113,7 @@ return true;
 bool cpu_rules_action_5070(ParseCtx *ctx, Str *name, Str *stmt_label) {
 switch (option_cpu()) {
 case CPU_R4K: case CPU_R5K: 
+if (ctx->expr_in_parens) warning(ErrExprInParens, NULL);
 DO_stmt_jre(0xEDA3);
 break;
 default: error(ErrIllegalIdent, NULL); }
@@ -65119,6 +65124,7 @@ return true;
 bool cpu_rules_action_5071(ParseCtx *ctx, Str *name, Str *stmt_label) {
 switch (option_cpu()) {
 case CPU_R4K: case CPU_R5K: 
+if (ctx->expr_in_parens) warning(ErrExprInParens, NULL);
 DO_stmt_jre(0xEDAB);
 break;
 default: error(ErrIllegalIdent, NULL); }
@@ -65129,6 +65135,7 @@ return true;
 bool cpu_rules_action_5072(ParseCtx *ctx, Str *name, Str *stmt_label) {
 switch (option_cpu()) {
 case CPU_R4K: case CPU_R5K: 
+if (ctx->expr_in_parens) warning(ErrExprInParens, NULL);
 DO_stmt_jre(0xEDB3);
 break;
 default: error(ErrIllegalIdent, NULL); }
@@ -65139,6 +65146,7 @@ return true;
 bool cpu_rules_action_5073(ParseCtx *ctx, Str *name, Str *stmt_label) {
 switch (option_cpu()) {
 case CPU_R4K: case CPU_R5K: 
+if (ctx->expr_in_parens) warning(ErrExprInParens, NULL);
 DO_stmt_jre(0xEDDB);
 break;
 default: error(ErrIllegalIdent, NULL); }
@@ -65149,6 +65157,7 @@ return true;
 bool cpu_rules_action_5074(ParseCtx *ctx, Str *name, Str *stmt_label) {
 switch (option_cpu()) {
 case CPU_R4K: case CPU_R5K: 
+if (ctx->expr_in_parens) warning(ErrExprInParens, NULL);
 DO_stmt_jre(0xEDD3);
 break;
 default: error(ErrIllegalIdent, NULL); }
@@ -65159,6 +65168,7 @@ return true;
 bool cpu_rules_action_5075(ParseCtx *ctx, Str *name, Str *stmt_label) {
 switch (option_cpu()) {
 case CPU_R4K: case CPU_R5K: 
+if (ctx->expr_in_parens) warning(ErrExprInParens, NULL);
 DO_stmt_jre(0xEDC3);
 break;
 default: error(ErrIllegalIdent, NULL); }
@@ -65169,6 +65179,7 @@ return true;
 bool cpu_rules_action_5076(ParseCtx *ctx, Str *name, Str *stmt_label) {
 switch (option_cpu()) {
 case CPU_R4K: case CPU_R5K: 
+if (ctx->expr_in_parens) warning(ErrExprInParens, NULL);
 DO_stmt_jre(0xEDC3);
 break;
 default: error(ErrIllegalIdent, NULL); }
@@ -65179,6 +65190,7 @@ return true;
 bool cpu_rules_action_5077(ParseCtx *ctx, Str *name, Str *stmt_label) {
 switch (option_cpu()) {
 case CPU_R4K: case CPU_R5K: 
+if (ctx->expr_in_parens) warning(ErrExprInParens, NULL);
 DO_stmt_jre(0xEDBB);
 break;
 default: error(ErrIllegalIdent, NULL); }
@@ -65189,6 +65201,7 @@ return true;
 bool cpu_rules_action_5078(ParseCtx *ctx, Str *name, Str *stmt_label) {
 switch (option_cpu()) {
 case CPU_R4K: case CPU_R5K: 
+if (ctx->expr_in_parens) warning(ErrExprInParens, NULL);
 DO_stmt_jre(0xEDCB);
 break;
 default: error(ErrIllegalIdent, NULL); }
@@ -117349,6 +117362,7 @@ return true;
 bool cpu_rules_action_9569(ParseCtx *ctx, Str *name, Str *stmt_label) {
 switch (option_cpu()) {
 case CPU_Z80N: 
+if (ctx->expr_in_parens) warning(ErrExprInParens, NULL);
 DO_stmt_NN(0xED8A);
 break;
 case CPU_R4K: case CPU_R5K: 
